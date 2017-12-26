@@ -1,6 +1,6 @@
 Blockly.Blocks['iframe_show'] = {
   init: function() {
-  this.appendValueInput('string_')
+  this.appendValueInput('url_')
       .setCheck('String')
       .appendField(Blockly.Msg.TEXT_SHOW)
       .appendField(Blockly.Msg.WIDTH_SHOW)
