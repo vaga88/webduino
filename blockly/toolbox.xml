@@ -1,0 +1,9 @@
+<category id="catToolText">
+      <block type="iframe_show">
+        <value name="string_">
+          <block type="text">
+            <field name="TEXT"></field>
+          </block>
+        </value>
+      </block>
+ </category>
