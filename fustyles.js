@@ -1,4 +1,4 @@
-+(function (window, document, $) {
++(function (window, document) {
 
   'use strict';
 
@@ -10,4 +10,4 @@
 
   window.createDiv = createDiv;
 
-}(window, window.document, window.jQuery));
+}(window, window.document));
