@@ -2,7 +2,7 @@
       <block type="iframe_show">
         <field name="width_">400</field>
         <field name="height_">300</field>            
-        <value name="string_">
+        <value name="url_">
           <block type="text">
             <field name="TEXT"></field>
           </block>
