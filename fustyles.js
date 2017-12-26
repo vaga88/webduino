@@ -3,9 +3,9 @@
   'use strict';
 
   function createDiv(input_url_) {
-    if (document.getElementById['fustyles'])
+    if (document.getElementById('fustyles'))
     {
-        document.getElementById['fustyles'].innerHTML = '<iframe src="' + input_url_ + '" width="600" height="400">';
+        document.getElementById('fustyles').innerHTML = '<iframe src="' + input_url_ + '" width="600" height="400">';
     }
     else
     {
