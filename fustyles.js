@@ -2,16 +2,17 @@
 
   'use strict';
 
-  function createDiv(input_url_) {
+  function createDiv(input_url_,input_WIDTH_,input_HEIGHT_) {
+    var src = '<iframe src="' + input_url_ + '" width="' + input_WIDTH_ + '" height="' + input_HEIGHT_ + '">';
     if (document.getElementById('fustyles'))
     {
-        document.getElementById('fustyles').innerHTML = '<iframe src="' + input_url_ + '" width="600" height="400">';
+        document.getElementById('fustyles').innerHTML = src;
     }
     else
     {
       var div = document.createElement('div');
       div.id = 'fustyles';
-      div.innerHTML = '<iframe src="' + input_url_ + '" width="600" height="400">';
+      div.innerHTML = src;
       document.body.appendChild(div);
     }
   }
