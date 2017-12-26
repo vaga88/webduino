@@ -4,15 +4,15 @@ Blockly.Blocks['iframe_show'] = {
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.TEXT_SHOW)
-      .appendField(Blockly.Msg.WIDTH_SHOW)
+      .appendField(Blockly.Msg.URL_SHOW)
   this.appendValueInput("width_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.HEIGHT_SHOW)
+      .appendField(Blockly.Msg.WIDTH_SHOW)
   this.appendValueInput("height_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.URL_SHOW);
+      .appendField(Blockly.Msg.HEIGHT_SHOW);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setTooltip('');
