@@ -13,10 +13,10 @@ Blockly.Blocks['iframe_show'] = {
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.HEIGHT_SHOW);
-  this.appendValueInput("right_")
+  this.appendValueInput("left_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.RIGHT_SHOW);    
+      .appendField(Blockly.Msg.LEFT_SHOW);    
     this.appendValueInput("top_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
