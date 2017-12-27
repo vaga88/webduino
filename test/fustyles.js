@@ -8,17 +8,17 @@
     
     if (document.getElementById('fustyles'))
     {
-        document.getElementById('fustyles').right = input_RIGHT_ + 'px';
-        document.getElementById('fustyles').top = input_TOP_ + 'px';
+        document.getElementById('fustyles').style.right = input_RIGHT_ + 'px';
+        document.getElementById('fustyles').style.top = input_TOP_ + 'px';
         document.getElementById('fustyles').innerHTML = src;
     }
     else
     {
       var div = document.createElement('div');
       div.id = 'fustyles';
-      div.position = "relative";      
-      div.right = input_RIGHT_ + 'px';
-      div.top = input_TOP_ + 'px';
+      div.style.position = "relative";      
+      div.style.right = input_RIGHT_ + 'px';
+      div.style.top = input_TOP_ + 'px';
       div.innerHTML = src;
       document.body.appendChild(div);
     }
