@@ -4,7 +4,7 @@
 
   function createDiv(input_url_,input_WIDTH_,input_HEIGHT_,input_LEFT_,input_TOP_) {
     
-    var src = '<iframe src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height=' + input_HEIGHT_ + 'px">';
+    var src = '<iframe src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px">';
     
     if (document.getElementById('fustyles'))
     {
