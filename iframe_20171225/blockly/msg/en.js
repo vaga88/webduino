@@ -1,0 +1,1 @@
+MSG.catToolText = "Web Page";
