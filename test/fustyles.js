@@ -19,6 +19,7 @@
       div.right = input_RIGHT_;
       div.top = input_TOP_;
       div.innerHTML = src;
+      div.position = "relative";
       document.body.appendChild(div);
     }
   }
