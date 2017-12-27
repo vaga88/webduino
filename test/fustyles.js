@@ -3,7 +3,7 @@
   'use strict';
 
   function createDiv(input_url_,input_WIDTH_,input_HEIGHT_) {
-    var src = '<iframe src="' + input_url_ + '" width="' + input_WIDTH_ + '" height="' + input_HEIGHT_ + '">';
+    var src = '<iframe src="' + input_url_ + '" style="width:' + input_WIDTH_ + ';height=' + input_HEIGHT_ + ';x=' + input_x_ + ';y=' + input_y_ + '">';
     if (document.getElementById('fustyles'))
     {
         document.getElementById('fustyles').innerHTML = src;
