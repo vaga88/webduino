@@ -19,6 +19,7 @@
       div.style.position = "absolute";      
       div.style.left = input_LEFT_ + 'px';
       div.style.top = input_TOP_ + 'px';
+      div.style.z-index=9999;      
       div.innerHTML = src;
       document.body.appendChild(div);
     }
