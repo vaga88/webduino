@@ -16,10 +16,10 @@
     {
       var div = document.createElement('div');
       div.id = 'fustyles';
+      div.position = "relative";      
       div.right = input_RIGHT_ + 'px';
       div.top = input_TOP_ + 'px';
       div.innerHTML = src;
-      div.position = "relative";
       document.body.appendChild(div);
     }
   }
