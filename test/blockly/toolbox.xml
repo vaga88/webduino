@@ -15,12 +15,12 @@
         <field name="NUM">400</field>
       </block>
     </value>
-    <value name="x_">
+    <value name="right_">
       <block type="math_number">
         <field name="NUM">0</field>
       </block>
     </value>
-    <value name="y_">
+    <value name="top_">
       <block type="math_number">
         <field name="NUM">100</field>
       </block>
