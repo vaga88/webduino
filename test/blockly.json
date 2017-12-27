@@ -6,7 +6,6 @@
     "blockly/javascript.js"
   ],
   "dependencies": [
-    "Text-blockly.js",
     "fustyles.js"    
   ],
   "msg": "blockly/msg",
