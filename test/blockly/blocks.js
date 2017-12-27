@@ -13,14 +13,14 @@ Blockly.Blocks['iframe_show'] = {
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.HEIGHT_SHOW);
-  this.appendValueInput("x_")
+  this.appendValueInput("right_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.X_SHOW);    
-    this.appendValueInput("y_")
+      .appendField(Blockly.Msg.RIGHT_SHOW);    
+    this.appendValueInput("top_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.Y_SHOW);  
+      .appendField(Blockly.Msg.TOP_SHOW);  
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setTooltip('');
