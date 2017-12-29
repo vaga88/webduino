@@ -5,7 +5,7 @@
   google.load("visualization", "1", { packages: ["corechart"] });
   google.setOnLoadCallback(drawChart);
 
-  function createChart(input_value_,input_WIDTH_,input_HEIGHT_,input_LEFT_,input_TOP_) {
+  function createGoogleChart(input_value_,input_WIDTH_,input_HEIGHT_,input_LEFT_,input_TOP_) {
     
     if (document.getElementById('fustyles'))
     {
@@ -55,10 +55,10 @@
 
 
         //Line Chart
-        //var chart = new google.visualization.LineChart(document.getElementById('myChart'));
+        var chart = new google.visualization.LineChart(document.getElementById('fustyles_googlechart'));
 
         //Stepped Area Chart
-        var chart = new google.visualization.SteppedAreaChart(document.getElementById('fustyles_googlechart'));
+        //var chart = new google.visualization.SteppedAreaChart(document.getElementById('fustyles_googlechart'));
 
         var options = {
                   title: ShowTH,
@@ -88,6 +88,6 @@
     }
   }
 
-  window.createDiv = createDiv;
+  window.createGoogleChart = createGoogleChart;
 
 }(window, window.document));
