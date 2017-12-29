@@ -82,10 +82,10 @@
             legend: { position: 'bottom' }
                     };
 
-          chart.draw(data, options);
+            chart.draw(data, options);
 
+          }
         }
-      }
 
   window.createLineChart = createLineChart;
 
