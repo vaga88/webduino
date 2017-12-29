@@ -1,5 +1,5 @@
 <category id="catToolText">
-  <block type="iframe_show">
+  <block type="iframe_open">
     <value name="url_">
       <block type="text">
         <field name="TEXT"></field>
