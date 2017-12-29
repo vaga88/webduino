@@ -1,5 +1,5 @@
 {
-  "types": ["iframe_open","iframe_close"],
+  "types": ["googlechart"],
   "category": "catPlus",
   "scripts": [
     "blockly/blocks.js",
