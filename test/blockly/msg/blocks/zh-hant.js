@@ -4,3 +4,4 @@ Blockly.Msg.WIDTH_SHOW = "寬度";
 Blockly.Msg.HEIGHT_SHOW = "高度";
 Blockly.Msg.LEFT_SHOW = "向右距離";
 Blockly.Msg.TOP_SHOW = "向下距離";
+Blockly.Msg.CLOSE_SHOW = "關閉 顯示網頁";
