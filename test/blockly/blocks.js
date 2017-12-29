@@ -4,7 +4,7 @@ Blockly.Blocks['googlechart_fustyles'] = {
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.TEXT_SHOW)
-      .appendField(Blockly.Msg.URL_SHOW)
+      .appendField(Blockly.Msg.VALUE_SHOW)
   this.appendValueInput("width_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
