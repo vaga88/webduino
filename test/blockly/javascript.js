@@ -7,3 +7,8 @@ Blockly.JavaScript['iframe_open'] = function (block) {
   var code = 'createDiv(' + value_url_ + ','+ value_width_ + ',' + value_height_ + ',' + value_left_ + ',' + value_top_ + ');';
   return code;
 };
+Blockly.JavaScript['iframe_close'] = function(block) {
+  // TODO: Assemble JavaScript into code variable.
+  var code = 'createDiv('about:blank','0','0','0','0');';
+  return code;
+};
