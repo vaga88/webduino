@@ -7,7 +7,7 @@
 
   function createGoogleChart(input_value_,input_WIDTH_,input_HEIGHT_,input_LEFT_,input_TOP_) {
     
-    if (document.getElementById('fustyles'))
+    if (document.getElementById('fustyles_googlechart'))
     {
         if ((input_WIDTH_>0)&&(input_HEIGHT_>0))
         {
