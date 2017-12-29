@@ -50,7 +50,7 @@
           data.setValue(i, 2, ParaValTH[1]);
 
           if (i==(getPara.length-1)) {
-            var ShowTH ='溫度 = '+ParaValTH[0].toString()+'°C   '+'濕度 = '+ParaValTH[1].toString()+'%';
+            var ShowTH ='temperature = '+ParaValTH[0].toString()+'°C   '+'humidity = '+ParaValTH[1].toString()+'%';
          }
 
 
