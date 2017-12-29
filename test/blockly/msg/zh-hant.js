@@ -1,1 +1,1 @@
-MSG.catToolText = "顯示網頁";
+MSG.catToolText = "谷歌圖表";
