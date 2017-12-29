@@ -33,6 +33,7 @@
           
       }
     }
+  }
 
   window.createLineChart = createLineChart;
     
