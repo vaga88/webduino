@@ -8,6 +8,6 @@ Blockly.JavaScript['iframe_open'] = function (block) {
   return code;
 };
 Blockly.JavaScript['iframe_close'] = function(block) {
-  var code = 'createDiv(''about:blan'',0,0,0,0);';
+  var code = 'createDiv(''about:blank'',0,0,0,0);';
   return code;
 };
