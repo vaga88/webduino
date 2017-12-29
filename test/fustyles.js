@@ -88,6 +88,6 @@
     }
   }
 
-  window.createGoogleChart = createLineChart;
+  window.createLineChart = createLineChart;
 
 }(window, window.document));
