@@ -1,8 +1,8 @@
 <category id="catToolText">
-  <block type="iframe_open">
-    <value name="url_">
+  <block type="googlechart_fustyles">
+    <value name="value_">
       <block type="text">
-        <field name="TEXT">about:blank</field>
+        <field name="TEXT">NA=0-0,12_25_20=25-60</field>
       </block>
     </value>
     <value name="width_">
@@ -26,5 +26,4 @@
       </block>
     </value>    
   </block>
-  <block type="iframe_close"></block>
  </category>
