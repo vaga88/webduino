@@ -2,7 +2,7 @@
   <block type="iframe_open">
     <value name="url_">
       <block type="text">
-        <field name="TEXT"></field>
+        <field name="TEXT">about:blank</field>
       </block>
     </value>
     <value name="width_">
