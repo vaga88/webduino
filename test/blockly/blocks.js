@@ -1,6 +1,6 @@
-Blockly.Blocks['iframe_open'] = {
+Blockly.Blocks['googlechart_fustyles'] = {
   init: function() {
-  this.appendValueInput("url_")
+  this.appendValueInput("value_")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.TEXT_SHOW)
@@ -26,16 +26,5 @@ Blockly.Blocks['iframe_open'] = {
   this.setTooltip('');
   this.setColour(65);
   this.setHelpUrl(mainUrl + 'basic/blockly/blockly-information.html' + utmUrl);
-  }
-};
-Blockly.Blocks['iframe_close'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.CLOSE_SHOW)
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(65);
- this.setTooltip("");
- this.setHelpUrl("");
   }
 };
