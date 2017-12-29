@@ -90,4 +90,4 @@
 
   window.createLineChart = createLineChart;
 
-}(window, window.document);
+}(window, window.document));
