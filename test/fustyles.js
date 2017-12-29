@@ -5,7 +5,7 @@
   google.load("visualization", "1", { packages: ["corechart"] });
   google.setOnLoadCallback(drawChart);
 
-  function createGoogleChart(input_value_,input_WIDTH_,input_HEIGHT_,input_LEFT_,input_TOP_) {
+  function createLineChart(input_value_,input_WIDTH_,input_HEIGHT_,input_LEFT_,input_TOP_) {
     
     if (document.getElementById('fustyles_googlechart'))
     {
@@ -88,6 +88,6 @@
     }
   }
 
-  window.createGoogleChart = createGoogleChart;
+  window.createGoogleChart = createLineChart;
 
 }(window, window.document));
