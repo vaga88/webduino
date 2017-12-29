@@ -10,6 +10,10 @@
     {
         document.getElementById('fustyles').style.left = input_LEFT_ + 'px';
         document.getElementById('fustyles').style.top = input_TOP_ + 'px';
+        if ((input_WIDTH_<=0)||(input_HEIGHT_<=0))
+          document.getElementById('fustyles').style.display = 'none';
+        else
+          document.getElementById('fustyles').style.display = 'block';
         document.getElementById('fustyles').innerHTML = src;
     }
     else
