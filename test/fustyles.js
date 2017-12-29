@@ -29,7 +29,13 @@
         div.style.zindex='9999';    
         document.body.appendChild(div);
 
-          
+        google.load("visualization", "1", { packages: ["corechart"] });
+        google.setOnLoadCallback(drawChart); 
+        
+        
+        
+        
+        
           
       }
     }
