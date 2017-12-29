@@ -26,4 +26,5 @@
       </block>
     </value>    
   </block>
+  <block type="iframe_close"></block>
  </category>
