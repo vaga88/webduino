@@ -1,6 +1,9 @@
 +(function (window, document) {
 
   'use strict';
+  
+  goog.provide('Blockly.JavaScript.webduino.tutorials');
+  goog.require('Blockly.JavaScript');
 
   function createLineChart(input_value_,input_WIDTH_,input_HEIGHT_,input_LEFT_,input_TOP_) {
     
