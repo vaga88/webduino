@@ -54,7 +54,35 @@
             var ShowTH ='temperature = '+ParaValTH[0].toString()+'°C   '+'humidity = '+ParaValTH[1].toString()+'%';
          }
         
-        
+          //Line Chart
+          var chart = new google.visualization.LineChart(document.getElementById('fustyles_googlechart'));
+
+          //Stepped Area Chart
+          //var chart = new google.visualization.SteppedAreaChart(document.getElementById('fustyles_googlechart'));
+
+          var options = {
+              title: ShowTH,
+              titleTextStyle:{
+                color: 'red', 
+                fontName: 'Times New Roman', 
+                fontSize: 28, 
+                bold: true,  
+                italic: false 
+              },
+              hAxis : { 
+                      textStyle : {fontSize: 14}
+                },
+              vAxis : { 
+                      textStyle : {fontSize: 18}
+              },
+              allowHtml: true,
+              showRowNumber: true,
+              width:'100%',
+              height:'400',
+              legend: { position: 'bottom' }
+          };
+
+          chart.draw(data, options);        
         
         
         
