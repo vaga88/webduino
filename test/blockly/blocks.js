@@ -1,4 +1,4 @@
-Blockly.Blocks['iframe_show'] = {
+Blockly.Blocks['iframe_open'] = {
   init: function() {
   this.appendValueInput("url_")
       .setCheck("String")
