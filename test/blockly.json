@@ -1,5 +1,5 @@
 {
-  "types": ["iframe_show"],
+  "types": ["iframe_open","iframe_close"],
   "category": "catPlus",
   "scripts": [
     "blockly/blocks.js",
