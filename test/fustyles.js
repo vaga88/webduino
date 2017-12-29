@@ -1,9 +1,6 @@
 +(function (window, document) {
 
   'use strict';
-  
-  google.load("visualization", "1", { packages: ["corechart"] });
-  google.setOnLoadCallback(drawChart);
 
   function createLineChart(input_value_,input_WIDTH_,input_HEIGHT_,input_LEFT_,input_TOP_) {
     
@@ -22,6 +19,8 @@
     {
       if ((input_WIDTH_>0)&&(input_HEIGHT_>0))
       {
+
+
         var div = document.createElement('div');
         div.id = 'fustyles_googlechart';
         div.style.position = "absolute";      
@@ -30,6 +29,8 @@
         div.style.zindex='9999';    
         document.body.appendChild(div);
         
+        google.load("visualization", "1", { packages: ["corechart"] });
+        google.setOnLoadCallback(drawChart);
         
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'time');
@@ -69,23 +70,24 @@
                       bold: true,  
                       italic: false 
                         },
-            hAxis : { 
-                    textStyle : {fontSize: 14}
-              },
-            vAxis : { 
-                    textStyle : {fontSize: 18}
-              },
+                    hAxis : { 
+                            textStyle : {fontSize: 14}
+                      },
+                    vAxis : { 
+                            textStyle : {fontSize: 18}
+                      },
                     allowHtml: true,
                     showRowNumber: true,
-            width:'100%',
-            height:'400',
-            legend: { position: 'bottom' }
-                    };
+                    width:'100%',
+                    height:'400',
+                    legend: { position: 'bottom' }
+            };
 
             chart.draw(data, options);
-
-          }
-        }
+          
+          
+      }
+    }
 
   window.createLineChart = createLineChart;
 
