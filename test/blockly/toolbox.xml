@@ -7,7 +7,7 @@
     </value>
     <value name="width_">
       <block type="math_number">
-        <field name="NUM">500</field>
+        <field name="NUM">800</field>
       </block>
     </value>
     <value name="height_">
