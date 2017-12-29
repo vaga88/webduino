@@ -10,8 +10,8 @@
     {
         if ((input_WIDTH_<=0)||(input_HEIGHT_<=0))
         {
-          document.getElementById('fustyles').style.display = 'none';
           document.getElementById('fustyles').innerHTML = '';
+          document.getElementById('fustyles').style.display = 'none';
         }
         else
         {
