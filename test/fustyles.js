@@ -45,7 +45,7 @@
         for (i = 0; i < getPara.length; i++) {
           ParaVal = getPara[i].split("=");
           ParaValTH = ParaVal[1].split("-");
-          data.setValue(i, 0, ParaVal[0].replace(/_/ig,':'));
+          data.setValue(i, 0, ParaVal[0]);
           data.setValue(i, 1, ParaValTH[0]);
           data.setValue(i, 2, ParaValTH[1]);
 
