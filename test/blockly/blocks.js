@@ -28,3 +28,14 @@ Blockly.Blocks['iframe_open'] = {
   this.setHelpUrl(mainUrl + 'basic/blockly/blockly-information.html' + utmUrl);
   }
 };
+Blockly.Blocks['iframe_close'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.CLOSE_SHOW)
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(65);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
