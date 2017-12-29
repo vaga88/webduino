@@ -1,5 +1,5 @@
 {
-  "types": ["googlechart"],
+  "types": ["googlechart_fustyles"],
   "category": "catPlus",
   "scripts": [
     "blockly/blocks.js",
