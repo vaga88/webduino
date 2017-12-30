@@ -23,7 +23,7 @@
         
         var s = document.createElement('svg');
         s.id='fustyles_linechart';
-        s.style.width=960+'px';
+        s.style.width=800+'px';
         s.style.height=500+'px';
         document.body.appendChild(s);
 
@@ -49,7 +49,7 @@ sheet.insertRule(styles, 0);
         
         
 // csv data (parse data)
-var data = d3.csvParse('time,temperature\n1-May-12,25\n30-Apr-12,27\n27-Apr-12,26\n26-Apr-12,24\n25-Apr-12,23\n24-Apr-12,22\n23-Apr-12,21\n');
+var data = d3.csvParse('time,temperature\n18:20:00,25.2\n18:20:05,27.0\n18:20:10,26.4\n18:20:15,24.5\n18:20:20,23.8\n18:20:25,22.6\n18:20:30,21.8\n');
 
 // === 1. Boilerplate setup
 // Set canvas margins
@@ -76,11 +76,11 @@ var line = d3.line()
 
 // === 3. Append data and start drawing
 // create parseTime helper to turn string into time format (11-Apr-12) into datetime JS object
-var parseTime = d3.timeParse('%d-%b-%y');
+//var parseTime = d3.timeParse('%d-%b-%y');
 // Iterate through each data point and parse strings into time and number format
 data.forEach(function(d){
-  d.time = parseTime(d.time);
-  d.temperature = parseInt(d.temperature);
+  d.time = d.time;
+  d.temperature = d.temperature;
 });
 
 // Set the x and y scales to the data ranges x based on min and max date range (d3.extent()) and y based on 0 to max value
