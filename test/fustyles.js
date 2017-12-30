@@ -48,9 +48,13 @@
 
         var dataset = "date,close\nA,1\nB,2\nC,3";
             
-        var data = d3.csvParse(dataset);
         
-
+d3.csvParse(dataset, function(d) {
+  d.date = d.date;
+  d.close = +d.close;
+  return d;
+}, function(error, data) {
+  if (error) throw error;
         
         
           x.domain(d3.extent(data, function(d) { return d.date; }));
@@ -81,7 +85,7 @@
               .attr("stroke-width", 1.5)
               .attr("d", line);
 
-        
+});        
         
         
           
