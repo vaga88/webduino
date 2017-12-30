@@ -47,11 +47,9 @@ alert('test');
             .x(function(d) { return x(d.date); })
             .y(function(d) { return y(d.close); });
 
-        var dataset = [['24-Apr-07', '93.24'], ['25-Apr-07', '95.35'], ['26-Apr-07', '98.84'], ['7-Apr-07', '99.92']];
+        var dataset = [{"date": "24-Apr-07", "close": "93.24"},  {"date": "25-Apr-07", "close": "95.35"}];
 
-        var string = d3.csvFormat(dataset, ["date", "close"]);
-
-        d3.csvParseRows(string, function(d) {
+        d3.csvParseRows(dataset, function(d) {
           d.date = parseTime(d.date);
           d.close = +d.close;
           return d;
