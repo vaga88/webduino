@@ -54,7 +54,7 @@ d3.csvParse(dataset, function(d) {
   d.close = d.close;
   return d;
 }, function(error, data) {
-  if (error) throw error;
+  //if (error) throw error;
         
         
           x.domain(d3.extent(data, function(d) { return d.date; }));
@@ -85,7 +85,6 @@ d3.csvParse(dataset, function(d) {
               .attr("stroke-width", 1.5)
               .attr("d", line);
   
-  alert('test');
 
 });        
         
