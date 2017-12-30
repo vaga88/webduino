@@ -1,1 +1,1 @@
-MSG.catToolText = "谷歌图表";
+MSG.catToolText = "折线图";
