@@ -20,7 +20,6 @@
       if ((input_WIDTH_>0)&&(input_HEIGHT_>0))
       {
 
-alert('test');
         
         var s = document.createElement('svg');
         s.id='fustyles_linechart';
@@ -50,6 +49,8 @@ alert('test');
         var dataset = [["2017-12-29", "93.24"],  ["2017-12-30", "95.35"]];
 
         var string = d3.csvFormat(dataset, ["date", "close"]);
+        
+        alert(string);
         
         d3.csvParseRows(string, function(d) {
           d.date = d.date;
