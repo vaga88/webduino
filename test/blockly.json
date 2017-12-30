@@ -7,7 +7,7 @@
   ],
   "dependencies": [
     "fustyles.js",
-    "https://www.google.com/jsapi"
+    "https://www.gstatic.com/charts/loader.js"
   ],
   "msg": "blockly/msg",
   "blocksMsg": "blockly/msg/blocks",
