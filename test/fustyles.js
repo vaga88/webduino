@@ -49,12 +49,13 @@
         var dataset = "date,close\nA,1\nB,2\nC,3";
             
         
-d3.csvParse(dataset, function(d) {
-  d.date = d.date;
-  d.close = d.close;
-  return d;
-}, function(error, data) {
-  //if (error) throw error;
+
+  
+d3.csvParse(dataset, function(error, data) {
+    data.forEach(function(d) {
+        d.date = d.date;
+        d.close = +d.close;
+    });
         
         
           x.domain(d3.extent(data, function(d) { return d.date; }));
