@@ -61,7 +61,7 @@ data.forEach(function(d){
 
 
 
-  
+var parseDate = d3.time.format("%H:%M:%S").parse;  
 var x = d3.time.scale()
     .range([0, width]);
 
