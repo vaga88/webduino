@@ -53,8 +53,8 @@
         alert(string);
         
         d3.csvParse(string, function(d) {
-          d.date = d.date;
-          d.close = +d.close;
+          date:d.date;
+          close:+d.close;
           return d;
         }, function(error, data) {
           if (error) throw error;
