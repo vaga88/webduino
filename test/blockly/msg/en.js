@@ -1,1 +1,1 @@
-MSG.catToolText = "Google Chart";
+MSG.catToolText = "Line Chart";
