@@ -46,7 +46,7 @@
             .x(function(d) { return x(d.date); })
             .y(function(d) { return y(d.close); });
 
-        var dataset = "date,close\nA,0.89\nB,0.71";
+        var dataset = "date,close\n24-Apr-07,93.24\n25-Apr-07,95.35";
             
         var data = d3.csvParse(dataset, function(d) { 
             return {
@@ -56,7 +56,6 @@
         });
         
 
-        alert(data);
         
         
           x.domain(d3.extent(data, function(d) { return d.date; }));
