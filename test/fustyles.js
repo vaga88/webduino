@@ -43,6 +43,7 @@ styles += '}';
 sheet.insertRule(styles, 0);
         
 var string = input_value_.replace("&","\n");
+alert(string);
         
 var data = d3.csvParse(string);
 
