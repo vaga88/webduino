@@ -76,10 +76,10 @@ var line = d3.line()
 
 // === 3. Append data and start drawing
 // create parseTime helper to turn string into time format (11-Apr-12) into datetime JS object
-//var parseTime = d3.timeParse('%d-%b-%y');
+var parseTime = d3.timeParse('%H:%M:%S');
 // Iterate through each data point and parse strings into time and number format
 data.forEach(function(d){
-  d.time = d.time;
+  d.time = parseTime(d.time);
   d.temperature = parseInt(d.temperature);
 });
 
