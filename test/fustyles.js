@@ -86,7 +86,7 @@ svg.append("g")
 // text label for the x axis
 svg.append("text")             
     .attr("transform",
-          "translate(" + (width+20) + " ," + 
+          "translate(" + (width+30) + " ," + 
                          (height + margin.top) + ")")
     .style("text-anchor", "middle")
     .text("Date");
