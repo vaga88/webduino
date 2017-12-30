@@ -5,19 +5,26 @@
   function createLineChart(input_value_,input_WIDTH_,input_HEIGHT_,input_TITLE_X_,input_TITLE_Y_) {
     
 
+
+    
+
+        
+    var string = "time,temperature\n"+input_value_.replace(/&/ig,"\n");
+
+    var data = d3.csvParse(string);
+
+    var margin = {top: 20, right: 50, bottom: 30, left: 50};
+    var width = input_WIDTH_ - margin.left - margin.right;
+    var height = input_HEIGHT_ - margin.top - margin.bottom;
+
+    
     if (document.getElementById('fustyles_linechart'))
     {
       d3.selectAll("svg > *").remove();
+      var svg = document.getElementById('fustyles_linechart');
     }
     else
     {
-      var s = document.createElement('svg');
-      s.id='fustyles_linechart';
-      s.style.width=input_WIDTH_+'px';
-      s.style.height=input_HEIGHT_+'px';
-      s.style.zindex='9999';
-      document.body.appendChild(s);
-
       var element = document.createElement('style');
       var sheet;
       document.head.appendChild(element);
@@ -30,24 +37,16 @@
       styles += '}';
 
       sheet.insertRule(styles, 0);    
-    }
+      
+      var svg = d3.select('body').append('svg')
+          .attr('id','fustyles_linechart')      
+          .attr('width', width + margin.left + margin.right)
+          .attr('height', height + margin.top + margin.bottom)
+          .append('g')
+          .attr('transform', `translate(${margin.left}, ${margin.top})`);
+    }    
     
-
-        
-    var string = "time,temperature\n"+input_value_.replace(/&/ig,"\n");
-
-    var data = d3.csvParse(string);
-
-    var margin = {top: 20, right: 50, bottom: 30, left: 50};
-    var width = input_WIDTH_ - margin.left - margin.right;
-    var height = input_HEIGHT_ - margin.top - margin.bottom;
-
-    var svg = d3.select('body').append('svg')
-        .attr('width', width + margin.left + margin.right)
-        .attr('height', height + margin.top + margin.bottom)
-        .append('g')
-        .attr('transform', `translate(${margin.left}, ${margin.top})`);
-
+    
     var xScale = d3.scaleTime().range([0, width]);
     var yScale = d3.scaleLinear().range([height, 0]);
 
