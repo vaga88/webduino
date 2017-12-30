@@ -55,7 +55,7 @@
         var data = d3.csvParse(string, function(d) {
           return {
             date: d.date,
-            close: d.close
+            close: +d.close
           };
         });
 
