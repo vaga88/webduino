@@ -4,10 +4,6 @@
 
   function createLineChart(input_value_,input_WIDTH_,input_HEIGHT_,input_TITLE_X_,input_TITLE_Y_) {
     
-
-
-    
-
         
     var string = "time,temperature\n"+input_value_.replace(/&/ig,"\n");
 
