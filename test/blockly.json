@@ -6,7 +6,8 @@
     "blockly/javascript.js"
   ],
   "dependencies": [
-    "fustyles.js"
+    "fustyles.js",
+    "https://www.gstatic.com/charts/loader.js"
   ],
   "msg": "blockly/msg",
   "blocksMsg": "blockly/msg/blocks",
