@@ -63,10 +63,10 @@ var line = d3.line()
   .x(d => xScale(d.time))
   .y(d => yScale(d.temperature))
 
-var parseDate = d3.timeFormat("%Y-%m-%d %H:%M:%S");
+var parseDate = d3.timeFormat("%H:%M:%S");
 data.forEach(function(d){
   d.time = parseDate(d.time);
-  d.temperature = d.temperature;
+  d.temperature = parseInt(d.temperature);
 });
 
 // Set the x and y scales to the data ranges x based on min and max date range (d3.extent()) and y based on 0 to max value
