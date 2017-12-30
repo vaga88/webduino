@@ -6,7 +6,7 @@
     
     if (document.getElementById('fustyles_linechart'))
     {
-      rave.selectAll("svg").remove();     
+      d3.select("svg").remove(); 
     }
     
     var s = document.createElement('svg');
