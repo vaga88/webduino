@@ -12,7 +12,11 @@
     if (document.getElementById('fustyles_linechart'))
     {
       d3.selectAll("svg > *").remove();
-      var svg = document.getElementById('fustyles_linechart');
+      var svg = d3.select('#fustyles_linechart')
+          .attr('width', width + margin.left + margin.right)
+          .attr('height', height + margin.top + margin.bottom)
+          .append('g')
+          .attr('transform', `translate(${margin.left}, ${margin.top})`);
     }
     else
     {
