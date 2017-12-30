@@ -52,12 +52,12 @@
             
         alert(string);
         
-        d3.csvParse(string, function(d) {
-          date:d.date;
-          close:+d.close;
-          return d;
-        }, function(error, data) {
-          if (error) throw error;
+        var data = d3.csvParse(string, function(d) {
+          return {
+            date: d.date,
+            close: d.close
+          };
+        });
 
           x.domain(d3.extent(data, function(d) { return d.date; }));
           y.domain(d3.extent(data, function(d) { return d.close; }));
@@ -86,7 +86,7 @@
               .attr("stroke-linecap", "round")
               .attr("stroke-width", 1.5)
               .attr("d", line);
-        });
+
         
         
         
