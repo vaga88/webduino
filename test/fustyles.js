@@ -50,7 +50,7 @@ var close_data = [
   { 'date': '27-Apr-07', 'close': 99.92 }
 ]        
         
-d3.tsv("data.tsv", function(d) {
+d3.tsv(close_data, function(d) {
   d.date = parseTime(d.date);
   d.close = +d.close;
   return d;
