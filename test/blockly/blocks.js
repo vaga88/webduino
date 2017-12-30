@@ -13,6 +13,14 @@ Blockly.Blocks['googlechart_linechart'] = {
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.HEIGHT_SHOW);
+  this.appendValueInput("title_x_")
+    .setCheck("String")
+    .setAlign(Blockly.ALIGN_RIGHT)
+    .appendField(Blockly.Msg.TITLE_X_SHOW);
+  this.appendValueInput("title_y_")
+    .setCheck("String")
+    .setAlign(Blockly.ALIGN_RIGHT)
+    .appendField(Blockly.Msg.TITLE_Y_SHOW);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setTooltip('');
