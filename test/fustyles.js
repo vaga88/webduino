@@ -46,11 +46,11 @@
             .x(function(d) { return x(d.date); })
             .y(function(d) { return y(d.close); });
 
-        var dataset = "date,close\n'24-Apr-07','93.24'\n'25-Apr-07','95.35'";
+        var dataset = "date,close\nA,1\nB,2";
             
         var data = d3.csvParse(dataset, function(d) { 
             return {
-                date:parseTime(d.date), 
+                date:d.date, 
                 close:+d.close
             }; 
         });
