@@ -5,27 +5,32 @@
   function createLineChart(input_value_,input_WIDTH_,input_HEIGHT_,input_TITLE_X_,input_TITLE_Y_) {
     
 
-    d3.selectAll("svg > *").remove();
+    if (document.gemElementById('fustyles_linechart'))
+    {
+      d3.selectAll("svg > *").remove();
+    }
+    else
+    {
+      var s = document.createElement('svg');
+      s.id='fustyles_linechart';
+      s.style.width=input_WIDTH_+'px';
+      s.style.height=input_HEIGHT_+'px';
+      s.style.zindex='9999';
+      document.body.appendChild(s);
 
-    var s = document.createElement('svg');
-    //s.id='fustyles_linechart';
-    s.style.width=input_WIDTH_+'px';
-    s.style.height=input_HEIGHT_+'px';
-    s.style.zindex='9999';
-    document.body.appendChild(s);
+      var element = document.createElement('style');
+      var sheet;
+      document.head.appendChild(element);
+      sheet = element.sheet;
 
-    var element = document.createElement('style');
-    var sheet;
-    document.head.appendChild(element);
-    sheet = element.sheet;
+      var styles = '.line {';
+      styles += 'fill: none;';
+      styles += 'stroke: hotpink;';
+      styles += 'stroke-width: 2px;';
+      styles += '}';
 
-    var styles = '.line {';
-    styles += 'fill: none;';
-    styles += 'stroke: hotpink;';
-    styles += 'stroke-width: 2px;';
-    styles += '}';
-
-    sheet.insertRule(styles, 0);    
+      sheet.insertRule(styles, 0);    
+    }
     
 
         
