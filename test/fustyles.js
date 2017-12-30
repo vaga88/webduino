@@ -69,17 +69,14 @@ data.forEach(function(d){
   d.temperature = d.temperature;
 });
 
-// Set the x and y scales to the data ranges x based on min and max date range (d3.extent()) and y based on 0 to max value
 xScale.domain(d3.extent(data, d => d.time));
 yScale.domain([0, d3.max(data, d => d.temperature)]);
 
-// Draw the line svg by appending the data to a new svg path giving a class of line and d value based on the d3.line callback
 svg.append('path')
   .data([data])
   .attr('class', 'line')
   .attr('d', line)
 
-// Add the axis 
 var xAxis = d3.axisBottom(xScale)
   .tickFormat(d3.timeFormat('%H:%M:%S'))
   .ticks(5);
