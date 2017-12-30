@@ -25,6 +25,10 @@
         s.id='fustyles_linechart';
         s.style.width=input_WIDTH_+'px';
         s.style.height=input_HEIGHT_+'px';
+        s.style.position='absolute';
+        s.style.left=input_LEFT_+'px';
+        s.style.top=input_TOP_+'px';
+        s.style.zindex='999';
         document.body.appendChild(s);
 
         
