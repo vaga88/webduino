@@ -89,8 +89,8 @@ svg.append('g')
   .call(xAxis);
 
 svg.append('g')
-  .call(d3.axisLeft(yScale))
-  .text('temperature');
+  .call(d3.axisLeft(yScale));
+
         
           
       }
