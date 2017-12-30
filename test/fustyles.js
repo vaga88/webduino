@@ -42,7 +42,7 @@ styles += '}';
 
 sheet.insertRule(styles, 0);
         
-var string = input_value_.replace(/&/ig,"\n");
+var string = "time,temperature\n"+input_value_.replace(/&/ig,"\n");
 alert(string);
         
 var data = d3.csvParse(string);
