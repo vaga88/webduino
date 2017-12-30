@@ -81,7 +81,6 @@ svg.append('path')
 
 // Add the axis 
 var xAxis = d3.axisBottom(xScale)
-  .tickFormat(d3.timeFormat('%S'))
   .ticks(5);
 
 svg.append('g')
