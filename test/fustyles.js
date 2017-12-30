@@ -107,20 +107,7 @@ svg.append("path")
    .duration(2000)
    .attr("opacity", 1);        
 
-        
-var points = svg.selectAll(".MyCircle")
-    .data(data)
-    .enter()
-    .append("circle")
-    .attr("class","MyCircle")
-    .attr("transform","translate(0,0)")
-    .attr("r", 3)
-    .attr("opacity", 0)
-    .transition()
-    .duration(2000)
-    .attr("cx", function(d){ return x(d.time); })
-    .attr("opacity", 1)
-    .attr("cy", function(d){ return y(d.temperature); });
+
           
       }
     }
