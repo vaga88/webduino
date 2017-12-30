@@ -80,7 +80,7 @@ svg.append('path')
 
 // Add the axis 
 var xAxis = d3.axisBottom(xScale)
-  .ticks(5);
+  .ticks(10);
 
 svg.append('g')
   .attr('transform', `translate(0, ${height})`)
