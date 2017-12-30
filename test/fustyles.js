@@ -50,7 +50,7 @@
             
         var data = d3.csvParse(dataset, function(d) { 
             return {
-                date:d.date, 
+                date:parseTime(d.date), 
                 close:+d.close
             }; 
         });
