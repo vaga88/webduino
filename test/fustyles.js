@@ -47,13 +47,13 @@ alert('test');
             .x(function(d) { return x(d.date); })
             .y(function(d) { return y(d.close); });
 
-        var dataset = [{"date": "24-Apr-07", "close": "93.24"},  {"date": "25-Apr-07", "close": "95.35"}];
+        var dataset = [["2017-12-29", 93.24],  ["2017-12-30", 95.35]];
 
         var string = d3.csvFormat(dataset, ["date", "close"]);
         
         d3.csvParseRows(string, function(d) {
-          d.date = parseTime(d.date);
-          d.close = +d.close;
+          //d.date = parseTime(d.date);
+          //d.close = +d.close;
           return d;
         }, function(error, data) {
           if (error) throw error;
