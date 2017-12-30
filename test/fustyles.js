@@ -71,7 +71,8 @@ var y = d3.scale.linear()
 var xAxis = d3.svg.axis()
     .scale(x)
     .orient("bottom")
-    .tickFormat(d3.time.format("%H:%M:%S"));
+    .tickFormat(d3.time.format("%H:%M:%S"))
+    .ticks(5);
 
 var yAxis = d3.svg.axis()
     .scale(y)
@@ -92,19 +93,14 @@ svg.append("g")
     .call(yAxis)
     .append("text")
     .attr("transform", "rotate(0)")
-    .attr("y", 25)
-    .attr("x", 75)
-    .attr("dy", ".71em")
-    .style("text-anchor", "end")
     .text("temperature");
         
 svg.append("path")
-   .datum(data)
+   .datum([data])
    .attr("class", "line")
    .attr("d", line)
    .attr("opacity", 0)
    .transition()
-   .duration(2000)
    .attr("opacity", 1);        
 
 
