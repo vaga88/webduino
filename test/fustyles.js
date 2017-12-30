@@ -63,7 +63,6 @@ var line = d3.line()
   .x(d => xScale(d.time))
   .y(d => yScale(d.temperature))
 
-var parseTime = d3.timeParse("%H:%M:%S");
 data.forEach(function(d){
   d.time = d.time;
   d.temperature = parseInt(d.temperature);
@@ -81,7 +80,7 @@ svg.append('path')
 
 // Add the axis 
 var xAxis = d3.axisBottom(xScale)
-  .tickFormat(d3.timeFormat('%H:%M:%S'))
+  .tickFormat(d3.timeFormat('%Y-%m-%d %H:%M:%S'))
   .ticks(5);
 
 svg.append('g')
