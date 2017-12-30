@@ -2,17 +2,17 @@
   <block type="googlechart_linechart">
     <value name="value_">
       <block type="text">
-        <field name="TEXT">NA=0-0,12:25:20=25-60</field>
+        <field name="TEXT">122520,250&122530,30&</field>
       </block>
     </value>
     <value name="width_">
       <block type="math_number">
-        <field name="NUM">800</field>
+        <field name="NUM">600</field>
       </block>
     </value>
     <value name="height_">
       <block type="math_number">
-        <field name="NUM">400</field>
+        <field name="NUM">300</field>
       </block>
     </value> 
     <value name="title_x_">
