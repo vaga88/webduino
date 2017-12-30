@@ -20,7 +20,8 @@
       if ((input_WIDTH_>0)&&(input_HEIGHT_>0))
       {
 
-
+alert('test');
+        
         var s = document.createElement('svg');
         s.id='fustyles_linechart';
         s.style.width=960+'px';
