@@ -80,7 +80,7 @@ var line = d3.line()
 // Iterate through each data point and parse strings into time and number format
 data.forEach(function(d){
   d.time = d.time;
-  d.temperature = d.temperature;
+  d.temperature = parseInt(d.temperature);
 });
 
 // Set the x and y scales to the data ranges x based on min and max date range (d3.extent()) and y based on 0 to max value
