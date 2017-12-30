@@ -6,34 +6,29 @@
     
     if (document.getElementById('fustyles_linechart'))
     {
-      var s = document.getElementById('fustyles_linechart');
-      s.style.width=input_WIDTH_+'px';
-      s.style.height=input_HEIGHT_+'px';
-    }
-    else
-    {
-      var s = document.createElement('svg');
-      s.id='fustyles_linechart';
-      s.style.width=input_WIDTH_+'px';
-      s.style.height=input_HEIGHT_+'px';
-      s.style.zindex='9999';
-      document.body.appendChild(s);
-
-      var element = document.createElement('style');
-      var sheet;
-      document.head.appendChild(element);
-      sheet = element.sheet;
-
-      var styles = '.line {';
-      styles += 'fill: none;';
-      styles += 'stroke: hotpink;';
-      styles += 'stroke-width: 2px;';
-      styles += '}';
-
-      sheet.insertRule(styles, 0);         
+      var child=document.getElementById('fustyles_linechart');
+      child.parentNode.removeChild(child);
     }
         
-        
+    var s = document.createElement('svg');
+    s.id='fustyles_linechart';
+    s.style.width=input_WIDTH_+'px';
+    s.style.height=input_HEIGHT_+'px';
+    s.style.zindex='9999';
+    document.body.appendChild(s);
+
+    var element = document.createElement('style');
+    var sheet;
+    document.head.appendChild(element);
+    sheet = element.sheet;
+
+    var styles = '.line {';
+    styles += 'fill: none;';
+    styles += 'stroke: hotpink;';
+    styles += 'stroke-width: 2px;';
+    styles += '}';
+
+    sheet.insertRule(styles, 0);        
 
 
     var string = "time,temperature\n"+input_value_.replace(/&/ig,"\n");
