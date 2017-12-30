@@ -31,9 +31,7 @@
         
 var element = document.createElement('style');
 var sheet;
-// Append style element to head
 document.head.appendChild(element);
-// Reference to the stylesheet
 sheet = element.sheet;
         
 var styles = '.line {';
@@ -42,42 +40,30 @@ styles += 'stroke: hotpink;';
 styles += 'stroke-width: 2px;';
 styles += '}';
 
-// Add the first CSS rule to the stylesheet
 sheet.insertRule(styles, 0);
         
         
         
-        
-// csv data (parse data)
 var data = d3.csvParse(input_value_);
 
-// === 1. Boilerplate setup
-// Set canvas margins
 var margin = {top: 20, right: 50, bottom: 30, left: 50};
 var width = 800 - margin.left - margin.right;
 var height = 500 - margin.top - margin.bottom;
 
-// Create svg object
 var svg = d3.select('body').append('svg')
     .attr('width', width + margin.left + margin.right)
     .attr('height', height + margin.top + margin.bottom)
   .append('g')
     .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
-// === 2. Set scales and draw line
-// Set x (timeseries) and y (linear) scales
 var xScale = d3.scaleTime().range([0, width]);
 var yScale = d3.scaleLinear().range([height, 0]);
 
-// draw line callback function using d3.line helper passing in x and y coordinates
 var line = d3.line()
   .x(d => xScale(d.time))
   .y(d => yScale(d.temperature))
 
-// === 3. Append data and start drawing
-// create parseTime helper to turn string into time format (11-Apr-12) into datetime JS object
-var parseTime = d3.time.format('%H:%M:%S');
-// Iterate through each data point and parse strings into time and number format
+var parseTime = d3.timeParse(%H:%M:%S")
 data.forEach(function(d){
   d.time = parseTime(d.time);
   d.temperature = parseInt(d.temperature);
