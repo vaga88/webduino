@@ -84,6 +84,7 @@ var xAxis = d3.axisBottom(xScale)
 
 svg.append('g')
   .attr('transform', `translate(0, ${height})`)
+  .attr("transform", function(d) {return "rotate(-65)"})
   .call(xAxis);
 
 svg.append('g')
