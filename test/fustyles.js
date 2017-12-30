@@ -54,7 +54,7 @@ var svg = d3.select('body').append('svg')
     .attr('width', width + margin.left + margin.right)
     .attr('height', height + margin.top + margin.bottom)
     .append('g')
-    .attr('transform', 'translate(${margin.left}, ${margin.top})');
+    .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
 var xScale = d3.scaleTime().range([0, width]);
 var yScale = d3.scaleLinear().range([height, 0]);
