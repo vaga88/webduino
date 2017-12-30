@@ -46,10 +46,7 @@
             .x(function(d) { return x(d.date); })
             .y(function(d) { return y(d.close); });
 
-        var dataset = "date,close
-        A,1
-        B,2
-        C,3";
+        var dataset = "date,close\nA,1\nB,2\nC,3";
             
         var data = d3.csvParse(dataset);
         
