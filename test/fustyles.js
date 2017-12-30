@@ -52,7 +52,7 @@
             
         alert(string);
         
-        d3.csvParse(string, function(d) {
+        d3.csv(string, function(d) {
           d.date = d.date;
           d.close = +d.close;
           return d;
