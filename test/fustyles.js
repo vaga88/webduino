@@ -4,11 +4,6 @@
 
   function createLineChart(input_value_,input_WIDTH_,input_HEIGHT_,input_TITLE_X_,input_TITLE_Y_) {
     
-        
-    var string = "time,temperature\n"+input_value_.replace(/&/ig,"\n");
-
-    var data = d3.csvParse(string);
-
     var margin = {top: 20, right: 50, bottom: 30, left: 50};
     var width = input_WIDTH_ - margin.left - margin.right;
     var height = input_HEIGHT_ - margin.top - margin.bottom;
@@ -41,6 +36,9 @@
           .append('g')
           .attr('transform', `translate(${margin.left}, ${margin.top})`);
     }    
+    
+    var string = "time,temperature\n"+input_value_.replace(/&/ig,"\n");
+    var data = d3.csvParse(string);
     
     
     var xScale = d3.scaleTime().range([0, width]);
