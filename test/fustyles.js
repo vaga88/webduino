@@ -49,7 +49,7 @@ sheet.insertRule(styles, 0);
         
         
 // csv data (parse data)
-var data = d3.csvParse('time,value\n1-May-12,58.13\n30-Apr-12,53.98\n27-Apr-12,67.00\n26-Apr-12,89.70\n25-Apr-12,99.00\n24-Apr-12,130.28\n23-Apr-12,166.70\n20-Apr-12,234.98\n19-Apr-12,345.44\n18-Apr-12,443.34\n17-Apr-12,543.70\n16-Apr-12,580.13\n13-Apr-12,605.23\n12-Apr-12,622.77\n11-Apr-12,626.20\n10-Apr-12,628.44\n9-Apr-12,636.23\n5-Apr-12,633.68\n4-Apr-12,624.31\n3-Apr-12,629.32\n2-Apr-12,618.63\n30-Mar-12,599.55\n29-Mar-12,609.86\n28-Mar-12,617.62\n27-Mar-12,614.48\n26-Mar-12,606.98\n');
+var data = d3.csvParse('time,value\n1-May-12,25\n30-Apr-12,27\n27-Apr-12,26\n26-Apr-12,24\n25-Apr-12,23\n24-Apr-12,22\n23-Apr-12,21\n');
 
 // === 1. Boilerplate setup
 // Set canvas margins
