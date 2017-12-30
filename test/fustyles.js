@@ -89,7 +89,7 @@ svg.append('g')
   .call(xAxis);
 
 svg.append('g')
-  .call(d3.axisLeft(yScale));
+  .call(d3.axisLeft(yScale))
 
         
           
