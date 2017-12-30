@@ -28,6 +28,14 @@
         document.body.appendChild(s);
 
         
+        
+var element = document.createElement('style');
+var sheet;
+// Append style element to head
+document.head.appendChild(element);
+// Reference to the stylesheet
+sheet = element.sheet;
+        
 var styles = '.line {';
 styles += 'fill: none;';
 styles += 'stroke: hotpink;';
