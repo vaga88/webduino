@@ -24,7 +24,7 @@
         var s = document.createElement('svg');
         s.id='fustyles_linechart';
         s.style.width=800+'px';
-        s.style.height=500+'px';
+        s.style.height=400+'px';
         document.body.appendChild(s);
 
         
@@ -49,7 +49,7 @@ var data = d3.csvParse(string);
 
 var margin = {top: 20, right: 50, bottom: 30, left: 50};
 var width = 800 - margin.left - margin.right;
-var height = 500 - margin.top - margin.bottom;
+var height = 400 - margin.top - margin.bottom;
 
 var svg = d3.select('body').append('svg')
     .attr('width', width + margin.left + margin.right)
