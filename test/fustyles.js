@@ -48,12 +48,7 @@
 
         var dataset = "date,close\nA,1\nB,2";
             
-        var data = d3.csvParse(dataset, function(d) { 
-            return {
-                date:d.date, 
-                close:+d.close
-            }; 
-        });
+        var data = d3.csvParse(dataset);
         
 
         
