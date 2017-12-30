@@ -2,7 +2,7 @@
 
   'use strict';
 
-  function createLineChart(input_value_,input_WIDTH_,input_HEIGHT_,input_LEFT_,input_TOP_) {
+  function createLineChart(input_value_,input_WIDTH_,input_HEIGHT_) {
     
     if (document.getElementById('fustyles_linechart'))
     {
@@ -26,8 +26,6 @@
         s.style.position='absolute';
         s.style.width=input_WIDTH_+'px';
         s.style.height=input_HEIGHT_+'px';
-        s.style.left=input_LEFT_+'px';
-        s.style.top=input_TOP_+'px';
         s.style.zindex='9999';
         document.body.appendChild(s);
 
