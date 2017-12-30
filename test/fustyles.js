@@ -48,7 +48,7 @@ var dataset = [['24-Apr-07', 93.24], ['25-Apr-07', 95.35], ['26-Apr-07', 98.84],
 
 var string = d3.csvFormat(dataset, ["date", "close"]);
         
-d3.csv(string, function(d) {
+d3.csvParseRows(string, function(d) {
   d.date = parseTime(d.date);
   d.close = +d.close;
   return d;
