@@ -2,7 +2,7 @@
   <block type="googlechart_linechart">
     <value name="value_">
       <block type="text">
-        <field name="TEXT">122520,250&122530,30&</field>
+        <field name="TEXT"></field>
       </block>
     </value>
     <value name="width_">
