@@ -46,13 +46,9 @@
             .x(function(d) { return x(d.date); })
             .y(function(d) { return y(d.close); });
 
-        var dataset = [{"date":"2017-12-29", "close":"93.24"},{"date":"2017-12-30", "close":"95.35"}];
-
-        var string = d3.csvFormat(dataset);
+        var dataset = "date,close\nA,0.89\nB,0.71";
             
-        alert(string);
-        
-        var data = d3.csvParse(string, function(d) {
+        var data = d3.csvParse(dataset, function(d) {
           return {
             date: d.date,
             close: +d.close
