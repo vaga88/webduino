@@ -47,12 +47,12 @@ alert('test');
             .x(function(d) { return x(d.date); })
             .y(function(d) { return y(d.close); });
 
-        var dataset = [["2017-12-29", 93.24],  ["2017-12-30", 95.35]];
+        var dataset = [["2017-12-29", "93.24"],  ["2017-12-30", "95.35"]];
 
         var string = d3.csvFormat(dataset, ["date", "close"]);
         
         d3.csvParseRows(string, function(d) {
-          d.date = parseTime(d.date);
+          d.date = d.date;
           d.close = +d.close;
           return d;
         }, function(error, data) {
