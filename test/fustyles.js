@@ -42,6 +42,14 @@ var line = d3.line()
     .x(function(d) { return x(d.date); })
     .y(function(d) { return y(d.close); });
 
+        
+var close_data = [
+  { 'date': '24-Apr-07', 'close': 93.24},
+  { 'date': '25-Apr-07', 'close': 595.35 },
+  { 'date': '26-Apr-07', 'close': 98.84 },
+  { 'date': '27-Apr-07', 'close': 99.92 }
+]        
+        
 d3.tsv("data.tsv", function(d) {
   d.date = parseTime(d.date);
   d.close = +d.close;
