@@ -26,6 +26,18 @@
         s.style.width=960+'px';
         s.style.height=500+'px';
         document.body.appendChild(s);
+
+        
+var styles = '.line {';
+styles += 'fill: none;';
+styles += 'stroke: hotpink;';
+styles += 'stroke-width: 2px;';
+styles += '}';
+
+// Add the first CSS rule to the stylesheet
+sheet.insertRule(styles, 0);
+        
+        
         
         
 // csv data (parse data)
