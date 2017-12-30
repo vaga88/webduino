@@ -6,10 +6,9 @@
     
     if (document.getElementById('fustyles_linechart'))
     {
-      var child=document.getElementById('fustyles_linechart');
-      child.parentNode.removeChild(child);
+      rave.selectAll("svg").remove();     
     }
-        
+    
     var s = document.createElement('svg');
     s.id='fustyles_linechart';
     s.style.width=input_WIDTH_+'px';
@@ -30,7 +29,7 @@
 
     sheet.insertRule(styles, 0);        
 
-
+        
     var string = "time,temperature\n"+input_value_.replace(/&/ig,"\n");
 
     var data = d3.csvParse(string);
