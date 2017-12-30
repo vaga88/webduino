@@ -78,32 +78,31 @@ svg.append('path')
   .attr('class', 'line')
   .attr('d', line)
 
-// Add the axis 
-var xAxis = d3.axisBottom(xScale)
-  .ticks(10);
+  // Add the x Axis
+  svg.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(xScale));
 
-svg.append('g')
-  .attr('transform', `translate(0, ${height})`)
-  .call(xAxis);
+  // text label for the x axis
+  svg.append("text")             
+      .attr("transform",
+            "translate(" + (width+20) + " ," + 
+                           (height + margin.top) + ")")
+      .style("text-anchor", "middle")
+      .text("Date");
 
-svg.append('g')
-  .call(d3.axisLeft(yScale))
+  // Add the y Axis
+  svg.append("g")
+      .call(d3.axisLeft(yScale));
 
-
-svg.append("text")             
-    .attr("transform",
-          "translate(" + (width+20) + " ," + (height + margin.top) + ")")
-    .style("text-anchor", "middle")
-    .text("Date");
-
-
-svg.append("text")
-    .attr("transform", "rotate(-90)")
-    .attr("y", 0 - margin.left)
-    .attr("x",0 - (height / 2))
-    .attr("dy", "1em")
-    .style("text-anchor", "middle")
-    .text("temperature"); 
+  // text label for the y axis
+  svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("teperature");  
         
         
         
