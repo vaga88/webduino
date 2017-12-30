@@ -48,7 +48,7 @@
 
         var dataset = "date,close\nA,0.89\nB,0.71";
             
-        data = d3.csvparse(dataset, function(d) { 
+        var data = d3.csvparse(dataset, function(d) { 
             return {
                 date:d.date, 
                 close:+d.close
