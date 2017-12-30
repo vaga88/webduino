@@ -6,8 +6,8 @@
     
     if (document.getElementById('fustyles_linechart'))
     {
-      var cls = document.getElementById('fustyles_linechart');
-      cls.selectAll(*).remove();
+      var svg = d3.select("svg");
+      svg.selectAll("*").remove();
     }
     else
     {
