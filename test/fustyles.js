@@ -52,7 +52,7 @@ var svg = d3.select('body').append('svg')
     .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
 var string = "time,temperature\n"+input_value_.replace(/&/ig,"\n");       
-var data = d3.csvParse(string);  
+var data = d3.csv.parse(string);  
 data.forEach(function(d){
   d.time = d.time;
   d.temperature = d.temperature;
