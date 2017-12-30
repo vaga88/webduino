@@ -62,7 +62,7 @@ var svg = d3.select("body")
               "translate(" + margin.left + "," + margin.top + ")");
 
 // Get the data
-var data = [{date:"1-May-12",close:58.13},{date:"30-Apr-12",close:53.98},{date:"27-Apr-12",close:67.00}];
+var data = "date,close\n1-May-12,58.13\n30-Apr-12,53.98\n27-Apr-12,67.00";
 
 //d3.csv("data.csv", function(error, data) {
    data.forEach(function(d) {
