@@ -89,7 +89,7 @@ svg.append("text")
           "translate(" + (width+30) + " ," + 
                          (height + margin.top) + ")")
     .style("text-anchor", "middle")
-    .text("Date");
+    .text("Time");
 
 // Add the y Axis
 svg.append("g")
@@ -102,7 +102,7 @@ svg.append("text")
     .attr("x",0 - (height / 2))
     .attr("dy", "1em")
     .style("text-anchor", "middle")
-    .text("teperature");  
+    .text("Teperature");  
         
         
         
