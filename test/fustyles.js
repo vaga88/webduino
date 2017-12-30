@@ -28,6 +28,11 @@
         div.style.top = input_TOP_ + 'px';
         div.style.zindex='9999';    
         document.body.appendChild(div);
+        
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://www.google.com/jsapi';    
+        document.getElementsByTagName('head')[0].appendChild(script);
 
         google.load("visualization", "1", { packages: ["corechart"] });
         google.setOnLoadCallback(drawChart);
