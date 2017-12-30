@@ -22,6 +22,7 @@
 
 
         var s = document.createElement('svg');
+        s.id='fustyles_linechart';
         s.style.width=960+'px';
         s.style.height=500+'px';
         document.body.appendChild(s);
