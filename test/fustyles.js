@@ -34,7 +34,7 @@
             height = +svg.attr("height") - margin.top - margin.bottom,
             g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-        var parseTime = d3.timeParse("%d-%b-%y");
+        //var parseTime = d3.timeParse("%d-%b-%y");
 
         var x = d3.scaleTime()
             .rangeRound([0, width]);
