@@ -5,11 +5,10 @@
   function createLineChart(input_value_,input_WIDTH_,input_HEIGHT_,input_TITLE_X_,input_TITLE_Y_) {
     
 
-    var svg = d3.select("svg");
-    svg.selectAll("*").remove();
+    d3.select("svg").selectAll("*").remove();
 
     var s = document.createElement('svg');
-    s.id='fustyles_linechart';
+    //s.id='fustyles_linechart';
     s.style.width=input_WIDTH_+'px';
     s.style.height=input_HEIGHT_+'px';
     s.style.zindex='9999';
