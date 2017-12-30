@@ -23,8 +23,8 @@
         
         var s = document.createElement('svg');
         s.id='fustyles_linechart';
-        s.style.width=800+'px';
-        s.style.height=400+'px';
+        s.style.width=input_WIDTH_+'px';
+        s.style.height=input_HEIGHT_+'px';
         document.body.appendChild(s);
 
         
@@ -47,8 +47,8 @@ var string = "time,temperature\n"+input_value_.replace(/&/ig,"\n");
 var data = d3.csvParse(string);
 
 var margin = {top: 20, right: 50, bottom: 30, left: 50};
-var width = 800 - margin.left - margin.right;
-var height = 400 - margin.top - margin.bottom;
+var width = input_WIDTH_ - margin.left - margin.right;
+var height = input_HEIGHT_ - margin.top - margin.bottom;
 
 var svg = d3.select('body').append('svg')
     .attr('width', width + margin.left + margin.right)
