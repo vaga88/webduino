@@ -48,11 +48,11 @@
 
         var dataset = "date,close\nA,0.89\nB,0.71";
             
-        var data = d3.csvParse(dataset, function(d) {
-          return {
-            date: d.date,
-            close: +d.close
-          };
+        data = d3.csv.parse(dataset, function(d) { 
+            return {
+                date:d.date, 
+                close:+d.close
+            }; 
         });
 
           x.domain(d3.extent(data, function(d) { return d.date; }));
