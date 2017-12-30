@@ -92,7 +92,7 @@ svg.append('g')
 
 svg.append("text")             
     .attr("transform",
-          "translate(" + (width/2) + " ," + (height + margin.top + 20) + ")")
+          "translate(" + (width/2) + " ," + (height + margin.top) + ")")
     .style("text-anchor", "middle")
     .text("Date");
 
