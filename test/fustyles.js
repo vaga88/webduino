@@ -42,39 +42,33 @@ styles += '}';
 
 sheet.insertRule(styles, 0);
         
-var string = "time,temperature\n"+input_value_.replace(/&/ig,"\n");
-        
-var data = d3.csvParse(string);
-
 var margin = {top: 20, right: 50, bottom: 30, left: 50};
 var width = 800 - margin.left - margin.right;
-var height = 400 - margin.top - margin.bottom;
-
+var height = 400 - margin.top - margin.bottom;        
 var svg = d3.select('body').append('svg')
     .attr('width', width + margin.left + margin.right)
     .attr('height', height + margin.top + margin.bottom)
     .append('g')
     .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
-var xScale = d3.scaleTime().range([0, width]);
-var yScale = d3.scaleLinear().range([height, 0]);
-
-var line = d3.line()
-  .x(d => xScale(d.time))
-  .y(d => yScale(d.temperature))
-
+var string = "time,temperature\n"+input_value_.replace(/&/ig,"\n");       
+var data = d3.csvParse(string);  
 data.forEach(function(d){
   d.time = d.time;
   d.temperature = d.temperature;
 });
+        
 
-xScale.domain(d3.extent(data, d => d.time));
-yScale.domain([0, d3.max(data, d => d.temperature)]);
 
-svg.append('path')
-  .data([data])
-  .attr('class', 'line')
-  .attr('d', line)
+
+  
+
+var parseDate = d3.time.format("%H:%M:%S").parse;
+var x = d3.time.scale()
+    .range([0, width]);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
 
 var xAxis = d3.svg.axis()
     .scale(x)
@@ -85,6 +79,13 @@ var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left");
 
+        
+        
+var line = d3.svg.line()
+    .x(function(d) { return x(d.time); })
+    .y(function(d) { return y(d.temperature); });
+
+
 svg.append("g")
     .attr("transform", "translate(0," + height + ")")
     .call(xAxis);
@@ -93,7 +94,35 @@ svg.append("g")
     .call(yAxis)
     .append("text")
     .attr("transform", "rotate(0)")
-    .text("我的数据");        
+    .attr("y", 25)
+    .attr("x", 75)
+    .attr("dy", ".71em")
+    .style("text-anchor", "end")
+    .text("temperature");
+        
+svg.append("path")
+   .datum(data)
+   .attr("class", "line")
+   .attr("d", line)
+   .attr("opacity", 0)
+   .transition()
+   .duration(2000)
+   .attr("opacity", 1);        
+
+        
+var points = svg.selectAll(".MyCircle")
+    .data(data)
+    .enter()
+    .append("circle")
+    .attr("class","MyCircle")
+    .attr("transform","translate(0,0)")
+    .attr("r", 3)
+    .attr("opacity", 0)
+    .transition()
+    .duration(2000)
+    .attr("cx", function(d){ return x(d.time); })
+    .attr("opacity", 1)
+    .attr("cy", function(d){ return y(d.temperature); });
           
       }
     }
