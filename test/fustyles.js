@@ -54,7 +54,8 @@ var svg = d3.select('body').append('svg')
     .attr('width', width + margin.left + margin.right)
     .attr('height', height + margin.top + margin.bottom)
   .append('g')
-    .attr('transform', `translate(${margin.left}, ${margin.top})`);
+    .attr('transform', `translate(${margin.left}, ${margin.top})`)
+    .attr('font-size': '14px');
 
 var xScale = d3.scaleTime().range([0, width]);
 var yScale = d3.scaleLinear().range([height, 0]);
@@ -65,7 +66,7 @@ var line = d3.line()
 
 var parseTime = d3.timeParse("%H:%M:%S");
 data.forEach(function(d){
-  d.time = d.time;
+  d.time = parseTime(d.time);
   d.temperature = parseInt(d.temperature);
 });
 
