@@ -5,7 +5,7 @@
   function createLineChart(input_value_,input_WIDTH_,input_HEIGHT_,input_TITLE_X_,input_TITLE_Y_) {
     
 
-    d3.selectAll('svg > g > *').remove();
+    d3.selectAll("svg > *").remove();
 
     var s = document.createElement('svg');
     //s.id='fustyles_linechart';
