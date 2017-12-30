@@ -49,7 +49,7 @@ sheet.insertRule(styles, 0);
         
         
 // csv data (parse data)
-var data = d3.csvParse('time,temperature\n18:20:00,25.2\n18:20:05,27.0\n18:20:10,26.4\n18:20:15,24.5\n18:20:20,23.8\n18:20:25,22.6\n18:20:30,21.8\n');
+var data = d3.csvParse(input_value_);
 
 // === 1. Boilerplate setup
 // Set canvas margins
