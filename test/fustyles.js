@@ -65,7 +65,6 @@ var line = d3.line()
 
 data.forEach(function(d){
   d.time = d.time;
-  alert(d.time);
   d.temperature = d.temperature;
 });
 
@@ -77,18 +76,24 @@ svg.append('path')
   .attr('class', 'line')
   .attr('d', line)
 
-var xAxis = d3.axisBottom(xScale)
-  .tickFormat(d3.timeFormat('%H:%M:%S'))
-  .ticks(5);
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom")
+    .tickFormat(d3.time.format("%H:%M:%S"));
 
-svg.append('g')
-  .attr('transform', `translate(0, ${height})`)
-  .call(xAxis);
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
 
-svg.append('g')
-  .call(d3.axisLeft(yScale))
+svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
 
-        
+svg.append("g")
+    .call(yAxis)
+    .append("text")
+    .attr("transform", "rotate(0)")
+    .text("我的数据");        
           
       }
     }
