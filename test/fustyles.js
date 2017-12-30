@@ -51,7 +51,7 @@
         
 d3.csvParse(dataset, function(d) {
   d.date = d.date;
-  d.close = +d.close;
+  d.close = d.close;
   return d;
 }, function(error, data) {
   if (error) throw error;
@@ -84,6 +84,8 @@ d3.csvParse(dataset, function(d) {
               .attr("stroke-linecap", "round")
               .attr("stroke-width", 1.5)
               .attr("d", line);
+  
+  alert('test');
 
 });        
         
