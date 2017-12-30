@@ -51,11 +51,12 @@
         
 
   
-d3.csvParse(dataset, function(error, data) {
-    data.forEach(function(d) {
-        d.date = d.date;
-        d.close = +d.close;
-    });
+var data = d3.csvParse(dataset, function(d) {
+    return {
+        date:d.date, 
+        close:+d.close,
+    };
+});
         
         
           x.domain(d3.extent(data, function(d) { return d.date; }));
@@ -85,9 +86,7 @@ d3.csvParse(dataset, function(error, data) {
               .attr("stroke-linecap", "round")
               .attr("stroke-width", 1.5)
               .attr("d", line);
-  
-
-});        
+     
         
         
           
