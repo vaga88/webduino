@@ -49,7 +49,13 @@ var data = [
   { 'date': '26-Apr-07', 'close': 98.84 },
   { 'date': '27-Apr-07', 'close': 99.92 }
 ]        
-        
+   
+d3.tsv(close_data, function(d) {
+  d.date = parseTime(d.date);
+  d.close = +d.close;
+  return d;
+}, function(error, data) {
+  if (error) throw error;
 
   x.domain(d3.extent(data, function(d) { return d.date; }));
   y.domain(d3.extent(data, function(d) { return d.close; }));
