@@ -49,7 +49,7 @@ sheet.insertRule(styles, 0);
         
         
 // csv data (parse data)
-var data = d3.csvParse('time,value\n1-May-12,25\n30-Apr-12,27\n27-Apr-12,26\n26-Apr-12,24\n25-Apr-12,23\n24-Apr-12,22\n23-Apr-12,21\n');
+var data = d3.csvParse('time,temperature\n1-May-12,25\n30-Apr-12,27\n27-Apr-12,26\n26-Apr-12,24\n25-Apr-12,23\n24-Apr-12,22\n23-Apr-12,21\n');
 
 // === 1. Boilerplate setup
 // Set canvas margins
@@ -71,8 +71,8 @@ var yScale = d3.scaleLinear().range([height, 0]);
 
 // draw line callback function using d3.line helper passing in x and y coordinates
 var line = d3.line()
-  .x(d => xScale(d.date))
-  .y(d => yScale(d.close))
+  .x(d => xScale(d.time))
+  .y(d => yScale(d.temperature))
 
 // === 3. Append data and start drawing
 // create parseTime helper to turn string into time format (11-Apr-12) into datetime JS object
@@ -80,12 +80,12 @@ var parseTime = d3.timeParse('%d-%b-%y');
 // Iterate through each data point and parse strings into time and number format
 data.forEach(function(d){
   d.time = parseTime(d.time);
-  d.value = parseInt(d.value);
+  d.temperature = parseInt(d.temperature);
 });
 
 // Set the x and y scales to the data ranges x based on min and max date range (d3.extent()) and y based on 0 to max value
 xScale.domain(d3.extent(data, d => d.time));
-yScale.domain([0, d3.max(data, d => d.value)]);
+yScale.domain([0, d3.max(data, d => d.temperature)]);
 
 // Draw the line svg by appending the data to a new svg path giving a class of line and d value based on the d3.line callback
 svg.append('path')
