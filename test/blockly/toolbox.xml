@@ -15,5 +15,15 @@
         <field name="NUM">400</field>
       </block>
     </value> 
+    <value name="title_x_">
+      <block type="text">
+        <field name="TEXT">time</field>
+      </block>
+    </value>
+    <value name="title_y_">
+      <block type="text">
+        <field name="TEXT">value</field>
+      </block>
+    </value>    
   </block>
  </category>
