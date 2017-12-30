@@ -90,7 +90,7 @@ svg.append('g')
 
 svg.append('g')
   .call(d3.axisLeft(yScale))
-
+  .text('temperature');
         
           
       }
