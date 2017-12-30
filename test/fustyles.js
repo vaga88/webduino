@@ -26,100 +26,62 @@
         
         
 
-var width=500;  
-var height=500;  
-  
-var dataset=[  
-    {  
-        country:"china",  
-        gdp:[[2000,11920],[2001,13170],[2002,14550],  
-            [2003,16500],[2004,19440],[2005,22870],  
-            [2006,27930],[2007,35040],[2008,45470],  
-            [2009,51050],[2010,59490],[2011,73140],  
-            [2012,83860],[2013,103550],]  
-    },  
-    {  
-        country:"japan",  
-        gdp:[[2000,47310],[2001,41590],[2002,39800],  
-            [2003,43020],[2004,46550],[2005,45710],  
-            [2006,43560],[2007,43560],[2008,48490],  
-            [2009,50350],[2010,54950],[2011,59050],  
-            [2012,59370],[2013,48980],]  
-    }  
-];  
-  
-var padding={top:70, right:70, bottom: 70, left:70};  
-var gdpmax=0;  
-for(var i=0;i<dataset.length;i++){  
-    var currGdp=d3.max(dataset[i].gdp,function(d){  
-        return d[1];  
-    });  
-    if(currGdp>gdpmax)  
-        gdpmax=currGdp;  
-}  
-console.log(gdpmax);  
-  
-var xScale=d3.scale.linear()  
-            .domain([2000,2013])  
-            .range([0,width-padding.left-padding.right]);  
-  
-var yScale=d3.scale.linear()  
-            .domain([0,gdpmax*1.1])  
-            .range([height-padding.bottom-padding.top,0]);  
-  
-var linePath=d3.svg.line()//创建一个直线生成器  
-                .x(function(d){  
-                    return xScale(d[0]);  
-                })  
-                .y(function(d){  
-                    return yScale(d[1]);  
-                })  
-                .interpolate("basis")//插值模式  
-                ;  
-  
-//定义两个颜色  
-var colors=[d3.rgb(0,0,255),d3.rgb(0,255,0)];  
-  
-var svg=d3.select("body")  
-                .append("svg")  
-                .attr("width",width)  
-                .attr("height",height);  
-  
-svg.selectAll("path")  
-    .data(dataset)  
-    .enter()  
-    .append("path")  
-    .attr("transform","translate("+padding.left+","+padding.top+")")  
-    .attr("d",function(d){  
-        return linePath(d.gdp);  
-        //返回线段生成器得到的路径  
-    })  
-    .attr("fill","none")  
-    .attr("stroke-width",3)  
-    .attr("stroke",function(d,i){  
-        return colors[i];  
-    });  
-  
-var xAxis=d3.svg.axis()  
-            .scale(xScale)  
-            .ticks(5)  
-            .tickFormat(d3.format("d"))  
-            .orient("bottom");  
-  
-var yAxis=d3.svg.axis()  
-            .scale(yScale)  
-            .orient("left");  
-  
-//添加一个g用于放x轴  
-svg.append("g")  
-    .attr("class","axis")  
-    .attr("transform","translate("+padding.left+","+(height-padding.top)+")")  
-    .call(xAxis);  
-  
-svg.append("g")  
-    .attr("class","axis")  
-    .attr("transform","translate("+padding.left+","+padding.top+")")  
-    .call(yAxis);  
+var svg = d3.select("svg"),
+    margin = {top: 20, right: 20, bottom: 30, left: 50},
+    width = +svg.attr("width") - margin.left - margin.right,
+    height = +svg.attr("height") - margin.top - margin.bottom,
+    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var parseTime = d3.timeParse("%d-%b-%y");
+
+var x = d3.scaleTime()
+    .rangeRound([0, width]);
+
+var y = d3.scaleLinear()
+    .rangeRound([height, 0]);
+
+var line = d3.line()
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.close); });
+
+        
+        
+        
+d3.tsv("data.tsv", function(d) {
+  d.date = parseTime(d.date);
+  d.close = +d.close;
+  return d;
+}, function(error, data) {
+  if (error) throw error;
+
+  x.domain(d3.extent(data, function(d) { return d.date; }));
+  y.domain(d3.extent(data, function(d) { return d.close; }));
+
+  g.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x))
+    .select(".domain")
+      .remove();
+
+  g.append("g")
+      .call(d3.axisLeft(y))
+    .append("text")
+      .attr("fill", "#000")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", "0.71em")
+      .attr("text-anchor", "end")
+      .text("Price ($)");
+
+  g.append("path")
+      .datum(data)
+      .attr("fill", "none")
+      .attr("stroke", "steelblue")
+      .attr("stroke-linejoin", "round")
+      .attr("stroke-linecap", "round")
+      .attr("stroke-width", 1.5)
+      .attr("d", line);
+});
         
         
         
