@@ -21,68 +21,175 @@
       {
 
 
-        var div = document.createElement('div');
-        div.id = 'fustyles_linechart';
-        div.style.position = "absolute";      
-        div.style.left = input_LEFT_ + 'px';
-        div.style.top = input_TOP_ + 'px';
-        div.style.zindex='9999';    
-        document.body.appendChild(div);
+        var svg = document.createElement('svg');
+        svg.id = 's';
+        document.body.appendChild(svg);
 
-        google.load("visualization", "1", { packages: ["corechart"] });
-        google.setOnLoadCallback(drawChart);
-        
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'time');
-        data.addColumn('number', 'temperature(°C )');
-        data.addColumn('number', 'humidity( % )');
+        var data = [
+  {x:0, y:38, z:28}, 
+  {x:20, y:27, z:15}, 
+  {x:40, y:56, z:39}, 
+  {x:60, y:34, z:45}, 
+  {x:80, y:41, z:88}, 
+  {x:100, y:35, z:74}, 
+  {x:120, y:100, z:55}, 
+  {x:140, y:57, z:75}, 
+  {x:160, y:36, z:44}, 
+  {x:180, y:41, z:30}
+  ];
 
-        var getPara, ParaVal, ParaValTH;
+  var width = 400,
+    height = 200;
 
-        getPara = input_value_.split(",");
+  var s = d3.select('#s');
 
-        data.addRows(getPara.length);
+  s.attr({
+      'width': 470,
+      'height': 250,
+    }).style({
+      'border':'1px dotted #ccc'
+    });
 
-        for (i = 0; i < getPara.length; i++) {
-          ParaVal = getPara[i].split("=");
-          ParaValTH = ParaVal[1].split("-");
-          data.setValue(i, 0, ParaVal[0]);
-          data.setValue(i, 1, ParaValTH[0]);
-          data.setValue(i, 2, ParaValTH[1]);
+  var minX = d3.min(data, function(d){return d.x});
+  var maxX = d3.max(data, function(d){return d.x});
+  var minY = d3.min(data, function(d){return d.y});
+  var maxY = d3.max(data, function(d){return d.y});
 
-          if (i==(getPara.length-1)) 
-            var ShowTH ='temperature = '+ParaValTH[0].toString()+'°C   '+'humidity = '+ParaValTH[1].toString()+'%';
-         }
-        
-          //Line Chart
-          var chart = new google.visualization.LineChart(document.getElementById('fustyles_googlechart'));
+  var scaleX = d3.scale.linear()
+                 .range([0,width])
+                 .domain([minX,maxX]);
 
-          //Stepped Area Chart
-          //var chart = new google.visualization.SteppedAreaChart(document.getElementById('fustyles_googlechart'));
+  var scaleY = d3.scale.linear()
+                 .range([height,0])
+                 .domain([0,maxY]);
 
-          var options = {
-              title: ShowTH,
-              titleTextStyle:{
-                color: 'red', 
-                fontName: 'Times New Roman', 
-                fontSize: 28, 
-                bold: true,  
-                italic: false 
-              },
-              hAxis : { 
-                      textStyle : {fontSize: 14}
-                },
-              vAxis : { 
-                      textStyle : {fontSize: 18}
-              },
-              allowHtml: true,
-              showRowNumber: true,
-              width:'100%',
-              height:'400',
-              legend: { position: 'bottom' }
-          };
+  //line
+  var line1 = d3.svg.line()
+    .x(function(d) {
+      return scaleX(d.x);
+    }).y(function(d) {
+      return scaleY(d.y);
+    });
 
-          chart.draw(data, options);        
+  var line2 = d3.svg.line()
+    .x(function(d) {
+      return scaleX(d.x);
+    }).y(function(d) {
+      return scaleY(d.z);
+    });
+
+  //area
+  var area1 = d3.svg.area()
+  .x(function(d) { return scaleX(d.x); })
+  .y0(height)
+  .y1(function(d) { return scaleY(d.y); });
+
+  var area2 = d3.svg.area()
+  .x(function(d) { return scaleX(d.x); })
+  .y0(height)
+  .y1(function(d) { return scaleY(d.z); });
+
+  s.append('path')
+    .attr({
+      'd':line1(data),
+      'stroke':'#06c',
+      'fill':'none',
+      'transform':'translate(35,20)' 
+    });
+
+  s.append('path')
+  .attr({
+    'd':area1(data),
+    'fill':'rgba(0,150,255,.1)',
+    'transform':'translate(35,20)' 
+  });
+
+  s.append('path')
+    .attr({
+      'd':line2(data),
+      'stroke':'#c00',
+      'fill':'none',
+      'transform':'translate(35,20)' 
+    });
+
+  s.append('path')
+  .attr({
+    'd':area2(data),
+    'fill':'rgba(255,0,0,.1)',
+    'transform':'translate(35,20)' 
+  });
+
+  //axis
+  var axisX = d3.svg.axis()
+    .scale(scaleX)
+    .orient("bottom")
+    .ticks(10);
+
+  var axisY = d3.svg.axis()
+    .scale(scaleY)
+    .orient("left")
+    .ticks(5);
+
+  //grid
+  var axisXGrid = d3.svg.axis()
+    .scale(scaleX)
+    .orient("bottom")
+    .ticks(10)
+    .tickFormat("")
+    .tickSize(-height,0);
+
+  var axisYGrid = d3.svg.axis()
+    .scale(scaleY)
+    .orient("left")
+    .ticks(10)
+    .tickFormat("")
+    .tickSize(-width,0);
+
+  // Axis Grid line
+  s.append('g')
+   .call(axisXGrid)
+   .attr({
+    'fill':'none',
+    'stroke':'rgba(0,0,0,.1)',
+    'transform':'translate(35,'+(height+20)+')' 
+   });
+
+  s.append('g')
+   .call(axisYGrid)
+   .attr({
+    'fill':'none',
+    'stroke':'rgba(0,0,0,.1)',
+    'transform':'translate(35,20)'
+   });
+
+  // Axis 
+  s.append('g')
+   .call(axisX)
+   .attr({
+    'fill':'none',
+    'stroke':'#000',
+    'transform':'translate(35,'+(height+20)+')' 
+   }).selectAll('text')
+   .attr({
+    'fill':'#000',
+    'stroke':'none',
+   }).style({
+    'font-size':'11px'
+   });
+
+  s.append('g')
+   .call(axisY)
+   .attr({
+    'fill':'none',
+    'stroke':'#000',
+    'transform':'translate(35,20)'
+   }).selectAll('text')
+   .attr({
+    'fill':'#000',
+    'stroke':'none',
+   }).style({
+    'font-size':'10px'
+   });
         
         
         
