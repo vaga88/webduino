@@ -23,12 +23,12 @@
         
         var s = document.createElement('svg');
         s.id='fustyles_linechart';
+        s.style.position='absolute';
         s.style.width=input_WIDTH_+'px';
         s.style.height=input_HEIGHT_+'px';
-        s.style.position='absolute';
         s.style.left=input_LEFT_+'px';
         s.style.top=input_TOP_+'px';
-        s.style.zindex='999';
+        s.style.zindex='9999';
         document.body.appendChild(s);
 
         
