@@ -21,9 +21,8 @@
       {
 
 
-        var svg = document.createElement('svg');
-        svg.id = 's';
-        document.body.appendChild(svg);
+        var s = document.createElement('svg');
+        document.body.appendChild(s);
 
 var svg = d3.select("svg"),
     margin = {top: 20, right: 20, bottom: 30, left: 50},
