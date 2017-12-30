@@ -4,7 +4,12 @@
 
   function createLineChart(input_value_,input_WIDTH_,input_HEIGHT_,input_TITLE_X_,input_TITLE_Y_) {
     
-    
+    if (document.getElementById('fustyles_linechart'))
+    {
+      var cls = document.getElementById('fustyles_linechart');
+      cls.selectAll(*).remove();
+    }
+        
     var s = document.createElement('svg');
     s.id='fustyles_linechart';
     s.style.width=input_WIDTH_+'px';
