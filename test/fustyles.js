@@ -52,8 +52,8 @@ alert('test');
         var string = d3.csvFormat(dataset, ["date", "close"]);
         
         d3.csvParseRows(string, function(d) {
-          //d.date = parseTime(d.date);
-          //d.close = +d.close;
+          d.date = parseTime(d.date);
+          d.close = +d.close;
           return d;
         }, function(error, data) {
           if (error) throw error;
