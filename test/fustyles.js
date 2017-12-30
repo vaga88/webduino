@@ -42,9 +42,9 @@ styles += '}';
 
 sheet.insertRule(styles, 0);
         
+var string = input_value_.replace("&","\n");
         
-        
-var data = d3.csvParse(input_value_.replace("&","\n"));
+var data = d3.csvParse(string);
 
 var margin = {top: 20, right: 50, bottom: 30, left: 50};
 var width = 800 - margin.left - margin.right;
