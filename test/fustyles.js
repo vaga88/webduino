@@ -65,7 +65,7 @@ var line = d3.line()
 
 var parseTime = d3.timeParse("%H:%M:%S");
 data.forEach(function(d){
-  d.time = parseTime(d.time);
+  d.time = d.time;
   d.temperature = parseInt(d.temperature);
 });
 
