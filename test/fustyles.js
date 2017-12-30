@@ -43,11 +43,12 @@ var y = d3.scaleLinear()
 var line = d3.line()
     .x(function(d) { return x(d.date); })
     .y(function(d) { return y(d.close); });
+        
+var dataset = [['24-Apr-07', 93.24], '25-Apr-07', 95.35], ['26-Apr-07', 98.84], ['7-Apr-07', 99.92]];
 
+var string = d3.csvFormat(dataset, ["date", "close"]);
         
-        
-        
-d3.tsv("data.tsv", function(d) {
+d3.csv(string, function(d) {
   d.date = parseTime(d.date);
   d.close = +d.close;
   return d;
