@@ -61,13 +61,6 @@
       .attr('class', 'line1')
       .attr('d', line1)
     
-    svg.selectAll(".point")
-      .data([data])
-      .enter().append("circle")
-      .attr("class", "point")
-      .attr("r", 4)
-      .attr("cx", function(d) { return xScale(d.time); })
-      .attr("cy", function(d) { return yScale(d.temperature); })  
     
     
     var line2 = d3.line()
@@ -79,13 +72,6 @@
       .attr('class', 'line2')
       .attr('d', line2)
     
-    var circles2 = svg.selectAll(".point")
-      .data([data])    
-      .enter().append("circle")
-      .attr("class", "point")
-      .attr("r", 4)
-      .attr("cx", function(d) { return xScale(d.time); })
-      .attr("cy", function(d) { return yScale(d.humidity); });  
     
       
     svg.append("g")
@@ -108,6 +94,22 @@
         .attr("dy", "1em")
         .style("text-anchor", "middle")
         .text(input_TITLE_Y_);  
+    
+    svg.selectAll(".point")
+      .data([data])
+      .enter().append("circle")
+      .attr("class", "point")
+      .attr("r", 4)
+      .attr("cx", function(d) { return xScale(d.time); })
+      .attr("cy", function(d) { return yScale(d.temperature); })  
+    
+    var circles2 = svg.selectAll(".point")
+      .data([data])    
+      .enter().append("circle")
+      .attr("class", "point")
+      .attr("r", 4)
+      .attr("cx", function(d) { return xScale(d.time); })
+      .attr("cy", function(d) { return yScale(d.humidity); });      
 
   }
 
