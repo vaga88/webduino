@@ -24,7 +24,7 @@
       sheet.innerHTML = "body {font-size: 100%;}\n"
       + ".line1 {fill: none;stroke: red;stroke-width: 2px;}\n"
       + ".line2 {fill: none;stroke: blue;stroke-width: 2px;}\n"
-      + ".point {fill: steelblue;stroke: #000;}";
+      + ".point {fill:black;stroke: #000;}";
 
       document.head.appendChild(sheet); // append in head
       
