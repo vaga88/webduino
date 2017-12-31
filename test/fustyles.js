@@ -47,7 +47,7 @@
     var xScale = d3.scaleTime().range([0, width-(margin.top+margin.bottom)]);
     var yScale = d3.scaleLinear().range([height-(margin.top+margin.bottom), 0]);
     
-    xScale.domain(d3.max(data, d => d.time));
+    xScale.domain(d3.extent(data, d => d.time));
     yScale.domain([0, 100]);    
 
     var line1 = d3.line()
