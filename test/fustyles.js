@@ -102,7 +102,7 @@
       .attr("r",2)
       .attr("title",'test')
       .on("mouseover", handleMouseOver1)
-      .on("mouseout", handleMouseOut);
+      .on("mouseout", handleMouseOut)
       .attr("class", "point");
 
       svg.append('circle')
@@ -110,7 +110,7 @@
       .attr("cy",yScale(d.humidity))
       .attr("r",2)
       .on("mouseover", handleMouseOver2)
-      .on("mouseout", handleMouseOut);      
+      .on("mouseout", handleMouseOut)     
       .attr("class", "point");        
     });
     
