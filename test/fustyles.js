@@ -90,8 +90,9 @@
         .attr("dy", "1em")
         .style("text-anchor", "middle")
         .text(input_TITLE_Y_);  
-    
-    svg.selectAll(".point")
+
+
+    var circles1 = svg.selectAll(".point")
       .data(data)
       .enter().append("circle")
       .attr("class", "point")
@@ -99,14 +100,14 @@
       .attr("cx", function(d) { return xScale(d.time); })
       .attr("cy", function(d) { return yScale(d.temperature); })
     
-    svg.selectAll(".point")
+    var circles2 = svg.selectAll(".point")
       .data(data)    
       .enter().append("circle")
       .attr("class", "point")
       .attr("r", 4)
       .attr("cx", function(d) { return xScale(d.time); })
       .attr("cy", function(d) { return yScale(d.humidity); });  
-
+ 
   }
 
   window.createLineChart = createLineChart;
