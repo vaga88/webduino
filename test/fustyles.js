@@ -100,7 +100,7 @@
           .attr("cx",xScale(d.time))
           .attr("cy",yScale(d.temperature))
           .attr("r",2)
-          .attr("onmouseover",alert('test');)
+          .attr("title",'test')
           .attr("class", "point");
         
         svg.append('circle')
