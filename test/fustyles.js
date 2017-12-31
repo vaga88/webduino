@@ -60,11 +60,20 @@
       .x(d => xScale(d.time))
       .y(d => yScale(d.temperature))
 
-
     svg.append('path')
       .data([data])
       .attr('class', 'line')
       .attr('d', line)
+    
+    var line1 = d3.line()
+      .x(d => xScale(d.time))
+      .y(d => yScale(d.humidity))
+
+    svg.append('path')
+      .data([data])
+      .attr('class', 'line')
+      .attr('d', line1)
+    
 
     svg.append("g")
         .attr("transform", "translate(0," + height + ")")
