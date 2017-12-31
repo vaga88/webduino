@@ -4,7 +4,7 @@
 
   function createLineChart(input_value_,input_WIDTH_,input_HEIGHT_,input_TITLE_X_,input_TITLE_Y_) {
     
-    var margin = {top: 20, right: 50, bottom: 30, left: 50};
+    var margin = {top: 20, right: 20, bottom: 70, left: 50};
     var width = input_WIDTH_ - margin.left - margin.right;
     var height = input_HEIGHT_ - margin.top - margin.bottom;
 
