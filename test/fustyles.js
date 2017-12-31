@@ -21,7 +21,7 @@
     else
     {
       var sheet = document.createElement('style');
-      sheet.innerHTML = "body {font-size: 14px;}\n"
+      sheet.innerHTML = "body {font-size: 125%;}\n"
       + ".line1 {fill: none;stroke: red;stroke-width: 2px;}\n"
       + ".line2 {fill: none;stroke: blue;stroke-width: 2px;}";
 
