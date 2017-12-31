@@ -86,8 +86,8 @@
 
     // text label for the y axis
     svg.append("text")
-        .attr("y", 20)
-        .attr("x", 0 )
+        .attr("y", 0 )
+        .attr("x", 20 )
         .attr("dy", "1em")
         .style("text-anchor", "middle")
         .text(input_TITLE_Y_);  
