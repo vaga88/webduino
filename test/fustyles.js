@@ -95,22 +95,56 @@
         .text(input_TITLE_Y_);  
     
     
-      data.forEach(function(d){
-        svg.append('circle')
-          .attr("cx",xScale(d.time))
-          .attr("cy",yScale(d.temperature))
-          .attr("r",2)
-          .attr("title",'test')
-          .attr("class", "point");
-        
-        svg.append('circle')
-          .attr("cx",xScale(d.time))
-          .attr("cy",yScale(d.humidity))
-          .attr("r",2)
-          .attr("class", "point");        
-      });
+    data.forEach(function(d){
+      svg.append('circle')
+      .attr("cx",xScale(d.time))
+      .attr("cy",yScale(d.temperature))
+      .attr("r",2)
+      .attr("title",'test')
+      .on("mouseover", handleMouseOver)
+      .on("mouseout", handleMouseOut);
+      .attr("class", "point");
+
+      svg.append('circle')
+      .attr("cx",xScale(d.time))
+      .attr("cy",yScale(d.humidity))
+      .attr("r",2)
+      .on("mouseover", handleMouseOver)
+      .on("mouseout", handleMouseOut);      
+      .attr("class", "point");        
+    });
+    
+        function handleMouseOver1(d, i) {  
+            svg.append("text").attr({
+               id: "t" + d.time + "-" + d.temperature + "-" + i,  
+                x: function() { return xScale(d.time) - 30; },
+                y: function() { return yScale(d.temperature) - 15; }
+            })
+            .text(function() {
+              return [d.time, d.temperature];  // Value of the text
+            });
+          }
+
+          function handleMouseOver2(d, i) {  
+            svg.append("text").attr({
+               id: "t" + d.time + "-" + d.humidity + "-" + i,  
+                x: function() { return xScale(d.time) - 30; },
+                y: function() { return yScale(d.humidity) - 15; }
+            })
+            .text(function() {
+              return [d.time, d.humidity];  // Value of the text
+            });
+          }
+    
+      function handleMouseOut(d, i) {
+            d3.select("#t" + d.x + "-" + d.y + "-" + i).remove();  // Remove text location
+          }    
+    
+    
     
   }
+  
+
 
   window.createLineChart = createLineChart;
     
