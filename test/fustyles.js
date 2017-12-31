@@ -85,7 +85,7 @@
 
     svg.append("text")
         .attr("y", 0 - margin.top )
-        .attr("x", 30 )
+        .attr("x", 40 )
         .attr("dy", "1em")
         .style("text-anchor", "middle")
         .text(input_TITLE_Y_);  
