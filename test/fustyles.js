@@ -101,16 +101,16 @@
       .attr("cy",yScale(d.temperature))
       .attr("r",2)
       .attr("title",'test')
-      .on("mouseover", handleMouseOver1)
-      .on("mouseout", handleMouseOut1)
+      .on("mouseover", handleMouseOver1(d))
+      .on("mouseout", handleMouseOut1(d))
       .attr("class", "point");
 
       svg.append('circle')
       .attr("cx",xScale(d.time))
       .attr("cy",yScale(d.humidity))
       .attr("r",2)
-      .on("mouseover", handleMouseOver2)
-      .on("mouseout", handleMouseOut2)     
+      .on("mouseover", handleMouseOver2(d))
+      .on("mouseout", handleMouseOut2(d))     
       .attr("class", "point");        
     });
     
@@ -118,11 +118,11 @@
   
 
   // Create Event Handlers for mouse
-      function handleMouseOver1(d, i) {  // Add interactivity
+      function handleMouseOver1(d) {  // Add interactivity
             var svg = d3.select('#fustyles_linechart');
             // Specify where to put label of text
             svg.append("text").attr({
-               id: "t" + d.time + "-" + d.temperature + "-" + i,  // Create an id for text so we can select it later for removing on mouseout
+               id: "t" + d.time + "-" + d.temperature + "-1",  // Create an id for text so we can select it later for removing on mouseout
                 x: function() { return xScale(d.time) - 30; },
                 y: function() { return yScale(d.temperature) - 15; }
             })
@@ -131,12 +131,12 @@
             });
           }
     
-          function handleMouseOver2(d, i) {  // Add interactivity
+          function handleMouseOver2(d) {  // Add interactivity
 
             var svg = d3.select('#fustyles_linechart');
             // Specify where to put label of text
             svg.append("text").attr({
-               id: "t" + d.time + "-" + d.humidity + "-" + i,  // Create an id for text so we can select it later for removing on mouseout
+               id: "t" + d.time + "-" + d.humidity + "-2",  // Create an id for text so we can select it later for removing on mouseout
                 x: function() { return xScale(d.time) - 30; },
                 y: function() { return yScale(d.humidity) - 15; }
             })
@@ -145,17 +145,17 @@
             });
           }
 
-      function handleMouseOut1(d, i) {
+      function handleMouseOut1(d) {
 
             // Select text by id and then remove
-            d3.select("#t" + d.time + "-" + d.temperature + "-" + i).remove();  // Remove text location
+            d3.select("#t" + d.time + "-" + d.temperature + "-1").remove();  // Remove text location
           }
     
 
-      function handleMouseOut2(d, i) {
+      function handleMouseOut2(d) {
 
             // Select text by id and then remove
-            d3.select("#t" + d.time + "-" + d.humidity + "-" + i).remove();  // Remove text location
+            d3.select("#t" + d.time + "-" + d.humidity + "-2").remove();  // Remove text location
           }    
   
   
