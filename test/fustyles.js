@@ -85,7 +85,7 @@
     svg.append("text")             
         .attr("transform",
               "translate(" + (width+35) + " ," + 
-                             (height + margin.top) + ")")
+                             height + ")")
         .style("text-anchor", "middle")
         .text(input_TITLE_X_);
 
@@ -93,7 +93,7 @@
         .call(d3.axisLeft(yScale));
 
     svg.append("text")
-        .attr("y", 0 - margin.top )
+        .attr("y", 0 )
         .attr("x", 40 )
         .attr("dy", "1em")
         .style("text-anchor", "middle")
