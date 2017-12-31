@@ -39,8 +39,9 @@
     var string = "time,temperature,humidity\n"+input_value_.replace(/&/ig,"\n");
     var data = d3.csvParse(string);
     
+    var parseTime = d3.timeParse("%Y%m%d");
     data.forEach(function(d){
-      d.time = d.time;
+      d.time = parseTime(d.time);
       d.temperature = d.temperature;
       d.humidity = d.humidity;
     });
