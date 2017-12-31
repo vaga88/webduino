@@ -20,23 +20,31 @@
     }
     else
     {
-      var element = document.createElement('style');
-      var sheet;
-      document.head.appendChild(element);
-      sheet = element.sheet;
+      //var element = document.createElement('style');
+      //var sheet;
+      //document.head.appendChild(element);
+      //sheet = element.sheet;
 
-      var styles = '.line {';
-      styles += 'fill: none;';
-      styles += 'stroke: red;';
-      styles += 'stroke-width: 2px;';
-      styles += '}\n';
-      styles += '.line1 {';
-      styles += 'fill: none;';
-      styles += 'stroke: blue;';
-      styles += 'stroke-width: 2px;';
-      styles += '}';
+      //var styles = '.line {';
+      //styles += 'fill: none;';
+      //styles += 'stroke: red;';
+      //styles += 'stroke-width: 2px;';
+      //styles += '}\n';
+      //styles += '.line1 {';
+      //styles += 'fill: none;';
+      //styles += 'stroke: blue;';
+      //styles += 'stroke-width: 2px;';
+      //styles += '}';
 
-      sheet.insertRule(styles, 0);    
+      //sheet.insertRule(styles, 0);  
+      
+      var sheet = document.createElement('style');
+      sheet.innerHTML = "body {font-size: 12px;}\n"
+      + ".line1 {fill: none;stroke: red;stroke-width: 2px;}\n"
+      + ".line2 {fill: none;stroke: blue;stroke-width: 2px;}";
+
+      //document.body.appendChild(sheet); // append in body
+      document.head.appendChild(sheet); // append in head
       
       var svg = d3.select('body').append('svg')
           .attr('id','fustyles_linechart')      
@@ -61,23 +69,23 @@
     xScale.domain(d3.extent(data, d => d.time));
     yScale.domain([0, 100]);    
 
-    var line = d3.line()
+    var line1 = d3.line()
       .x(d => xScale(d.time))
       .y(d => yScale(d.temperature))
 
     svg.append('path')
       .data([data])
-      .attr('class', 'line')
-      .attr('d', line)
+      .attr('class', 'line1')
+      .attr('d', line1)
     
-    var line1 = d3.line()
+    var line2 = d3.line()
       .x(d => xScale(d.time))
       .y(d => yScale(d.humidity))
 
     svg.append('path')
       .data([data])
-      .attr('class', 'line1')
-      .attr('d', line1)
+      .attr('class', 'line2')
+      .attr('d', line2)
     
 
     svg.append("g")
