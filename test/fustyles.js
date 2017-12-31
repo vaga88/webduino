@@ -94,22 +94,15 @@
         .style("text-anchor", "middle")
         .text(input_TITLE_Y_);  
     
-      /*
-      svg.selectAll(".point")
-        .data(data)
-        .enter().append("circle")
-        .attr("class", "point")
-        .attr("r", 4)
-        .attr("cx", function(d) { return xScale(d.time); })
-        .attr("cy", function(d) { return yScale(d.humidity); }) ;      
-      */
     
       data.forEach(function(d){
         svg.append('circle')
           .attr("cx",xScale(d.time))
           .attr("cy",yScale(d.temperature))
           .attr("r",3)
+          .attr("onmouseover",alert('test');)
           .attr("class", "point");
+        
         svg.append('circle')
           .attr("cx",xScale(d.time))
           .attr("cy",yScale(d.humidity))
