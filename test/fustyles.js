@@ -98,6 +98,9 @@
       .attr("r", 4)
       .attr("cx", function(d) { return xScale(d.time); })
       .attr("cy", function(d) { return yScale(d.temperature); })
+    
+    svg.selectAll(".point")
+      .data(data)    
       .enter().append("circle")
       .attr("class", "point")
       .attr("r", 4)
