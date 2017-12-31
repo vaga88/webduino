@@ -41,7 +41,7 @@
     
     var parseTime = d3.timeParse("%H:%M:%S");
     data.forEach(function(d){
-      d.time = d.time;
+      d.time = parseTime(d.time);
       d.temperature = d.temperature;
       d.humidity = d.humidity;
     });
