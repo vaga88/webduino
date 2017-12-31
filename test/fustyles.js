@@ -101,62 +101,59 @@
       .attr("cy",yScale(d.temperature))
       .attr("r",2)
       .attr("title",'test')
-      .on("mouseover", handleMouseOver1(d))
-      .on("mouseout", handleMouseOut1(d))
+      .on("mouseover", handleMouseOver1(d.time,d.temperature))
+      .on("mouseout", handleMouseOut1(d.time,d.temperature))
       .attr("class", "point");
 
       svg.append('circle')
       .attr("cx",xScale(d.time))
       .attr("cy",yScale(d.humidity))
       .attr("r",2)
-      .on("mouseover", handleMouseOver2(d))
-      .on("mouseout", handleMouseOut2(d))     
+      .on("mouseover", handleMouseOver2(d.time,d.humidity))
+      .on("mouseout", handleMouseOut2(d.time,d.humidity))     
       .attr("class", "point");        
     });
     
   }
   
 
-  // Create Event Handlers for mouse
-      function handleMouseOver1(d) {  // Add interactivity
+
+      function handleMouseOver1(v1,v2) {  
             var svg = d3.select('#fustyles_linechart');
-            // Specify where to put label of text
             svg.append("text").attr({
-               id: "t" + d.time + "-" + d.temperature + "-1",  // Create an id for text so we can select it later for removing on mouseout
-                x: function() { return xScale(d.time) - 30; },
-                y: function() { return yScale(d.temperature) - 15; }
+               id: "t" + v1 + "-" + v2 + "-1",  
+                x: function() { return xScale(v1) - 30; },
+                y: function() { return yScale(v2) - 15; }
             })
             .text(function() {
-              return [d.time, d.temperature];  // Value of the text
+              return [v1, v2]; 
             });
           }
     
-          function handleMouseOver2(d) {  // Add interactivity
-
+      function handleMouseOver2(v1,v2) {  
             var svg = d3.select('#fustyles_linechart');
-            // Specify where to put label of text
             svg.append("text").attr({
-               id: "t" + d.time + "-" + d.humidity + "-2",  // Create an id for text so we can select it later for removing on mouseout
-                x: function() { return xScale(d.time) - 30; },
-                y: function() { return yScale(d.humidity) - 15; }
+               id: "t" + v1 + "-" + v2 + "-2",  
+                x: function() { return xScale(v1) - 30; },
+                y: function() { return yScale(v2) - 15; }
             })
             .text(function() {
-              return [d.time, d.humidity];  // Value of the text
+              return [v1, v2]; 
             });
           }
-
-      function handleMouseOut1(d) {
+  
+      function handleMouseOut1(v1,v2) {
 
             // Select text by id and then remove
-            d3.select("#t" + d.time + "-" + d.temperature + "-1").remove();  // Remove text location
+            d3.select("#t" + v1 + "-" + v2 + "-1").remove();  // Remove text location
           }
-    
-
-      function handleMouseOut2(d) {
+     
+       function handleMouseOut2(v1,v2) {
 
             // Select text by id and then remove
-            d3.select("#t" + d.time + "-" + d.humidity + "-2").remove();  // Remove text location
-          }    
+            d3.select("#t" + v1 + "-" + v2 + "-2").remove();  // Remove text location
+          }
+     
   
   
 
