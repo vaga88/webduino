@@ -94,7 +94,7 @@
         .style("text-anchor", "middle")
         .text(input_TITLE_Y_);  
     
-    
+      /*
       svg.selectAll(".point")
         .data(data)
         .enter().append("circle")
@@ -102,7 +102,18 @@
         .attr("r", 4)
         .attr("cx", function(d) { return xScale(d.time); })
         .attr("cy", function(d) { return yScale(d.humidity); }) ;      
-
+      */
+    
+      data.forEach(function(d){
+        svg.selectAll(".point")
+          .data(data)
+          .enter().append("circle")
+          .attr("class", "point")
+          .attr("r", 4)
+          .attr("cx", d.time)
+          .attr("cy", d.humidity) ;
+      });
+    
   }
 
   window.createLineChart = createLineChart;
