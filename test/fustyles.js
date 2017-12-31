@@ -114,9 +114,10 @@
       .attr("class", "point");        
     });
     
-    
-    
-          // Create Event Handlers for mouse
+  }
+  
+
+  // Create Event Handlers for mouse
       function handleMouseOver1(d, i) {  // Add interactivity
 
             // Specify where to put label of text
@@ -156,12 +157,8 @@
             // Select text by id and then remove
             d3.select("#t" + d.time + "-" + d.humidity + "-" + i).remove();  // Remove text location
           }    
-
-     
-    
-  }
   
-
+  
 
   window.createLineChart = createLineChart;
     
