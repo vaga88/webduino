@@ -75,7 +75,7 @@
       
     svg.append("g")
         .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(xScale).ticks(data.length-1).tickFormat(d3.timeFormat("%H:%M:%S")))
+        .call(d3.axisBottom(xScale).ticks(data.length).tickFormat(d3.timeFormat("%H:%M:%S")))
         .selectAll("text")	
           .style("text-anchor", "end")
           .attr("dx", "-.8em")
