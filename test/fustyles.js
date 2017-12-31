@@ -105,13 +105,16 @@
       */
     
       data.forEach(function(d){
-        svg.selectAll(".point")
-          .data(data)
-          .enter().append("circle")
-          .attr("class", "point")
-          .attr("r", 4)
-          .attr("cx", d.time)
-          .attr("cy", d.humidity) ;
+        svg.append('circle')
+          .attr("cx",d.time)
+          .attr("cy",d.temperature)
+          .attr("r",3)
+          .style({fill: 'black',stroke: 'black','stroke-width': 2});
+        svg.append('circle')
+          .attr("cx",d.time)
+          .attr("cy",d.humidity)
+          .attr("r",3)
+          .style({fill: 'black',stroke: 'black','stroke-width': 2});        
       });
     
   }
