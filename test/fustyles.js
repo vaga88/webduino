@@ -91,7 +91,18 @@
         .style("text-anchor", "middle")
         .text(input_TITLE_Y_);  
 
-
+    for(var i=0; i< data.length; i++){
+        svg.append("circle")
+        .attr("cx", function(data) { return data[i].time; })
+        .attr("cy", function(data) { return data[i].temperature; })
+        .attr("r", 3);
+        svg.append("circle")
+        .attr("cx", function(data) { return data[i].time; })
+        .attr("cy", function(data) { return data[i].humidity; })
+        .attr("r", 3);      
+    }
+    
+    /*
     var circles1 = svg.selectAll(".point")
       .data(data)
       .enter().append("circle")
@@ -107,7 +118,7 @@
       .attr("r", 4)
       .attr("cx", function(d) { return xScale(d.time); })
       .attr("cy", function(d) { return yScale(d.humidity); });  
- 
+  */
   }
 
   window.createLineChart = createLineChart;
