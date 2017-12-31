@@ -114,31 +114,31 @@
       .attr("class", "point");        
     });
     
-        function circleMouseOver1(d, i) {  
-            svg.append("text").attr({
-               id: "t" + d.time + "-" + d.temperature + "-" + i,  
-                x: function() { return xScale(d.time) - 30; },
-                y: function() { return yScale(d.temperature) - 15; }
-            })
-            .text(function() {
-              return [d.time, d.temperature];  // Value of the text
-            });
-          }
+    function circleMouseOver1(d, i) {  
+        svg.append("text").attr({
+           id: "t" + d.time + "-" + d.temperature + "-" + i,  
+            x: function() { return xScale(d.time) - 30; },
+            y: function() { return yScale(d.temperature) - 15; }
+        })
+        .text(function() {
+          return [d.time, d.temperature];
+        });
+      }
 
-          function circleMouseOver2(d, i) {  
-            svg.append("text").attr({
-               id: "t" + d.time + "-" + d.humidity + "-" + i,  
-                x: function() { return xScale(d.time) - 30; },
-                y: function() { return yScale(d.humidity) - 15; }
-            })
-            .text(function() {
-              return [d.time, d.humidity];  // Value of the text
-            });
-          }
-    
-      function circleMouseOut(d, i) {
-            d3.select("#t" + d.x + "-" + d.y + "-" + i).remove();  // Remove text location
-          }    
+      function circleMouseOver2(d, i) {  
+        svg.append("text").attr({
+           id: "t" + d.time + "-" + d.humidity + "-" + i,  
+            x: function() { return xScale(d.time) - 30; },
+            y: function() { return yScale(d.humidity) - 15; }
+        })
+        .text(function() {
+          return [d.time, d.humidity];
+        });
+      }
+
+    function circleMouseOut(d, i) {
+        d3.select("#t" + d.x + "-" + d.y + "-" + i).remove();
+      }    
     
     
     
