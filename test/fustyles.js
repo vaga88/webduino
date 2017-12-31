@@ -95,12 +95,12 @@
         .text(input_TITLE_Y_);  
     
     svg.selectAll('.point')
-      .data((d) -> d)
+      .data(data)
       .enter().append("svg:circle")
       .attr("class", 'point')
       .attr("r", 3)
-      .attr("cx", (d, i) -> xScale(i))
-      .attr("cy", (d) -> yScale(d));
+      .attr("cx", (data, i) -> xScale(i))
+      .attr("cy", (data) -> yScale(data));
     
       /*
       svg.selectAll(".point")
