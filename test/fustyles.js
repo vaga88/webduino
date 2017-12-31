@@ -44,8 +44,8 @@
       d.humidity = d.humidity;
     });
     
-    var xScale = d3.scaleTime().range([0, width-(margin.top+margin.bottom)]);
-    var yScale = d3.scaleLinear().range([height-(margin.top+margin.bottom), 0]);
+    var xScale = d3.scaleTime().range([0, width]);
+    var yScale = d3.scaleLinear().range([height, 0]);
     
     xScale.domain(d3.extent(data, d => d.time));
     yScale.domain([0, 100]);    
