@@ -42,8 +42,8 @@
     var parseTime = d3.timeParse("%H:%M:%S");
     data.forEach(function(d){
       d.time = parseTime(d.time);
-      d.temperature = parseFloat(d.temperature);
-      d.humidity = parseFloat(d.humidity);
+      d.temperature = d.temperature;
+      d.humidity = d.humidity;
     });
     
     var xScale = d3.scaleTime().range([0, width]);
