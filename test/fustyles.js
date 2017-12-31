@@ -96,16 +96,16 @@
       .enter().append("circle")
       .attr("class", "point")
       .attr("r", 4.5)
-      .attr("cx", function(d) { return x(d.time); })
-      .attr("cy", function(d) { return y(d.temperature); })
+      .attr("cx", function(d) { return xScale(d.time); })
+      .attr("cy", function(d) { return yScale(d.temperature); })
     
     svg.selectAll(".point")
       .data(data)
       .enter().append("circle")
       .attr("class", "point")
       .attr("r", 4.5)
-      .attr("cx", function(d) { return x(d.time); })
-      .attr("cy", function(d) { return y(d.humidity); });     
+      .attr("cx", function(d) { return xScale(d.time); })
+      .attr("cy", function(d) { return yScale(d.humidity); });     
 
   }
 
