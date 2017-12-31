@@ -101,17 +101,17 @@
       .attr("cy",yScale(d.temperature))
       .attr("r",2)
       .attr("title",'test')
-      .on("mouseover", "function(){alert('"+d.temperature+"');}")
-      .on("mouseout", "")
-      .attr("class", "point");
+      .attr("class", "point")
+      .append("svg:title")
+      .text(function(d) { return d.temperature; });
 
       svg.append('circle')
       .attr("cx",xScale(d.time))
       .attr("cy",yScale(d.humidity))
       .attr("r",2)
-      .on("mouseover", "function(){alert('"+d.humidity+"');}")
-      .on("mouseout", "")     
-      .attr("class", "point");        
+      .attr("class", "point")
+      .append("svg:title")
+      .text(function(d) { return d.humidity; });      
     });
     
   }
