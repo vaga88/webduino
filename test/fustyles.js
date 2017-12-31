@@ -101,7 +101,7 @@
       .attr("cy",yScale(d.temperature))
       .attr("r",2)
       .attr("title",'test')
-      .on("mouseover", alert(d.temperature);)
+      .on("mouseover", "alert('"+d.temperature+"');")
       .on("mouseout", "")
       .attr("class", "point");
 
@@ -109,7 +109,7 @@
       .attr("cx",xScale(d.time))
       .attr("cy",yScale(d.humidity))
       .attr("r",2)
-      .on("mouseover", alert(d.humidity);)
+      .on("mouseover", "alert('"+d.humidity+"');")
       .on("mouseout", "")     
       .attr("class", "point");        
     });
