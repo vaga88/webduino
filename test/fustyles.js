@@ -101,20 +101,20 @@
       .attr("cy",yScale(d.temperature))
       .attr("r",2)
       .attr("title",'test')
-      .on("mouseover", handleMouseOver1)
-      .on("mouseout", handleMouseOut)
+      .on("mouseover", circleMouseOver1)
+      .on("mouseout", circleMouseOut)
       .attr("class", "point");
 
       svg.append('circle')
       .attr("cx",xScale(d.time))
       .attr("cy",yScale(d.humidity))
       .attr("r",2)
-      .on("mouseover", handleMouseOver2)
-      .on("mouseout", handleMouseOut)     
+      .on("mouseover", circleMouseOver2)
+      .on("mouseout", circleMouseOut)     
       .attr("class", "point");        
     });
     
-        function handleMouseOver1(d, i) {  
+        function circleMouseOver1(d, i) {  
             svg.append("text").attr({
                id: "t" + d.time + "-" + d.temperature + "-" + i,  
                 x: function() { return xScale(d.time) - 30; },
@@ -125,7 +125,7 @@
             });
           }
 
-          function handleMouseOver2(d, i) {  
+          function circleMouseOver2(d, i) {  
             svg.append("text").attr({
                id: "t" + d.time + "-" + d.humidity + "-" + i,  
                 x: function() { return xScale(d.time) - 30; },
@@ -136,7 +136,7 @@
             });
           }
     
-      function handleMouseOut(d, i) {
+      function circleMouseOut(d, i) {
             d3.select("#t" + d.x + "-" + d.y + "-" + i).remove();  // Remove text location
           }    
     
