@@ -125,9 +125,7 @@
                 x: function() { return xScale(v1) - 30; },
                 y: function() { return yScale(v2) - 15; }
             })
-            .text(function() {
-              return [v1, v2]; 
-            });
+            .text(v1+','+v2);
           }
     
       function handleMouseOver2(v1,v2) {  
@@ -137,9 +135,7 @@
                 x: function() { return xScale(v1) - 30; },
                 y: function() { return yScale(v2) - 15; }
             })
-            .text(function() {
-              return [v1, v2]; 
-            });
+            .text(v1+','+v2);
           }
   
       function handleMouseOut1(v1,v2) {
