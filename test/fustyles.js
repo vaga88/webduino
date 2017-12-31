@@ -101,57 +101,21 @@
       .attr("cy",yScale(d.temperature))
       .attr("r",2)
       .attr("title",'test')
-      .on("mouseover", handleMouseOver1(d.time,d.temperature))
-      .on("mouseout", handleMouseOut1(d.time,d.temperature))
+      .on("mouseover", alert(d.temperature);)
+      .on("mouseout", "")
       .attr("class", "point");
 
       svg.append('circle')
       .attr("cx",xScale(d.time))
       .attr("cy",yScale(d.humidity))
       .attr("r",2)
-      .on("mouseover", handleMouseOver2(d.time,d.humidity))
-      .on("mouseout", handleMouseOut2(d.time,d.humidity))     
+      .on("mouseover", alert(d.humidity);)
+      .on("mouseout", "")     
       .attr("class", "point");        
     });
     
   }
-  
 
-
-      function handleMouseOver1(v1,v2) {  
-            var svg = d3.select('#fustyles_linechart');
-            svg.append("text").attr({
-               id: "t" + v1 + "-" + v2 + "-1",  
-                x: function() { return xScale(v1) - 30; },
-                y: function() { return yScale(v2) - 15; }
-            })
-            .text(v1+','+v2);
-          }
-    
-      function handleMouseOver2(v1,v2) {  
-            var svg = d3.select('#fustyles_linechart');
-            svg.append("text").attr({
-               id: "t" + v1 + "-" + v2 + "-2",  
-                x: function() { return xScale(v1) - 30; },
-                y: function() { return yScale(v2) - 15; }
-            })
-            .text(v1+','+v2);
-          }
-  
-      function handleMouseOut1(v1,v2) {
-
-            // Select text by id and then remove
-            d3.select("#t" + v1 + "-" + v2 + "-1").remove();  // Remove text location
-          }
-     
-       function handleMouseOut2(v1,v2) {
-
-            // Select text by id and then remove
-            d3.select("#t" + v1 + "-" + v2 + "-2").remove();  // Remove text location
-          }
-     
-  
-  
 
   window.createLineChart = createLineChart;
     
