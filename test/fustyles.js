@@ -41,7 +41,7 @@
           .attr('transform', `translate(${margin.left}, ${margin.top})`);
     }    
     
-    var string = "time,temperature\n"+input_value_.replace(/&/ig,"\n");
+    var string = "time,temperature\n"+input_value_.replace(/<br>/ig,"\n");
     var data = d3.csvParse(string);
     
     
