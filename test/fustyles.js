@@ -20,30 +20,11 @@
     }
     else
     {
-      //var element = document.createElement('style');
-      //var sheet;
-      //document.head.appendChild(element);
-      //sheet = element.sheet;
-
-      //var styles = '.line {';
-      //styles += 'fill: none;';
-      //styles += 'stroke: red;';
-      //styles += 'stroke-width: 2px;';
-      //styles += '}\n';
-      //styles += '.line1 {';
-      //styles += 'fill: none;';
-      //styles += 'stroke: blue;';
-      //styles += 'stroke-width: 2px;';
-      //styles += '}';
-
-      //sheet.insertRule(styles, 0);  
-      
       var sheet = document.createElement('style');
-      sheet.innerHTML = "body {font-size: 12px;}\n"
+      sheet.innerHTML = "body {font-size: 14px;}\n"
       + ".line1 {fill: none;stroke: red;stroke-width: 2px;}\n"
       + ".line2 {fill: none;stroke: blue;stroke-width: 2px;}";
 
-      //document.body.appendChild(sheet); // append in body
       document.head.appendChild(sheet); // append in head
       
       var svg = d3.select('body').append('svg')
