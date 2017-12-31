@@ -91,7 +91,7 @@
         .style("text-anchor", "middle")
         .text(input_TITLE_Y_);  
 
-    for(var i=0; i< data.length; i++){
+    for(var i=1; i< data.length; i++){
         svg.append("circle")
         .attr("cx", function(data) { return data[i].time; })
         .attr("cy", function(data) { return data[i].temperature; })
