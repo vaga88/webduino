@@ -87,7 +87,7 @@
     // text label for the y axis
     svg.append("text")
         .attr("transform",
-              "translate("35" ," + margin.top + ")")
+              "translate(35," + margin.top + ")")
         .attr("y", 0 - margin.left)
         .attr("x",0 - (height / 2))
         .attr("dy", "1em")
