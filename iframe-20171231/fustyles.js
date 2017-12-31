@@ -47,7 +47,7 @@
       d.humidity = d.humidity;
     });
     
-    var xScale = d3.scaleLinear().range([0, width]);
+    var xScale = d3.scaleTime().range([0, width]);
     var yScale = d3.scaleLinear().range([height, 0]);
     
     xScale.domain(d3.extent(data, d => d.time));
@@ -86,7 +86,7 @@
     svg.append("text")             
         .attr("transform",
               "translate(" + (width+35) + " ," + 
-                             height + ")")
+                             (height-10) + ")")
         .style("text-anchor", "middle")
         .text(input_TITLE_X_);
 
