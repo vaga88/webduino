@@ -44,35 +44,31 @@
     var string = "time,temperature\n"+input_value_.replace(/<br>/ig,"\n");
     var data = d3.csvParse(string);
     
+    data.forEach(function(d){
+      d.time = d.time;
+      d.temperature = d.temperature;
+    });
     
     var xScale = d3.scaleTime().range([0, width]);
     var yScale = d3.scaleLinear().range([height, 0]);
+    
+    xScale.domain(d3.extent(data, d => d.time));
+    yScale.domain([0, d3.max(data, d => d.temperature)]);    
 
     var line = d3.line()
       .x(d => xScale(d.time))
       .y(d => yScale(d.temperature))
 
-    data.forEach(function(d){
-      d.time = d.time;
-      d.temperature = d.temperature;
-    });
 
-    // Set the x and y scales to the data ranges x based on min and max date range (d3.extent()) and y based on 0 to max value
-    xScale.domain(d3.extent(data, d => d.time));
-    yScale.domain([0, d3.max(data, d => d.temperature)]);
-
-    // Draw the line svg by appending the data to a new svg path giving a class of line and d value based on the d3.line callback
     svg.append('path')
       .data([data])
       .attr('class', 'line')
       .attr('d', line)
 
-    // Add the x Axis
     svg.append("g")
         .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(xScale));
 
-    // text label for the x axis
     svg.append("text")             
         .attr("transform",
               "translate(" + (width+35) + " ," + 
@@ -80,11 +76,9 @@
         .style("text-anchor", "middle")
         .text(input_TITLE_X_);
 
-    // Add the y Axis
     svg.append("g")
         .call(d3.axisLeft(yScale));
 
-    // text label for the y axis
     svg.append("text")
         .attr("y", 0 )
         .attr("x", 20 )
