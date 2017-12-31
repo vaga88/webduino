@@ -27,7 +27,12 @@
 
       var styles = '.line {';
       styles += 'fill: none;';
-      styles += 'stroke: hotpink;';
+      styles += 'stroke: red;';
+      styles += 'stroke-width: 2px;';
+      styles += '}';
+      styles += '.line1 {';
+      styles += 'fill: none;';
+      styles += 'stroke: blue;';
       styles += 'stroke-width: 2px;';
       styles += '}';
 
@@ -71,7 +76,7 @@
 
     svg.append('path')
       .data([data])
-      .attr('class', 'line')
+      .attr('class', 'line1')
       .attr('d', line1)
     
 
