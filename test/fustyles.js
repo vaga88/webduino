@@ -79,7 +79,7 @@
 
     svg.append("text")             
         .attr("transform",
-              "translate(" + (width+30) + " ," + 
+              "translate(" + (width+35) + " ," + 
                              (height + margin.top) + ")")
         .style("text-anchor", "middle")
         .text(input_TITLE_X_);
