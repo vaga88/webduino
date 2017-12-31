@@ -101,18 +101,62 @@
       .attr("cy",yScale(d.temperature))
       .attr("r",2)
       .attr("title",'test')
-      .on("mouseover", function() {svg.append("text").attr({id: "t" + d.time + "-" + d.temperature + "-1",x: function() { return xScale(d.time) - 30; },y: function() { return yScale(d.temperature) - 15; }}).text(function() {return [d.time, d.temperature]; });} )
-      .on("mouseout", function() {d3.select("#t" + d.time + "-" + d.temperature + "-1").remove();})
+      .on("mouseover", handleMouseOver1)
+      .on("mouseout", handleMouseOut1)
       .attr("class", "point");
 
       svg.append('circle')
       .attr("cx",xScale(d.time))
       .attr("cy",yScale(d.humidity))
       .attr("r",2)
-      .on("mouseover", function() {svg.append("text").attr({ id: "t" + d.time + "-" + d.humidity + "-2",  x: function() { return xScale(d.time) - 30; },y: function() { return yScale(d.humidity) - 15; }}).text(function() {return [d.time, d.humidity]; });} )
-      .on("mouseout", function() {d3.select("#t" + d.time + "-" + d.humidity + "-2").remove();})     
+      .on("mouseover", handleMouseOver2)
+      .on("mouseout", handleMouseOut2)     
       .attr("class", "point");        
     });
+    
+    
+    
+          // Create Event Handlers for mouse
+      function handleMouseOver1(d, i) {  // Add interactivity
+
+            // Specify where to put label of text
+            svg.append("text").attr({
+               id: "t" + d.time + "-" + d.temperature + "-" + i,  // Create an id for text so we can select it later for removing on mouseout
+                x: function() { return xScale(d.time) - 30; },
+                y: function() { return yScale(d.temperature) - 15; }
+            })
+            .text(function() {
+              return [d.time, d.temperature];  // Value of the text
+            });
+          }
+    
+          function handleMouseOver2(d, i) {  // Add interactivity
+
+
+            // Specify where to put label of text
+            svg.append("text").attr({
+               id: "t" + d.time + "-" + d.humidity + "-" + i,  // Create an id for text so we can select it later for removing on mouseout
+                x: function() { return xScale(d.time) - 30; },
+                y: function() { return yScale(d.humidity) - 15; }
+            })
+            .text(function() {
+              return [d.time, d.humidity];  // Value of the text
+            });
+          }
+
+      function handleMouseOut1(d, i) {
+
+            // Select text by id and then remove
+            d3.select("#t" + d.time + "-" + d.temperature + "-" + i).remove();  // Remove text location
+          }
+    
+
+      function handleMouseOut2(d, i) {
+
+            // Select text by id and then remove
+            d3.select("#t" + d.time + "-" + d.humidity + "-" + i).remove();  // Remove text location
+          }    
+
      
     
   }
