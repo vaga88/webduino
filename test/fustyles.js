@@ -75,7 +75,7 @@
       
     svg.append("g")
         .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(xScale));
+        .call(d3.axisBottom(xScale).ticks(data.length).tickFormat(d3.timeFormat("%H:%M:%S")));
 
     svg.append("text")             
         .attr("transform",
