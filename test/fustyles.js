@@ -21,7 +21,7 @@
     else
     {
       var sheet = document.createElement('style');
-      sheet.innerHTML = "body {font-size: 125%;}\n"
+      sheet.innerHTML = "body {font-size: 120%;}\n"
       + ".line1 {fill: none;stroke: red;stroke-width: 2px;}\n"
       + ".line2 {fill: none;stroke: blue;stroke-width: 2px;}";
 
@@ -75,7 +75,7 @@
 
     svg.append("text")             
         .attr("transform",
-              "translate(" + (width+35) + " ," + 
+              "translate(" + (width+30) + " ," + 
                              (height + margin.top) + ")")
         .style("text-anchor", "middle")
         .text(input_TITLE_X_);
@@ -85,7 +85,7 @@
 
     svg.append("text")
         .attr("y", 0 - margin.top )
-        .attr("x", 20 )
+        .attr("x", 30 )
         .attr("dy", "1em")
         .style("text-anchor", "middle")
         .text(input_TITLE_Y_);  
