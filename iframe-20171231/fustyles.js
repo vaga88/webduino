@@ -24,7 +24,8 @@
       sheet.innerHTML = "body {font-size: 100%;}\n"
       + ".line1 {fill: none;stroke: red;stroke-width: 2px;}\n"
       + ".line2 {fill: none;stroke: blue;stroke-width: 2px;}\n"
-      + ".point {fill:black;stroke: #000;}";
+      + ".point1 {fill:red;stroke:red;}\n"
+      + ".point2 {fill:blue;stroke:blue;}";      
 
       document.head.appendChild(sheet); // append in head
       
@@ -104,17 +105,17 @@
       svg.append('circle')
       .attr("cx",xScale(d.time))
       .attr("cy",yScale(d.temperature))
-      .attr("r",2)
+      .attr("r",3)
       .attr("title",'test')
-      .attr("class", "point")
+      .attr("class", "point1")
       .append("svg:title")
       .text(d.temperature);
 
       svg.append('circle')
       .attr("cx",xScale(d.time))
       .attr("cy",yScale(d.humidity))
-      .attr("r",2)
-      .attr("class", "point")
+      .attr("r",3)
+      .attr("class", "point2")
       .append("svg:title")
       .text(d.humidity);      
     });
