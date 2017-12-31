@@ -108,7 +108,7 @@
       .attr("title",'test')
       .attr("class", "point")
       .append("svg:title")
-      .text(d.time+','+d.temperature);
+      .text(parseTime(d.time)+','+d.temperature);
 
       svg.append('circle')
       .attr("cx",xScale(d.time))
@@ -116,7 +116,7 @@
       .attr("r",2)
       .attr("class", "point")
       .append("svg:title")
-      .text(d.time+','+d.humidity);      
+      .text(parseTime(d.time)+','+d.humidity);      
     });
     
   }
