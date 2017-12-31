@@ -119,7 +119,7 @@
 
   // Create Event Handlers for mouse
       function handleMouseOver1(d, i) {  // Add interactivity
-
+            var svg = d3.select('#fustyles_linechart');
             // Specify where to put label of text
             svg.append("text").attr({
                id: "t" + d.time + "-" + d.temperature + "-" + i,  // Create an id for text so we can select it later for removing on mouseout
@@ -133,7 +133,7 @@
     
           function handleMouseOver2(d, i) {  // Add interactivity
 
-
+            var svg = d3.select('#fustyles_linechart');
             // Specify where to put label of text
             svg.append("text").attr({
                id: "t" + d.time + "-" + d.humidity + "-" + i,  // Create an id for text so we can select it later for removing on mouseout
