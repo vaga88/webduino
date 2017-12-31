@@ -95,7 +95,7 @@
       .data(data)
       .enter().append("circle")
       .attr("class", "point")
-      .attr("r", 4.5)
+      .attr("r", 4)
       .attr("cx", function(d) { return xScale(d.time); })
       .attr("cy", function(d) { return yScale(d.temperature); })
     
@@ -103,7 +103,7 @@
       .data(data)
       .enter().append("circle")
       .attr("class", "point")
-      .attr("r", 4.5)
+      .attr("r", 4)
       .attr("cx", function(d) { return xScale(d.time); })
       .attr("cy", function(d) { return yScale(d.humidity); });     
 
