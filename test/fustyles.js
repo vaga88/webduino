@@ -62,7 +62,6 @@
       .attr('d', line1)
     
     
-    
     var line2 = d3.line()
       .x(d => xScale(d.time))
       .y(d => yScale(d.humidity))
@@ -71,7 +70,6 @@
       .data([data])
       .attr('class', 'line2')
       .attr('d', line2)
-    
     
       
     svg.append("g")
