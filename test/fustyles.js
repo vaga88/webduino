@@ -101,16 +101,16 @@
       .attr("cy",yScale(d.temperature))
       .attr("r",2)
       .attr("title",'test')
-      .on("mouseover", function() {svg.append("text").attr({id: "t" + d.time + "-" + d.temperature + "-" + i,x: function() { return xScale(d.time) - 30; },y: function() { return yScale(d.temperature) - 15; }}).text(function() {return [d.time, d.temperature]; });} )
-      .on("mouseout", function() {d3.select("#t" + d.time + "-" + d.temperature + "-" + i).remove();})
+      .on("mouseover", function() {svg.append("text").attr({id: "t" + d.time + "-" + d.temperature + "-1",x: function() { return xScale(d.time) - 30; },y: function() { return yScale(d.temperature) - 15; }}).text(function() {return [d.time, d.temperature]; });} )
+      .on("mouseout", function() {d3.select("#t" + d.time + "-" + d.temperature + "-1").remove();})
       .attr("class", "point");
 
       svg.append('circle')
       .attr("cx",xScale(d.time))
       .attr("cy",yScale(d.humidity))
       .attr("r",2)
-      .on("mouseover", function() {svg.append("text").attr({ id: "t" + d.time + "-" + d.humidity + "-" + i,  x: function() { return xScale(d.time) - 30; },y: function() { return yScale(d.humidity) - 15; }}).text(function() {return [d.time, d.humidity]; });} )
-      .on("mouseout", function() {d3.select("#t" + d.time + "-" + d.humidity + "-" + i).remove();})     
+      .on("mouseover", function() {svg.append("text").attr({ id: "t" + d.time + "-" + d.humidity + "-2",  x: function() { return xScale(d.time) - 30; },y: function() { return yScale(d.humidity) - 15; }}).text(function() {return [d.time, d.humidity]; });} )
+      .on("mouseout", function() {d3.select("#t" + d.time + "-" + d.humidity + "-2").remove();})     
       .attr("class", "point");        
     });
      
