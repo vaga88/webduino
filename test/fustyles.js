@@ -23,7 +23,8 @@
       var sheet = document.createElement('style');
       sheet.innerHTML = "body {font-size: 100%;}\n"
       + ".line1 {fill: none;stroke: red;stroke-width: 2px;}\n"
-      + ".line2 {fill: none;stroke: blue;stroke-width: 2px;}";
+      + ".line2 {fill: none;stroke: blue;stroke-width: 2px;}\n"
+      + ".point {fill: steelblue;stroke: #000;}";
 
       document.head.appendChild(sheet); // append in head
       
@@ -89,7 +90,22 @@
         .attr("dy", "1em")
         .style("text-anchor", "middle")
         .text(input_TITLE_Y_);  
-        
+    
+    svg.selectAll(".point")
+      .data(data)
+      .enter().append("circle")
+      .attr("class", "point")
+      .attr("r", 4.5)
+      .attr("cx", function(d) { return x(d.time); })
+      .attr("cy", function(d) { return y(d.temperature); })
+    
+    svg.selectAll(".point")
+      .data(data)
+      .enter().append("circle")
+      .attr("class", "point")
+      .attr("r", 4.5)
+      .attr("cx", function(d) { return x(d.time); })
+      .attr("cy", function(d) { return y(d.humidity); });     
 
   }
 
