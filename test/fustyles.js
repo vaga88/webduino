@@ -49,7 +49,8 @@
     var yScale = d3.scaleLinear().range([height, 0]);
     
     xScale.domain(d3.extent(data, d => d.time));
-    yScale.domain([0, 100]);    
+    yScale.domain([0, 100]); 
+    
 
     var line1 = d3.line()
       .x(d => xScale(d.time))
@@ -60,6 +61,15 @@
       .attr('class', 'line1')
       .attr('d', line1)
     
+    svg.selectAll(".point")
+      .data([data])
+      .enter().append("circle")
+      .attr("class", "point")
+      .attr("r", 4)
+      .attr("cx", function(d) { return xScale(d.time); })
+      .attr("cy", function(d) { return yScale(d.temperature); })  
+    
+    
     var line2 = d3.line()
       .x(d => xScale(d.time))
       .y(d => yScale(d.humidity))
@@ -69,7 +79,15 @@
       .attr('class', 'line2')
       .attr('d', line2)
     
-
+    var circles2 = svg.selectAll(".point")
+      .data([data])    
+      .enter().append("circle")
+      .attr("class", "point")
+      .attr("r", 4)
+      .attr("cx", function(d) { return xScale(d.time); })
+      .attr("cy", function(d) { return yScale(d.humidity); });  
+    
+      
     svg.append("g")
         .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(xScale));
@@ -91,34 +109,6 @@
         .style("text-anchor", "middle")
         .text(input_TITLE_Y_);  
 
-    for(var i=1; i< data.length; i++){
-        svg.append("circle")
-        .attr("cx", function(data) { return data[i].time; })
-        .attr("cy", function(data) { return data[i].temperature; })
-        .attr("r", 3);
-        svg.append("circle")
-        .attr("cx", function(data) { return data[i].time; })
-        .attr("cy", function(data) { return data[i].humidity; })
-        .attr("r", 3);      
-    }
-    
-    /*
-    var circles1 = svg.selectAll(".point")
-      .data(data)
-      .enter().append("circle")
-      .attr("class", "point")
-      .attr("r", 4)
-      .attr("cx", function(d) { return xScale(d.time); })
-      .attr("cy", function(d) { return yScale(d.temperature); })
-    
-    var circles2 = svg.selectAll(".point")
-      .data(data)    
-      .enter().append("circle")
-      .attr("class", "point")
-      .attr("r", 4)
-      .attr("cx", function(d) { return xScale(d.time); })
-      .attr("cy", function(d) { return yScale(d.humidity); });  
-  */
   }
 
   window.createLineChart = createLineChart;
