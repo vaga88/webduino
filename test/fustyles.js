@@ -93,7 +93,7 @@
         .call(d3.axisLeft(yScale));
 
     svg.append("text")
-        .attr("y", 0 )
+        .attr("y", (0 - margin.top) )
         .attr("x", 40 )
         .attr("dy", "1em")
         .style("text-anchor", "middle")
