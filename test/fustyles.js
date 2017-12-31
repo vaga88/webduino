@@ -99,12 +99,7 @@
       .attr("class", "point")
       .attr("r", 4)
       .attr("cx", function(d) { return xScale(d.time); })
-      .attr("cy", function(d) { return yScale(d.temperature); })  
-      .enter().append("circle")
-      .attr("class", "point")
-      .attr("r", 4)
-      .attr("cx", function(d) { return xScale(d.time); })
-      .attr("cy", function(d) { return yScale(d.humidity); });      
+      .attr("cy", function(d) { return yScale(d.temperature); }) ;   
 
   }
 
