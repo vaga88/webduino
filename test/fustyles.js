@@ -94,7 +94,7 @@
         .style("text-anchor", "middle")
         .text(input_TITLE_Y_);  
     
-
+    
       svg.selectAll(".point")
         .data(data)
         .enter().append("circle")
@@ -102,6 +102,14 @@
         .attr("r", 4)
         .attr("cx", function(d) { return xScale(d.time); })
         .attr("cy", function(d) { return yScale(d.temperature); }) ;   
+    
+      svg.selectAll(".point")
+        .data(data)
+        .enter().append("circle")
+        .attr("class", "point")
+        .attr("r", 4)
+        .attr("cx", function(d) { return xScale(d.time); })
+        .attr("cy", function(d) { return yScale(d.humidity); }) ;      
 
   }
 
