@@ -41,7 +41,6 @@
           .attr('transform', `translate(${margin.left}, ${margin.top})`);
     }    
     
-    alert(input_value_);
     var string = "time,temperature\n"+input_value_.replace(/<br>/ig,"\n");
     var data = d3.csvParse(string);
     
@@ -87,7 +86,6 @@
 
     // text label for the y axis
     svg.append("text")
-        .attr("transform", "rotate(-90)")
         .attr("y", 36)
         .attr("x", 0 )
         .attr("dy", "1em")
