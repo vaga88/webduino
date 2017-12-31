@@ -79,6 +79,8 @@
         .call(d3.axisBottom(xScale).tickFormat(d3.timeFormat("%H:%M:%S")))
         .selectAll("text")	
           .style("text-anchor", "end")
+          .attr("dx", "-.8em")
+          .attr("dy", ".15em")    
           .attr("transform", "rotate(-65)");
 
     svg.append("text")             
