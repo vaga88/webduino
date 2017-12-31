@@ -54,7 +54,7 @@
     var yScale = d3.scaleLinear().range([height, 0]);
     
     xScale.domain(d3.extent(data, d => d.time));
-    yScale.domain([0, d3.max(data, d => d.temperature)]);    
+    yScale.domain([0, 100]);    
 
     var line = d3.line()
       .x(d => xScale(d.time))
