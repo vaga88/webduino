@@ -99,14 +99,14 @@
         svg.append('circle')
           .attr("cx",xScale(d.time))
           .attr("cy",yScale(d.temperature))
-          .attr("r",3)
+          .attr("r",2)
           .attr("onmouseover",alert('test');)
           .attr("class", "point");
         
         svg.append('circle')
           .attr("cx",xScale(d.time))
           .attr("cy",yScale(d.humidity))
-          .attr("r",3)
+          .attr("r",2)
           .attr("class", "point");        
       });
     
