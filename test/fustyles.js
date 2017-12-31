@@ -106,15 +106,15 @@
     
       data.forEach(function(d){
         svg.append('circle')
-          .attr("cx",d.time)
-          .attr("cy",d.temperature)
+          .attr("cx",xScale(d.time))
+          .attr("cy",yScale(d.temperature))
           .attr("r",3)
-          .style({fill: 'black',stroke: 'black','stroke-width': 2});
+          .attr("class", "point");
         svg.append('circle')
-          .attr("cx",d.time)
-          .attr("cy",d.humidity)
+          .attr("cx",xScale(d.time))
+          .attr("cy",yScale(d.humidity))
           .attr("r",3)
-          .style({fill: 'black',stroke: 'black','stroke-width': 2});        
+          .attr("class", "point");        
       });
     
   }
