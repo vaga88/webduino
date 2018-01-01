@@ -2,7 +2,7 @@
   <block type="googlechart_linechart">
     <value name="value_">
       <block type="text">
-        <field name="TEXT"></field>
+        <field name="TEXT">00:00:00,25,60;</field>
       </block>
     </value>
     <value name="width_">
