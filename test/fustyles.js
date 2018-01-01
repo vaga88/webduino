@@ -21,6 +21,8 @@
     {
       var sheet = document.createElement('style');
       sheet.innerHTML = "body {font-size: 100%;}\n"
+      + ".area1 {fill: red;}\n"
+      + ".area2 {fill: blue;}\n"      
       + ".line1 {fill: none;stroke: red;stroke-width: 2px;}\n"
       + ".line2 {fill: none;stroke: blue;stroke-width: 2px;}\n"
       + ".point1 {fill:red;stroke:red;}\n"
@@ -53,18 +55,38 @@
     xScale.domain(d3.extent(data, d => d.time));
     yScale.domain([0, 100]); 
     
+    var area1 = d3.area()
+    .x(function(d) { return x(d.time); })
+    .y0(height)
+    .y1(function(d) { return y(d.temperature); });
+    
     var line1 = d3.line()
       .x(d => xScale(d.time))
       .y(d => yScale(d.temperature))
 
+    svg.append("path")
+       .data([data])
+       .attr("class", "area1")
+       .attr("d", area1);
+    
     svg.append('path')
       .data([data])
       .attr('class', 'line1')
       .attr('d', line1)
     
+    var area2 = d3.area()
+    .x(function(d) { return x(d.time); })
+    .y0(height)
+    .y1(function(d) { return y(d.humidity); });
+    
     var line2 = d3.line()
       .x(d => xScale(d.time))
       .y(d => yScale(d.humidity))
+    
+    svg.append("path")
+       .data([data])
+       .attr("class", "area2")
+       .attr("d", area2);    
 
     svg.append('path')
       .data([data])
