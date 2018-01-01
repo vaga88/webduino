@@ -1,4 +1,4 @@
-<category id="catDHTLineChart">
+<category id="catToolText">
   <block type="DHT_linechart">
     <value name="value_">
       <block type="text">
