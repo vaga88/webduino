@@ -1,0 +1,29 @@
+<category id="catDHTLineChart">
+  <block type="DHT_linechart">
+    <value name="value_">
+      <block type="text">
+        <field name="TEXT">00:00:00,25,60;</field>
+      </block>
+    </value>
+    <value name="width_">
+      <block type="math_number">
+        <field name="NUM">600</field>
+      </block>
+    </value>
+    <value name="height_">
+      <block type="math_number">
+        <field name="NUM">300</field>
+      </block>
+    </value> 
+    <value name="title_x_">
+      <block type="text">
+        <field name="TEXT">time</field>
+      </block>
+    </value>
+    <value name="title_y_">
+      <block type="text">
+        <field name="TEXT">value</field>
+      </block>
+    </value>    
+  </block>
+ </category>
