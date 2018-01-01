@@ -1,1 +1,1 @@
-MSG.catDHTLineChart = " DHT Line Chart";
+MSG.catToolText = " DHT Line Chart";
