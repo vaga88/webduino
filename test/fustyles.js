@@ -8,7 +8,6 @@
     var width = input_WIDTH_ - margin.left - margin.right;
     var height = input_HEIGHT_ - margin.top - margin.bottom;
 
-    
     if (document.getElementById('fustyles_linechart'))
     {
       d3.selectAll("svg > *").remove();
@@ -41,6 +40,7 @@
     var data = d3.csvParse(string);
     
     var parseTime = d3.timeParse("%H:%M:%S");
+    
     data.forEach(function(d){
       d.time = parseTime(d.time);
       d.temperature = d.temperature;
@@ -53,7 +53,6 @@
     xScale.domain(d3.extent(data, d => d.time));
     yScale.domain([0, 100]); 
     
-
     var line1 = d3.line()
       .x(d => xScale(d.time))
       .y(d => yScale(d.temperature))
@@ -62,7 +61,6 @@
       .data([data])
       .attr('class', 'line1')
       .attr('d', line1)
-    
     
     var line2 = d3.line()
       .x(d => xScale(d.time))
@@ -73,7 +71,6 @@
       .attr('class', 'line2')
       .attr('d', line2)
     
-      
     svg.append("g")
         .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(xScale).tickFormat(d3.timeFormat("%H:%M:%S")))
@@ -84,9 +81,7 @@
           .attr("transform", "rotate(-65)");
 
     svg.append("text")             
-        .attr("transform",
-              "translate(" + (width+35) + " ," + 
-                             (height-10) + ")")
+        .attr("transform", "translate(" + (width+35) + " ," + (height-10) + ")")
         .style("text-anchor", "middle")
         .text(input_TITLE_X_);
 
@@ -99,7 +94,6 @@
         .attr("dy", "1em")
         .style("text-anchor", "middle")
         .text(input_TITLE_Y_);  
-    
     
     data.forEach(function(d){
       svg.append('circle')
@@ -121,7 +115,6 @@
     });
     
   }
-
 
   window.createLineChart = createLineChart;
     
