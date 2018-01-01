@@ -28,7 +28,7 @@
       + ".point1 {fill:red;stroke:red;}\n"
       + ".point2 {fill:blue;stroke:blue;}";      
 
-      document.head.appendChild(sheet); // append in head
+      document.head.appendChild(sheet);
       
       var svg = d3.select('body').append('svg')
           .attr('id','fustyles_linechart')      
@@ -119,21 +119,21 @@
     
     data.forEach(function(d){
       svg.append('circle')
-      .attr("cx",xScale(d.time))
-      .attr("cy",yScale(d.temperature))
-      .attr("r",2)
-      .attr("title",'test')
-      .attr("class", "point1")
-      .append("svg:title")
-      .text(d.temperature);
+        .attr("cx",xScale(d.time))
+        .attr("cy",yScale(d.temperature))
+        .attr("r",2)
+        .attr("title",'test')
+        .attr("class", "point1")
+        .append("svg:title")
+        .text(d.temperature);
 
       svg.append('circle')
-      .attr("cx",xScale(d.time))
-      .attr("cy",yScale(d.humidity))
-      .attr("r",2)
-      .attr("class", "point2")
-      .append("svg:title")
-      .text(d.humidity);      
+        .attr("cx",xScale(d.time))
+        .attr("cy",yScale(d.humidity))
+        .attr("r",2)
+        .attr("class", "point2")
+        .append("svg:title")
+        .text(d.humidity);      
     });
     
   }
