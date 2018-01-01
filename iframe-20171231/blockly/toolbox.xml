@@ -1,5 +1,5 @@
-<category id="catDHTLineChart">
-  <block type="DHT_linechart">
+<category id="catToolText">
+  <block type="googlechart_linechart">
     <value name="value_">
       <block type="text">
         <field name="TEXT">00:00:00,25,60;</field>

@@ -1,5 +1,5 @@
 {
-  "types": ["DHT_linechart"],
+  "types": ["googlechart_linechart"],
   "category": "catPlus",
   "scripts": [
     "blockly/blocks.js",
