@@ -1,4 +1,4 @@
-<category id="catToolText">
+<category id="catDHTLineChart">
   <block type="googlechart_linechart">
     <value name="value_">
       <block type="text">
