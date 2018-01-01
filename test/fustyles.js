@@ -81,7 +81,7 @@
           .attr("transform", "rotate(-65)");
 
     svg.append("text")             
-        .attr("transform", "translate(" + (width+35) + " ," + (height-10) + ")")
+        .attr("transform", "translate(" + (width+25) + " ," + (height-10) + ")")
         .style("text-anchor", "middle")
         .text(input_TITLE_X_);
 
