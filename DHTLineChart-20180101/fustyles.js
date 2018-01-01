@@ -26,7 +26,7 @@
       + ".point1 {fill:red;stroke:red;}\n"
       + ".point2 {fill:blue;stroke:blue;}";      
 
-      document.head.appendChild(sheet); // append in head
+      document.head.appendChild(sheet);
       
       var svg = d3.select('body').append('svg')
           .attr('id','fustyles_linechart')      
