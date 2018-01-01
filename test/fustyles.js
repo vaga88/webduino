@@ -47,31 +47,29 @@
       d.humidity = d.humidity;
     });
     
-    var xScale = d3.scaleTime().rangeRound([0, width]);
-    var yScale = d3.scaleLinear().rangeRound([height, 0]);
+    var xScale = d3.scaleTime().range([0, width]);
+    var yScale = d3.scaleLinear().range([height, 0]);
     
     xScale.domain(d3.extent(data, d => d.time));
     yScale.domain([0, 100]); 
     
-    var area1 = d3.area()
-    .x(function(d) { return x(d.time); })
-    .y0(height)
-    .y(function(d) { return y(d.temperature); });
+    var line1 = d3.line()
+      .x(d => xScale(d.time))
+      .y(d => yScale(d.temperature))
 
     svg.append('path')
       .data([data])
       .attr('class', 'line1')
-      .attr('d', area1)
+      .attr('d', line1)
     
-    var area2 = d3.area()
-    .x(function(d) { return x(d.time); })
-    .y0(height)
-    .y(function(d) { return y(d.humidity); });
+    var line2 = d3.line()
+      .x(d => xScale(d.time))
+      .y(d => yScale(d.humidity))
 
     svg.append('path')
       .data([data])
       .attr('class', 'line2')
-      .attr('d', area2)
+      .attr('d', line2)
     
     svg.append("g")
         .attr("transform", "translate(0," + height + ")")
