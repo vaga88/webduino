@@ -26,7 +26,7 @@
       + ".point1 {fill:red;stroke:red;}\n"
       + ".point2 {fill:blue;stroke:blue;}";      
 
-      document.head.appendChild(sheet); // append in head
+      document.head.appendChild(sheet);
       
       var svg = d3.select('body').append('svg')
           .attr('id','fustyles_linechart')      
@@ -55,21 +55,21 @@
     
     var line1 = d3.line()
       .x(d => xScale(d.time))
-      .y(d => yScale(d.temperature))
+      .y(d => yScale(d.temperature));
 
     svg.append('path')
       .data([data])
       .attr('class', 'line1')
-      .attr('d', line1)
+      .attr('d', line1);
     
     var line2 = d3.line()
       .x(d => xScale(d.time))
-      .y(d => yScale(d.humidity))
+      .y(d => yScale(d.humidity));
 
     svg.append('path')
       .data([data])
       .attr('class', 'line2')
-      .attr('d', line2)
+      .attr('d', line2);
     
     svg.append("g")
         .attr("transform", "translate(0," + height + ")")
