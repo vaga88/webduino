@@ -1,4 +1,4 @@
-<category id="catToolText">
+<category id="catIframe">
   <block type="iframe_open">
     <value name="url_">
       <block type="text">
