@@ -55,25 +55,6 @@
     xScale.domain(d3.extent(data, d => d.time));
     yScale.domain([0, 100]); 
     
-    var area1 = d3.area()
-      .x(d => xScale(d.time))
-      .y0(height)
-      .y1(d => yScale(d.temperature));
-    
-    var line1 = d3.line()
-      .x(d => xScale(d.time))
-      .y(d => yScale(d.temperature));
-
-    svg.append("path")
-       .data([data])
-       .attr("class", "area1")
-       .attr("d", area1);
-    
-    svg.append('path')
-      .data([data])
-      .attr('class', 'line1')
-      .attr('d', line1);
-    
     var area2 = d3.area()
       .x(d => xScale(d.time))
       .y0(height)
@@ -93,6 +74,25 @@
       .attr('class', 'line2')
       .attr('d', line2);
     
+    var area1 = d3.area()
+      .x(d => xScale(d.time))
+      .y0(height)
+      .y1(d => yScale(d.temperature));
+    
+    var line1 = d3.line()
+      .x(d => xScale(d.time))
+      .y(d => yScale(d.temperature));
+
+    svg.append("path")
+       .data([data])
+       .attr("class", "area1")
+       .attr("d", area1);
+    
+    svg.append('path')
+      .data([data])
+      .attr('class', 'line1')
+      .attr('d', line1);
+        
     svg.append("g")
         .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(xScale).tickFormat(d3.timeFormat("%H:%M:%S")))
