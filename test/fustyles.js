@@ -58,11 +58,11 @@
     var area1 = d3.area()
       .x(d => xScale(d.time))
       .y0(height)
-      .y(d => yScale(d.temperature))
+      .y1(d => yScale(d.temperature));
     
     var line1 = d3.line()
       .x(d => xScale(d.time))
-      .y(d => yScale(d.temperature))
+      .y(d => yScale(d.temperature));
 
     svg.append("path")
        .data([data])
@@ -72,16 +72,16 @@
     svg.append('path')
       .data([data])
       .attr('class', 'line1')
-      .attr('d', line1)
+      .attr('d', line1);
     
     var area2 = d3.area()
       .x(d => xScale(d.time))
       .y0(height)
-      .y(d => yScale(d.humidity))
+      .y1(d => yScale(d.humidity));
     
     var line2 = d3.line()
       .x(d => xScale(d.time))
-      .y(d => yScale(d.humidity))
+      .y(d => yScale(d.humidity));
     
     svg.append("path")
        .data([data])
@@ -91,7 +91,7 @@
     svg.append('path')
       .data([data])
       .attr('class', 'line2')
-      .attr('d', line2)
+      .attr('d', line2);
     
     svg.append("g")
         .attr("transform", "translate(0," + height + ")")
