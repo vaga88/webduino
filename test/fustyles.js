@@ -55,6 +55,7 @@
     
     var area1 = d3.area()
     .x(function(d) { return x(d.time); })
+    .y0(height)
     .y(function(d) { return y(d.temperature); });
 
     svg.append('path')
@@ -64,6 +65,7 @@
     
     var area2 = d3.area()
     .x(function(d) { return x(d.time); })
+    .y0(height)
     .y(function(d) { return y(d.humidity); });
 
     svg.append('path')
