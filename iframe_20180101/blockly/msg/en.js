@@ -1,1 +1,1 @@
-MSG.catToolText = "Web Page";
+MSG.catIframe = "Web Page";
