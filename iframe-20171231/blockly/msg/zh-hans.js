@@ -1,1 +1,1 @@
-MSG.catToolText = "折线图";
+MSG.catToolText = "温湿度折线图";
