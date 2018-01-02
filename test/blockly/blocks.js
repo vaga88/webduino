@@ -1,11 +1,11 @@
 Blockly.Blocks['DHT_chart'] = {
   init: function() {
   this.appendDummyInput()
+      .appendField(Blockly.Msg.TEXT_SHOW)
       .appendField(new Blockly.FieldDropdown([["LineChart","LineChart"], ["AreaChart","AreaChart"]]), "type_");     
   this.appendValueInput("value_")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.TEXT_SHOW)
       .appendField(Blockly.Msg.VALUE_SHOW);
   this.appendValueInput("width_")
       .setCheck("Number")
