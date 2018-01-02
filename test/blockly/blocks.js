@@ -4,11 +4,14 @@ Blockly.Blocks['DHT_chart'] = {
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.TEXT_SHOW)
-      .appendField(Blockly.Msg.VALUE_SHOW)
+      .appendField(Blockly.Msg.VALUE_SHOW);
+  this.appendValueInput("kind_")
+        .setCheck(null)
+        .appendField(new Blockly.FieldDropdown([["LineChart","OPTIONNAME"], ["AreaChart","OPTIONNAME"]]), "kind_");    
   this.appendValueInput("width_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.WIDTH_SHOW)
+      .appendField(Blockly.Msg.WIDTH_SHOW);
   this.appendValueInput("height_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
