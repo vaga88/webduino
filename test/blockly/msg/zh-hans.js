@@ -1,1 +1,1 @@
-MSG.catDHTchart = "温湿度折线图";
+MSG.catDHTchart = "温湿度图";
