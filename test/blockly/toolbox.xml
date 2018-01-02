@@ -1,6 +1,6 @@
 <category id="catDHTchart">
   <block type="DHT_chart">
-    <field name="kind_">LineChart</field>
+    <field name="kind_"></field>
     <value name="value_">
       <block type="text">
         <field name="TEXT">00:00:00,30,60;00:00:01,20,80;</field>
