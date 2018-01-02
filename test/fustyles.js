@@ -2,7 +2,7 @@
 
   'use strict';
 
-  function createLineChart(input_value_,input_WIDTH_,input_HEIGHT_,input_TITLE_X_,input_TITLE_Y_) {
+  function createLineChart(input_kind_,input_value_,input_WIDTH_,input_HEIGHT_,input_TITLE_X_,input_TITLE_Y_) {
     
     var margin = {top: 50, right: 50, bottom: 70, left: 50};
     var width = input_WIDTH_ - margin.left - margin.right;
@@ -55,38 +55,43 @@
     xScale.domain(d3.extent(data, d => d.time));
     yScale.domain([0, 100]); 
     
-    var area2 = d3.area()
-      .x(d => xScale(d.time))
-      .y0(height)
-      .y1(d => yScale(d.humidity));
+    if (kind=='areachart')
+    {
+      var area2 = d3.area()
+        .x(d => xScale(d.time))
+        .y0(height)
+        .y1(d => yScale(d.humidity));
+
+      svg.append("path")
+         .data([data])
+         .attr("class", "area2")
+         .attr("d", area2);   
+    }
     
     var line2 = d3.line()
       .x(d => xScale(d.time))
-      .y(d => yScale(d.humidity));
-    
-    svg.append("path")
-       .data([data])
-       .attr("class", "area2")
-       .attr("d", area2);    
+      .y(d => yScale(d.humidity));    
 
     svg.append('path')
       .data([data])
       .attr('class', 'line2')
       .attr('d', line2);
-    
-    var area1 = d3.area()
-      .x(d => xScale(d.time))
-      .y0(height)
-      .y1(d => yScale(d.temperature));
-    
-    var line1 = d3.line()
-      .x(d => xScale(d.time))
-      .y(d => yScale(d.temperature));
 
-    svg.append("path")
-       .data([data])
-       .attr("class", "area1")
-       .attr("d", area1);
+    if (kind=='areachart')
+    {
+      var area1 = d3.area()
+        .x(d => xScale(d.time))
+        .y0(height)
+        .y1(d => yScale(d.temperature));
+
+      svg.append("path")
+         .data([data])
+         .attr("class", "area1")
+         .attr("d", area1);    
+      var line1 = d3.line()
+        .x(d => xScale(d.time))
+        .y(d => yScale(d.temperature));
+    }
     
     svg.append('path')
       .data([data])
