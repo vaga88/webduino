@@ -1,7 +1,7 @@
 Blockly.Blocks['DHT_chart'] = {
   init: function() {
   this.appendDummyInput()
-      .appendField(new Blockly.FieldDropdown([["LineChart","LineChart"], ["AreaChart","AreaChart"]]), "kind_");     
+      .appendField(new Blockly.FieldDropdown([["LineChart","LineChart"], ["AreaChart","AreaChart"]]), "type_");     
   this.appendValueInput("value_")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
