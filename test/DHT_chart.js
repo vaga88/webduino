@@ -2,7 +2,7 @@
 
   'use strict';
 
-  function createLineChart(input_kind_,input_value_,input_WIDTH_,input_HEIGHT_,input_TITLE_X_,input_TITLE_Y_) {
+  function createDHTchart(input_kind_,input_value_,input_WIDTH_,input_HEIGHT_,input_TITLE_X_,input_TITLE_Y_) {
     
     var margin = {top: 50, right: 50, bottom: 70, left: 50};
     var width = input_WIDTH_ - margin.left - margin.right;
@@ -143,6 +143,6 @@
     
   }
 
-  window.createLineChart = createLineChart;
+  window.createDHTchart = createDHTchart;
     
 }(window, window.document));
