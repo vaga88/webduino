@@ -1,8 +1,8 @@
-<category id="catDHTLineChart">
-  <block type="DHT_linechart">
+<category id="catDHTchart">
+  <block type="DHT_chart">
     <value name="value_">
       <block type="text">
-        <field name="TEXT">00:00:00,25,60;</field>
+        <field name="TEXT">00:00:00,30,60;00:00:01,20,80;</field>
       </block>
     </value>
     <value name="width_">
