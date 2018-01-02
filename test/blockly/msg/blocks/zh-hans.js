@@ -1,4 +1,4 @@
-Blockly.Msg.TEXT_SHOW = "温湿度折线图";
+Blockly.Msg.TEXT_SHOW = "温湿度";
 Blockly.Msg.VALUE_SHOW = "数据";
 Blockly.Msg.WIDTH_SHOW = "宽度";
 Blockly.Msg.HEIGHT_SHOW = "高度";
