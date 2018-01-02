@@ -1,4 +1,4 @@
-Blockly.Msg.TEXT_SHOW = " DHT Chart";
+Blockly.Msg.TEXT_SHOW = " DHT";
 Blockly.Msg.VALUE_SHOW = "value";
 Blockly.Msg.WIDTH_SHOW = "width";
 Blockly.Msg.HEIGHT_SHOW = "height";
