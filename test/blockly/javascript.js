@@ -1,5 +1,5 @@
 Blockly.JavaScript['DHT_chart'] = function (block) {
-  var value_kind_ = Blockly.JavaScript.valueToCode(block, 'value_', Blockly.JavaScript.ORDER_ATOMIC);  
+  var value_kind_ = Blockly.JavaScript.valueToCode(block, 'kind_', Blockly.JavaScript.ORDER_ATOMIC);  
   var value_value_ = Blockly.JavaScript.valueToCode(block, 'value_', Blockly.JavaScript.ORDER_ATOMIC);
   var value_width_ = Blockly.JavaScript.valueToCode(block, 'width_', Blockly.JavaScript.ORDER_ATOMIC);
   var value_height_ = Blockly.JavaScript.valueToCode(block, 'height_', Blockly.JavaScript.ORDER_ATOMIC);
