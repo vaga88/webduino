@@ -88,10 +88,11 @@
          .data([data])
          .attr("class", "area1")
          .attr("d", area1);    
-      var line1 = d3.line()
-        .x(d => xScale(d.time))
-        .y(d => yScale(d.temperature));
     }
+    
+    var line1 = d3.line()
+      .x(d => xScale(d.time))
+      .y(d => yScale(d.temperature));
     
     svg.append('path')
       .data([data])
