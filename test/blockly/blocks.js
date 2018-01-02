@@ -1,4 +1,4 @@
-Blockly.Blocks['DHT_linechart'] = {
+Blockly.Blocks['DHT_chart'] = {
   init: function() {
   this.appendValueInput("value_")
       .setCheck("String")
