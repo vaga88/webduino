@@ -2,7 +2,7 @@
 
   'use strict';
 
-  function createDHTchart(input_kind_,input_value_,input_WIDTH_,input_HEIGHT_,input_TITLE_X_,input_TITLE_Y_) {
+  function createDHTchart(input_type_,input_value_,input_WIDTH_,input_HEIGHT_,input_TITLE_X_,input_TITLE_Y_) {
     
     var margin = {top: 50, right: 50, bottom: 70, left: 50};
     var width = input_WIDTH_ - margin.left - margin.right;
@@ -55,7 +55,7 @@
     xScale.domain(d3.extent(data, d => d.time));
     yScale.domain([0, 100]); 
     
-    if (kind=='AreaChart')
+    if (input_type_=='AreaChart')
     {
       var area2 = d3.area()
         .x(d => xScale(d.time))
@@ -77,7 +77,7 @@
       .attr('class', 'line2')
       .attr('d', line2);
 
-    if (kind=='AreaChart')
+    if (input_type_=='AreaChart')
     {
       var area1 = d3.area()
         .x(d => xScale(d.time))
