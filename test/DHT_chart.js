@@ -55,7 +55,7 @@
     xScale.domain(d3.extent(data, d => d.time));
     yScale.domain([0, 100]); 
     
-    if (kind=='areachart')
+    if (kind=='AreaChart')
     {
       var area2 = d3.area()
         .x(d => xScale(d.time))
@@ -77,7 +77,7 @@
       .attr('class', 'line2')
       .attr('d', line2);
 
-    if (kind=='areachart')
+    if (kind=='AreaChart')
     {
       var area1 = d3.area()
         .x(d => xScale(d.time))
