@@ -8,10 +8,10 @@
     var width = input_WIDTH_ - margin.left - margin.right;
     var height = input_HEIGHT_ - margin.top - margin.bottom;
 
-    if (document.getElementById('fustyles_linechart'))
+    if (document.getElementById('fustyles_DHTchart'))
     {
       d3.selectAll("svg > *").remove();
-      var svg = d3.select('#fustyles_linechart')
+      var svg = d3.select('#fustyles_DHTchart')
           .attr('width', width + margin.left + margin.right)
           .attr('height', height + margin.top + margin.bottom)
           .append('g')
@@ -31,7 +31,7 @@
       document.head.appendChild(sheet);
       
       var svg = d3.select('body').append('svg')
-          .attr('id','fustyles_linechart')      
+          .attr('id','fustyles_DHTchart')      
           .attr('width', width + margin.left + margin.right)
           .attr('height', height + margin.top + margin.bottom)
           .append('g')
