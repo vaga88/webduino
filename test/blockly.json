@@ -6,7 +6,7 @@
     "blockly/javascript.js"
   ],
   "dependencies": [
-    "fustyles.js",
+    "DHT_chart.js",
     "https://d3js.org/d3.v4.min.js"
   ],
   "msg": "blockly/msg",
