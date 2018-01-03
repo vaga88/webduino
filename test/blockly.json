@@ -1,5 +1,5 @@
 {
-  "types": ["DHT_chart"],
+  "types": ["DHT_chart","DHT_dataset"],
   "category": "catPlus",
   "scripts": [
     "blockly/blocks.js",
