@@ -12,6 +12,6 @@ Blockly.JavaScript['DHT_chart'] = function (block) {
 Blockly.JavaScript['DHT_datasetcheck'] = function(block) {
   var value_dataset_ = Blockly.JavaScript.valueToCode(block, 'dataset_', Blockly.JavaScript.ORDER_ATOMIC);
   var value_count_ = Blockly.JavaScript.valueToCode(block, 'count_', Blockly.JavaScript.ORDER_ATOMIC);
-  var code = 'checkDHTdataset(' + input_dataset_ + ',' + input_count_ + ');';
+  var code = 'checkDHTdataset(' + value_dataset_ + ',' + value_count_ + ');';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
