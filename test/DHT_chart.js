@@ -1,6 +1,21 @@
 +(function (window, document) {
 
   'use strict';
+  
+  function checkDHTdataset(input_dataset_,input_count_){
+    if ((input_dataset_.split(';')).length > (input_count_ + 1)) {
+      var outputdataset = '';
+      input_dataset_ = input_dataset_.split(';');
+      var i_start = input_dataset_.length - input_count_;
+      var i_end = input_dataset_.length - 1;
+      for (var i = i_start;i <= i_end;i++) {
+        outputdataset = outputdataset + input_dataset_[i - 1] + ';';
+      }
+    } else {
+      outputdataset = input_dataset_;
+    }
+    return outputdataset;    
+  }
 
   function createDHTchart(input_type_,input_value_,input_WIDTH_,input_HEIGHT_,input_TITLE_X_,input_TITLE_Y_) {
     
@@ -145,5 +160,6 @@
   }
 
   window.createDHTchart = createDHTchart;
+  window.checkDHTdataset = checkDHTdataset;
     
 }(window, window.document));
