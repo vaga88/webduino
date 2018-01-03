@@ -30,3 +30,21 @@ Blockly.Blocks['DHT_chart'] = {
   this.setHelpUrl(mainUrl + 'basic/blockly/blockly-information.html' + utmUrl);
   }
 };
+
+Blockly.Blocks['dht_datacheck'] = {
+  init: function() {
+    this.appendValueInput("dataset_")
+        .setCheck("String")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.VALUE_DATASET);
+    this.appendValueInput("count_")
+        .setCheck("Number")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.VALUE_COUNT);
+    this.setOutput(true, null);
+    this.setColour(230);
+    this.setTooltip("");
+    this.setColour(65);    
+    this.setHelpUrl(mainUrl + 'basic/blockly/blockly-information.html' + utmUrl);
+  }
+};  
