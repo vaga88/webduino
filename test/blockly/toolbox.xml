@@ -29,9 +29,9 @@
   </block>
   
   <block type="variables_set">
-    <field name="VAR" id="ub+)1nkbzi(Nc^zo/1#X" variabletype="">Dataset</field>
+    <field name="VAR">Dataset</field>
     <value name="VALUE">
-      <block type="dht_datacheck">
+      <block type="DHT_datasetcheck">
         <value name="dataset_">
           <block type="text">
             <field name="TEXT"></field>
