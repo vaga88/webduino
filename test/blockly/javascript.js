@@ -8,3 +8,10 @@ Blockly.JavaScript['DHT_chart'] = function (block) {
   var code = 'createDHTchart("' + dropdown_type_ + '",' + value_value_ + ','+ value_width_ + ',' + value_height_ + ',' + value_title_x_ + ',' + value_title_y_ + ');';
   return code;
 };
+
+Blockly.JavaScript['dht_datacheck'] = function(block) {
+  var value_dataset_ = Blockly.JavaScript.valueToCode(block, 'dataset_', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_count_ = Blockly.JavaScript.valueToCode(block, 'count_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'checkDHTdataset(' + input_dataset_ + ',' + input_count_ + ');';
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
