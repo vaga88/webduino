@@ -34,6 +34,7 @@ Blockly.Blocks['DHT_chart'] = {
 Blockly.Blocks['DHT_datasetcheck'] = {
   init: function() {
     this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_RIGHT)    
         .appendField(Blockly.Msg.BLOCK2_SHOW);     
     this.appendValueInput("dataset_")
         .setCheck("String")
