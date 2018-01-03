@@ -99,7 +99,7 @@
       svg.append('circle')
       .attr("cx",xScale(d.time))
       .attr("cy",yScale(d.temperature))
-      .attr("r",2)
+      .attr("r",1)
       .attr("title",'test')
       .attr("class", "point1")
       .append("svg:title")
@@ -108,7 +108,7 @@
       svg.append('circle')
       .attr("cx",xScale(d.time))
       .attr("cy",yScale(d.humidity))
-      .attr("r",2)
+      .attr("r",1)
       .attr("class", "point2")
       .append("svg:title")
       .text(d.humidity);      
