@@ -31,7 +31,7 @@ Blockly.Blocks['DHT_chart'] = {
   }
 };
 
-Blockly.Blocks['dht_datasetcheck'] = {
+Blockly.Blocks['DHT_datasetcheck'] = {
   init: function() {
     this.appendDummyInput()
         .appendField(Blockly.Msg.TEXT1_SHOW);     
