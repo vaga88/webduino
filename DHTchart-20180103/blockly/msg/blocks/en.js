@@ -1,5 +1,5 @@
 Blockly.Msg.BLOCK1_SHOW = " DHT";
-Blockly.Msg.VALUE_SHOW = "value";
+Blockly.Msg.VALUE_SHOW = "dataset";
 Blockly.Msg.WIDTH_SHOW = "width";
 Blockly.Msg.HEIGHT_SHOW = "height";
 Blockly.Msg.TITLE_X_SHOW = "title_x";
