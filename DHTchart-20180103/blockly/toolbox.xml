@@ -1,4 +1,23 @@
 <category id="catDHTchart">
+  
+  <block type="variables_set">
+    <field name="VAR">Dataset</field>
+    <value name="VALUE">
+      <block type="DHT_datasetcheck">
+        <value name="dataset_">
+          <block type="text">
+            <field name="TEXT"></field>
+          </block>
+        </value>
+        <value name="count_">
+          <block type="math_number">
+            <field name="NUM">20</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>  
+  
   <block type="DHT_chart">
     <field name="type_">LineChart</field>
     <value name="value_">
@@ -27,24 +46,7 @@
       </block>
     </value>    
   </block>
-  
-  <block type="variables_set">
-    <field name="VAR">Dataset</field>
-    <value name="VALUE">
-      <block type="DHT_datasetcheck">
-        <value name="dataset_">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name="count_">
-          <block type="math_number">
-            <field name="NUM">20</field>
-          </block>
-        </value>
-      </block>
-    </value>
-  </block>  
+ 
 </category>
 
 
