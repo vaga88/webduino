@@ -6,7 +6,7 @@
     "blockly/javascript.js"
   ],
   "dependencies": [
-    "fustyles.js"    
+    "iframe.js"    
   ],
   "msg": "blockly/msg",
   "blocksMsg": "blockly/msg/blocks",
