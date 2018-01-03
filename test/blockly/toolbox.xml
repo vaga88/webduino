@@ -27,9 +27,7 @@
       </block>
     </value>    
   </block>
-</category>
-
-<category name="catDHTdatasetcheck">
+  
   <block type="variables_set">
     <field name="VAR" id="ub+)1nkbzi(Nc^zo/1#X" variabletype="">Dataset</field>
     <value name="VALUE">
@@ -46,5 +44,7 @@
         </value>
       </block>
     </value>
-  </block>
+  </block>  
 </category>
+
+
