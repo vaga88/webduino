@@ -6,4 +6,4 @@ Blockly.Msg.TITLE_X_SHOW = "X軸名稱";
 Blockly.Msg.TITLE_Y_SHOW = "Y軸名稱";
 Blockly.Msg.BLOCK2_SHOW = "取得";
 Blockly.Msg.DATASET_SHOW = "數據";
-Blockly.Msg.COUNT_SHOW = "筆數";
+Blockly.Msg.COUNT_SHOW = "最新筆數";
