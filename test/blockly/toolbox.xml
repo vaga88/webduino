@@ -30,7 +30,7 @@
   
   <block type="variables_set">
     <field name="VAR">Dataset</field>
-    <value name="VALUE">
+    <value name="value_">
       <block type="DHT_datasetcheck">
         <value name="dataset_">
           <block type="text">
