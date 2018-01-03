@@ -6,7 +6,7 @@
       <block type="DHT_datasetcheck">
         <value name="dataset_">
           <block type="text">
-            <field name="TEXT"></field>
+            <field name="TEXT">00:00:00,30,60;00:00:01,20,80;</field>
           </block>
         </value>
         <value name="count_">
