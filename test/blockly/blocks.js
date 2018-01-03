@@ -33,16 +33,17 @@ Blockly.Blocks['DHT_chart'] = {
 
 Blockly.Blocks['dht_datacheck'] = {
   init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.TEXT1_SHOW);     
     this.appendValueInput("dataset_")
         .setCheck("String")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.VALUE_DATASET);
+        .appendField(Blockly.Msg.DATASET_SHOW);
     this.appendValueInput("count_")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.VALUE_COUNT);
+        .appendField(Blockly.Msg.COUNT_SHOW);
     this.setOutput(true, null);
-    this.setColour(230);
     this.setTooltip("");
     this.setColour(65);    
     this.setHelpUrl(mainUrl + 'basic/blockly/blockly-information.html' + utmUrl);
