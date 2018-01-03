@@ -1,7 +1,7 @@
 Blockly.Blocks['DHT_chart'] = {
   init: function() {
   this.appendDummyInput()
-      .appendField(Blockly.Msg.TEXT_SHOW)
+      .appendField(Blockly.Msg.BLOCK1_SHOW)
       .appendField(new Blockly.FieldDropdown([["LineChart","LineChart"], ["AreaChart","AreaChart"]]), "type_");     
   this.appendValueInput("value_")
       .setCheck("String")
@@ -34,7 +34,7 @@ Blockly.Blocks['DHT_chart'] = {
 Blockly.Blocks['DHT_datasetcheck'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.TEXT1_SHOW);     
+        .appendField(Blockly.Msg.BLOCK2_SHOW);     
     this.appendValueInput("dataset_")
         .setCheck("String")
         .setAlign(Blockly.ALIGN_RIGHT)
