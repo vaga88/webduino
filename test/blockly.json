@@ -1,6 +1,6 @@
 {
   "types": ["DHT_chart","DHT_datasetcheck","variables_set"],
-  "category": "catPlus",
+  "category": "catStandard",
   "scripts": [
     "blockly/blocks.js",
     "blockly/javascript.js"
