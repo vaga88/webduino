@@ -5,7 +5,7 @@
   function createIframe(input_url_,input_WIDTH_,input_HEIGHT_,input_LEFT_,input_TOP_) {
     
     var substr = input_url_.toLowerCase().split('.');
-    if ((substr[substr.length-1]=='mp3')||((substr[substr.length-1]=='pdf')||((substr[substr.length-1]=='swf'))
+    if ((substr[substr.length-1]=='mp3')||(substr[substr.length-1]=='pdf')||(substr[substr.length-1]=='swf'))
         var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px">';
     else
         var src = '<iframe src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px">';
