@@ -9,7 +9,7 @@
     if (substr[substr.length-1]=='mp3')
         var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="audio/mpeg" autostart="true" loop="false"></embed>'; 
     else if (substr[substr.length-1]=='swf')
-        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="application/x-shockwave-flash" wmode="transparent"></embed>';
+        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="application/x-shockwave-flash"></embed>';
     else if (substr[substr.length-1]=='pdf')
         var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px"></embed>';
     else
