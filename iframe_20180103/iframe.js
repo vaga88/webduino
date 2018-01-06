@@ -4,7 +4,16 @@
 
   function createIframe(input_url_,input_WIDTH_,input_HEIGHT_,input_LEFT_,input_TOP_) {
     
-    var src = '<iframe src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px">';
+    var substr = input_url_.toLowerCase().split('.');
+    
+    if (substr[substr.length-1]=='mp3')
+        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="audio/mpeg" autostart="true" loop="false"></embed>'; 
+    else if (substr[substr.length-1]=='swf')
+        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="application/x-shockwave-flash" wmode="transparent"></embed>';
+    else if (substr[substr.length-1]=='pdf')
+        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px"></embed>';
+    else
+        var src = '<iframe src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px"></iframe>';
     
     if (document.getElementById('fustyles'))
     {
