@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<head>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+</head>
+
+<body>
+   <div id="myChart"/>
+</body>
+
+</html>
+
+<script type="text/javascript">
+
+    google.load("visualization", "1", { packages: ["corechart"] });
+    google.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+  	var data = new google.visualization.DataTable();
+  	data.addColumn('string', '時間');
+        data.addColumn('number', '溫度(°C )');
+        data.addColumn('number', '濕度( % )');
+
+  	var strUrl = location.search;
+  	var getPara, ParaVal, ParaValTH;
+
+  	if (strUrl.indexOf("?") != -1) {
+  		var getSearch = strUrl.split("?");
+  		getPara = getSearch[1].split(",");
+
+  		data.addRows(getPara.length);
+
+  		for (i = 0; i < getPara.length; i++) {
+  			ParaVal = getPara[i].split("=");
+  			ParaValTH = ParaVal[1].split("-");
+  			data.setValue(i, 0, ParaVal[0].replace(/_/ig,':'));
+  			data.setValue(i, 1, ParaValTH[0]);
+  			data.setValue(i, 2, ParaValTH[1]);
+
+  			if (i==(getPara.length-1)) {
+  				var ShowTH ='溫度 = '+ParaValTH[0].toString()+'°C   '+'濕度 = '+ParaValTH[1].toString()+'%';
+ 			 }
+
+  		}
+
+  		//Line Chart
+          	//var chart = new google.visualization.LineChart(document.getElementById('myChart'));
+
+  		//Stepped Area Chart
+  		var chart = new google.visualization.SteppedAreaChart(document.getElementById('myChart'));
+
+  		var options = {
+             		title: ShowTH,
+  			titleTextStyle:{
+           				color: 'red', 
+           				fontName: 'Times New Roman', 
+           				fontSize: 28, 
+           				bold: true,  
+           				italic: false 
+             			 	},
+  			hAxis : { 
+          			textStyle : {fontSize: 14}
+  				},
+  			vAxis : { 
+          			textStyle : {fontSize: 18}
+  				},
+             		allowHtml: true,
+             		showRowNumber: true,
+  			width:'100%',
+  			height:'400',
+  			legend: { position: 'bottom' }
+          			};
+
+  		chart.draw(data, options);
+  	}
+    } 
+</script>
+
+<!--
+http://blockly.webduino.io/index.html?lang=zh-hant&demo=demo-area-01#-Kw3KGqpz3_GLRKJUGOU
+-->

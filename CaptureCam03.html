@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Webduino Blockly Demo 08</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://webduino.io/components/webduino-js/dist/webduino-all.min.js"></script>
+  <script src="https://blockly.webduino.io/webduino-blockly.js"></script>
+  <script src="https://blockly.webduino.io/lib/runtime.min.js"></script>
+  <script src="https://blockly.webduino.io/lib/tracking-min.js"></script>
+  <script src="https://blockly.webduino.io/lib/face-min.js"></script>
+  
+<style id="jsbin-css">
+
+#demo-area-08-content {
+  position:  relative;
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  pointer-events: auto!important;
+}
+
+#demo-area-08-picture {
+  top: -200px;
+  left: 300px;
+  position:  relative;
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  pointer-events: auto!important;
+}
+
+#demo-area-08-video {
+  top: 0;
+  left: 0;
+  position:  absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#demo-area-08-canvas {
+  top: 0;
+  left: 0;
+  position:  absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#myCanvas {
+  top: 0;
+  left: 0;
+  position:  absolute;
+  width: 100%;
+  height: 100%;
+}
+
+</style>
+</head>
+<body>
+
+<div>
+<div id="demo-area-08-content">
+    <video id="demo-area-08-video" preload="" autoplay="" loop="" muted="" controls=""></video>
+    <canvas id="demo-area-08-canvas"></canvas>
+</div>
+</div>
+
+<div id="demo-area-08-picture">
+	<canvas id="myCanvas" width="300px" height="200px"></canvas><img id="pic">
+</div>
+
+<script>
+
+var track_x,track_y,track_width,track_height,track_face,track_color;
+
+    function CaptureCam() {
+
+		var canvas = document.getElementById("myCanvas");
+        	var context = canvas.getContext("2d");
+        	var video = document.getElementById("demo-area-08-video");
+        	context.drawImage(video, 0, 0, video.clientWidth, video.clientHeight);
+            
+       		//畫耳朵
+    		context.lineWidth = 3;
+    		context.strokeStyle = "red";
+            
+            context.beginPath();
+    		context.arc(track_x+track_width/6, track_y-15, 15, 0, Math.PI*2, true);           
+    		context.stroke();
+            context.beginPath();
+    		context.arc(track_x+track_width/6, track_y-15, 7, 0, Math.PI*2, true);           
+    		context.stroke();
+            
+            context.beginPath();
+    		context.arc(track_x+track_width-track_width/6, track_y-15, 15, 0, Math.PI*2, true);
+    		context.stroke();
+            context.beginPath();
+    		context.arc(track_x+track_width-track_width/6, track_y-15, 7, 0, Math.PI*2, true);
+    		context.stroke();
+
+			//畫鬍子
+            context.strokeStyle = "gray";
+            context.beginPath();
+            context.moveTo(track_x+track_width/2,track_y+track_height-10);
+			context.lineTo(track_x+track_width/2,track_y+track_height+20);
+			context.stroke();
+            context.beginPath();
+            context.moveTo(track_x+track_width/2+10,track_y+track_height-10);
+			context.lineTo(track_x+track_width/2+10,track_y+track_height+20);
+			context.stroke();
+            context.beginPath();
+            context.moveTo(track_x+track_width/2-10,track_y+track_height-10);
+			context.lineTo(track_x+track_width/2-10,track_y+track_height+20);
+			context.stroke();
+            
+		//var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  
+		//window.location.href=image;
+
+    }
+</script>
+
+<script>
+var track;
+var GoogleMapUrl;
+var Parameters;
+track = {};
+track.canvas = document.getElementById("demo-area-08-canvas");
+track.context = track.canvas.getContext("2d");
+track.myTracker = new tracking.ObjectTracker("face");
+track.myTracker.setInitialScale(4);
+track.myTracker.setStepSize(0.5);
+track.myTracker.setEdgesDensity(0.1);
+track.myTracker.on("track", function(event) {
+  if (event.data.length === 0) {
+    track.context.clearRect(0, 0, track.canvas.width, track.canvas.height);
+  } else {
+    track.context.clearRect(0, 0, track.canvas.width, track.canvas.height);
+    event.data.forEach(function(data) {
+      
+      //取得視訊參數
+      track_x = data.x;
+  	  track_y = data.y;
+  	  track_width = data.width;
+  	  track_height = data.height;
+  	  track_face = event.data.length;
+  	  track_color = data.color;
+      
+      CaptureCam();   //視訊截圖
+  
+      if(data.color){
+        track.context.strokeStyle = track.storkColor[data.color];
+      }else{
+        track.context.strokeStyle = "#f00";
+      }
+      track.context.lineWidth = 5;
+      track.context.strokeRect(data.x, data.y, data.width, data.height-30);
+      track.context.font = "11px Helvetica";
+      track.context.fillStyle = "#fff";
+    });
+  }
+});
+track.trackerTask = tracking.track("#demo-area-08-video", track.myTracker, {
+camera: true
+});
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-65365242-1', 'auto');
+ga('require', 'linkid', 'linkid.js');
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+</script>
+</body>
+</html>

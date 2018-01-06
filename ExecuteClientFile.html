@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<head>
+</head>
+<body>
+</body>
+</html>
+
+<script>
+var strUrl = location.search;
+if (strUrl.indexOf("?") != -1) {
+	var getPara = strUrl.split("?");
+	var executeCmd = getPara[1].replace(/_/ig,':');
+	window.location = executeCmd;
+}
+</script>
+
+<!--
+https://blockly.webduino.io/?demo=demo-area-01#-Kw9hRgGErHjTwNfgxb4
+-->
