@@ -1,7 +1,7 @@
 Blockly.Blocks['iframe_open'] = {
   init: function() {
   this.appendValueInput("openid_")
-      .setCheck("String")
+      .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.OPEN_SHOW)
       .appendField(Blockly.Msg.OPENID_SHOW)    
@@ -35,7 +35,7 @@ Blockly.Blocks['iframe_open'] = {
 Blockly.Blocks['iframe_close'] = {
   init: function() {
     this.appendValueInput("closeid_")
-        .setCheck("String")
+        .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.CLOSE_SHOW)
         .appendField(Blockly.Msg.CLOSEID_SHOW)     
