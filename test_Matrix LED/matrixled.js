@@ -4,7 +4,7 @@
 
   function createMatrixLed(input_value_) {
     
-    var L[25];
+    var L = new Array(25);
     for (var i=0;i<25;i++)
     {
       if (input_value_.substr(i,1)=="1")
