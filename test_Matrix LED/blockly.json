@@ -1,12 +1,12 @@
 {
-  "types": ["iframe_open","iframe_close"],
+  "types": ["matrix_led"],
   "category": "catPlus",
   "scripts": [
     "blockly/blocks.js",
     "blockly/javascript.js"
   ],
   "dependencies": [
-    "iframe.js"    
+    "matrixled.js"    
   ],
   "msg": "blockly/msg",
   "blocksMsg": "blockly/msg/blocks",
