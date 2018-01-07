@@ -25,6 +25,6 @@ Blockly.JavaScript['matrix_led'] = function(block) {
   var L23 = (block.getFieldValue('L23') == 'TRUE')?"1":"0";
   var L24 = (block.getFieldValue('L24') == 'TRUE')?"1":"0";
   var L25 = (block.getFieldValue('L25') == 'TRUE')?"1":"0";
-  var code = 'createMatrixLed(String('+L1+L2+L3+L4+L5+L6+L7+L8+L9+L10+L11+L12+L13+L14+L15+L16+L17+L18+L19+L20+L21+L22+L23+L24+L25+'));';
+  var code = 'createMatrixLed("'+L1+L2+L3+L4+L5+L6+L7+L8+L9+L10+L11+L12+L13+L14+L15+L16+L17+L18+L19+L20+L21+L22+L23+L24+L25+'");';
   return code;
 };
