@@ -3,7 +3,6 @@
   'use strict';
 
   function createMatrixLed(input_value_) {
-    alert(input_value_);
     var L = new Array(25);
     for (var i=0;i<25;i++)
     {
@@ -13,7 +12,7 @@
         L[i]=" bgcolor='white'";
     }
     
-    var ledtable ="<table width='400' height='400' border='0'>"
+    var ledtable ="<table width='400' height='400' style='border-style:outset;'>"
                   + "<tr><td"+L[0]+"></td><td"+L[1]+"></td><td"+L[2]+"></td><td"+L[3]+"></td><td"+L[4]+"></td></tr>"
                   + "<tr><td"+L[5]+"></td><td"+L[6]+"></td><td"+L[7]+"></td><td"+L[8]+"></td><td"+L[9]+"></td></tr>"
                   + "<tr><td"+L[10]+"></td><td"+L[11]+"></td><td"+L[12]+"></td><td"+L[13]+"></td><td"+L[14]+"></td></tr>"
