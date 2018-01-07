@@ -1,8 +1,8 @@
 <category id="catIframe">
   <block type="iframe_open">
     <value name="openid_">
-      <block type="text">
-        <field name="TEXT"></field>
+      <block type="math_number">
+        <field name="NUM">0</field>
       </block>
     </value>    
     <value name="url_">
@@ -33,8 +33,8 @@
   </block>
   <block type="iframe_close">
     <value name="closeid_">
-      <block type="text">
-        <field name="TEXT"></field>
+      <block type="math_number">
+        <field name="NUM">0</field>
       </block>
     </value> 
   </block>
