@@ -11,7 +11,7 @@
     else if ((substr[substr.length-1]=='swf')||(substr[substr.length-1]=='flv'))
         var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="application/x-shockwave-flash"></embed>';
     else
-        var src = '<iframe src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px"></iframe>';
+        var src = '<iframe src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" frameborder="0"></iframe>';
     
     if (document.getElementById('fustyles'))
     {
