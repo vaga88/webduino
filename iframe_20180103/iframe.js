@@ -6,12 +6,10 @@
     
     var substr = input_url_.toLowerCase().split('.');
     
-    if (substr[substr.length-1]=='mp3')
-        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="audio/mpeg" autostart="true" loop="false"></embed>'; 
-    else if (substr[substr.length-1]=='swf')
+    if (substr[substr.length-1].indexOf("aac,au,aif,aiff,aiffc,alac,ape,asf,avi,cda,dat,divx,flac,m2ts,m4a,mid,mov,mp2,mp3,mp4,mpc,mpg,mpeg,mv2,ogg,pdf,ra,ram,raw,rcp,rm,rmvb,snd,tak,tta,vob,voc,wma,wav,wmf,wmv,wv,xmi")!=-1)
+        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" autostart="true"></embed>'; 
+    else if ((substr[substr.length-1]=='swf')||(substr[substr.length-1]=='flv'))
         var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="application/x-shockwave-flash"></embed>';
-    else if (substr[substr.length-1]=='pdf')
-        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px"></embed>';
     else
         var src = '<iframe src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px"></iframe>';
     
