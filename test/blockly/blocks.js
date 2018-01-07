@@ -1,10 +1,10 @@
 Blockly.Blocks['iframe_open'] = {
   init: function() {
-  this.appendValueInput("id_")
+  this.appendValueInput("openid_")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.TEXT_SHOW)
-      .appendField(Blockly.Msg.ID_SHOW)    
+      .appendField(Blockly.Msg.OPEN_SHOW)
+      .appendField(Blockly.Msg.OPENID_SHOW)    
   this.appendValueInput("url_")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
@@ -34,8 +34,11 @@ Blockly.Blocks['iframe_open'] = {
 };
 Blockly.Blocks['iframe_close'] = {
   init: function() {
-    this.appendDummyInput()
+    this.appendValueInput("closeid_")
+        .setCheck("String")
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.CLOSE_SHOW)
+        .appendField(Blockly.Msg.CLOSEID_SHOW)     
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(65);
