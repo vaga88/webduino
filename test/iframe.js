@@ -17,10 +17,10 @@
     
     if (document.getElementById("fustyles_iframe"+input_id_))
     {
-          document.getElementById('fustyles').style.left = input_LEFT_ + 'px';
-          document.getElementById('fustyles').style.top = input_TOP_ + 'px';
-          document.getElementById('fustyles').style.display = 'block';
-          document.getElementById('fustyles').innerHTML = src;
+          document.getElementById("fustyles_iframe"+input_id_).style.left = input_LEFT_ + 'px';
+          document.getElementById("fustyles_iframe"+input_id_).style.top = input_TOP_ + 'px';
+          document.getElementById("fustyles_iframe"+input_id_).style.display = 'block';
+          document.getElementById("fustyles_iframe"+input_id_).innerHTML = src;
     }
     else
     {
