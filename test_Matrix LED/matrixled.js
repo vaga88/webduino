@@ -3,7 +3,7 @@
   'use strict';
 
   function createMatrixLed(input_value_) {
-    
+    alert(input_value_);
     var L = new Array(25);
     for (var i=0;i<25;i++)
     {
