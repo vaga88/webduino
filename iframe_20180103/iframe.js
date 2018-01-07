@@ -6,7 +6,7 @@
     
     var substr = input_url_.toLowerCase().split('.');
     
-    if (substr[substr.length-1].indexOf("aif,wav,cda,mp3,wma,ra,rm,rmvb,mid,ogg,mp4,m4a,au,aif,aiff,snd,aac,flac,ape,mov,pdf,mpg,mpeg,m2ts,vob,wmv")!=-1)
+    if (substr[substr.length-1].indexOf("aif,au,wav,cda,mp3,wma,ra,rm,rmvb,mid,ogg,mp4,m4a,au,aif,aiff,snd,aac,flac,ape,mov,pdf,mpg,mpeg,m2ts,vob,wmv")!=-1)
         var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" autostart="true"></embed>'; 
     else if ((substr[substr.length-1]=='swf')||(substr[substr.length-1]=='flv'))
         var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="application/x-shockwave-flash"></embed>';
