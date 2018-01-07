@@ -1,5 +1,5 @@
 Blockly.Msg.TEXT_SHOW = "Web Page";
-Blockly.Msg.URL_SHOW = "ID";
+Blockly.Msg.ID_SHOW = "ID";
 Blockly.Msg.URL_SHOW = "URL";
 Blockly.Msg.WIDTH_SHOW = "WIDTH";
 Blockly.Msg.LEFT_SHOW = "LEFT";
