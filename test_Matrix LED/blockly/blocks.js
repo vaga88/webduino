@@ -1,47 +1,40 @@
-Blockly.Blocks['iframe_open'] = {
+Blockly.Blocks['matrix_led'] = {
   init: function() {
-  this.appendValueInput("openid_")
-      .setCheck("Number")
-      .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.OPEN_SHOW)
-      .appendField(Blockly.Msg.OPENID_SHOW)    
-  this.appendValueInput("url_")
-      .setCheck("String")
-      .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.URL_SHOW)
-  this.appendValueInput("width_")
-      .setCheck("Number")
-      .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.WIDTH_SHOW)
-  this.appendValueInput("height_")
-      .setCheck("Number")
-      .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.HEIGHT_SHOW);
-  this.appendValueInput("left_")
-      .setCheck("Number")
-      .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.LEFT_SHOW);    
-    this.appendValueInput("top_")
-      .setCheck("Number")
-      .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.TOP_SHOW);  
-  this.setPreviousStatement(true);
-  this.setNextStatement(true);
-  this.setTooltip('');
-  this.setColour(65);
-  this.setHelpUrl(mainUrl + 'basic/blockly/blockly-information.html' + utmUrl);
-  }
-};
-Blockly.Blocks['iframe_close'] = {
-  init: function() {
-    this.appendValueInput("closeid_")
-        .setCheck("Number")
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.CLOSE_SHOW)
-        .appendField(Blockly.Msg.CLOSEID_SHOW)     
+    this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_CENTRE)
+        .appendField("Matrix LED");
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L1")
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L2")
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L3")
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L4")
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L5");
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L6")
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L7")
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L8")
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L9")
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L10");
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L11")
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L12")
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L13")
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L14")
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L15");
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L16")
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L17")
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L18")
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L19")
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L20");
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L21")
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L22")
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L23")
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L24")
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L25");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(65);
  this.setTooltip("");
  this.setHelpUrl("");
   }
