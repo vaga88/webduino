@@ -1,5 +1,10 @@
 <category id="catIframe">
   <block type="iframe_open">
+    <value name="id_">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>    
     <value name="url_">
       <block type="text">
         <field name="TEXT">about:blank</field>
