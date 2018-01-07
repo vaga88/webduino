@@ -6,9 +6,9 @@
     
     var substr = input_url_.toLowerCase().split('.');
     
-    if (substr[substr.length-1].indexOf("wav,cda,mp3,wma,ra,rm,rmx,mid,ogg,mp4,au,aif,aiff,snd,aac,flac,ape,mov,pdf,mpg,mpeg,flv")!=-1)
+    if (substr[substr.length-1].indexOf("wav,cda,mp3,wma,ra,rm,rmx,mid,ogg,mp4,m4a,au,aif,aiff,snd,aac,flac,ape,mov,pdf,mpg,mpeg,m2ts")!=-1)
         var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" autostart="true"></embed>'; 
-    else if (substr[substr.length-1]=='swf')
+    else if ((substr[substr.length-1]=='swf')||(substr[substr.length-1]=='flv'))
         var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="application/x-shockwave-flash"></embed>';
     else
         var src = '<iframe src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px"></iframe>';
