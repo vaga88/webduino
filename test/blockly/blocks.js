@@ -1,9 +1,13 @@
 Blockly.Blocks['iframe_open'] = {
   init: function() {
-  this.appendValueInput("url_")
+  this.appendValueInput("id_")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.TEXT_SHOW)
+      .appendField(Blockly.Msg.ID_SHOW)    
+  this.appendValueInput("url_")
+      .setCheck("String")
+      .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.URL_SHOW)
   this.appendValueInput("width_")
       .setCheck("Number")
