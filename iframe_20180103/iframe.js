@@ -10,6 +10,8 @@
         var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="audio/mpeg"></embed>'; 
     else if (substr[substr.length-1]=='mid')
         var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="audio/Midi"></embed>';
+    else if (substr[substr.length-1]=='mp4')
+        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="video/mp4"></embed>';    
     else if (substr[substr.length-1]=='ram')
         var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" autostart="true" controls="ImageWindow"></embed>';
     else if (substr[substr.length-1]=='mov')
