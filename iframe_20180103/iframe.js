@@ -6,8 +6,10 @@
     
     var substr = input_url_.toLowerCase().split('.');
     
-    if (substr[substr.length-1].indexOf("mp3,mid,ogg,mp4,ram,mov,swf,pdf,wav,mpg,mpeg")!=-1)
+    if (substr[substr.length-1].indexOf("mp3,mid,ogg,mp4,ram,mov,pdf,wav,mpg,mpeg")!=-1)
         var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" autostart="true"></embed>'; 
+    else if (substr[substr.length-1]=='swf')
+        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="application/x-shockwave-flash"></embed>';
     else
         var src = '<iframe src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px"></iframe>';
     
