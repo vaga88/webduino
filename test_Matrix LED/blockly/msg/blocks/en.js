@@ -1,1 +1,0 @@
-Blockly.Msg.MATRIXLED_SHOW = "MATRIX LED";
