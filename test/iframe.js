@@ -15,7 +15,7 @@
     else
         var src = '<iframe src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px"></iframe>';
     
-    if (document.getElementById(input_id_)
+    if (document.getElementById('fustyles-'+input_id_)
     {
           document.getElementById('fustyles').style.left = input_LEFT_ + 'px';
           document.getElementById('fustyles').style.top = input_TOP_ + 'px';
@@ -25,7 +25,7 @@
     else
     {
         var div = document.createElement('div');
-        div.id = input_id_;
+        div.id = 'fustyles-'+input_id_;
         div.style.position = 'absolute';      
         div.style.left = input_LEFT_ + 'px';
         div.style.top = input_TOP_ + 'px';
