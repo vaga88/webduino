@@ -35,7 +35,8 @@ Blockly.Blocks['matrix_led'] = {
         .appendField(new Blockly.FieldCheckbox("FALSE"), "L25");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
- this.setTooltip("");
- this.setHelpUrl("");
+    this.setColour(100);    
+    this.setTooltip("");
+    this.setHelpUrl("");
   }
 };
