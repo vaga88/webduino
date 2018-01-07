@@ -1,0 +1,9 @@
+Blockly.Msg.OPEN_SHOW = "顯示網頁";
+Blockly.Msg.CLOSE_SHOW = "關閉 顯示網頁";
+Blockly.Msg.OPENID_SHOW = "ID";
+Blockly.Msg.CLOSEID_SHOW = "ID";
+Blockly.Msg.URL_SHOW = "網址";
+Blockly.Msg.WIDTH_SHOW = "寬度";
+Blockly.Msg.HEIGHT_SHOW = "高度";
+Blockly.Msg.LEFT_SHOW = "右移距離";
+Blockly.Msg.TOP_SHOW = "下移距離";
