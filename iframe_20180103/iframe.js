@@ -6,8 +6,16 @@
     
     var substr = input_url_.toLowerCase().split('.');
     
-    if (substr[substr.length-1]=='mp3')
-        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="audio/mpeg" autostart="true" loop="false"></embed>'; 
+    if ((substr[substr.length-1]=='mp3')||(substr[substr.length-1]=='mpg')||(substr[substr.length-1]=='mpeg'))
+        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="audio/mpeg" autoplay="true"></embed>'; 
+    else if (substr[substr.length-1]=='mid')
+        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="audio/Midi" autoplay="true"></embed>';
+    else if (substr[substr.length-1]=='wav')
+        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" autoplay="true"></embed>';
+    else if (substr[substr.length-1]=='mov')
+        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="video/quicktime" autoplay="true"></embed>';
+    else if (substr[substr.length-1]=='ogg')
+        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="audio/ogg" autoplay="true"></embed>';
     else if (substr[substr.length-1]=='swf')
         var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="application/x-shockwave-flash"></embed>';
     else if (substr[substr.length-1]=='pdf')
