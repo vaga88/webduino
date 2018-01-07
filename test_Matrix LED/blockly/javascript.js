@@ -1,15 +1,29 @@
-Blockly.JavaScript['iframe_open'] = function (block) {
-  var value_openid_ = Blockly.JavaScript.valueToCode(block, 'openid_', Blockly.JavaScript.ORDER_ATOMIC);  
-  var value_url_ = Blockly.JavaScript.valueToCode(block, 'url_', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_width_ = Blockly.JavaScript.valueToCode(block, 'width_', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_height_ = Blockly.JavaScript.valueToCode(block, 'height_', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_left_ = Blockly.JavaScript.valueToCode(block, 'left_', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_top_ = Blockly.JavaScript.valueToCode(block, 'top_', Blockly.JavaScript.ORDER_ATOMIC);  
-  var code = 'createIframe(' + value_openid_ + ',' + value_url_ + ','+ value_width_ + ',' + value_height_ + ',' + value_left_ + ',' + value_top_ + ');';
-  return code;
-};
-Blockly.JavaScript['iframe_close'] = function(block) {
-  var value_closeid_ = Blockly.JavaScript.valueToCode(block, 'closeid_', Blockly.JavaScript.ORDER_ATOMIC);  
-  var code = 'createIframe(' + value_closeid_ + ',\'about:blank\',0,0,0,0);';
+Blockly.JavaScript['matrix_led'] = function(block) {
+  var checkbox_l1 = (block.getFieldValue('L1') == 'TRUE')?"1":"0";
+  var checkbox_l2 = (block.getFieldValue('L2') == 'TRUE')?"1":"0";
+  var checkbox_l3 = (block.getFieldValue('L3') == 'TRUE')?"1":"0";
+  var checkbox_l4 = (block.getFieldValue('L4') == 'TRUE')?"1":"0";
+  var checkbox_l5 = (block.getFieldValue('L5') == 'TRUE')?"1":"0";
+  var checkbox_l6 = (block.getFieldValue('L6') == 'TRUE')?"1":"0";
+  var checkbox_l7 = (block.getFieldValue('L7') == 'TRUE')?"1":"0";
+  var checkbox_l8 = (block.getFieldValue('L8') == 'TRUE')?"1":"0";
+  var checkbox_l9 = (block.getFieldValue('L9') == 'TRUE')?"1":"0";
+  var checkbox_l10 = (block.getFieldValue('L10') == 'TRUE')?"1":"0";
+  var checkbox_l11 = (block.getFieldValue('L11') == 'TRUE')?"1":"0";
+  var checkbox_l12 = (block.getFieldValue('L12') == 'TRUE')?"1":"0";
+  var checkbox_l13 = (block.getFieldValue('L13') == 'TRUE')?"1":"0";
+  var checkbox_l14 = (block.getFieldValue('L14') == 'TRUE')?"1":"0";
+  var checkbox_l15 = (block.getFieldValue('L15') == 'TRUE')?"1":"0";
+  var checkbox_l16 = (block.getFieldValue('L16') == 'TRUE')?"1":"0";
+  var checkbox_l17 = (block.getFieldValue('L17') == 'TRUE')?"1":"0";
+  var checkbox_l18 = (block.getFieldValue('L18') == 'TRUE')?"1":"0";
+  var checkbox_l19 = (block.getFieldValue('L19') == 'TRUE')?"1":"0";;
+  var checkbox_l20 = (block.getFieldValue('L20') == 'TRUE')?"1":"0";
+  var checkbox_l21 = (block.getFieldValue('L21') == 'TRUE')?"1":"0";
+  var checkbox_l22 = (block.getFieldValue('L22') == 'TRUE')?"1":"0";
+  var checkbox_l23 = (block.getFieldValue('L23') == 'TRUE')?"1":"0";
+  var checkbox_l24 = (block.getFieldValue('L24') == 'TRUE')?"1":"0";
+  var checkbox_l25 = (block.getFieldValue('L25') == 'TRUE')?"1":"0";
+  var code = 'createMatrixLed('+L1+L2+L3+L4+L5+L6+L7+L8+L9+L10+L11+L12+L13+L14+L15+L16+L17+L18+L19+L20+L21+L22+L23+L24+L25+');';
   return code;
 };
