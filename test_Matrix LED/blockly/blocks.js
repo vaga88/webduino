@@ -2,7 +2,7 @@ Blockly.Blocks['matrix_led'] = {
   init: function() {
     this.appendDummyInput()
         .setAlign(Blockly.ALIGN_CENTRE)
-        .appendField("Matrix LED");
+        .appendField(Blockly.Msg.MATRIXLED_SHOW);
     this.appendDummyInput()
         .appendField(new Blockly.FieldCheckbox("FALSE"), "L1")
         .appendField(new Blockly.FieldCheckbox("FALSE"), "L2")
