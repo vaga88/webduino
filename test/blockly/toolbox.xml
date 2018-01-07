@@ -1,6 +1,6 @@
 <category id="catIframe">
   <block type="iframe_open">
-    <value name="id_">
+    <value name="openid_">
       <block type="text">
         <field name="TEXT"></field>
       </block>
@@ -31,5 +31,11 @@
       </block>
     </value>    
   </block>
-  <block type="iframe_close"></block>
+  <block type="iframe_close">
+    <value name="closeid_">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value> 
+  </block>
  </category>
