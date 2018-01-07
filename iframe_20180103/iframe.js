@@ -6,22 +6,8 @@
     
     var substr = input_url_.toLowerCase().split('.');
     
-    if (substr[substr.length-1]=='mp3')
-        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="audio/mpeg"></embed>'; 
-    else if (substr[substr.length-1]=='mid')
-        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="audio/Midi"></embed>';
-    else if (substr[substr.length-1]=='ogg')
-        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="audio/ogg"></embed>';    
-    else if (substr[substr.length-1]=='mp4')
-        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="video/mp4"></embed>';    
-    else if (substr[substr.length-1]=='ram')
-        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" autostart="true" controls="ImageWindow"></embed>';
-    else if (substr[substr.length-1]=='mov')
-        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="video/quicktime"></embed>';
-    else if (substr[substr.length-1]=='swf')
-        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="application/x-shockwave-flash"></embed>';
-    else if ((substr[substr.length-1]=='pdf')||(substr[substr.length-1]=='wav')||(substr[substr.length-1]=='mpg')||(substr[substr.length-1]=='mpeg'))
-        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px"></embed>';
+    if (substr[substr.length-1].indexOf("mp3,mid,ogg,mp4,ram,mov,swf,pdf,wav,mpg,mpeg")!=-1)
+        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px"></embed>'; 
     else
         var src = '<iframe src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px"></iframe>';
     
