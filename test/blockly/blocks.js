@@ -53,3 +53,22 @@ Blockly.Blocks['matrix_led_clear'] = {
     this.setHelpUrl("");    
   }
 };    
+
+Blockly.Blocks['matrix_led_one'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.MATRIXLED_ONE_SHOW);
+    this.appendValueInput("value_x_")
+        .setCheck("Number")
+        .appendField("x");
+    this.appendValueInput("value_y_")
+        .setCheck("Number")
+        .appendField("y");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(60);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
