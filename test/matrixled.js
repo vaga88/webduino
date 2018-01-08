@@ -19,7 +19,7 @@
         L[i]=" bgcolor='red'";
       else
       {
-        if (isnan(L[i]))
+        if (isNaN(L[i]))
           L[i]=" bgcolor='white'";
         alert('y');
       }
@@ -34,7 +34,7 @@
         L[i]=" bgcolor='white'";
       else
       {
-        if (isnan(L[i]))
+        if (isNaN(L[i]))
           L[i]=" bgcolor='white'";
         alert('y');
       }
