@@ -1,4 +1,4 @@
-Blockly.JavaScript['matrix_led'] = function(block) {
+Blockly.JavaScript['matrix_led_matrix'] = function(block) {
   var L01 = (block.getFieldValue('L01') == 'TRUE')?"1":"0";
   var L02 = (block.getFieldValue('L02') == 'TRUE')?"1":"0";
   var L03 = (block.getFieldValue('L03') == 'TRUE')?"1":"0";
