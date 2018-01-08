@@ -1,13 +1,13 @@
 Blockly.JavaScript['matrix_led'] = function(block) {
-  var L1 = (block.getFieldValue('L1') == 'TRUE')?"1":"0";
-  var L2 = (block.getFieldValue('L2') == 'TRUE')?"1":"0";
-  var L3 = (block.getFieldValue('L3') == 'TRUE')?"1":"0";
-  var L4 = (block.getFieldValue('L4') == 'TRUE')?"1":"0";
-  var L5 = (block.getFieldValue('L5') == 'TRUE')?"1":"0";
-  var L6 = (block.getFieldValue('L6') == 'TRUE')?"1":"0";
-  var L7 = (block.getFieldValue('L7') == 'TRUE')?"1":"0";
-  var L8 = (block.getFieldValue('L8') == 'TRUE')?"1":"0";
-  var L9 = (block.getFieldValue('L9') == 'TRUE')?"1":"0";
+  var L01 = (block.getFieldValue('L01') == 'TRUE')?"1":"0";
+  var L02 = (block.getFieldValue('L02') == 'TRUE')?"1":"0";
+  var L03 = (block.getFieldValue('L03') == 'TRUE')?"1":"0";
+  var L04 = (block.getFieldValue('L04') == 'TRUE')?"1":"0";
+  var L05 = (block.getFieldValue('L05') == 'TRUE')?"1":"0";
+  var L06 = (block.getFieldValue('L06') == 'TRUE')?"1":"0";
+  var L07 = (block.getFieldValue('L07') == 'TRUE')?"1":"0";
+  var L08 = (block.getFieldValue('L08') == 'TRUE')?"1":"0";
+  var L09 = (block.getFieldValue('L09') == 'TRUE')?"1":"0";
   var L10 = (block.getFieldValue('L10') == 'TRUE')?"1":"0";
   var L11 = (block.getFieldValue('L11') == 'TRUE')?"1":"0";
   var L12 = (block.getFieldValue('L12') == 'TRUE')?"1":"0";
@@ -24,6 +24,6 @@ Blockly.JavaScript['matrix_led'] = function(block) {
   var L23 = (block.getFieldValue('L23') == 'TRUE')?"1":"0";
   var L24 = (block.getFieldValue('L24') == 'TRUE')?"1":"0";
   var L25 = (block.getFieldValue('L25') == 'TRUE')?"1":"0";
-  var code = 'createMatrixLed("'+L1+L2+L3+L4+L5+L6+L7+L8+L9+L10+L11+L12+L13+L14+L15+L16+L17+L18+L19+L20+L21+L22+L23+L24+L25+'");';
+  var code = 'createMatrixLed("'+L01+L02+L03+L04+L05+L06+L07+L08+L09+L10+L11+L12+L13+L14+L15+L16+L17+L18+L19+L20+L21+L22+L23+L24+L25+'");';
   return code;
 };
