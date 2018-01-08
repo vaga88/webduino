@@ -1,3 +1,22 @@
+
+Blockly.JavaScript['matrix_led_color'] = function(block) {
+  var value_color_ = Blockly.JavaScript.valueToCode(block, 'value_color_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'MatrixLed_color('+ value_color_ +');';
+  return code;
+};
+
+Blockly.JavaScript['matrix_led_width'] = function(block) {
+  var value_width_ = Blockly.JavaScript.valueToCode(block, 'value_width_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'MatrixLed_width('+ value_width_ +');';
+  return code;
+};
+
+Blockly.JavaScript['matrix_led_height'] = function(block) {
+  var value_height_ = Blockly.JavaScript.valueToCode(block, 'value_height_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'MatrixLed_height('+ value_height_ +');';
+  return code;
+};
+
 Blockly.JavaScript['matrix_led_matrix'] = function(block) {
   var L01 = (block.getFieldValue('L01') == 'TRUE')?"1":"0";
   var L02 = (block.getFieldValue('L02') == 'TRUE')?"1":"0";
@@ -17,7 +36,7 @@ Blockly.JavaScript['matrix_led_matrix'] = function(block) {
   var L16 = (block.getFieldValue('L16') == 'TRUE')?"1":"0";
   var L17 = (block.getFieldValue('L17') == 'TRUE')?"1":"0";
   var L18 = (block.getFieldValue('L18') == 'TRUE')?"1":"0";
-  var L19 = (block.getFieldValue('L19') == 'TRUE')?"1":"0";;
+  var L19 = (block.getFieldValue('L19') == 'TRUE')?"1":"0";
   var L20 = (block.getFieldValue('L20') == 'TRUE')?"1":"0";
   var L21 = (block.getFieldValue('L21') == 'TRUE')?"1":"0";
   var L22 = (block.getFieldValue('L22') == 'TRUE')?"1":"0";
@@ -46,3 +65,4 @@ Blockly.JavaScript['matrix_led_off'] = function(block) {
   var code = 'MatrixLed_off('+value_x_off_+','+value_y_off_+');';
   return code;
 };
+
