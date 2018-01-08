@@ -46,3 +46,22 @@ Blockly.JavaScript['matrix_led_off'] = function(block) {
   var code = 'MatrixLed_off('+value_x_off_+','+value_y_off_+');';
   return code;
 };
+
+Blockly.JavaScript['matrix_led_color'] = function(block) {
+  var value_color_ = Blockly.JavaScript.valueToCode(block, 'value_color_', Blockly.JavaScript.ORDER_ATOMIC);
+  alert(value_color_);
+  var code = 'MatrixLed_color("'+ value_color_ +'");';
+  return code;
+};
+
+Blockly.JavaScript['matrix_led_width'] = function(block) {
+  var value_width_ = Blockly.JavaScript.valueToCode(block, 'value_width_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'MatrixLed_width('+ value_width_ +');';
+  return code;
+};
+
+Blockly.JavaScript['matrix_led_height'] = function(block) {
+  var value_height_ = Blockly.JavaScript.valueToCode(block, 'value_height_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'MatrixLed_height('+ value_height_ +');';
+  return code;
+};
