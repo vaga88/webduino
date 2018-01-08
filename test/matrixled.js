@@ -22,10 +22,10 @@
       else
         L[i]=" bgcolor='white'";
     }
-    ShowMatrixLed();
+    MatrixLed_show();
   }
   
-  function ShowMatrixLed() {
+  function MatrixLed_show() {
     var ledtable ="<table style='width:250px;height:250px;border:white;'>"
                   + "<tr><td"+L[0]+"></td><td"+L[5]+"></td><td"+L[10]+"></td><td"+L[15]+"></td><td"+L[20]+"></td></tr>"
                   + "<tr><td"+L[1]+"></td><td"+L[6]+"></td><td"+L[11]+"></td><td"+L[16]+"></td><td"+L[21]+"></td></tr>"
@@ -49,6 +49,6 @@
 
   window.MatrixLed_clear = MatrixLed_clear;
   window.MatrixLed_matrix = MatrixLed_matrix;
-  window.ShowMatrixLed = ShowMatrixLed;
+  window.MatrixLed_show = MatrixLed_show;
 
 }(window, window.document));
