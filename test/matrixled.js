@@ -2,13 +2,10 @@
 
   'use strict';
   
-  var a=1;
+  var L = new Array(25);
 
-  function createMatrixLed(input_value_) {
+  function MatrixLed_b1(input_value_) {
     
-    alert(a);
-    
-    var L = new Array(25);
     for (var i=0;i<25;i++)
     {
       if (input_value_.substr(i,1)=="1")
@@ -16,7 +13,10 @@
       else
         L[i]=" bgcolor='white'";
     }
-    
+    ShowMatrixLed();
+  }
+  
+  function ShowMatrixLed() {
     var ledtable ="<table style='width:250px;height:250px;border:white;'>"
                   + "<tr><td"+L[0]+"></td><td"+L[5]+"></td><td"+L[10]+"></td><td"+L[15]+"></td><td"+L[20]+"></td></tr>"
                   + "<tr><td"+L[1]+"></td><td"+L[6]+"></td><td"+L[11]+"></td><td"+L[16]+"></td><td"+L[21]+"></td></tr>"
@@ -35,9 +35,10 @@
         div.id = "fustyles_matrixled";   
         div.innerHTML = ledtable;
         document.body.appendChild(div);
-    }
+    }    
   }
 
-  window.createMatrixLed = createMatrixLed;
+  window.MatrixLed_b1 = MatrixLed_b1;
+  window.ShowMatrixLed = ShowMatrixLed;
 
 }(window, window.document));
