@@ -32,3 +32,17 @@ Blockly.JavaScript['matrix_led_clear'] = function(block) {
   var code = 'MatrixLed_clear();';
   return code;
 };
+
+Blockly.JavaScript['matrix_led_on'] = function(block) {
+  var value_x_on_ = Blockly.JavaScript.valueToCode(block, 'value_x_on_', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_y_on_ = Blockly.JavaScript.valueToCode(block, 'value_y_on_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'MatrixLed_on('+value_x_on_+','+value_y_on_+');';
+  return code;
+};
+
+Blockly.JavaScript['matrix_led_off'] = function(block) {
+  var value_x_off_ = Blockly.JavaScript.valueToCode(block, 'value_x_off_', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_y_off_ = Blockly.JavaScript.valueToCode(block, 'value_y_off_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'MatrixLed_off('+value_x_off_+','+value_y_off_+');';
+  return code;
+};

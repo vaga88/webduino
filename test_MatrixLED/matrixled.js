@@ -2,10 +2,9 @@
 
   'use strict';
   
-  var L = new Array(25);
+  var L = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
 
   function MatrixLed_clear() {
-    
     for (var i=0;i<25;i++)
     {
       L[i]=" bgcolor='white'";
@@ -13,8 +12,35 @@
     MatrixLed_show();
   }
   
+  function MatrixLed_on(input_x_,input_y_) {
+    for (var i=0;i<25;i++)
+    {
+      if (i==(input_x_*5+input_y_))
+        L[i]=" bgcolor='red'";
+      else
+      {
+        if (L[i]=="")
+          L[i]=" bgcolor='white'";
+      }
+    }
+    MatrixLed_show();
+  }
+  
+  function MatrixLed_off(input_x_,input_y_) {
+    for (var i=0;i<25;i++)
+    {
+      if (i==(input_x_*5+input_y_))
+        L[i]=" bgcolor='white'";
+      else
+      {
+        if (L[i]=="")
+          L[i]=" bgcolor='white'";
+      }
+    }
+    MatrixLed_show();
+  }
+  
   function MatrixLed_matrix(input_value_) {
-    
     for (var i=0;i<25;i++)
     {
       if (input_value_.substr(i,1)=="1")
@@ -50,5 +76,7 @@
   window.MatrixLed_clear = MatrixLed_clear;
   window.MatrixLed_matrix = MatrixLed_matrix;
   window.MatrixLed_show = MatrixLed_show;
+  window.MatrixLed_on = MatrixLed_on;
+  window.MatrixLed_off = MatrixLed_off;
 
 }(window, window.document));
