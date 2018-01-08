@@ -49,7 +49,6 @@ Blockly.JavaScript['matrix_led_off'] = function(block) {
 
 Blockly.JavaScript['matrix_led_color'] = function(block) {
   var value_color_ = Blockly.JavaScript.valueToCode(block, 'value_color_', Blockly.JavaScript.ORDER_ATOMIC);
-  alert(value_color_);
   var code = 'MatrixLed_color("'+ value_color_ +'");';
   return code;
 };
