@@ -26,4 +26,6 @@
     <field name="L20">FALSE</field>
     <field name="L25">FALSE</field>
   </block>
+  <block type="matrix_led_clear">
+  </block>
  </category>
