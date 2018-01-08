@@ -3,20 +3,20 @@
   'use strict';
   
   var L = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
-  var MatrixLed_color = "#FF0000";
-  var MatrixLed_width = 250;
-  var MatrixLed_height = 250;
+  var MatrixLedcolor = "#FF0000";
+  var MatrixLedwidth = 250;
+  var MatrixLedheight = 250;
 
   function MatrixLed_color(input_color_) {
-    MatrixLed_color = input_color_;
+    MatrixLedcolor = input_color_;
   }
   
   function MatrixLed_width(input_width_) {
-    MatrixLed_width = input_width_;
+    MatrixLedwidth = input_width_;
   }
   
   function MatrixLed_height(input_height_) {
-    MatrixLed_height = input_height_;
+    MatrixLedheight = input_height_;
   }  
   
   function MatrixLed_clear() {
@@ -31,7 +31,7 @@
     for (var i=0;i<25;i++)
     {
       if (i==(input_x_*5+input_y_))
-        L[i]=" bgcolor='"+MatrixLed_color+"'";
+        L[i]=" bgcolor='"+MatrixLedcolor+"'";
       else
       {
         if (L[i]=="")
@@ -45,7 +45,7 @@
     for (var i=0;i<25;i++)
     {
       if (i==(input_x_*5+input_y_))
-        L[i]=" bgcolor='"+MatrixLed_color+"'";
+        L[i]=" bgcolor='"+MatrixLedcolor+"'";
       else
       {
         if (L[i]=="")
@@ -59,7 +59,7 @@
     for (var i=0;i<25;i++)
     {
       if (input_value_.substr(i,1)=="1")
-        L[i]=" bgcolor='"+MatrixLed_color+"'";
+        L[i]=" bgcolor='"+MatrixLedcolor+"'";
       else
         L[i]=" bgcolor='white'";
     }
@@ -67,7 +67,7 @@
   }
   
   function MatrixLed_show() {
-    var ledtable ="<table style='width:"+MatrixLed_width+"px;height:"+MatrixLed_height+"px;border:white;'>"
+    var ledtable ="<table style='width:"+MatrixLedwidth+"px;height:"+MatrixLedheight+"px;border:white;'>"
                   + "<tr><td"+L[0]+"></td><td"+L[5]+"></td><td"+L[10]+"></td><td"+L[15]+"></td><td"+L[20]+"></td></tr>"
                   + "<tr><td"+L[1]+"></td><td"+L[6]+"></td><td"+L[11]+"></td><td"+L[16]+"></td><td"+L[21]+"></td></tr>"
                   + "<tr><td"+L[2]+"></td><td"+L[7]+"></td><td"+L[12]+"></td><td"+L[17]+"></td><td"+L[22]+"></td></tr>"
