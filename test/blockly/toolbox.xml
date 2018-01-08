@@ -1,5 +1,5 @@
 <category id="catMatrixLed">
-  <block type="matrix_led">
+  <block type="matrix_led_matrix">
     <field name="L01">FALSE</field>
     <field name="L06">FALSE</field>
     <field name="L11">FALSE</field>
