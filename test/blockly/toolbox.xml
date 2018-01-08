@@ -26,6 +26,30 @@
     <field name="L20">FALSE</field>
     <field name="L25">FALSE</field>
   </block>
+  <block type="matrix_led_on">
+    <value name="value_x_on_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="value_y_on_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="matrix_led_off">
+    <value name="value_x_off_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="value_y_off_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>  
   <block type="matrix_led_clear">
   </block>
  </category>
