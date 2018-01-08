@@ -45,7 +45,7 @@
     for (var i=0;i<25;i++)
     {
       if (i==(input_x_*5+input_y_))
-        L[i]=" bgcolor='"+MatrixLedcolor+"'";
+        L[i]=" bgcolor='white'";
       else
       {
         if (L[i]=="")
