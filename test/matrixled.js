@@ -13,7 +13,7 @@
     ShowMatrixLed();
   }
   
-  function MatrixLed_b1(input_value_) {
+  function MatrixLed_matrix(input_value_) {
     
     for (var i=0;i<25;i++)
     {
@@ -48,7 +48,7 @@
   }
 
   window.MatrixLed_clear = MatrixLed_clear;
-  window.MatrixLed_b1 = MatrixLed_b1;
+  window.MatrixLed_matrix = MatrixLed_matrix;
   window.ShowMatrixLed = ShowMatrixLed;
 
 }(window, window.document));
