@@ -1,10 +1,9 @@
 
 Blockly.Blocks['matrix_led_color'] = {
   init: function() {
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.MATRIXLED_COLOR_SHOW);
     this.appendValueInput("value_color_")
         .setCheck(null)  
+        .appendField(Blockly.Msg.MATRIXLED_COLOR_SHOW);    
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(300);    
@@ -15,10 +14,9 @@ Blockly.Blocks['matrix_led_color'] = {
 
 Blockly.Blocks['matrix_led_width'] = {
   init: function() {
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.MATRIXLED_WIDTH_SHOW);
     this.appendValueInput("value_width_")
         .setCheck("Number")  
+        .appendField(Blockly.Msg.MATRIXLED_WIDTH_SHOW);    
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(300);    
@@ -29,10 +27,9 @@ Blockly.Blocks['matrix_led_width'] = {
 
 Blockly.Blocks['matrix_led_height'] = {
   init: function() {
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.MATRIXLED_HEIGHT_SHOW);
     this.appendValueInput("value_height_")
         .setCheck("Number")  
+        .appendField(Blockly.Msg.MATRIXLED_HEIGHT_SHOW);    
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(300);    
