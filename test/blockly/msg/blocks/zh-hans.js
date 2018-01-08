@@ -1,1 +1,1 @@
-Blockly.Msg.MATRIXLED_SHOW = "矩阵 LED";
+Blockly.Msg.MATRIXLED_SHOW = "显示 指示灯";
