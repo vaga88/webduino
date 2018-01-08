@@ -9,7 +9,6 @@
 
   function MatrixLed_color(input_color_) {
     MatrixLedcolor = input_color_;
-    alert(MatrixLedcolor);
   }
   
   function MatrixLed_width(input_width_) {
