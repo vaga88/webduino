@@ -35,7 +35,6 @@
       {
         if (isNaN(L[i]))
           L[i]=" bgcolor='white'";
-        alert('y');
       }
     }
     MatrixLed_show();
