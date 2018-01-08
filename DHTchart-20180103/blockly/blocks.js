@@ -27,7 +27,7 @@ Blockly.Blocks['DHT_chart'] = {
     this.setNextStatement(true);
     this.setTooltip('');
     this.setColour(65);
-    this.setHelpUrl(mainUrl + 'basic/blockly/blockly-information.html' + utmUrl);
+    this.setHelpUrl("");
   }
 };
 
@@ -47,6 +47,6 @@ Blockly.Blocks['DHT_datasetcheck'] = {
     this.setOutput(true, null);
     this.setTooltip("");
     this.setColour(65);    
-    this.setHelpUrl(mainUrl + 'basic/blockly/blockly-information.html' + utmUrl);
+    this.setHelpUrl("");
   }
 };  
