@@ -15,13 +15,12 @@
   function MatrixLed_on(input_x_,input_y_) {
     for (var i=0;i<25;i++)
     {
-      if (i==((input_x_-1)*5+input_y_-1))
+      if (i==(input_x_*5+input_y_))
         L[i]=" bgcolor='red'";
       else
       {
         if (isNaN(L[i]))
           L[i]=" bgcolor='white'";
-        alert('y');
       }
     }
     MatrixLed_show();
@@ -30,7 +29,7 @@
   function MatrixLed_off(input_x_,input_y_) {
     for (var i=0;i<25;i++)
     {
-      if (i==((input_x_-1)*5+input_y_-1))
+      if (i==(input_x_*5+input_y_))
         L[i]=" bgcolor='white'";
       else
       {
