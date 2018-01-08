@@ -10,7 +10,7 @@
     {
       L[i]=" bgcolor='white'";
     }
-    ShowMatrixLed();
+    MatrixLed_show();
   }
   
   function MatrixLed_matrix(input_value_) {
