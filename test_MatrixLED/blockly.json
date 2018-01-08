@@ -1,5 +1,5 @@
 {
-  "types": ["matrix_led"],
+  "types": ["matrix_led_matrix","matrix_led_clear"],
   "category": "catPlus",
   "scripts": [
     "blockly/blocks.js",
