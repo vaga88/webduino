@@ -35,7 +35,7 @@ Blockly.Blocks['matrix_led_matrix'] = {
         .appendField(new Blockly.FieldCheckbox("FALSE"), "L25");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(80);    
+    this.setColour(250);    
     this.setTooltip("");
     this.setHelpUrl("");
   }
@@ -47,7 +47,7 @@ Blockly.Blocks['matrix_led_clear'] = {
         .appendField(Blockly.Msg.MATRIXLED_CLEAR_SHOW);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(80);    
+    this.setColour(250);    
     this.setTooltip("");
     this.setHelpUrl("");    
   }
@@ -66,7 +66,7 @@ Blockly.Blocks['matrix_led_on'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(80);
+    this.setColour(250);
     this.setTooltip("");
     this.setHelpUrl("");
   }
@@ -85,7 +85,7 @@ Blockly.Blocks['matrix_led_off'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(80);
+    this.setColour(250);
     this.setTooltip("");
     this.setHelpUrl("");
   }
@@ -99,7 +99,7 @@ Blockly.Blocks['matrix_led_color'] = {
         .setCheck(null)  
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(80);    
+    this.setColour(250);    
     this.setTooltip("");
     this.setHelpUrl("");    
   }
@@ -113,7 +113,7 @@ Blockly.Blocks['matrix_led_width'] = {
         .setCheck("Number")  
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(80);    
+    this.setColour(250);    
     this.setTooltip("");
     this.setHelpUrl("");    
   }
@@ -127,7 +127,7 @@ Blockly.Blocks['matrix_led_height'] = {
         .setCheck("Number")  
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(80);    
+    this.setColour(250);    
     this.setTooltip("");
     this.setHelpUrl("");    
   }
