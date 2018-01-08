@@ -1,8 +1,13 @@
 +(function (window, document) {
 
   'use strict';
+  
+  var a=1;
 
   function createMatrixLed(input_value_) {
+    
+    alert(a);
+    
     var L = new Array(25);
     for (var i=0;i<25;i++)
     {
