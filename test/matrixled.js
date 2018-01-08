@@ -4,6 +4,15 @@
   
   var L = new Array(25);
 
+  function MatrixLed_clear() {
+    
+    for (var i=0;i<25;i++)
+    {
+      L[i]=" bgcolor='white'";
+    }
+    ShowMatrixLed();
+  }
+  
   function MatrixLed_b1(input_value_) {
     
     for (var i=0;i<25;i++)
@@ -38,6 +47,7 @@
     }    
   }
 
+  window.MatrixLed_clear = MatrixLed_clear;
   window.MatrixLed_b1 = MatrixLed_b1;
   window.ShowMatrixLed = ShowMatrixLed;
 
