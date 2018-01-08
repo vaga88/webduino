@@ -46,5 +46,10 @@ Blockly.Blocks['matrix_led_clear'] = {
     this.appendDummyInput()
         .setAlign(Blockly.ALIGN_CENTRE)
         .appendField(Blockly.Msg.MATRIXLED_CLEAR_SHOW);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(100);    
+    this.setTooltip("");
+    this.setHelpUrl("");    
   }
 };    
