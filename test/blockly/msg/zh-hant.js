@@ -1,1 +1,1 @@
-MSG.catMatrixLed = "矩陣 LED";
+MSG.catMatrixLed = "顯示 指示燈";
