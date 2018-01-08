@@ -11,11 +11,11 @@
     MatrixLed_color = input_color_;
   }
   
-  function MatrixLed_clear(input_width_) {
+  function MatrixLed_width(input_width_) {
     MatrixLed_width = input_width_;
   }
   
-  function MatrixLed_clear(input_height_) {
+  function MatrixLed_height(input_height_) {
     MatrixLed_height = input_height_;
   }  
   
