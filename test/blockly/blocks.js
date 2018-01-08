@@ -40,3 +40,11 @@ Blockly.Blocks['matrix_led'] = {
     this.setHelpUrl("");
   }
 };
+
+Blockly.Blocks['matrix_led_clear'] = {
+  init: function() {
+    this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_CENTRE)
+        .appendField(Blockly.Msg.MATRIXLED_CLEAR_SHOW);
+  }
+};    
