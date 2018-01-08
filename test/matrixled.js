@@ -67,7 +67,7 @@
   }
   
   function MatrixLed_show() {
-    var ledtable ="<table style='width:250px;height:250px;border:white;'>"
+    var ledtable ="<table style='width:"+MatrixLed_width+"px;height:"+MatrixLed_height+"px;border:white;'>"
                   + "<tr><td"+L[0]+"></td><td"+L[5]+"></td><td"+L[10]+"></td><td"+L[15]+"></td><td"+L[20]+"></td></tr>"
                   + "<tr><td"+L[1]+"></td><td"+L[6]+"></td><td"+L[11]+"></td><td"+L[16]+"></td><td"+L[21]+"></td></tr>"
                   + "<tr><td"+L[2]+"></td><td"+L[7]+"></td><td"+L[12]+"></td><td"+L[17]+"></td><td"+L[22]+"></td></tr>"
