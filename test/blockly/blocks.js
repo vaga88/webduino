@@ -96,7 +96,7 @@ Blockly.Blocks['matrix_led_color'] = {
     this.appendDummyInput()
         .appendField(Blockly.Msg.MATRIXLED_COLOR_SHOW);
     this.appendValueInput("value_color_")
-        .setCheck("Number")  
+        .setCheck(null)  
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(80);    
