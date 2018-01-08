@@ -35,7 +35,7 @@ Blockly.Blocks['matrix_led_matrix'] = {
         .appendField(new Blockly.FieldCheckbox("FALSE"), "L25");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(60);    
+    this.setColour(80);    
     this.setTooltip("");
     this.setHelpUrl("");
   }
@@ -48,7 +48,7 @@ Blockly.Blocks['matrix_led_clear'] = {
         .appendField(Blockly.Msg.MATRIXLED_CLEAR_SHOW);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(60);    
+    this.setColour(80);    
     this.setTooltip("");
     this.setHelpUrl("");    
   }
@@ -67,7 +67,7 @@ Blockly.Blocks['matrix_led_on'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(60);
+    this.setColour(80);
     this.setTooltip("");
     this.setHelpUrl("");
   }
@@ -86,7 +86,7 @@ Blockly.Blocks['matrix_led_off'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(60);
+    this.setColour(80);
     this.setTooltip("");
     this.setHelpUrl("");
   }
