@@ -36,7 +36,7 @@ Blockly.JavaScript['matrix_led_matrix'] = function(block) {
   var L16 = (block.getFieldValue('L16') == 'TRUE')?"1":"0";
   var L17 = (block.getFieldValue('L17') == 'TRUE')?"1":"0";
   var L18 = (block.getFieldValue('L18') == 'TRUE')?"1":"0";
-  var L19 = (block.getFieldValue('L19') == 'TRUE')?"1":"0";;
+  var L19 = (block.getFieldValue('L19') == 'TRUE')?"1":"0";
   var L20 = (block.getFieldValue('L20') == 'TRUE')?"1":"0";
   var L21 = (block.getFieldValue('L21') == 'TRUE')?"1":"0";
   var L22 = (block.getFieldValue('L22') == 'TRUE')?"1":"0";
