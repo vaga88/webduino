@@ -3,7 +3,22 @@
   'use strict';
   
   var L = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
+  var MatrixLed_color = "#FF0000";
+  var MatrixLed_width = 250;
+  var MatrixLed_height = 250;
 
+  function MatrixLed_color(input_color_) {
+    MatrixLed_color = input_color_;
+  }
+  
+  function MatrixLed_clear(input_width_) {
+    MatrixLed_width = input_width_;
+  }
+  
+  function MatrixLed_clear(input_height_) {
+    MatrixLed_height = input_height_;
+  }  
+  
   function MatrixLed_clear() {
     for (var i=0;i<25;i++)
     {
@@ -16,7 +31,7 @@
     for (var i=0;i<25;i++)
     {
       if (i==(input_x_*5+input_y_))
-        L[i]=" bgcolor='red'";
+        L[i]=" bgcolor='"+MatrixLed_color+"'";
       else
       {
         if (L[i]=="")
@@ -30,7 +45,7 @@
     for (var i=0;i<25;i++)
     {
       if (i==(input_x_*5+input_y_))
-        L[i]=" bgcolor='white'";
+        L[i]=" bgcolor='"+MatrixLed_color+"'";
       else
       {
         if (L[i]=="")
@@ -44,7 +59,7 @@
     for (var i=0;i<25;i++)
     {
       if (input_value_.substr(i,1)=="1")
-        L[i]=" bgcolor='red'";
+        L[i]=" bgcolor='"+MatrixLed_color+"'";
       else
         L[i]=" bgcolor='white'";
     }
@@ -78,5 +93,8 @@
   window.MatrixLed_show = MatrixLed_show;
   window.MatrixLed_on = MatrixLed_on;
   window.MatrixLed_off = MatrixLed_off;
+  window.MatrixLed_color = MatrixLed_color;
+  window.MatrixLed_width = MatrixLed_width;
+  window.MatrixLed_height = MatrixLed_height;
 
 }(window, window.document));
