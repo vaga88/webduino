@@ -1,4 +1,4 @@
-Blockly.Blocks['matrix_led'] = {
+Blockly.Blocks['matrix_led_matrix'] = {
   init: function() {
     this.appendDummyInput()
         .setAlign(Blockly.ALIGN_CENTRE)
