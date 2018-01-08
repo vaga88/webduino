@@ -2,7 +2,7 @@
 
   'use strict';
   
-  var L = new Array(25);
+  var L = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
 
   function MatrixLed_clear() {
     for (var i=0;i<25;i++)
@@ -19,7 +19,7 @@
         L[i]=" bgcolor='red'";
       else
       {
-        if (isNaN(L[i]))
+        if (L[i]=="")
           L[i]=" bgcolor='white'";
       }
     }
@@ -33,7 +33,7 @@
         L[i]=" bgcolor='white'";
       else
       {
-        if (isNaN(L[i]))
+        if (L[i]=="")
           L[i]=" bgcolor='white'";
       }
     }
