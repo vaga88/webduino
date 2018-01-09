@@ -18,7 +18,7 @@
   
   function MatrixLed_height(input_height_) {
     MatrixLedheight = input_height_;
-  }  
+  } 
   
   function MatrixLed_marquee(input_marquee_) {
     MatrixLedmarquee = input_marquee_.toUpperCase();
