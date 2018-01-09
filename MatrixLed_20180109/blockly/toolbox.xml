@@ -1,0 +1,79 @@
+<category id="catMatrixLed">
+  <block type="matrix_led_color">
+    <value name="value_color_">
+      <block type="colour_picker">
+        <field name="COLOUR">#ff0000</field>
+      </block>
+    </value>
+  </block>  
+  <block type="matrix_led_width">
+    <value name="value_width_">
+      <block type="math_number">
+        <field name="NUM">250</field>
+      </block>
+    </value>
+  </block>
+  <block type="matrix_led_height">
+    <value name="value_height_">
+      <block type="math_number">
+        <field name="NUM">250</field>
+      </block>
+    </value>
+  </block>  
+  <block type="matrix_led_sample">
+    <field name="value_sample_">heart</field>
+  </block>   
+  <block type="matrix_led_matrix">
+    <field name="L01">FALSE</field>
+    <field name="L06">FALSE</field>
+    <field name="L11">FALSE</field>
+    <field name="L16">FALSE</field>
+    <field name="L21">FALSE</field>
+    <field name="L02">FALSE</field>
+    <field name="L07">FALSE</field>
+    <field name="L12">FALSE</field>
+    <field name="L17">FALSE</field>
+    <field name="L22">FALSE</field>
+    <field name="L03">FALSE</field>
+    <field name="L08">FALSE</field>
+    <field name="L13">FALSE</field>
+    <field name="L18">FALSE</field>
+    <field name="L23">FALSE</field>
+    <field name="L04">FALSE</field>
+    <field name="L09">FALSE</field>
+    <field name="L14">FALSE</field>
+    <field name="L19">FALSE</field>
+    <field name="L24">FALSE</field>
+    <field name="L05">FALSE</field>
+    <field name="L10">FALSE</field>
+    <field name="L15">FALSE</field>
+    <field name="L20">FALSE</field>
+    <field name="L25">FALSE</field>
+  </block>
+  <block type="matrix_led_on">
+    <value name="value_x_on_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="value_y_on_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="matrix_led_off">
+    <value name="value_x_off_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="value_y_off_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>  
+  <block type="matrix_led_clear">
+  </block>
+ </category>
