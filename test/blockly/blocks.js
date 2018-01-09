@@ -1,3 +1,19 @@
+Blockly.Blocks['matrix_led_sample'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.BLOCK1_SHOW)
+        .appendField(new Blockly.FieldDropdown([["heart","0110011110011111111001100"], ["↑","0010001000111110100000100"], ["↓",""], ["←",""], ["→",""]]), "type_");     
+    this.appendValueInput("value_")
+        .setCheck("String")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.VALUE_SHOW);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setTooltip('');
+    this.setColour(300);
+    this.setHelpUrl("");
+  }
+};
 
 Blockly.Blocks['matrix_led_color'] = {
   init: function() {
