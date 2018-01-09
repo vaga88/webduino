@@ -96,9 +96,9 @@
   
   function MatrixLed_conversion(input_str_) {
     const A = "0111110100101001010001111";
-    const B = "";
-    const C = "";
-    const D = "";
+    const B = "1111110101101011010101010";
+    const C = "0111010001100011000100000";
+    const D = "1111110001100011000101110";
     const E = "";
     const F = "";
     const G = "";
