@@ -2,32 +2,32 @@
 
   'use strict';
   
-  const A = "0111110100101001010001111";
-  const B = "1111110101101011010101010";
-  const C = "0111010001100011000100000";
-  const D = "1111110001100011000101110";
-  const E = "1111110101101011010110101";
-  const F = "1111110100101001010010100";
-  const G = "0111010001101011010110111";
-  const H = "1111100100001000010011111";
-  const I = "1000110001111111000110001";
-  const J = "1001110001111111000010000";
-  const K = "1111100010001000101010001";
-  const L = "1111100001000010000100001";
-  const M = "1111101000001000100011111";
-  const N = "1111101000001000001011111";
-  const O = "0111010001100011000101110";
-  const P = "1111110010100101001001100";
-  const Q = "0111010001101011001001101";
-  const R = "1111110100101001010001011";
-  const S = "0100110101101011010110010";
-  const T = "1000010000111111000010000";
-  const U = "1111000001000010000111110";
-  const V = "1110000010000010001011100";
-  const W = "1111000001111100000111110";
-  const X = "1000101010001000101010001";
-  const Y = "1000001000001110100010000";   
-  const Z = "1000110011101011100110001";
+  const charA = "0111110100101001010001111";
+  const charB = "1111110101101011010101010";
+  const charC = "0111010001100011000100000";
+  const charD = "1111110001100011000101110";
+  const charE = "1111110101101011010110101";
+  const charF = "1111110100101001010010100";
+  const charG = "0111010001101011010110111";
+  const charH = "1111100100001000010011111";
+  const charI = "1000110001111111000110001";
+  const charJ = "1001110001111111000010000";
+  const charK = "1111100010001000101010001";
+  const charL = "1111100001000010000100001";
+  const charM = "1111101000001000100011111";
+  const charN = "1111101000001000001011111";
+  const charO = "0111010001100011000101110";
+  const charP = "1111110010100101001001100";
+  const charQ = "0111010001101011001001101";
+  const charR = "1111110100101001010001011";
+  const charS = "0100110101101011010110010";
+  const charT = "1000010000111111000010000";
+  const charU = "1111000001000010000111110";
+  const charV = "1110000010000010001011100";
+  const charW = "1111000001111100000111110";
+  const charX = "1000101010001000101010001";
+  const charY = "1000001000001110100010000";   
+  const charZ = "1000110011101011100110001";
   const comma = "0000000001000100000000000";
   const period = "0000000001000000000000000";
   const questionmark = "0100010000100111010001000";
@@ -156,57 +156,57 @@
   
   function MatrixLed_conversion(input_char_) {
     if (input_char_=="A")
-      return A;
+      return charA;
     else if (input_char_=="B")
-      return B;  
+      return charB;  
     else if (input_char_=="C")
-      return C; 
+      return charC; 
     else if (input_char_=="D")
-      return D;  
+      return charD;  
     else if (input_char_=="E")
-      return E;   
+      return charE;   
     else if (input_char_=="F")
-      return F;  
+      return charF;  
     else if (input_char_=="G")
-      return G;   
+      return charG;   
     else if (input_char_=="H")
-      return H;  
+      return charH;  
     else if (input_char_=="I")
-      return I;   
+      return charI;   
     else if (input_char_=="J")
-      return J;  
+      return charJ;  
     else if (input_char_=="K")
-      return K;   
+      return charK;   
     else if (input_char_=="L")
-      return L;  
+      return charL;  
     else if (input_char_=="M")
-      return M;  
+      return charM;  
     else if (input_char_=="N")
-      return N;  
+      return charN;  
     else if (input_char_=="O")
-      return O;  
+      return charO;  
     else if (input_char_=="P")
-      return P;  
+      return charP;  
     else if (input_char_=="Q")
-      return Q; 
+      return charQ; 
     else if (input_char_=="R")
-      return R;  
+      return charR;  
     else if (input_char_=="S")
-        return S;
+      return charS;
     else if (input_char_=="T")
-      return T;  
+      return charT;  
     else if (input_char_=="U")
-      return U;  
+      return charU;  
     else if (input_char_=="V")
-      return V;  
+      return charV;  
     else if (input_char_=="W")
-      return W;  
+      return charW;  
     else if (input_char_=="X")
-      return X;  
+      return charX;  
     else if (input_char_=="Y")
-      return Y; 
+      return charY; 
     else if (input_char_=="Z")
-      return Z;  
+      return charZ;  
     else if (input_char_==",")
         return comma;
     else if (input_char_==".")
