@@ -22,6 +22,7 @@
   
   function MatrixLed_marquee(input_marquee_) {
     MatrixLedmarquee = input_marquee_;
+    alert(MatrixLedmarquee);
   }  
   
   function MatrixLed_clear() {
