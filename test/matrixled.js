@@ -109,9 +109,9 @@
     const L = "1111100001000010000100001";
     const M = "1111101000001000100011111";
     const N = "1111101000001000001011111";
-    const O = "";
-    const P = "";
-    const Q = "";
+    const O = "0111010001100011000101110";
+    const P = "1111110010100101001001100";
+    const Q = "0111010001101011001001101";
     const R = "";
     const S = "";
     const T = "";
@@ -136,6 +136,16 @@
     const Quotationmarkssingle = "";
     const Quotationmarksdouble = "";
     const hyphen = "";
+    const number0 = ""
+    const number1 = ""
+    const number2 = ""
+    const number3 = ""
+    const number4 = ""
+    const number5 = ""
+    const number6 = ""
+    const number7 = ""
+    const number8 = ""
+    const number9 = ""
   }
 
   window.MatrixLed_clear = MatrixLed_clear;
