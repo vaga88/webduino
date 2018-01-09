@@ -74,7 +74,14 @@
   } 
   
   function MatrixLed_marquee(input_marquee_) {
-    MatrixLedmarquee = input_marquee_.toUpperCase();
+    if (input_marquee_.length==1)
+      MatrixLed_matrix(MatrixLed_conversion(input_marquee_.toUpperCase()));
+    else
+    {
+      MatrixLedmarquee="";
+      for (var i=0;i<input_marquee_.length;i++)
+        MatrixLedmarquee = MatrixLedmarquee + MatrixLed_conversion(input_marquee_.substr(i,1).toUpperCase());
+    }
     alert(MatrixLedmarquee);
   }  
   
