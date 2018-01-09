@@ -73,6 +73,13 @@
         <field name="NUM">0</field>
       </block>
     </value>
+  </block>
+  <block type="matrix_led_char">
+    <value name="value_char_">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
   </block>  
   <block type="matrix_led_marquee">
     <value name="value_marquee_">
