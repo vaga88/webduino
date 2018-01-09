@@ -74,6 +74,13 @@
       </block>
     </value>
   </block>  
+  <block type="matrix_led_marquee">
+    <value name="value_marquee_">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
   <block type="matrix_led_clear">
   </block>
  </category>
