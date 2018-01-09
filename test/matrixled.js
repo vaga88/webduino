@@ -6,6 +6,7 @@
   var MatrixLedcolor = "#FF0000";
   var MatrixLedwidth = 250;
   var MatrixLedheight = 250;
+  var MatrixLedmarquee="";
 
   function MatrixLed_color(input_color_) {
     MatrixLedcolor = input_color_;
@@ -17,6 +18,10 @@
   
   function MatrixLed_height(input_height_) {
     MatrixLedheight = input_height_;
+  }  
+  
+  function MatrixLed_marquee(input_marquee_) {
+    MatrixLedmarquee = input_marquee_;
   }  
   
   function MatrixLed_clear() {
@@ -96,5 +101,6 @@
   window.MatrixLed_color = MatrixLed_color;
   window.MatrixLed_width = MatrixLed_width;
   window.MatrixLed_height = MatrixLed_height;
+  window.MatrixLed_marquee = MatrixLed_marquee;
 
 }(window, window.document));
