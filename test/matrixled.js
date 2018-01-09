@@ -132,10 +132,10 @@
     const squarebracketsleft = "0000011111100010000000000";
     const squarebracketsright = "0000000000100011111100000";
     const curlybracketsleft = "0000000100111111000100000";
-    const curlybracketsright = "";
-    const Quotationmarkssingle = "";
-    const Quotationmarksdouble = "";
-    const hyphen = "";
+    const curlybracketsright = "0000010001111110010000000";
+    const Quotationmarkssingle = "0000000000110000010000000";
+    const Quotationmarksdouble = "1100000100110000010000000";
+    const hyphen = "0000000100001000010000000";
     const number0 = ""
     const number1 = ""
     const number2 = ""
