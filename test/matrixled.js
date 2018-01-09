@@ -95,7 +95,7 @@
   }
   
   function MatrixLed_conversion(input_str_) {
-    const A = "";
+    const A = "0111110100101001010001111";
     const B = "";
     const C = "";
     const D = "";
@@ -121,10 +121,21 @@
     const X = "";
     const Y = "";   
     const Z = "";
-    const , = "";
-    const . = "";
-    const ? = "";
-    const ! = "";    
+    const comma = "";
+    const period = "";
+    const questionmark = "";
+    const exclamationmark  = "";   
+    const semicolon = "";
+    const colon = "";
+    const parenthesesledt = "";
+    const parenthesesright = "";
+    const squarebracketsleft = "";
+    const squarebracketsright = "";
+    const curlybracketsleft = "";
+    const curlybracketsright = "";
+    const Quotationmarkssingle = "";
+    const Quotationmarksdouble = "";
+    const hyphen = "";
   }
 
   window.MatrixLed_clear = MatrixLed_clear;
