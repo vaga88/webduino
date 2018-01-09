@@ -78,6 +78,13 @@
     alert(MatrixLedmarquee);
   }  
   
+  function MatrixLed_char(input_char_) {
+    if (input_char_.length==1)
+    {
+      MatrixLed_matrix(MatrixLed_conversion(input_char_.toUpperCase()));
+    }
+  }  
+  
   function MatrixLed_clear() {
     for (var i=0;i<25;i++)
     {
