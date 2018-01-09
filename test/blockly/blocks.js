@@ -1,12 +1,8 @@
 Blockly.Blocks['matrix_led_sample'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.BLOCK1_SHOW)
-        .appendField(new Blockly.FieldDropdown([["heart","0110011110011111111001100"], ["↑","0010001000111110100000100"], ["↓","0010000010111110001000100"], ["←","0010001110101010010000100"], ["→","0010000100101010111000100"], ["○","0111010001100011000101110"], ["x","1000101010001000101010001"]]), "type_");     
-    this.appendValueInput("value_")
-        .setCheck("String")
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.VALUE_SHOW);
+        .appendField(Blockly.Msg.MATRIXLED_SAMPLE_SHOW)
+        .appendField(new Blockly.FieldDropdown([["heart","0110011110011111111001100"], ["↑","0010001000111110100000100"], ["↓","0010000010111110001000100"], ["←","0010001110101010010000100"], ["→","0010000100101010111000100"], ["○","0111010001100011000101110"], ["x","1000101010001000101010001"]]), "value_sample_");     
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip('');
