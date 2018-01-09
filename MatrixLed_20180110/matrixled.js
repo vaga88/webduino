@@ -53,7 +53,7 @@
   const number7 = "0000011000100001111100000"
   const number8 = "0000011111101011111100000"
   const number9 = "0000011101101011111100000"  
-  const cls = "0000000000000000000000000"
+  const noexist = "0000000000000000000000000"
   
   var L = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
   var MatrixLedcolor = "#FF0000";
@@ -74,7 +74,14 @@
   } 
   
   function MatrixLed_marquee(input_marquee_) {
-    MatrixLedmarquee = input_marquee_.toUpperCase();
+    if (input_marquee_.length==1)
+      MatrixLed_matrix(MatrixLed_conversion(input_marquee_.toUpperCase()));
+    else
+    {
+      MatrixLedmarquee="";
+      for (var i=0;i<input_marquee_.length;i++)
+        MatrixLedmarquee = MatrixLedmarquee + MatrixLed_conversion(input_marquee_.substr(i,1).toUpperCase());
+    }
     alert(MatrixLedmarquee);
   }  
   
@@ -256,7 +263,7 @@
     else if (input_char_=="9")
       return number9;  
     else
-      return cls;
+      return noexist;
   }
 
   window.MatrixLed_clear = MatrixLed_clear;
