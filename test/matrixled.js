@@ -268,5 +268,6 @@
   window.MatrixLed_width = MatrixLed_width;
   window.MatrixLed_height = MatrixLed_height;
   window.MatrixLed_marquee = MatrixLed_marquee;
-
+  window.MatrixLed_char = MatrixLed_char;
+  
 }(window, window.document));
