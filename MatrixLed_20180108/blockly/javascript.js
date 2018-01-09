@@ -17,6 +17,12 @@ Blockly.JavaScript['matrix_led_height'] = function(block) {
   return code;
 };
 
+Blockly.JavaScript['matrix_led_sample'] = function(block) {
+  var value_sample_ = block.getFieldValue('value_sample_');
+  var code = 'MatrixLed_matrix("'+ value_sample_ +'");';
+  return code;
+};
+
 Blockly.JavaScript['matrix_led_matrix'] = function(block) {
   var L01 = (block.getFieldValue('L01') == 'TRUE')?"1":"0";
   var L02 = (block.getFieldValue('L02') == 'TRUE')?"1":"0";
