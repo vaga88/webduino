@@ -20,9 +20,6 @@
       </block>
     </value>
   </block>  
-  <block type="matrix_led_sample">
-    <field name="value_sample_">heart</field>
-  </block>   
   <block type="matrix_led_matrix">
     <field name="L01">FALSE</field>
     <field name="L06">FALSE</field>
@@ -50,6 +47,9 @@
     <field name="L20">FALSE</field>
     <field name="L25">FALSE</field>
   </block>
+  <block type="matrix_led_sample">
+    <field name="value_sample_">heart</field>
+  </block>     
   <block type="matrix_led_on">
     <value name="value_x_on_">
       <block type="math_number">
