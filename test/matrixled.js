@@ -121,10 +121,10 @@
     const X = "1000101010001000101010001";
     const Y = "1000001000001110100010000";   
     const Z = "1000110011101011100110001";
-    const comma = "";
-    const period = "";
-    const questionmark = "";
-    const exclamationmark  = "";   
+    const comma = "0000000001000100000000000";
+    const period = "0000000001000000000000000";
+    const questionmark = "0100010000100111010001000";
+    const exclamationmark  = "0000000000111010000000000";   
     const semicolon = "";
     const colon = "";
     const parenthesesledt = "";
