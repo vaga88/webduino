@@ -6,3 +6,4 @@ Blockly.Msg.MATRIXLED_COLOR_SHOW = "灯光颜色";
 Blockly.Msg.MATRIXLED_WIDTH_SHOW = "指示灯 宽度";
 Blockly.Msg.MATRIXLED_HEIGHT_SHOW = "指示灯 高度";
 Blockly.Msg.MATRIXLED_SAMPLE_SHOW = "显示 范本";
+Blockly.Msg.MATRIXLED_MARQUEE_SHOW = "显示 跑马灯";
