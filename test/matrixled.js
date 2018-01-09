@@ -94,7 +94,7 @@
     }    
   }
   
-  function MatrixLed_conversion(input_str_) {
+  function MatrixLed_conversion(input_char_) {
     const A = "0111110100101001010001111";
     const B = "1111110101101011010101010";
     const C = "0111010001100011000100000";
@@ -105,10 +105,10 @@
     const H = "1111100100001000010011111";
     const I = "1000110001111111000110001";
     const J = "1001110001111111000010000";
-    const K = "";
-    const L = "";
-    const M = "";
-    const N = "";
+    const K = "1111100010001000101010001";
+    const L = "1111100001000010000100001";
+    const M = "1111101000001000100011111";
+    const N = "1111101000001000001011111";
     const O = "";
     const P = "";
     const Q = "";
