@@ -89,7 +89,7 @@
     {
       MatrixLedmarquee="";
       for (var i=0;i<input_marquee_.length;i++)
-        MatrixLedmarquee = MatrixLedmarquee + MatrixLed_conversion(input_marquee_.substr(i,1).toUpperCase()) + "0000000000";
+        MatrixLedmarquee = MatrixLedmarquee + MatrixLed_conversion(input_marquee_.substr(i,1).toUpperCase()) + "00000";
     }
     window.clearInterval(timeid);
     timeid = window.setInterval("MatrixLed_marquee_play()",MatrixLedmarqueetime);
