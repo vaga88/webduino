@@ -83,7 +83,7 @@
   function MatrixLed_marquee(input_marquee_) {
     if (input_marquee_.length==1)
       MatrixLed_matrix(MatrixLed_conversion(input_marquee_.toUpperCase()));
-    else
+    else if (input_marquee_.length>1)
     {
       MatrixLedmarquee="";
       for (var i=0;i<input_marquee_.length;i++)
