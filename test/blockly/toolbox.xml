@@ -88,6 +88,8 @@
       </block>
     </value>
   </block>
+  <block type="matrix_led_marquee_stop">
+  </block>  
   <block type="matrix_led_clear">
   </block>
  </category>
