@@ -95,7 +95,7 @@
   }  
   
   function MatrixLed_marquee_play() {
-    if (MatrixLedmarqueetime.length>25)
+    if (MatrixLedmarquee.length>25)
       {
       MatrixLed_matrix(MatrixLedmarqueetime.substr(0,25));
       MatrixLedmarqueetime = MatrixLedmarqueetime.substr(1,MatrixLedmarqueetime.length-1)+MatrixLedmarqueetime.substr(0,1);
