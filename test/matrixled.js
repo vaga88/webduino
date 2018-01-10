@@ -68,6 +68,7 @@
   var MatrixLedheight = 250;
   var MatrixLedmarquee = "";
   var MatrixLedmarqueetime = 1000;
+  var timeid;
 
   function MatrixLed_color(input_color_) {
     MatrixLedcolor = input_color_;
@@ -90,10 +91,10 @@
       for (var i=0;i<input_marquee_.length;i++)
         MatrixLedmarquee = MatrixLedmarquee + MatrixLed_conversion(input_marquee_.substr(i,1).toUpperCase()) + "0000000000";
     }
-    var timeid = window.setInterval("MatrixLed_marquee_paly",MatrixLedmarqueetime);
+    timeid = window.setInterval("MatrixLed_marquee_play",MatrixLedmarqueetime);
   }  
   
-  function MatrixLed_marquee_paly() {
+  function MatrixLed_marquee_play() {
     if (MatrixLedmarqueetime.length>25)
       {
       MatrixLed_matrix(MatrixLedmarqueetime.substr(0,25));
