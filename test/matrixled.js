@@ -310,7 +310,7 @@
   window.MatrixLed_height = MatrixLed_height;
   window.MatrixLed_sample = MatrixLed_sample;
   window.MatrixLed_marquee = MatrixLed_marquee;
-  window.MatrixLed_marquee_paly = MatrixLed_marquee_paly;
+  window.MatrixLed_marquee_play = MatrixLed_marquee_paly;
   window.MatrixLed_char = MatrixLed_char;
   window.MatrixLed_conversion =MatrixLed_conversion;
   
