@@ -99,7 +99,7 @@
     if (MatrixLedmarquee.length>25)
       {
       MatrixLed_matrix(MatrixLedmarquee.substr(0,25));
-      MatrixLedmarquee = MatrixLedmarquee.substr(1,MatrixLedmarquee.length-1)+MatrixLedmarquee.substr(0,1);
+      MatrixLedmarquee = MatrixLedmarquee.substr(5,MatrixLedmarquee.length-1)+MatrixLedmarquee.substr(0,5);
     }
   } 
   
