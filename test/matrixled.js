@@ -66,7 +66,8 @@
   var MatrixLedcolor = "#FF0000";
   var MatrixLedwidth = 250;
   var MatrixLedheight = 250;
-  var MatrixLedmarquee="";
+  var MatrixLedmarquee = "";
+  var MatrixLedmarqueetime = 1000;
 
   function MatrixLed_color(input_color_) {
     MatrixLedcolor = input_color_;
@@ -89,8 +90,16 @@
       for (var i=0;i<input_marquee_.length;i++)
         MatrixLedmarquee = MatrixLedmarquee + MatrixLed_conversion(input_marquee_.substr(i,1).toUpperCase()) + "0000000000";
     }
-    alert(MatrixLedmarquee);
+    var timeid = window.setInterval(MatrixLed_marquee_paly(),MatrixLedmarqueetime);
   }  
+  
+  function MatrixLed_marquee_paly() {
+    if (MatrixLedmarqueetime.length>25)
+      {
+      MatrixLed_matrix(MatrixLedmarqueetime.substr(0,25));
+      MatrixLedmarqueetime = MatrixLedmarqueetime.substr(1,MatrixLedmarqueetime.length-1)+MatrixLedmarqueetime.substr(0,1);
+    }
+  } 
   
   function MatrixLed_char(input_char_) {
     if (input_char_.length==1)
