@@ -15,7 +15,9 @@ Blockly.Blocks['matrix_led_marquee'] = {
   init: function() {
     this.appendValueInput("value_marquee_")
         .setCheck("String")   
-        .appendField(Blockly.Msg.MATRIXLED_MARQUEE_SHOW);    
+        .appendField(Blockly.Msg.MATRIXLED_MARQUEE_SHOW)
+        .appendField(new Blockly.FieldNumber(500), "value_marquee_time_")
+        .appendField(Blockly.Msg.MATRIXLED_MARQUEE_TIME_SHOW);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(300);    
