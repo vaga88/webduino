@@ -7,4 +7,5 @@ Blockly.Msg.MATRIXLED_WIDTH_SHOW = "指示燈 寬度";
 Blockly.Msg.MATRIXLED_HEIGHT_SHOW = "指示燈 高度";
 Blockly.Msg.MATRIXLED_SAMPLE_SHOW = "顯示 範本";
 Blockly.Msg.MATRIXLED_MARQUEE_SHOW = "顯示 跑馬燈(英數)";
+Blockly.Msg.MATRIXLED_MARQUEE_STOP_SHOW = "停止 跑馬燈";
 Blockly.Msg.MATRIXLED_CHAR_SHOW = "顯示 字元(英數)";
