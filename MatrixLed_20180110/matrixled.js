@@ -2,7 +2,7 @@
 
   'use strict';
   
-  const charA = "0111110100101001010001111";
+  const charA = "0111110010100101001001111";
   const charB = "1111110101101011010101010";
   const charC = "0111010001100011000110001";
   const charD = "1111110001100011000101110";
@@ -83,11 +83,11 @@
   function MatrixLed_marquee(input_marquee_) {
     if (input_marquee_.length==1)
       MatrixLed_matrix(MatrixLed_conversion(input_marquee_.toUpperCase()));
-    else
+    else if (input_marquee_.length>1)
     {
       MatrixLedmarquee="";
       for (var i=0;i<input_marquee_.length;i++)
-        MatrixLedmarquee = MatrixLedmarquee + MatrixLed_conversion(input_marquee_.substr(i,1).toUpperCase());
+        MatrixLedmarquee = MatrixLedmarquee + MatrixLed_conversion(input_marquee_.substr(i,1).toUpperCase()) + "0000000000";
     }
     alert(MatrixLedmarquee);
   }  
@@ -97,6 +97,23 @@
     {
       MatrixLed_matrix(MatrixLed_conversion(input_char_.toUpperCase()));
     }
+  }  
+  
+  function MatrixLed_sample(input_sample_) {
+    if (input_sample_=="heart")
+      MatrixLed_matrix(heart);
+    else if (input_sample_=="↑")
+      MatrixLed_matrix(arrowup);
+    else if (input_sample_=="↓")
+      MatrixLed_matrix(arrowdown);
+    else if (input_sample_=="←")
+      MatrixLed_matrix(arrowleft);
+    else if (input_sample_=="→")
+      MatrixLed_matrix(arrowright);
+    else if (input_sample_=="○")
+      MatrixLed_matrix(correct);
+    else if (input_sample_=="x")
+      MatrixLed_matrix(wrong);
   }  
   
   function MatrixLed_clear() {
@@ -268,7 +285,7 @@
     else if (input_char_=="8")
       return number8; 
     else if (input_char_=="9")
-      return number9; 
+      return number9;  
     else
       return noexist;
   }
@@ -281,6 +298,7 @@
   window.MatrixLed_color = MatrixLed_color;
   window.MatrixLed_width = MatrixLed_width;
   window.MatrixLed_height = MatrixLed_height;
+  window.MatrixLed_sample = MatrixLed_sample;
   window.MatrixLed_marquee = MatrixLed_marquee;
   window.MatrixLed_char = MatrixLed_char;
   window.MatrixLed_conversion =MatrixLed_conversion;

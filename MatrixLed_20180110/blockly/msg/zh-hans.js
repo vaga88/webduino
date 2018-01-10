@@ -1,1 +1,1 @@
-MSG.catMatrixLed = "指示灯";
+MSG.catMatrixLed = "模拟指示灯";
