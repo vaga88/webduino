@@ -24,6 +24,18 @@ Blockly.Blocks['matrix_led_marquee'] = {
   }
 };  
 
+Blockly.Blocks['matrix_led_marquee_stop'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.MATRIXLED_MARQUEE_STOP_SHOW);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(300);    
+    this.setTooltip("");
+    this.setHelpUrl("");    
+  }
+}; 
+
 Blockly.Blocks['matrix_led_sample'] = {
   init: function() {
     this.appendDummyInput()
