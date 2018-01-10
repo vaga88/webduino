@@ -97,8 +97,8 @@
   function MatrixLed_marquee_play() {
     if (MatrixLedmarquee.length>25)
       {
-      MatrixLed_matrix(MatrixLedmarqueetime.substr(0,25));
-      MatrixLedmarqueetime = MatrixLedmarqueetime.substr(1,MatrixLedmarqueetime.length-1)+MatrixLedmarqueetime.substr(0,1);
+      MatrixLed_matrix(MatrixLedmarquee.substr(0,25));
+      MatrixLedmarquee = MatrixLedmarquee.substr(1,MatrixLedmarquee.length-1)+MatrixLedmarquee.substr(0,1);
     }
   } 
   
