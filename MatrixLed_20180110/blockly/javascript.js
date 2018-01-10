@@ -6,7 +6,8 @@ Blockly.JavaScript['matrix_led_char'] = function(block) {
 
 Blockly.JavaScript['matrix_led_marquee'] = function(block) {
   var value_marquee_ = Blockly.JavaScript.valueToCode(block, 'value_marquee_', Blockly.JavaScript.ORDER_ATOMIC);
-  var code = 'MatrixLed_marquee('+ value_marquee_ +');';
+  var value_marquee_time_ = block.getFieldValue('value_marquee_time_');
+  var code = 'MatrixLed_marquee('+value_marquee_+','+value_marquee_time_+');';
   return code;
 };
 
