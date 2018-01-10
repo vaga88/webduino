@@ -82,7 +82,6 @@
     </value>
   </block>  
   <block type="matrix_led_marquee">
-    <field name="value_marquee_time_">500</field>
     <value name="value_marquee_">
       <block type="text">
         <field name="TEXT"></field>
