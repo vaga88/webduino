@@ -66,7 +66,9 @@
   var MatrixLedcolor = "#FF0000";
   var MatrixLedwidth = 250;
   var MatrixLedheight = 250;
-  var MatrixLedmarquee="";
+  var MatrixLedmarquee = "";
+  var MatrixLedmarqueetime = 500;
+  var timeid;
 
   function MatrixLed_color(input_color_) {
     MatrixLedcolor = input_color_;
@@ -87,10 +89,19 @@
     {
       MatrixLedmarquee="";
       for (var i=0;i<input_marquee_.length;i++)
-        MatrixLedmarquee = MatrixLedmarquee + MatrixLed_conversion(input_marquee_.substr(i,1).toUpperCase()) + "0000000000";
+        MatrixLedmarquee = MatrixLedmarquee + MatrixLed_conversion(input_marquee_.substr(i,1).toUpperCase()) + "00000";
     }
-    alert(MatrixLedmarquee);
+    window.clearInterval(timeid);
+    timeid = window.setInterval("MatrixLed_marquee_play()",MatrixLedmarqueetime);
   }  
+  
+  function MatrixLed_marquee_play() {
+    if (MatrixLedmarquee.length>25)
+      {
+      MatrixLed_matrix(MatrixLedmarquee.substr(0,25));
+      MatrixLedmarquee = MatrixLedmarquee.substr(5,MatrixLedmarquee.length-1)+MatrixLedmarquee.substr(0,5);
+    }
+  } 
   
   function MatrixLed_char(input_char_) {
     if (input_char_.length==1)
@@ -300,6 +311,7 @@
   window.MatrixLed_height = MatrixLed_height;
   window.MatrixLed_sample = MatrixLed_sample;
   window.MatrixLed_marquee = MatrixLed_marquee;
+  window.MatrixLed_marquee_play = MatrixLed_marquee_play;
   window.MatrixLed_char = MatrixLed_char;
   window.MatrixLed_conversion =MatrixLed_conversion;
   
