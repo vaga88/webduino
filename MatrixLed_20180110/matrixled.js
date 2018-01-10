@@ -52,7 +52,14 @@
   const number6 = "0000011111101011011100000"
   const number7 = "0000011000100001111100000"
   const number8 = "0000011111101011111100000"
-  const number9 = "0000011101101011111100000"  
+  const number9 = "0000011101101011111100000"
+  const heart = "0110011110011111111001100";
+  const arrowup = "0010001000111110100000100";
+  const arrowdown = "0010000010111110001000100";
+  const arrowleft = "0010001110101010010000100";
+  const arrowright = "0010000100101010111000100";
+  const correct = "0111010001100011000101110";
+  const wrong = "1000101010001000101010001";
   const noexist = "0000000000000000000000000"
   
   var L = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
@@ -261,7 +268,7 @@
     else if (input_char_=="8")
       return number8; 
     else if (input_char_=="9")
-      return number9;  
+      return number9; 
     else
       return noexist;
   }
