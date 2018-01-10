@@ -67,7 +67,7 @@
   var MatrixLedwidth = 250;
   var MatrixLedheight = 250;
   var MatrixLedmarquee = "";
-  var MatrixLedmarqueetime = 1000;
+  var MatrixLedmarqueetime = 500;
   var timeid;
 
   function MatrixLed_color(input_color_) {
