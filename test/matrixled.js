@@ -87,7 +87,7 @@
     {
       MatrixLedmarquee="";
       for (var i=0;i<input_marquee_.length;i++)
-        MatrixLedmarquee = MatrixLedmarquee + MatrixLed_conversion(input_marquee_.substr(i,1).toUpperCase());
+        MatrixLedmarquee = MatrixLedmarquee + MatrixLed_conversion(input_marquee_.substr(i,1).toUpperCase()) + "0000000000";
     }
     alert(MatrixLedmarquee);
   }  
@@ -97,6 +97,23 @@
     {
       MatrixLed_matrix(MatrixLed_conversion(input_char_.toUpperCase()));
     }
+  }  
+  
+  function MatrixLed_sample(input_sample_) {
+    if (input_sample_=="heart")
+      MatrixLed_matrix(heart);
+    else if (input_sample_=="↑")
+      MatrixLed_matrix(arrowup);
+    else if (input_sample_=="↓")
+      MatrixLed_matrix(arrowdown);
+    else if (input_sample_=="←")
+      MatrixLed_matrix(arrowleft);
+    else if (input_sample_=="→")
+      MatrixLed_matrix(arrowright);
+    else if (input_sample_=="○")
+      MatrixLed_matrix(correct);
+    else if (input_sample_=="x")
+      MatrixLed_matrix(wrong);
   }  
   
   function MatrixLed_clear() {
@@ -281,6 +298,7 @@
   window.MatrixLed_color = MatrixLed_color;
   window.MatrixLed_width = MatrixLed_width;
   window.MatrixLed_height = MatrixLed_height;
+  window.MatrixLed_sample = MatrixLed_sample;
   window.MatrixLed_marquee = MatrixLed_marquee;
   window.MatrixLed_char = MatrixLed_char;
   window.MatrixLed_conversion =MatrixLed_conversion;
