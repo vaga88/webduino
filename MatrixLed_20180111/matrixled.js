@@ -309,7 +309,9 @@
     else if (input_char_=="8")
       return number8; 
     else if (input_char_=="9")
-      return number9;  
+      return number9;
+    else if (input_char_=="♥")
+      return heart;    
     else
       return noexist;
   }
