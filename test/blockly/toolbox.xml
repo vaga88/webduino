@@ -48,7 +48,7 @@
     <field name="L25">FALSE</field>
   </block>
   <block type="matrix_led_sample">
-    <field name="value_sample_">heart</field>
+    <field name="value_sample_">♥</field>
   </block>     
   <block type="matrix_led_on">
     <value name="value_x_on_">
