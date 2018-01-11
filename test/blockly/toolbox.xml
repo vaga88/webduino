@@ -81,6 +81,12 @@
       </block>
     </value>
   </block>  
+  <block type="matrix_led_marquee_time">
+    <value name="value_marquee_time_">
+      <block type="math_number">
+        <field name="NUM">500</field>
+      </block>
+  </block>
   <block type="matrix_led_marquee">
     <value name="value_marquee_">
       <block type="text">
@@ -89,6 +95,8 @@
     </value>
   </block>
   <block type="matrix_led_marquee_stop">
+  </block>
+  <block type="matrix_led_marquee_resume">
   </block>  
   <block type="matrix_led_clear">
   </block>
