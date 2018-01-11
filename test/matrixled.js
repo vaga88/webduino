@@ -309,9 +309,21 @@
     else if (input_char_=="8")
       return number8; 
     else if (input_char_=="9")
-      return number9;  
+      return number9; 
     else if (input_char_=="♡")
-      return heart;      
+      MatrixLed_matrix(heart);
+    else if (input_char_=="↑")
+      MatrixLed_matrix(arrowup);
+    else if (input_char_=="↓")
+      MatrixLed_matrix(arrowdown);
+    else if (input_char_=="←")
+      MatrixLed_matrix(arrowleft);
+    else if (input_char_=="→")
+      MatrixLed_matrix(arrowright);
+    else if (input_char_=="○")
+      MatrixLed_matrix(correct);
+    else if (input_char_=="x")
+      MatrixLed_matrix(wrong);    
     else
       return noexist;
   }
