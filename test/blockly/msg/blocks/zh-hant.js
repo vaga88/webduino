@@ -9,5 +9,5 @@ Blockly.Msg.MATRIXLED_SAMPLE_SHOW = "顯示 圖案";
 Blockly.Msg.MATRIXLED_MARQUEE_SHOW = "顯示 跑馬燈(英數)";
 Blockly.Msg.MATRIXLED_MARQUEE_STOP_SHOW = "停止 跑馬燈";
 Blockly.Msg.MATRIXLED_MARQUEE_RESUME_SHOW = "恢復 跑馬燈";
-Blockly.Msg.MATRIXLED_MARQUEE_TIME_SHOW = "跑馬燈 時間(ms)";
+Blockly.Msg.MATRIXLED_MARQUEE_TIME_SHOW = "跑馬燈 間隔時間(ms)";
 Blockly.Msg.MATRIXLED_CHAR_SHOW = "顯示 字元(英數)";
