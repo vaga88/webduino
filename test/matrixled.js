@@ -113,6 +113,7 @@
   } 
   
   function MatrixLed_marquee_resume() {
+    window.clearInterval(timeid);
     timeid = window.setInterval("MatrixLed_marquee_play()",MatrixLedmarqueetime);
   } 
   
