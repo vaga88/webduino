@@ -87,7 +87,6 @@
       MatrixLed_matrix(MatrixLed_conversion(input_marquee_.toUpperCase()));
     else if (input_marquee_.length>1)
     {
-      MatrixLedmarqueetime = input_marquee_time_;
       MatrixLedmarquee="";
       for (var i=0;i<input_marquee_.length;i++)
         MatrixLedmarquee = MatrixLedmarquee + MatrixLed_conversion(input_marquee_.substr(i,1).toUpperCase()) + "00000";
