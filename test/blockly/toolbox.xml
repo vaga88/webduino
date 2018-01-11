@@ -74,6 +74,9 @@
       </block>
     </value>
   </block>
+  </block>  
+  <block type="matrix_led_clear">
+  </block>  
   <block type="matrix_led_char">
     <value name="value_char_">
       <block type="text">
@@ -97,7 +100,4 @@
   <block type="matrix_led_marquee_stop">
   </block>
   <block type="matrix_led_marquee_resume">
-  </block>  
-  <block type="matrix_led_clear">
-  </block>
  </category>
