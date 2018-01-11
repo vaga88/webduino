@@ -36,6 +36,31 @@ Blockly.Blocks['matrix_led_marquee_stop'] = {
   }
 }; 
 
+Blockly.Blocks['matrix_led_marquee_resume'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.MATRIXLED_MARQUEE_RESUME_SHOW);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(300);    
+    this.setTooltip("");
+    this.setHelpUrl("");    
+  }
+}; 
+
+Blockly.Blocks['matrix_led_marquee_time'] = {
+  init: function() {
+    this.appendValueInput("value_time_")
+        .setCheck("Number")  
+        .appendField(Blockly.Msg.MATRIXLED_TIME_SHOW);    
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(300);    
+    this.setTooltip("");
+    this.setHelpUrl("");    
+  }
+};  
+
 Blockly.Blocks['matrix_led_sample'] = {
   init: function() {
     this.appendDummyInput()
