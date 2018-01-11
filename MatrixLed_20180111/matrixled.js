@@ -124,20 +124,7 @@
   }  
   
   function MatrixLed_sample(input_sample_) {
-    if (input_sample_=="heart")
-      MatrixLed_matrix(heart);
-    else if (input_sample_=="↑")
-      MatrixLed_matrix(arrowup);
-    else if (input_sample_=="↓")
-      MatrixLed_matrix(arrowdown);
-    else if (input_sample_=="←")
-      MatrixLed_matrix(arrowleft);
-    else if (input_sample_=="→")
-      MatrixLed_matrix(arrowright);
-    else if (input_sample_=="○")
-      MatrixLed_matrix(correct);
-    else if (input_sample_=="x")
-      MatrixLed_matrix(wrong);
+    MatrixLed_matrix(MatrixLed_conversion(input_sample_));
   }  
   
   function MatrixLed_clear() {
@@ -309,7 +296,21 @@
     else if (input_char_=="8")
       return number8; 
     else if (input_char_=="9")
-      return number9;  
+      return number9; 
+    else if (input_char_=="♡")
+      return heart;
+    else if (input_char_=="↑")
+      return arrowup;
+    else if (input_char_=="↓")
+      return arrowdown;
+    else if (input_char_=="←")
+      return arrowleft;
+    else if (input_char_=="→")
+      return arrowright;
+    else if (input_char_=="○")
+      return correct;
+    else if (input_char_=="x")
+      return wrong;    
     else
       return noexist;
   }
