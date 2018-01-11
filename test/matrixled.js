@@ -124,7 +124,7 @@
   }  
   
   function MatrixLed_sample(input_sample_) {
-    if (input_sample_=="heart")
+    if (input_sample_=="♡")
       MatrixLed_matrix(heart);
     else if (input_sample_=="↑")
       MatrixLed_matrix(arrowup);
@@ -310,7 +310,7 @@
       return number8; 
     else if (input_char_=="9")
       return number9;  
-    else if (input_char_=="♥")
+    else if (input_char_=="♡")
       return heart;      
     else
       return noexist;
