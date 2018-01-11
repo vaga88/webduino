@@ -88,6 +88,7 @@
       <block type="math_number">
         <field name="NUM">500</field>
       </block>
+    </value>
   </block>
   <block type="matrix_led_marquee">
     <value name="value_marquee_">
