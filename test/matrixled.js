@@ -82,7 +82,7 @@
     MatrixLedheight = input_height_;
   } 
   
-  function MatrixLed_marquee(input_marquee_,input_marquee_time_) {
+  function MatrixLed_marquee(input_marquee_) {
     if (input_marquee_.length==1)
       MatrixLed_matrix(MatrixLed_conversion(input_marquee_.toUpperCase()));
     else if (input_marquee_.length>1)
@@ -104,8 +104,16 @@
     }
   } 
   
+  function MatrixLed_marquee_time(input_time_) {
+    MatrixLedmarqueetime = input_time_;
+  } 
+  
   function MatrixLed_marquee_stop() {
     window.clearInterval(timeid);
+  } 
+  
+  function MatrixLed_marquee_resume() {
+    timeid = window.setInterval("MatrixLed_marquee_play()",MatrixLedmarqueetime);
   } 
   
   function MatrixLed_char(input_char_) {
@@ -318,6 +326,8 @@
   window.MatrixLed_marquee = MatrixLed_marquee;
   window.MatrixLed_marquee_play = MatrixLed_marquee_play;
   window.MatrixLed_marquee_stop = MatrixLed_marquee_stop;
+  window.MatrixLed_marquee_resume = MatrixLed_marquee_resume;
+  window.MatrixLed_marquee_time = MatrixLed_marquee_time;
   window.MatrixLed_char = MatrixLed_char;
   window.MatrixLed_conversion =MatrixLed_conversion;
   
