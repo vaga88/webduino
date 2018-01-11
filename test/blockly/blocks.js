@@ -1,7 +1,7 @@
 Blockly.Blocks['matrix_led_char'] = {
   init: function() {
     this.appendValueInput("value_char_")
-        .setCheck("String")   
+        .setCheck(null)   
         .appendField(Blockly.Msg.MATRIXLED_CHAR_SHOW);    
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
