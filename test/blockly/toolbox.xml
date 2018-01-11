@@ -100,4 +100,5 @@
   <block type="matrix_led_marquee_stop">
   </block>
   <block type="matrix_led_marquee_resume">
+  </block>
  </category>
