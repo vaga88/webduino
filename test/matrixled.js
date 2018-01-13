@@ -114,7 +114,7 @@
       else if (MatrixLedmarqueereverse==2)
       {
         MatrixLed_matrix(MatrixLedmarquee.substr(MatrixLedmarquee.length-5,5));
-        MatrixLedmarquee = MatrixLedmarquee.substr(MatrixLedmarquee.length-4,5)+MatrixLedmarquee.substr(0,MatrixLedmarquee.length-5);
+        MatrixLedmarquee = MatrixLedmarquee.substr(MatrixLedmarquee.length-5,5)+MatrixLedmarquee.substr(0,MatrixLedmarquee.length-5);
       }
     }
   } 
