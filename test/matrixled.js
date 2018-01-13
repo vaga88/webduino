@@ -109,12 +109,12 @@
       if (MatrixLedmarqueereverse==1)
       {
         MatrixLed_matrix(MatrixLedmarquee.substr(0,25));
-        MatrixLedmarquee = MatrixLedmarquee.substr(5,MatrixLedmarquee.length-1)+MatrixLedmarquee.substr(0,5);
+        MatrixLedmarquee = MatrixLedmarquee.substr(5,MatrixLedmarquee.length-5)+MatrixLedmarquee.substr(0,5);
       }
       else if (MatrixLedmarqueereverse==2)
       {
         MatrixLed_matrix(MatrixLedmarquee.substr(0,25));
-        MatrixLedmarquee = MatrixLedmarquee.substr(MatrixLedmarquee.length-5,MatrixLedmarquee.length-1)+MatrixLedmarquee.substr(0,MatrixLedmarquee.length-4);
+        MatrixLedmarquee = MatrixLedmarquee.substr(MatrixLedmarquee.length-4,5)+MatrixLedmarquee.substr(0,MatrixLedmarquee.length-5);
       }
     }
   } 
