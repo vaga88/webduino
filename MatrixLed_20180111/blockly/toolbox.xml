@@ -79,7 +79,7 @@
   <block type="matrix_led_char">
     <value name="value_char_">
       <block type="text">
-        <field name="TEXT">♡</field>
+        <field name="TEXT">♥</field>
       </block>
     </value>
   </block>  
