@@ -50,8 +50,7 @@ Blockly.Blocks['matrix_led_marquee_resume'] = {
 
 Blockly.Blocks['matrix_led_marquee_reverse'] = {
   init: function() {
-    this.appendValueInput("value_marquee_reverse_")
-        .setCheck("Number")  
+    this.appendDummyInput() 
         .appendField(Blockly.Msg.MATRIXLED_MARQUEE_REVERSE_SHOW);    
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
