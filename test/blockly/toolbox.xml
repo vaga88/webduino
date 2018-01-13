@@ -49,7 +49,14 @@
   </block>
   <block type="matrix_led_sample">
     <field name="value_sample_">♥</field>
-  </block>     
+  </block>  
+  <block type="matrix_led_code">
+    <value name="value_code_">
+      <block type="text">
+        <field name="TEXT">0110011110011111111001100</field>
+      </block>
+    </value>
+  </block>  
   <block type="matrix_led_on">
     <value name="value_x_on_">
       <block type="math_number">
