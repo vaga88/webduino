@@ -130,6 +130,11 @@
     }
   }  
   
+  function MatrixLed_code(input_code_) {
+    if (input_code_.length==25)
+      MatrixLed_matrix(input_code_);
+  }    
+  
   function MatrixLed_sample(input_sample_) {
     MatrixLed_matrix(MatrixLed_conversion(input_sample_));
   }  
@@ -345,6 +350,7 @@
   window.MatrixLed_width = MatrixLed_width;
   window.MatrixLed_height = MatrixLed_height;
   window.MatrixLed_sample = MatrixLed_sample;
+  window.MatrixLed_code = MatrixLed_code;
   window.MatrixLed_marquee = MatrixLed_marquee;
   window.MatrixLed_marquee_play = MatrixLed_marquee_play;
   window.MatrixLed_marquee_stop = MatrixLed_marquee_stop;
