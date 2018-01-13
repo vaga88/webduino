@@ -135,7 +135,7 @@
   function MatrixLed_marquee_reverse() {
     if (MatrixLedmarqueereverse==1)
       MatrixLedmarqueereverse=2;
-    else if
+    else if (MatrixLedmarqueereverse==2)
       MatrixLedmarqueereverse=1;
   }   
   
