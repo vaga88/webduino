@@ -46,13 +46,13 @@ Blockly.JavaScript['matrix_led_height'] = function(block) {
 
 Blockly.JavaScript['matrix_led_sample'] = function(block) {
   var value_sample_ = block.getFieldValue('value_sample_');
-  var code = 'MatrixLed_sample("'+ value_sample_ +'");';
+  var code = 'MatrixLed_sample('+ value_sample_ +');';
   return code;
 };
 
 Blockly.JavaScript['matrix_led_code'] = function(block) {
   var value_code_ = Blockly.JavaScript.valueToCode(block, 'value_code_', Blockly.JavaScript.ORDER_ATOMIC);
-  var code = 'MatrixLed_code("'+ value_code_ +'");';
+  var code = 'MatrixLed_code('+ value_code_ +');';
   return code;
 };
 
