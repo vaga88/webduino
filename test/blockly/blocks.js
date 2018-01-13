@@ -16,6 +16,8 @@ Blockly.Blocks['matrix_led_marquee'] = {
     this.appendValueInput("value_marquee_")
         .setCheck("String")   
         .appendField(Blockly.Msg.MATRIXLED_MARQUEE_SHOW)
+        .appendField(Blockly.Msg.MATRIXLED_MARQUEE_DIRECTION_SHOW)
+        .appendField(new Blockly.FieldDropdown([["right","1"], ["left","2"]]), "value_direction_"); 
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(300);    
@@ -47,6 +49,19 @@ Blockly.Blocks['matrix_led_marquee_resume'] = {
     this.setHelpUrl("");    
   }
 }; 
+
+Blockly.Blocks['matrix_led_marquee_reverse'] = {
+  init: function() {
+    this.appendValueInput("value_marquee_reverse_")
+        .setCheck("Number")  
+        .appendField(Blockly.Msg.MATRIXLED_MARQUEE_REVERSE_SHOW);    
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(300);    
+    this.setTooltip("");
+    this.setHelpUrl("");    
+  }
+};
 
 Blockly.Blocks['matrix_led_marquee_time'] = {
   init: function() {
