@@ -250,7 +250,27 @@
     else if (input_char_=="Y")
       return charY; 
     else if (input_char_=="Z")
-      return charZ;  
+      return charZ; 
+    else if (input_char_=="0")
+      return char0; 
+    else if (input_char_=="1")
+      return char1;   
+    else if (input_char_=="2")
+      return char2; 
+    else if (input_char_=="3")
+      return char3;       
+    else if (input_char_=="4")
+      return char4; 
+    else if (input_char_=="5")
+      return char5;       
+    else if (input_char_=="6")
+      return char6; 
+    else if (input_char_=="7")
+      return char7;       
+    else if (input_char_=="8")
+      return char8; 
+    else if (input_char_=="9")
+      return char9;     
     else if (input_char_==",")
         return comma;
     else if (input_char_==".")
@@ -279,26 +299,6 @@
       return Quotationmarkssingle;     
     else if (input_char_=="\"")
       return Quotationmarksdouble;   
-    else if (input_char_=="0")
-      return char0; 
-    else if (input_char_=="1")
-      return char1;   
-    else if (input_char_=="2")
-      return char2; 
-    else if (input_char_=="3")
-      return char3;       
-    else if (input_char_=="4")
-      return char4; 
-    else if (input_char_=="5")
-      return char5;       
-    else if (input_char_=="6")
-      return char6; 
-    else if (input_char_=="7")
-      return char7;       
-    else if (input_char_=="8")
-      return char8; 
-    else if (input_char_=="9")
-      return char9; 
     else if (input_char_=="♡")
       return heart;
     else if (input_char_=="↑")
@@ -309,6 +309,14 @@
       return arrowleft;
     else if (input_char_=="→")
       return arrowright;   
+    else if (input_char_=="↖")
+      return arrowleftup;
+    else if (input_char_=="↙")
+      return arrowleftdown;
+    else if (input_char_=="↗")
+      return arrowrightup;
+    else if (input_char_=="↘")
+      return arrowrightdown;       
     else
       return noexist;
   }
