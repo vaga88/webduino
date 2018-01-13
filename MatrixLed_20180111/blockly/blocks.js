@@ -1,7 +1,7 @@
 Blockly.Blocks['matrix_led_char'] = {
   init: function() {
     this.appendValueInput("value_char_")
-        .setCheck("String")   
+        .setCheck(null)   
         .appendField(Blockly.Msg.MATRIXLED_CHAR_SHOW);    
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -65,7 +65,7 @@ Blockly.Blocks['matrix_led_sample'] = {
   init: function() {
     this.appendDummyInput()
         .appendField(Blockly.Msg.MATRIXLED_SAMPLE_SHOW)
-        .appendField(new Blockly.FieldDropdown([["♡","♡"], ["↑","↑"], ["↓","↓"], ["←","←"], ["→","→"], ["○","○"], ["x","x"]]), "value_sample_");     
+        .appendField(new Blockly.FieldDropdown([["♡","♡"], ["↑","↑"], ["↓","↓"], ["←","←"], ["→","→"], ["↖","↖"], ["↙","↙"], ["↗","↗"], ["↘","↘"], ["O","O"], ["X","X"], ["V","V"]]), "value_sample_");     
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip('');

@@ -28,6 +28,16 @@
   const charX = "1000101010001000101010001";
   const charY = "1000001000001110100010000";   
   const charZ = "1000110011101011100110001";
+  const char0 = "0000001110100010111000000";
+  const char1 = "0000001001111110000100000";
+  const char2 = "0000010111101011110100000";
+  const char3 = "0000010101101011111100000";
+  const char4 = "0000011100001001111100000";
+  const char5 = "0000011101101011011100000";
+  const char6 = "0000011111101011011100000";
+  const char7 = "0000011000100001111100000";
+  const char8 = "0000011111101011111100000";
+  const char9 = "0000011101101011111100000";  
   const comma = "0000000001000100000000000";
   const period = "0000000001000000000000000";
   const questionmark = "0100010000100111010001000";
@@ -43,23 +53,15 @@
   const Quotationmarkssingle = "0000000000110000010000000";
   const Quotationmarksdouble = "1100000100110000010000000";
   const hyphen = "0000000100001000010000000";
-  const number0 = "0000001110100010111000000";
-  const number1 = "0000001001111110000100000";
-  const number2 = "0000010111101011110100000";
-  const number3 = "0000010101101011111100000";
-  const number4 = "0000011100001001111100000";
-  const number5 = "0000011101101011011100000";
-  const number6 = "0000011111101011011100000";
-  const number7 = "0000011000100001111100000";
-  const number8 = "0000011111101011111100000";
-  const number9 = "0000011101101011111100000";
   const heart = "0110011110011111111001100";
   const arrowup = "0010001000111110100000100";
   const arrowdown = "0010000010111110001000100";
   const arrowleft = "0010001110101010010000100";
   const arrowright = "0010000100101010111000100";
-  const correct = "0111010001100011000101110";
-  const wrong = "1000101010001000101010001";
+  const arrowleftup = "1111011000101001001000001";
+  const arrowleftdown = "0111100011001010100110000";
+  const arrowrightup = "0000110010101001100011110";
+  const arrowrightdown = "1000001001001010001101111";
   const noexist = "0000000000000000000000000";
   
   var L = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
@@ -175,7 +177,7 @@
   }
   
   function MatrixLed_show() {
-    var ledtable ="<table style='width:"+MatrixLedwidth+"px;height:"+MatrixLedheight+"px;border:40px white;'>"
+    var ledtable ="<table style='width:"+MatrixLedwidth+"px;height:"+MatrixLedheight+"px;border:white;'>"
                   + "<tr><td"+L[0]+"></td><td"+L[5]+"></td><td"+L[10]+"></td><td"+L[15]+"></td><td"+L[20]+"></td></tr>"
                   + "<tr><td"+L[1]+"></td><td"+L[6]+"></td><td"+L[11]+"></td><td"+L[16]+"></td><td"+L[21]+"></td></tr>"
                   + "<tr><td"+L[2]+"></td><td"+L[7]+"></td><td"+L[12]+"></td><td"+L[17]+"></td><td"+L[22]+"></td></tr>"
@@ -248,7 +250,27 @@
     else if (input_char_=="Y")
       return charY; 
     else if (input_char_=="Z")
-      return charZ;  
+      return charZ; 
+    else if (input_char_=="0")
+      return char0; 
+    else if (input_char_=="1")
+      return char1;   
+    else if (input_char_=="2")
+      return char2; 
+    else if (input_char_=="3")
+      return char3;       
+    else if (input_char_=="4")
+      return char4; 
+    else if (input_char_=="5")
+      return char5;       
+    else if (input_char_=="6")
+      return char6; 
+    else if (input_char_=="7")
+      return char7;       
+    else if (input_char_=="8")
+      return char8; 
+    else if (input_char_=="9")
+      return char9;     
     else if (input_char_==",")
         return comma;
     else if (input_char_==".")
@@ -277,26 +299,6 @@
       return Quotationmarkssingle;     
     else if (input_char_=="\"")
       return Quotationmarksdouble;   
-    else if (input_char_=="0")
-      return number0; 
-    else if (input_char_=="1")
-      return number1;   
-    else if (input_char_=="2")
-      return number2; 
-    else if (input_char_=="3")
-      return number3;       
-    else if (input_char_=="4")
-      return number4; 
-    else if (input_char_=="5")
-      return number5;       
-    else if (input_char_=="6")
-      return number6; 
-    else if (input_char_=="7")
-      return number7;       
-    else if (input_char_=="8")
-      return number8; 
-    else if (input_char_=="9")
-      return number9; 
     else if (input_char_=="♡")
       return heart;
     else if (input_char_=="↑")
@@ -306,11 +308,15 @@
     else if (input_char_=="←")
       return arrowleft;
     else if (input_char_=="→")
-      return arrowright;
-    else if (input_char_=="○")
-      return correct;
-    else if (input_char_=="x")
-      return wrong;    
+      return arrowright;   
+    else if (input_char_=="↖")
+      return arrowleftup;
+    else if (input_char_=="↙")
+      return arrowleftdown;
+    else if (input_char_=="↗")
+      return arrowrightup;
+    else if (input_char_=="↘")
+      return arrowrightdown;       
     else
       return noexist;
   }
