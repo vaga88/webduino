@@ -74,6 +74,19 @@ Blockly.Blocks['matrix_led_sample'] = {
   }
 };
 
+Blockly.Blocks['matrix_led_code'] = {
+  init: function() {
+    this.appendValueInput("value_code_")
+        .setCheck("String")   
+        .appendField(Blockly.Msg.MATRIXLED_CODE_SHOW)
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(300);    
+    this.setTooltip("");
+    this.setHelpUrl("");    
+  }
+}; 
+
 Blockly.Blocks['matrix_led_color'] = {
   init: function() {
     this.appendValueInput("value_color_")
