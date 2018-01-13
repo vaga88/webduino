@@ -75,6 +75,7 @@
   var MatrixLedheight = 250;
   var MatrixLedmarquee = "";
   var MatrixLedmarqueetime = 500;
+  var MatrixLedmarqueereverse = 1;
   var marqueetimeid;
 
   function MatrixLed_color(input_color_) {
@@ -104,9 +105,17 @@
   
   function MatrixLed_marquee_play() {
     if (MatrixLedmarquee.length>25)
+    {
+      if (MatrixLedmarqueereverse==1)
       {
-      MatrixLed_matrix(MatrixLedmarquee.substr(0,25));
-      MatrixLedmarquee = MatrixLedmarquee.substr(5,MatrixLedmarquee.length-1)+MatrixLedmarquee.substr(0,5);
+        MatrixLed_matrix(MatrixLedmarquee.substr(0,25));
+        MatrixLedmarquee = MatrixLedmarquee.substr(5,MatrixLedmarquee.length-1)+MatrixLedmarquee.substr(0,5);
+      }
+      else if (MatrixLedmarqueereverse==2)
+      {
+        MatrixLed_matrix(MatrixLedmarquee.substr(0,25));
+        MatrixLedmarquee = MatrixLedmarquee.substr(MatrixLedmarquee.length-5,MatrixLedmarquee.length-1)+MatrixLedmarquee.substr(0,MatrixLedmarquee.length-4);
+      }
     }
   } 
   
@@ -122,6 +131,13 @@
     window.clearInterval(marqueetimeid);
     marqueetimeid = window.setInterval("MatrixLed_marquee_play()",MatrixLedmarqueetime);
   } 
+  
+  function MatrixLed_marquee_reverse() {
+    if (MatrixLedmarqueereverse==1)
+      MatrixLedmarqueereverse=2;
+    else if
+      MatrixLedmarqueereverse=1;
+  }   
   
   function MatrixLed_char(input_char_) {
     if (input_char_.length==1)
@@ -355,6 +371,7 @@
   window.MatrixLed_marquee_play = MatrixLed_marquee_play;
   window.MatrixLed_marquee_stop = MatrixLed_marquee_stop;
   window.MatrixLed_marquee_resume = MatrixLed_marquee_resume;
+  window.MatrixLed_marquee_reverse = MatrixLed_marquee_reverse;
   window.MatrixLed_marquee_time = MatrixLed_marquee_time;
   window.MatrixLed_char = MatrixLed_char;
   window.MatrixLed_conversion =MatrixLed_conversion;
