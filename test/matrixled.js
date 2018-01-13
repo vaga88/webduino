@@ -62,6 +62,11 @@
   const arrowleftdown = "0111100011001010100110000";
   const arrowrightup = "0000110010101001100011110";
   const arrowrightdown = "1000001001001010001101111";
+  const heart = "0110011110011111111001100";
+  const arrowupfill = "0000100111111110011100001";
+  const arrowdownfill = "1000011100111111110010000";
+  const arrowleftfill = "0010000100011100111011111";
+  const arrowrightfill = "1111101110011100010000100";  
   const noexist = "0000000000000000000000000";
   
   var L = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
@@ -316,7 +321,15 @@
     else if (input_char_=="↗")
       return arrowrightup;
     else if (input_char_=="↘")
-      return arrowrightdown;       
+      return arrowrightdown;  
+    else if (input_char_=="▲")
+      return arrowupfill;
+    else if (input_char_=="▼")
+      return arrowdownfill;
+    else if (input_char_=="◄")
+      return arrowleftfill;
+    else if (input_char_=="►")
+      return arrowrightfill;    
     else
       return noexist;
   }
