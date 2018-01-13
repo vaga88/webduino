@@ -53,7 +53,8 @@
   const Quotationmarkssingle = "0000000000110000010000000";
   const Quotationmarksdouble = "1100000100110000010000000";
   const hyphen = "0000000100001000010000000";
-  const heart = "0110011110011111111001100";
+  const heart = "0110010010010011001001100";
+  const heartfill = "0110011110011111111001100";  
   const arrowup = "0010001000111110100000100";
   const arrowdown = "0010000010111110001000100";
   const arrowleft = "0010001110101010010000100";
@@ -62,6 +63,10 @@
   const arrowleftdown = "0111100011001010100110000";
   const arrowrightup = "0000110010101001100011110";
   const arrowrightdown = "1000001001001010001101111";
+  const arrowupfill = "0000100111111110011100001";
+  const arrowdownfill = "1000011100111111110010000";
+  const arrowleftfill = "0010000100011100111011111";
+  const arrowrightfill = "1111101110011100010000100";  
   const noexist = "0000000000000000000000000";
   
   var L = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
@@ -301,6 +306,8 @@
       return Quotationmarksdouble;   
     else if (input_char_=="♡")
       return heart;
+    else if (input_char_=="♥")
+      return heartfill;    
     else if (input_char_=="↑")
       return arrowup;
     else if (input_char_=="↓")
@@ -316,7 +323,15 @@
     else if (input_char_=="↗")
       return arrowrightup;
     else if (input_char_=="↘")
-      return arrowrightdown;       
+      return arrowrightdown;  
+    else if (input_char_=="▲")
+      return arrowupfill;
+    else if (input_char_=="▼")
+      return arrowdownfill;
+    else if (input_char_=="◄")
+      return arrowleftfill;
+    else if (input_char_=="►")
+      return arrowrightfill;    
     else
       return noexist;
   }
