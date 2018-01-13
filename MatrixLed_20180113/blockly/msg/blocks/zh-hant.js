@@ -11,4 +11,5 @@ Blockly.Msg.MATRIXLED_MARQUEE_SHOW = "顯示 跑馬燈(英數)";
 Blockly.Msg.MATRIXLED_MARQUEE_STOP_SHOW = "暫停 跑馬燈";
 Blockly.Msg.MATRIXLED_MARQUEE_RESUME_SHOW = "恢復 跑馬燈";
 Blockly.Msg.MATRIXLED_MARQUEE_TIME_SHOW = "跑馬燈 間隔時間(ms)";
+Blockly.Msg.MATRIXLED_MARQUEE_REVERSE_SHOW = "跑馬燈 反向";
 Blockly.Msg.MATRIXLED_CHAR_SHOW = "顯示 字元(英數)";

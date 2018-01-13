@@ -108,4 +108,6 @@
   </block>
   <block type="matrix_led_marquee_resume">
   </block>
+  <block type="matrix_led_marquee_reverse">
+  </block>
  </category>

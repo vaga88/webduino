@@ -26,6 +26,11 @@ Blockly.JavaScript['matrix_led_marquee_resume'] = function(block) {
   return code;
 };
 
+Blockly.JavaScript['matrix_led_marquee_reverse'] = function(block) {
+  var code = 'MatrixLed_marquee_reverse();';
+  return code;
+};
+
 Blockly.JavaScript['matrix_led_color'] = function(block) {
   var value_color_ = Blockly.JavaScript.valueToCode(block, 'value_color_', Blockly.JavaScript.ORDER_ATOMIC);
   var code = 'MatrixLed_color('+ value_color_ +');';
