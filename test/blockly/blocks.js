@@ -15,9 +15,7 @@ Blockly.Blocks['matrix_led_marquee'] = {
   init: function() {
     this.appendValueInput("value_marquee_")
         .setCheck("String")   
-        .appendField(Blockly.Msg.MATRIXLED_MARQUEE_SHOW)
-        .appendField(Blockly.Msg.MATRIXLED_MARQUEE_DIRECTION_SHOW)
-        .appendField(new Blockly.FieldDropdown([["right","1"], ["left","2"]]), "value_direction_"); 
+        .appendField(Blockly.Msg.MATRIXLED_MARQUEE_SHOW); 
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(300);    
