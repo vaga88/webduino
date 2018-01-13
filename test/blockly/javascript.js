@@ -51,7 +51,7 @@ Blockly.JavaScript['matrix_led_sample'] = function(block) {
 };
 
 Blockly.JavaScript['matrix_led_code'] = function(block) {
-  var value_code_ = block.getFieldValue('value_code_');
+  var value_code_ = Blockly.JavaScript.valueToCode(block, 'value_code_', Blockly.JavaScript.ORDER_ATOMIC);
   var code = 'MatrixLed_code("'+ value_code_ +'");';
   return code;
 };
