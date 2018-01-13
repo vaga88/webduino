@@ -50,6 +50,12 @@ Blockly.JavaScript['matrix_led_sample'] = function(block) {
   return code;
 };
 
+Blockly.JavaScript['matrix_led_code'] = function(block) {
+  var value_code_ = block.getFieldValue('value_code_');
+  var code = 'MatrixLed_code("'+ value_code_ +'");';
+  return code;
+};
+
 Blockly.JavaScript['matrix_led_matrix'] = function(block) {
   var L01 = (block.getFieldValue('L01') == 'TRUE')?"1":"0";
   var L02 = (block.getFieldValue('L02') == 'TRUE')?"1":"0";
