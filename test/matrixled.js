@@ -63,6 +63,7 @@
   const arrowrightup = "0000110010101001100011110";
   const arrowrightdown = "1000001001001010001101111";
   const heart = "0110011110011111111001100";
+  const heartfill = "0110011110011111111001100";  
   const arrowupfill = "0000100111111110011100001";
   const arrowdownfill = "1000011100111111110010000";
   const arrowleftfill = "0010000100011100111011111";
@@ -306,6 +307,8 @@
       return Quotationmarksdouble;   
     else if (input_char_=="♡")
       return heart;
+    else if (input_char_=="♥")
+      return heartfill;    
     else if (input_char_=="↑")
       return arrowup;
     else if (input_char_=="↓")
