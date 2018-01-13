@@ -93,7 +93,7 @@
   <block type="matrix_led_marquee">
     <value name="value_marquee_">
       <block type="text">
-        <field name="TEXT">♥ webduino ♥</field>
+        <field name="TEXT">♥ webduino ♡</field>
       </block>
     </value>
   </block>
