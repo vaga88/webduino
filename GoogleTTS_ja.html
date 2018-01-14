@@ -127,6 +127,7 @@ async function speechRecognition(){
       result.resultTranscript = event.results[result.resultLength][0].transcript;
       if(event.results[result.resultLength].isFinal===true){
         console.log(result.resultTranscript);
+          document.getElementById("demo-area-01-show").innerHTML = result.resultTranscript;
           if (ReadState == 0) {
     if(result.resultTranscript.indexOf("翻譯")!== -1){
               ReadState = 1;
