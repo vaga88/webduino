@@ -4,12 +4,23 @@
 
   function createIframe(input_id_,input_word_,input_WIDTH_,input_HEIGHT_,input_LEFT_,input_TOP_) {
     
-    var myWindow = window.open("https://translate.google.com.tw/?hl=zh-TW#zh-CN/en/"+input_word_,"_blank");
-   
-    myWindow.document.getElementById('gt-res-listen').class="trans-listen-button goog-toolbar-button goog-toolbar-button-checked";
-    //myWindow.document.getElementById('gt-res-listen').aria-pressed="true";
+    var getword = new ActiveXObject("Msxml2.XMLHTTP");
+    getword.onReadyStateChange = gettransferword;
+    getword.open("GET", "https://translate.google.com.tw/?hl=zh-TW#zh-CN/en/"+input_word_ , true);
+    getword.send(null);				
+  }
+  
+  function getgoogletranslate() {
+    if (getword.readyState==4)
+    {
+      if (getword.status==200)
+        document.write(getword.responseText);
+      else
+        getword ("伺服器發生錯誤，無法回傳資料！");
+    }
   }
 
   window.createIframe = createIframe;
+  window.getgoogletranslate = getgoogletranslate;
 
 }(window, window.document));
