@@ -16,7 +16,7 @@
       if (getword.status==200)
         document.write(getword.responseText);
       else
-        getword ("伺服器發生錯誤，無法回傳資料！");
+        document.write("");
     }
   }
 
