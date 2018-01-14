@@ -4,17 +4,17 @@
 
   function createIframe(input_id_,input_word_,input_WIDTH_,input_HEIGHT_,input_LEFT_,input_TOP_) {
     
-    var getcode = new XMLHttpRequest();
-    getcode.onReadyStateChange = getgoogletranslate;
-    getcode.open("GET", "https://translate.google.com.tw/?hl=zh-TW#zh-CN/en/"+input_word_ , true);
-    getcode.send();				
+    var xhttp = new XMLHttpRequest();
+    xhttp.onReadyStateChange = getgoogletranslate;
+    xhttp.open("GET", "https://translate.google.com.tw/?hl=zh-TW#zh-CN/en/"+input_word_ , true);
+    xhttp.send();				
   }
   
   function getgoogletranslate() {
-    if (getcode.readyState==4)
+    if (xhttp.readyState==4)
     {
-      if (getcode.status==200)
-        document.write(getcode.responseText);
+      if (xhttp.status==200)
+        document.getElementById("demo-area-01-show").innerHTML = xhttp.responseText;
       else
         document.write("");
     }
