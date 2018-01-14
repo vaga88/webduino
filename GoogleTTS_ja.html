@@ -3,7 +3,7 @@
 Created using JS Bin
 http://bin.webduino.io
 
-Copyright (c) 2018 by anonymous (http://bin.webduino.io/butut/1/edit)
+Copyright (c) 2018 by anonymous (http://bin.webduino.io/kowok/1/edit)
 
 Released under the MIT license: http://jsbin.mit-license.org
 -->
@@ -74,7 +74,6 @@ function get_time(t) {
 }
 
 async function GoogleTTS(word) {
-  ReadState = 1;
   myData= {};
   myData.sheetUrl = 'https://docs.google.com/spreadsheets/d/10SzGm_aXHa-V4P7BAAUOqR2ccGRhFKDH0fmX_cisHrA/edit?usp=sharing';
   myData.sheetName = '工作表1';
@@ -132,7 +131,8 @@ async function speechRecognition(){
         console.log(result.resultTranscript);
           if (ReadState == 0) {
     if(result.resultTranscript.indexOf("翻譯")!== -1){
-              GoogleTTS((result.resultTranscript.split('翻譯'))[0]);
+              ReadState = 1;
+      GoogleTTS((result.resultTranscript.split('翻譯'))[0]);
             console.log(event.results[result.resultLength]);
           }
   }
