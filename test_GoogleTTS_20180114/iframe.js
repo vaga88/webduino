@@ -2,9 +2,9 @@
 
   'use strict';
 
-  function createIframe(input_id_,input_url_,input_WIDTH_,input_HEIGHT_,input_LEFT_,input_TOP_) {
+  function createIframe(input_id_,input_word_,input_WIDTH_,input_HEIGHT_,input_LEFT_,input_TOP_) {
     
-    var src = '<iframe id="googletts" src="https://translate.google.com.tw/?hl=zh-TW#zh-CN/zh-TW/%E6%B8%AC%E8%A9%A6" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px"></iframe>';
+    var src = '<iframe id="googletts" src="https://translate.google.com.tw/?hl=zh-TW#zh-CN/en/'+input_word_+'" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px"></iframe>';
     
     if (document.getElementById("fustyles_iframe"+input_id_))
     {
