@@ -3,30 +3,25 @@
   'use strict';
  
 
-  function createIframe(input_id_,input_word_,input_WIDTH_,input_HEIGHT_,input_LEFT_,input_TOP_) {
-    var request = createCORSRequest("get", "http://www.bing.com/translator/");
-    if (request){
-        request.onload = function(){
-            document.getElementById("demo-area-01-show").innerHTML = request.responseText;
-        };
-        request.send();
-    }
+  function GoogleTTS(input_url_,input_sheet_,input_word_,input_x_,input_y_) {
+
+    var myData= {};
+    myData.sheetUrl = input_url_;
+    myData.sheetName = input_sheet_;
+    myData.column0 = input_word_;
+    myData.column1 = '=GOOGLETRANSLATE(A1,"auto","en")';
+    writeSheetData(myData);
+    
+    readSheetData({
+      row : 1,
+      col : 2,
+      sheetUrl : myData.sheetUrl,
+      sheetName : myData.sheetName
+    },function(googleSheetReadData){
+      speak(googleSheetReadData,["en-US",1,1,1]);
+    });
   }
     
-  function createCORSRequest(method, url){
-    var xhr = new XMLHttpRequest();
-    if ("withCredentials" in xhr){
-        xhr.open(method, url, true);
-    } else if (typeof XDomainRequest != "undefined"){
-        xhr = new XDomainRequest();
-        xhr.open(method, url);
-    } else {
-        xhr = null;
-    }
-    return xhr;
-  }
-    
-  window.createIframe = createIframe;
-  window.createCORSRequest = createCORSRequest;
+  window.GoogleTTS = GoogleTTS;
     
 }(window, window.document));
