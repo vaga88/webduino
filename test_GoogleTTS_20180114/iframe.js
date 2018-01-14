@@ -1,9 +1,10 @@
 +(function (window, document) {
 
   'use strict';
+ 
 
   function createIframe(input_id_,input_word_,input_WIDTH_,input_HEIGHT_,input_LEFT_,input_TOP_) {
-    var request = createCORSRequest("get", "https://translate.google.com.tw/?hl=zh-TW#zh-CN/en/"+input_word_);
+    var request = createCORSRequest("get", "http://www.bing.com/translator/");
     if (request){
         request.onload = function(){
             document.getElementById("demo-area-01-show").innerHTML = request.responseText;
