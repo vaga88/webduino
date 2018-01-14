@@ -1,0 +1,148 @@
+<!doctype html>
+<!--
+Created using JS Bin
+http://bin.webduino.io
+
+Copyright (c) 2018 by anonymous (http://bin.webduino.io/huxap/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Webduino Blockly Demo 01</title>
+  <script src="https://blocklypro.webduino.io/components/jquery/dist/jquery.min.js"></script>
+  <script src="https://webduino.io/components/webduino-js/dist/webduino-all.min.js"></script>
+  <script src="https://blockly.webduino.io/webduino-blockly.js"></script>
+  <script src="https://blockly.webduino.io/lib/firebase.js"></script>
+  <script src="https://blockly.webduino.io/lib/runtime.min.js"></script>
+<style id="jsbin-css">
+#demo-area-01-show { font-size: 60px; pointer-events: auto!important; }
+</style>
+</head>
+
+<body>
+  <div><span id="demo-area-01-show">123</span></div>
+<script id="jsbin-javascript">
+(async function () {
+
+var ReadState;
+var word;
+var myData;
+
+function get_date(t) {
+  var varDay = new Date(),
+    varYear = varDay.getFullYear(),
+    varMonth = varDay.getMonth() + 1,
+    varDate = varDay.getDate();
+  var varNow;
+  if (t == "ymd") {
+    varNow = varYear + "/" + varMonth + "/" + varDate;
+  } else if (t == "mdy") {
+    varNow = varMonth + "/" + varDate + "/" + varYear;
+  } else if (t == "dmy") {
+    varNow = varDate + "/" + varMonth + "/" + varYear;
+  } else if (t == "y") {
+    varNow = varYear;
+  } else if (t == "m") {
+    varNow = varMonth;
+  } else if (t == "d") {
+    varNow = varDate;
+  }
+  return varNow;
+}
+
+function get_time(t) {
+  var varTime = new Date(),
+    varHours = varTime.getHours(),
+    varMinutes = varTime.getMinutes(),
+    varSeconds = varTime.getSeconds();
+  var varNow;
+  if (t == "hms") {
+    varNow = varHours + ":" + varMinutes + ":" + varSeconds;
+  } else if (t == "h") {
+    varNow = varHours;
+  } else if (t == "m") {
+    varNow = varMinutes;
+  } else if (t == "s") {
+    varNow = varSeconds;
+  }
+  return varNow;
+}
+
+async function GoogleTTS(word) {
+  myData= {};
+  myData.sheetUrl = 'https://docs.google.com/spreadsheets/d/10SzGm_aXHa-V4P7BAAUOqR2ccGRhFKDH0fmX_cisHrA/edit?usp=sharing';
+  myData.sheetName = '工作表1';
+  myData.column0 = get_date("ymd");
+  myData.column1 = get_time("hms");
+  myData.column2 = word;
+  myData.column3 = '=GOOGLETRANSLATE(INDIRECT("C"&ROW()),"auto","ja")';
+  myData.column4 = '=INDIRECT("D"&COUNTA(A:A))';
+  writeSheetData(myData);
+  await delay(2);
+  readSheetData({
+    row : 1,
+    col : 5,
+    sheetUrl : myData.sheetUrl,
+    sheetName : myData.sheetName
+  },function(googleSheetReadData){
+    document.getElementById("demo-area-01-show").innerHTML = ([word,("<br/>"),googleSheetReadData].join(''));
+    speak(googleSheetReadData,["ja-JP",1,1,1],async function(){
+      ReadState = 0;
+
+    },0);
+  });
+}
+
+
+ReadState = 0;
+async function speechRecognition(){
+  if (!("webkitSpeechRecognition" in window)) {
+    alert("本瀏覽器不支援語音辨識，請更換瀏覽器！(Chrome 25 版以上才支援語音辨識)");
+  } else{
+    window._recognition = new webkitSpeechRecognition();
+    window._recognition.continuous = true;
+    window._recognition.interimResults = true;
+    window._recognition.lang = "cmn-Hant-TW";
+
+    window._recognition.onstart = async function() {
+      window._recognition.status = true;
+      console.log("Start recognize...");
+    };
+
+    window._recognition.onend = async function() {
+      console.log("Stop recognize");
+      if(window._recognition.status){
+         window._recognition.start();
+      }
+    };
+
+    window._recognition.onresult = async function(event,result) {
+      result = {};
+      result.resultLength = event.results.length-1;
+      result.resultTranscript = event.results[result.resultLength][0].transcript;
+      if(event.results[result.resultLength].isFinal===false){
+        console.log(result.resultTranscript);
+          if (ReadState == 0) {
+    if(result.resultTranscript.indexOf("翻譯")!== -1){
+              ReadState = 1;
+      GoogleTTS((result.resultTranscript.split('翻譯'))[0]);
+            console.log(event.results[result.resultLength]);
+          }
+  }
+              }else if(event.results[result.resultLength].isFinal===true){
+        console.log("final");
+      }
+    };
+    window._recognition.start();
+  }
+}
+speechRecognition();
+
+}());
+</script>
+</body>
