@@ -7,7 +7,7 @@
     var myWindow = window.open("https://translate.google.com.tw/?hl=zh-TW#zh-CN/en/"+input_word_,"googletts");
    
     myWindow.document.getElementById('gt-res-listen').class="trans-listen-button goog-toolbar-button goog-toolbar-button-checked";
-    //document.getElementById("googletts").contentWindow.document.getElementById('gt-res-listen').aria-pressed="true";
+    myWindow.document.getElementById('gt-res-listen')..aria-pressed="true";
   }
 
   window.createIframe = createIframe;
