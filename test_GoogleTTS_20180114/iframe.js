@@ -9,7 +9,7 @@
     myData.sheetUrl = input_url_;
     myData.sheetName = input_sheet_;
     myData.column0 = input_word_;
-    myData.column1 = '=GOOGLETRANSLATE(A1,"auto","en")';
+    myData.column1 = '=GOOGLETRANSLATE(INDIRECT("A"&ROW()),"auto","en")';
     writeSheetData(myData);
     
     readSheetData({
