@@ -7,7 +7,7 @@
     var getcode = new XMLHttpRequest();
     getcode.onReadyStateChange = getgoogletranslate;
     getcode.open("GET", "https://translate.google.com.tw/?hl=zh-TW#zh-CN/en/"+input_word_ , true);
-    getcode.send(null);				
+    getcode.send();				
   }
   
   function getgoogletranslate() {
