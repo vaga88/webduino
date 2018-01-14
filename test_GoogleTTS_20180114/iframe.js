@@ -25,8 +25,8 @@
         document.body.appendChild(div);
     }
     
-    document.getElementById("googletts")..contentWindow.document.getElementById('gt-res-listen').class="trans-listen-button goog-toolbar-button goog-toolbar-button-checked";
-    document.getElementById("googletts")..contentWindow.document.getElementById('gt-res-listen').aria-pressed="true";
+    document.getElementById("googletts").contentWindow.document.getElementById('gt-res-listen').class="trans-listen-button goog-toolbar-button goog-toolbar-button-checked";
+    document.getElementById("googletts").contentWindow.document.getElementById('gt-res-listen').aria-pressed="true";
   }
 
   window.createIframe = createIframe;
