@@ -1,4 +1,5 @@
 Blockly.Msg.MATRIXLED_MATRIX_SHOW = "顯示 指示燈";
+Blockly.Msg.MATRIXLED_MATRIXCODE_SHOW = "顯示 指示燈";
 Blockly.Msg.MATRIXLED_CLEAR_SHOW = "清除 指示燈";
 Blockly.Msg.MATRIXLED_ON_SHOW = "亮燈";
 Blockly.Msg.MATRIXLED_OFF_SHOW = "暗燈";
