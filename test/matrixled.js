@@ -93,6 +93,8 @@
   function MatrixLed_marquee(input_marquee_) {
     if (input_marquee_.length==1)
       MatrixLed_matrix(MatrixLed_conversion(input_marquee_.toUpperCase()));
+    else if ((input_marquee_.length%25=0)&&(regex_match(input_marquee_,"^[0-1]")==0))
+      MatrixLedmarquee = input_marquee_;       
     else if (input_marquee_.length>1)
     {
       MatrixLedmarquee="";
