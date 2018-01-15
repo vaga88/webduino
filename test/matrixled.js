@@ -197,6 +197,13 @@
     }
     MatrixLed_show();
   }
+
+  function MatrixLed_state(input_x_,input_y_) {
+    if (L(input_x_*5+input_y_)==''||L(input_x_*5+input_y_)==" bgcolor='white'")
+      return 0;
+    else
+      return 1;
+  }
   
   function MatrixLed_matrix(input_value_) {
     for (var i=0;i<25;i++)
@@ -369,6 +376,7 @@
   window.MatrixLed_show = MatrixLed_show;
   window.MatrixLed_on = MatrixLed_on;
   window.MatrixLed_off = MatrixLed_off;
+  window.MatrixLed_state = MatrixLed_state;
   window.MatrixLed_color = MatrixLed_color;
   window.MatrixLed_width = MatrixLed_width;
   window.MatrixLed_height = MatrixLed_height;
