@@ -108,6 +108,18 @@
       </block>
     </value>
   </block>
+  <block type="matrix_led_state">
+    <value name="value_x_state_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="value_y_state_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>  
   <block type="matrix_led_clear">
   </block>  
   <block type="matrix_led_char">
