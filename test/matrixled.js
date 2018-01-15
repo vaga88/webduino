@@ -92,8 +92,10 @@
   
   function MatrixLed_marquee(input_marquee_) {
     if ((input_marquee_.length==25)&&(input_marquee_.search(/^01/)==0))
+    {
       MatrixLed_matrix(input_marquee_);
       return;
+    }
     else if ((input_marquee_.length%25==0)&&(input_marquee_.search(/^01/)==0))
       MatrixLedmarquee = input_marquee_;  
     else if (input_marquee_.length==1)
