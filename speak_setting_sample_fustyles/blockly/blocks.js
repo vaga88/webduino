@@ -7,7 +7,7 @@ Blockly.Blocks['speak_setting_sample_fustyles'] = {
         [Blockly.Msg.WEBDUINO_SPEAK_US, "en-US"],
         [Blockly.Msg.WEBDUINO_SPEAK_JP, "ja-JP"],
         [Blockly.Msg.WEBDUINO_SPEAK_KR, "ko-KR"],
-        [Blockly.Msg.WEBDUINO_SPEAK_TH, "th-TH"],
+        [Blockly.Msg.WEBDUINO_SPEAK_TH, "th"],
         [Blockly.Msg.WEBDUINO_SPEAK_VI, "vi-VN"],      
         [Blockly.Msg.WEBDUINO_SPEAK_ES, "es-ES"],
         [Blockly.Msg.WEBDUINO_SPEAK_FR, "fr-FR"],
