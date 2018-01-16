@@ -199,7 +199,7 @@
   }
 
   function MatrixLed_state(input_x_,input_y_) {
-    if ((L(input_x_*5+input_y_)=='')||(L(input_x_*5+input_y_)==" bgcolor='white'"))
+    if ((L[input_x_*5+input_y_]=='')||(L[input_x_*5+input_y_]==" bgcolor='white'"))
       return 0;
     else
       return 1;
