@@ -271,6 +271,7 @@ Blockly.Blocks['matrix_led_off'] = {
     this.setTooltip("");
     this.setHelpUrl("");
   }
+};  
   
 Blockly.Blocks['matrix_led_state'] = {
   init: function() {
