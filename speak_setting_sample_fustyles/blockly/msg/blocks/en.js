@@ -18,6 +18,7 @@ Blockly.Msg.WEBDUINO_SPEAK_LANG = "language";
 Blockly.Msg.WEBDUINO_SPEAK_TW = "zh-TW";
 Blockly.Msg.WEBDUINO_SPEAK_US = "en-US";
 Blockly.Msg.WEBDUINO_SPEAK_JP = "ja-JP";
+Blockly.Msg.WEBDUINO_SPEAK_YUEHANT = "yue-Hant-HK";
 Blockly.Msg.WEBDUINO_SPEAK_KR = "ko-KR";
 Blockly.Msg.WEBDUINO_SPEAK_TH = "th-TH";
 Blockly.Msg.WEBDUINO_SPEAK_VI = "vi-VN";
