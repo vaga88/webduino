@@ -143,6 +143,6 @@ Blockly.JavaScript['matrix_led_off'] = function(block) {
 Blockly.JavaScript['matrix_led_state'] = function(block) {
   var value_x_state_ = Blockly.JavaScript.valueToCode(block, 'value_x_state_', Blockly.JavaScript.ORDER_ATOMIC);
   var value_y_state_ = Blockly.JavaScript.valueToCode(block, 'value_y_state_', Blockly.JavaScript.ORDER_ATOMIC);
-  var code = 'MatrixLed_state('+value_x_state_+','+value_y_state_+');';
+  var code = 'MatrixLed_state('+value_x_state_+','+value_y_state_+')';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
