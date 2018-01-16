@@ -18,6 +18,7 @@ Blockly.Msg.WEBDUINO_SPEAK_LANG = "朗读语言";
 Blockly.Msg.WEBDUINO_SPEAK_TW = "中文";
 Blockly.Msg.WEBDUINO_SPEAK_US = "英文";
 Blockly.Msg.WEBDUINO_SPEAK_JP = "日文";
+Blockly.Msg.WEBDUINO_SPEAK_YUEHANT = "广东话";
 Blockly.Msg.WEBDUINO_SPEAK_KR = "韩文";
 Blockly.Msg.WEBDUINO_SPEAK_TH ="泰文";
 Blockly.Msg.WEBDUINO_SPEAK_VI ="越南文";
