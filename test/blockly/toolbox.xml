@@ -1,4 +1,10 @@
 <category id="catSpeakmodify">
   <block type="speak_setting_sample_fustyles"></block>
-  <block type="speak_setting_sample1_fustyles"></block>  
+  <block type="speak_setting_sample1_fustyles">
+    <value name="value_lang_">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>  
 </category>
