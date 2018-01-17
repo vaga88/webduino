@@ -1,1 +1,1 @@
-MSG.catMatrixLed = "朗读语言";
+MSG.catSpeakmodify = "朗读语言";
