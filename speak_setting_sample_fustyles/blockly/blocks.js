@@ -3,7 +3,7 @@ Blockly.Blocks['speak_setting_sample_fustyles'] = {
     this.appendDummyInput()
       .appendField(Blockly.Msg.WEBDUINO_SPEAK_LANG)
       .appendField(new Blockly.FieldDropdown([
-        [Blockly.Msg.WEBDUINO_SPEAK_TW, "zh-TW"],
+        [Blockly.Msg.WEBDUINO_SPEAK_TW, "cmn-Hant-TW"],
         [Blockly.Msg.WEBDUINO_SPEAK_US, "en-US"],
         [Blockly.Msg.WEBDUINO_SPEAK_JP, "ja-JP"],
         [Blockly.Msg.WEBDUINO_SPEAK_KR, "ko-KR"],
@@ -119,7 +119,6 @@ Blockly.Blocks['speak_setting_sample_fustyles'] = {
         [Blockly.Msg.WEBDUINO_SPEAK_fa_IR,"fa-IR"],
         [Blockly.Msg.WEBDUINO_SPEAK_hi_IN,"hi-IN"],
         [Blockly.Msg.WEBDUINO_SPEAK_th_TH,"th-TH"],
-        [Blockly.Msg.WEBDUINO_SPEAK_cmn_Hant_TW,"cmn-Hant-TW"],
         [Blockly.Msg.WEBDUINO_SPEAK_yue_Hant_HK,"yue-Hant-HK"],
         [Blockly.Msg.WEBDUINO_SPEAK_cmn_Hans_HK,"cmn-Hans-HK"],
         [Blockly.Msg.WEBDUINO_SPEAK_cmn_Hans_CN,"cmn-Hans-CN"]      
@@ -165,7 +164,6 @@ Blockly.Blocks['speak_setting_sample_fustyles'] = {
 Blockly.Blocks['speak_setting_sample1_fustyles'] = {
   init: function () {
     this.appendValueInput("value_lang_")
-        .setCheck("String") 
       .appendField(Blockly.Msg.WEBDUINO_SPEAK_LANG)
     this.appendDummyInput()
       .appendField(Blockly.Msg.WEBDUINO_SPEAK_VOLUME)
