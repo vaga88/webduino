@@ -1,9 +1,21 @@
 <category id="catSpeakmodify">
-  <block type="speak_setting_sample_fustyles"></block>
-  <block type="speak_setting_sample1_fustyles">
+  <block type="speak_setting_sample_fustyles">
+    <field name="volume_">0.5</field>
+    <field name="pitch_">1</field>
+    <field name="rate_">1</field>
     <value name="value_lang_">
       <block type="text">
-        <field name="TEXT"></field>
+        <field name="TEXT">en</field>
+      </block>
+    </value>
+  </block>
+  <block type="speak_setting_sample1_fustyles">
+    <field name="volume_">0.5</field>
+    <field name="pitch_">1</field>
+    <field name="rate_">1</field>
+    <value name="value_lang_">
+      <block type="text">
+        <field name="TEXT">en</field>
       </block>
     </value>
   </block>  
