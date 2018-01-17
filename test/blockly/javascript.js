@@ -8,7 +8,7 @@ Blockly.JavaScript['speak_setting_sample_fustyles'] = function (block) {
 };
 
 Blockly.JavaScript['speak_setting_sample1_fustyles'] = function (block) {
-  var dropdown_lang_ = block.getFieldValue('lang_');
+  var dropdown_lang_ =Blockly.JavaScript.valueToCode(block, 'lang_', Blockly.JavaScript.ORDER_ATOMIC);
   var dropdown_volume_ = block.getFieldValue('volume_');
   var dropdown_pitch_ = block.getFieldValue('pitch_');
   var dropdown_rate_ = block.getFieldValue('rate_');
