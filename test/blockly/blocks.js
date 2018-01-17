@@ -164,10 +164,9 @@ Blockly.Blocks['speak_setting_sample_fustyles'] = {
 
 Blockly.Blocks['speak_setting_sample1_fustyles'] = {
   init: function () {
-    this.appendDummyInput()
-      .appendField(Blockly.Msg.WEBDUINO_SPEAK_LANG)
     this.appendValueInput("value_lang_")
-        .setCheck("String")     
+        .setCheck("String") 
+      .appendField(Blockly.Msg.WEBDUINO_SPEAK_LANG)
       .appendField(Blockly.Msg.WEBDUINO_SPEAK_VOLUME)
       .appendField(new Blockly.FieldDropdown([
         ["1", "1"],
