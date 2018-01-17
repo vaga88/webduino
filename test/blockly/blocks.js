@@ -165,11 +165,11 @@ Blockly.Blocks['speak_setting_sample_fustyles'] = {
 Blockly.Blocks['speak_setting_sample1_fustyles'] = {
   init: function () {
     this.appendDummyInput()
-      this..appendField(Blockly.Msg.WEBDUINO_SPEAK_LANG)
-      this..appendValueInput("value_lang_")
+      .appendField(Blockly.Msg.WEBDUINO_SPEAK_LANG)
+      .appendValueInput("value_lang_")
         .setCheck("String")     
-      this..appendField(Blockly.Msg.WEBDUINO_SPEAK_VOLUME)
-      this..appendField(new Blockly.FieldDropdown([
+      .appendField(Blockly.Msg.WEBDUINO_SPEAK_VOLUME)
+      .appendField(new Blockly.FieldDropdown([
         ["1", "1"],
         ["0.9", "0.9"],
         ["0.8", "0.8"],
@@ -182,16 +182,16 @@ Blockly.Blocks['speak_setting_sample1_fustyles'] = {
         ["0.1", "0.1"],
         ["0", "0"]
       ]), "volume_")
-      this..appendField(Blockly.Msg.WEBDUINO_SPEAK_PITCH)
-      this..appendField(new Blockly.FieldDropdown([
+      .appendField(Blockly.Msg.WEBDUINO_SPEAK_PITCH)
+      .appendField(new Blockly.FieldDropdown([
         [Blockly.Msg.WEBDUINO_SPEAK_P20, "2"],
         [Blockly.Msg.WEBDUINO_SPEAK_P15, "1.5"],
         [Blockly.Msg.WEBDUINO_SPEAK_P10, "1"],
         [Blockly.Msg.WEBDUINO_SPEAK_P05, "0.5"],
         [Blockly.Msg.WEBDUINO_SPEAK_P01, "0.1"]
       ]), "pitch_")
-      this..appendField(Blockly.Msg.WEBDUINO_SPEAK_RATE)
-      this..appendField(new Blockly.FieldDropdown([
+      .appendField(Blockly.Msg.WEBDUINO_SPEAK_RATE)
+      .appendField(new Blockly.FieldDropdown([
         [Blockly.Msg.WEBDUINO_SPEAK_R20, "2"],
         [Blockly.Msg.WEBDUINO_SPEAK_R15, "1.5"],
         [Blockly.Msg.WEBDUINO_SPEAK_R10, "1"],
