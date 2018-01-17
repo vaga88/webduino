@@ -1,1 +1,1 @@
-MSG.catMatrixLed = "Speak Language";
+MSG.catSpeakmodify = "Speak Language";
