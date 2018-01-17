@@ -119,7 +119,6 @@ Blockly.Blocks['speak_setting_sample_fustyles'] = {
         [Blockly.Msg.WEBDUINO_SPEAK_fa_IR,"fa-IR"],
         [Blockly.Msg.WEBDUINO_SPEAK_hi_IN,"hi-IN"],
         [Blockly.Msg.WEBDUINO_SPEAK_th_TH,"th-TH"],
-        [Blockly.Msg.WEBDUINO_SPEAK_cmn_Hant_TW,"cmn-Hant-TW"],
         [Blockly.Msg.WEBDUINO_SPEAK_yue_Hant_HK,"yue-Hant-HK"],
         [Blockly.Msg.WEBDUINO_SPEAK_cmn_Hans_HK,"cmn-Hans-HK"],
         [Blockly.Msg.WEBDUINO_SPEAK_cmn_Hans_CN,"cmn-Hans-CN"]      
