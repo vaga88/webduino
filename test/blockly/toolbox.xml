@@ -1,6 +1,6 @@
 <category id="catSpeakmodify">
   <block type="speak_setting_sample_fustyles">
-    <field name="lang_">en-US</field>
+    <field name="lang_">cmn_Hant_TW</field>
     <field name="volume_">1</field>
     <field name="pitch_">1</field>
     <field name="rate_">1</field>
@@ -11,7 +11,7 @@
     <field name="rate_">1</field>
     <value name="value_lang_">
       <block type="text">
-        <field name="TEXT">en</field>
+        <field name="TEXT">cmn_Hant_TW</field>
       </block>
     </value>
   </block>  
