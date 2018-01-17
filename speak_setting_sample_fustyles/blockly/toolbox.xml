@@ -11,7 +11,7 @@
     <field name="rate_">1</field>
     <value name="value_lang_">
       <block type="text">
-        <field name="TEXT">en</field>
+        <field name="TEXT">cmn_Hant_TW</field>
       </block>
     </value>
   </block>  
