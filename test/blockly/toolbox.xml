@@ -1,3 +1,4 @@
-<category id="catMatrixLed">
+<category id="catSpeak">
   <block type="speak_setting_sample_fustyles"></block>
+  <block type="speak_setting_sample1_fustyles"></block>  
 </category>
