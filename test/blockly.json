@@ -1,5 +1,5 @@
 {
-  "types": ["speak_setting_sample_fustyles"],
+  "types": ["speak_setting_sample_fustyles","speak_setting_sample1_fustyles"],
   "category": "catPlus",
   "scripts": [
     "blockly/blocks.js",
