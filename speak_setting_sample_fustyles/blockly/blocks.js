@@ -10,6 +10,9 @@ Blockly.Blocks['speak_setting_sample_fustyles'] = {
         [Blockly.Msg.WEBDUINO_SPEAK_ES, "es-ES"],
         [Blockly.Msg.WEBDUINO_SPEAK_FR, "fr-FR"],
         [Blockly.Msg.WEBDUINO_SPEAK_IT, "it-IT"],
+        [Blockly.Msg.WEBDUINO_SPEAK_yue_Hant_HK,"yue-Hant-HK"],
+        [Blockly.Msg.WEBDUINO_SPEAK_cmn_Hans_HK,"cmn-Hans-HK"],
+        [Blockly.Msg.WEBDUINO_SPEAK_cmn_Hans_CN,"cmn-Hans-CN"],      
         [Blockly.Msg.WEBDUINO_SPEAK_af_ZA,"af-ZA"],
         [Blockly.Msg.WEBDUINO_SPEAK_am_ET,"am-ET"],
         [Blockly.Msg.WEBDUINO_SPEAK_hy_AM,"hy-AM"],
@@ -118,10 +121,7 @@ Blockly.Blocks['speak_setting_sample_fustyles'] = {
         [Blockly.Msg.WEBDUINO_SPEAK_ar_EG,"ar-EG"],
         [Blockly.Msg.WEBDUINO_SPEAK_fa_IR,"fa-IR"],
         [Blockly.Msg.WEBDUINO_SPEAK_hi_IN,"hi-IN"],
-        [Blockly.Msg.WEBDUINO_SPEAK_th_TH,"th-TH"],
-        [Blockly.Msg.WEBDUINO_SPEAK_yue_Hant_HK,"yue-Hant-HK"],
-        [Blockly.Msg.WEBDUINO_SPEAK_cmn_Hans_HK,"cmn-Hans-HK"],
-        [Blockly.Msg.WEBDUINO_SPEAK_cmn_Hans_CN,"cmn-Hans-CN"]      
+        [Blockly.Msg.WEBDUINO_SPEAK_th_TH,"th-TH"]    
       ]), "lang_")
       .appendField(Blockly.Msg.WEBDUINO_SPEAK_VOLUME)
       .appendField(new Blockly.FieldDropdown([
