@@ -1,1 +1,1 @@
-MSG.catSpeakmodify = "朗讀語言";
+MSG.catMatrixLed = "模擬指示燈";

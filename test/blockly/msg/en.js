@@ -1,1 +1,1 @@
-MSG.catSpeakmodify = "Speak Language";
+MSG.catMatrixLed = "Simulation Indicator Light";
