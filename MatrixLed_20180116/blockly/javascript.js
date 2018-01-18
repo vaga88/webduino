@@ -1,6 +1,6 @@
 Blockly.JavaScript['matrix_led_char'] = function(block) {
   var value_char_ = Blockly.JavaScript.valueToCode(block, 'value_char_', Blockly.JavaScript.ORDER_ATOMIC);
-  var code = 'MatrixLed_char("'+ String(value_char_).replace(/\'/g,"") +'");';
+  var code = 'MatrixLed_char('+ value_char_ +');';
   return code;
 };
 
