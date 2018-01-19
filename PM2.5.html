@@ -34,14 +34,14 @@ function myFunction(xml) {
     x[i].getElementsByTagName("ItemUnit")[0].childNodes[0].nodeValue +
     "</td></tr>";
   }
-  document.getElementById("PM25").innerHTML = table;
+  document.getElementById("PM25").innerHTML = "<table>" +　table + "</table>";
 }
 
 </script>
 
 </head>
 <body>
-<div ="PM25"></div>
+<div id="PM25"></div>
 </body>
 </html>
 
