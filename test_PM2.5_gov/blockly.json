@@ -6,7 +6,7 @@
     "blockly/javascript.js"
   ],
   "dependencies": [
-    "pm2.5_gov.js"    
+    "pm2.5gov.js"    
   ],
   "msg": "blockly/msg",
   "blocksMsg": "blockly/msg/blocks",
