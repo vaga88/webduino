@@ -77,7 +77,7 @@
               document.getElementById("fustyles_PM").style.top = '0px';
               document.getElementById("fustyles_PM").style.width = '0px';
               document.getElementById("fustyles_PM").style.height = '0px';
-              document.getElementById("fustyles_PM").style.display = 'block';
+              document.getElementById("fustyles_PM").style.display = 'none';
               document.getElementById("fustyles_PM").innerHTML = PM_data;
         }
         else
