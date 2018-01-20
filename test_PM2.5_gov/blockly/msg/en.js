@@ -1,1 +1,1 @@
-MSG.catpmgov = "TAIWAN PM DATA";
+MSG.catpmgov = "TAIWAN AIR QUALITY";
