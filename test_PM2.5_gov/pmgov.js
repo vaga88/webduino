@@ -48,12 +48,12 @@
                   ",O3_8hr," +
                   x[i].getElementsByTagName("O3_8hr")[0].childNodes[0].nodeValue +
                   ",SO2," +
-                  x[i].getElementsByTagName("SO2")[0].childNodes[0].nodeValue +
-                  ",WindDirec," +
-                  x[i].getElementsByTagName("WindDirec")[0].childNodes[0].nodeValue +
-                  ",WindSpeed," +
-                  x[i].getElementsByTagName("WindSpeed")[0].childNodes[0].nodeValue +             
-                  ";"; 
+                  x[i].getElementsByTagName("SO2")[0].childNodes[0].nodeValue + ";"; 
+                  //",WindDirec," +
+                  //x[i].getElementsByTagName("WindDirec")[0].childNodes[0].nodeValue +
+                  //",WindSpeed," +
+                  //x[i].getElementsByTagName("WindSpeed")[0].childNodes[0].nodeValue +             
+                  //";"; 
             
         }
         if (document.getElementById("fustyles_PM"))
