@@ -2,6 +2,21 @@ Blockly.Blocks['pmgov_link'] = {
   init: function() {
     this.appendDummyInput()
         .appendField(Blockly.Msg.PM_LINK_SHOW)
+    this.appendValueInput("value_url_")
+        .setCheck("String");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setColour(300);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }  
+};
+
+Blockly.Blocks['pmgov_get'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.PM_GET_SHOW);
         .appendField(new Blockly.FieldDropdown([
           ["基隆市-基隆","基隆市-基隆"],
           ["新北市-汐止","新北市-汐止"],
@@ -80,21 +95,6 @@ Blockly.Blocks['pmgov_link'] = {
           ["金門縣-金門","金門縣-金門"],
           ["澎湖縣-馬公","澎湖縣-馬公"]
         ]), "value_site_");
-    this.appendValueInput("value_url_")
-        .setCheck("String");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true);
-    this.setNextStatement(true);
-    this.setColour(300);
-    this.setTooltip("");
-    this.setHelpUrl("");
-  }  
-};
-
-Blockly.Blocks['pmgov_get'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.PM_GET_SHOW);
     this.setOutput(true, null);  
     this.setColour(300);
     this.setTooltip("");
