@@ -3,7 +3,7 @@
     <field name="value_site_"></field>
     <value name="value_url_">
       <block type="text">
-        <field name="TEXT">https://opendata2.epa.gov.tw/AQI.xml</field>
+        <field name="TEXT">http://opendata2.epa.gov.tw/AQI.xml</field>
       </block>
     </value>
   </block>  
