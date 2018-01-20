@@ -1,7 +1,7 @@
-Blockly.Blocks['pm_gov'] = {
+Blockly.Blocks['pmgov_link'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.PM_SHOW)
+        .appendField(Blockly.Msg.PM_LINK_SHOW)
         .appendField(new Blockly.FieldDropdown([
           ["基隆市-基隆","基隆市-基隆"],
           ["新北市-汐止","新北市-汐止"],
@@ -85,6 +85,17 @@ Blockly.Blocks['pm_gov'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
+    this.setColour(300);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }  
+};
+
+Blockly.Blocks['pmgov_get'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.PM_GET_SHOW);
+    this.setOutput(true, null);  
     this.setColour(300);
     this.setTooltip("");
     this.setHelpUrl("");
