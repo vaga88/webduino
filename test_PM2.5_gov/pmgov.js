@@ -72,7 +72,7 @@
       var x = (document.getElementById("fustyles_PM").innerHTML).split(";");
       for (var i = 0; i <x.length; i++) 
       { 
-        if (x[i].indexOf(input_site_)!=-1)
+        if ((x[i].indexOf(input_site_.split("-")[0])!=-1)&&(x[i].indexOf(input_site_.split("-")[1])!=-1))
         {
           return x[i];
          }
