@@ -2,7 +2,7 @@
 
   'use strict';
   
-  var PM_data = "";
+  var PM_data;
   
   function PM_gov_link(input_url_) 
   {
@@ -14,6 +14,7 @@
       if (this.readyState == 4 && this.status == 200) 
       {
         var x = this.responseXML.getElementsByTagName("Data");
+        PM_data = "";
         
         for (var i = 0; i <x.length; i++) 
         { 
