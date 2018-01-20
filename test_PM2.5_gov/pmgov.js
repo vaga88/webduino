@@ -59,7 +59,7 @@
                       if (document.getElementById("fustyles_PM"))
                       {
                             document.getElementById("fustyles_PM").style.left = '0px';
-                            document.getElementById("fustyles_PM").style.top = '160px';
+                            document.getElementById("fustyles_PM").style.top = '0px';
                             document.getElementById("fustyles_PM").style.width = '0px';
                             document.getElementById("fustyles_PM").style.height = '0px';
                             document.getElementById("fustyles_PM").style.display = 'block';
@@ -70,7 +70,7 @@
                           var div = document.createElement('div');
                           div.id = "fustyles_PM";    
                           div.style.left = '0px';
-                          div.style.top = '160px';
+                          div.style.top = '0px';
                           div.style.width = '0px';
                           div.style.height = '0px';                        
                           div.style.zindex='9999';      
