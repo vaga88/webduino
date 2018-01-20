@@ -1,17 +1,12 @@
-﻿+(function (window, document) {
++(function (window, document) {
 
   'use strict';
 
   function PM_gov_get(input_url_,input_site_) 
   {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = PM_gov_search(input_site_);
-    xmlHttp.open("GET", input_url_, true);
-    xmlHttp.send();
-  }
-   
-  function PM_gov_search(input_site_)
-   {
+    xmlHttp.onreadystatechange = function() 
+    {
       if (this.readyState == 4 && this.status == 200) 
       {
             var x = this.responseXML.getElementsByTagName("Data");
@@ -55,13 +50,16 @@
                           x[i].getElementsByTagName("WindDirec")[0].childNodes[0].nodeValue +
                           ",WindSpeed," +
                           x[i].getElementsByTagName("WindSpeed")[0].childNodes[0].nodeValue; 
-                return Data;
+                callback.apply(Data);
               }
-              if (i==(x.length-1)) return "No Exist!";
+              if (i==(x.length-1)) callback.apply("No Exist!");
             }
       }
-   }
-   
+    };
+    xmlHttp.open("GET", input_url_, true);
+    xmlHttp.send();
+  }
+    
   window.PM_gov_get = PM_gov_get;
   
 }(window, window.document));
