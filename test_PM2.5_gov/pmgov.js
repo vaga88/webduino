@@ -70,9 +70,12 @@
     {
       console.log(document.getElementById("fustyles_PM").innerHTML);
       var x = (document.getElementById("fustyles_PM").innerHTML).split(";");
+      var s = input_site_.split("-");
+      console.log(s[0]);
+      console.log(s[1]);
       for (var i = 0; i <x.length; i++) 
       { 
-        if ((x[i].indexOf(input_site_.split("-")[0])!=-1)&&(x[i].indexOf(input_site_.split("-")[1])!=-1))
+        if ((x[i].indexOf(s[0])!=-1)&&(x[i].indexOf(s[1])!=-1))
         {
           return x[i];
          }
