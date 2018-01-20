@@ -1,5 +1,5 @@
 <category id="catpmgov">
-  <block type="pmgov_get">
+  <block type="pmgov_link">
     <field name="value_site_"></field>
     <value name="value_url_">
       <block type="text">
@@ -7,5 +7,5 @@
       </block>
     </value>
   </block>  
-  <block type="pmgov_link"></block> 
+  <block type="pmgov_get"></block> 
  </category>
