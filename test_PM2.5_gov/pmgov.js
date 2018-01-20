@@ -17,7 +17,7 @@
         for (var i = 0; i <x.length; i++) 
         { 
           PM_data = PM_data + "SiteName,";
-          console.log(x[i].getElementsByTagName("SiteName")[0].childNodes.length);
+          console.log(x[i].getElementsByTagName("WindSpeed")[0].childNodes.length);
           
           if (x[i].getElementsByTagName("SiteName")[0].childNodes.length==1)
             PM_data = PM_data + x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue;
