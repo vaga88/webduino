@@ -48,7 +48,8 @@
                           ",WindDirec," +
                           x[i].getElementsByTagName("WindDirec")[0].childNodes[0].nodeValue +
                           ",WindSpeed," +
-                          x[i].getElementsByTagName("WindSpeed")[0].childNodes[0].nodeValue;                    
+                          x[i].getElementsByTagName("WindSpeed")[0].childNodes[0].nodeValue;  
+                if (i==(x.length-1)) return "No Exist!"
             }
       }
     };
