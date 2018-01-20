@@ -1,1 +1,1 @@
-MSG.catpmgov = "政府PM資料";
+MSG.catpmgov = "台灣空氣品質";
