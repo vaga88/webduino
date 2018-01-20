@@ -5,9 +5,10 @@ Blockly.JavaScript['pm_gov'] = function(block) {
   var t="";
   for (var name in window)
   {
-    t=t+","+window[name];
+    if (name=="PM_data")
+    document.write(window[name]);
   }
-  document.write(t);
+  
   
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
