@@ -17,47 +17,60 @@
         for (var i = 0; i <x.length; i++) 
         { 
           PM_data = PM_data + 
-                  "SiteName," +
-                  x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue +
-                  ",County," +
-                  x[i].getElementsByTagName("County")[0].childNodes[0].nodeValue +
-                  ",PublishTime," +
-                  x[i].getElementsByTagName("PublishTime")[0].childNodes[0].nodeValue +
-                  ",PM10," +
-                  x[i].getElementsByTagName("PM10")[0].childNodes[0].nodeValue +
-                  ",PM10_AVG," +
-                  x[i].getElementsByTagName("PM10_AVG")[0].childNodes[0].nodeValue +                       
-                  ",PM2.5," +
-                  x[i].getElementsByTagName("PM2.5")[0].childNodes[0].nodeValue +
-                  ",PM2.5_AVG," +
-                  x[i].getElementsByTagName("PM2.5_AVG")[0].childNodes[0].nodeValue +   
-                  ",Status," +
-                  x[i].getElementsByTagName("Status")[0].childNodes[0].nodeValue +
-                  ",CO," +
-                  x[i].getElementsByTagName("CO")[0].childNodes[0].nodeValue +
-                  ",CO_8hr," +
-                  x[i].getElementsByTagName("CO_8hr")[0].childNodes[0].nodeValue +
-                  ",NO," +
-                  x[i].getElementsByTagName("NO")[0].childNodes[0].nodeValue +
-                  ",NO2," +
-                  x[i].getElementsByTagName("NO2")[0].childNodes[0].nodeValue +    
-                  ",NOx," +
-                  x[i].getElementsByTagName("NOx")[0].childNodes[0].nodeValue +
-                  ",O3," +
-                  x[i].getElementsByTagName("O3")[0].childNodes[0].nodeValue +
-                  ",O3_8hr," +
-                  x[i].getElementsByTagName("O3_8hr")[0].childNodes[0].nodeValue +
-                  ",SO2," +
-                  x[i].getElementsByTagName("SO2")[0].childNodes[0].nodeValue;
-          
+                  PM_data = PM_data + "SiteName,";
+                  if (x[i].getElementsByTagName("WindDirec").HasChildNodes==true)
+                    x[i].getElementsByTagName("WindDirec")[0].childNodes[0].nodeValue;
+                  PM_data = PM_data + ",County,";
+                  if (x[i].getElementsByTagName("County").HasChildNodes==true)                      
+                    x[i].getElementsByTagName("County")[0].childNodes[0].nodeValue;
+                  PM_data = PM_data + ",PublishTime,";
+                  if (x[i].getElementsByTagName("PublishTime").HasChildNodes==true)                      
+                    x[i].getElementsByTagName("PublishTime")[0].childNodes[0].nodeValue;
+                  PM_data = PM_data + ",PM10,";
+                  if (x[i].getElementsByTagName("PM10").HasChildNodes==true)                      
+                    x[i].getElementsByTagName("PM10")[0].childNodes[0].nodeValue;
+                  PM_data = PM_data + ",PM10_AVG,";
+                  if (x[i].getElementsByTagName("PM10_AVG").HasChildNodes==true)                      
+                    x[i].getElementsByTagName("PM10_AVG")[0].childNodes[0].nodeValu;                      
+                  PM_data = PM_data + ",PM2.5,";
+                  if (x[i].getElementsByTagName("PM2.5").HasChildNodes==true)                      
+                    x[i].getElementsByTagName("PM2.5")[0].childNodes[0].nodeValue;
+                  PM_data = PM_data + ",PM2.5_AVG,";
+                  if (x[i].getElementsByTagName("PM2.5_AVG").HasChildNodes==true)                      
+                    x[i].getElementsByTagName("PM2.5_AVG")[0].childNodes[0].nodeValue;
+                  PM_data = PM_data + ",Status,";
+                  if (x[i].getElementsByTagName("Status").HasChildNodes==true)                      
+                    x[i].getElementsByTagName("Status")[0].childNodes[0].nodeValue;
+                  PM_data = PM_data + ",CO,";
+                  if (x[i].getElementsByTagName("CO").HasChildNodes==true)                      
+                    x[i].getElementsByTagName("CO")[0].childNodes[0].nodeValue;
+                  PM_data = PM_data + ",CO_8hr,";
+                  if (x[i].getElementsByTagName("CO_8hr").HasChildNodes==true)                      
+                    x[i].getElementsByTagName("CO_8hr")[0].childNodes[0].nodeValue;
+                  PM_data = PM_data + ",NO,";
+                  if (x[i].getElementsByTagName("NO").HasChildNodes==true)                      
+                    x[i].getElementsByTagName("NO")[0].childNodes[0].nodeValue;
+                  PM_data = PM_data + ",NO2,";
+                  if (x[i].getElementsByTagName("NO2").HasChildNodes==true)                      
+                    x[i].getElementsByTagName("NO2")[0].childNodes[0].nodeValue;  
+                  PM_data = PM_data + ",NOx,";
+                  if (x[i].getElementsByTagName("NOx").HasChildNodes==true)                      
+                    x[i].getElementsByTagName("NOx")[0].childNodes[0].nodeValue;
+                  PM_data = PM_data + ",O3,";
+                  if (x[i].getElementsByTagName("O3").HasChildNodes==true)                      
+                    x[i].getElementsByTagName("O3")[0].childNodes[0].nodeValue;
+                  PM_data = PM_data + ",O3_8hr,";
+                  if (x[i].getElementsByTagName("O3_8hr").HasChildNodes==true)                      
+                    x[i].getElementsByTagName("O3_8hr")[0].childNodes[0].nodeValue;
+                  PM_data = PM_data + ",SO2,";
+                  if (x[i].getElementsByTagName("SO2").HasChildNodes==true)                      
+                    x[i].getElementsByTagName("SO2")[0].childNodes[0].nodeValue;
                   PM_data = PM_data + ",WindDirec,";
                   if (x[i].getElementsByTagName("WindDirec").HasChildNodes==true)
                     PM_data = PM_data + x[i].getElementsByTagName("WindDirec")[0].childNodes[0].nodeValue;
-                 
                   PM_data = PM_data + ",WindSpeed,";
                   if (x[i].getElementsByTagName("WindSpeed").HasChildNodes==true)
                     PM_data = PM_data + x[i].getElementsByTagName("WindSpeed")[0].childNodes[0].nodeValue; 
-
                   PM_data = PM_data + ";"; 
             
         }
