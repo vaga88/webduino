@@ -1,1 +1,1 @@
-Blockly.Msg.PM_SHOW = "GET PM DATA";
+Blockly.Msg.PM_SHOW = "LINK PM DATA";
