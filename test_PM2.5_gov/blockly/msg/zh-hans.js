@@ -1,1 +1,1 @@
-MSG.catpmgov = "政府PM资料";
+MSG.catpmgov = "台湾空气品质";
