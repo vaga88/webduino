@@ -2,6 +2,8 @@
 
   'use strict';
   
+  var PM_data = "";
+  
   function PM_gov_link(input_url_) 
   {
     if (document.getElementById("fustyles_PM"))
@@ -12,7 +14,7 @@
       if (this.readyState == 4 && this.status == 200) 
       {
         var x = this.responseXML.getElementsByTagName("Data");
-        var PM_data = "";
+        
         for (var i = 0; i <x.length; i++) 
         { 
           PM_data = PM_data + "County,";
@@ -71,28 +73,6 @@
             PM_data = PM_data + x[i].getElementsByTagName("WindSpeed")[0].childNodes[0].nodeValue; 
           PM_data = PM_data + ";"; 
         }
-        if (document.getElementById("fustyles_PM"))
-        {
-              document.getElementById("fustyles_PM").style.left = '0px';
-              document.getElementById("fustyles_PM").style.top = '0px';
-              document.getElementById("fustyles_PM").style.width = '0px';
-              document.getElementById("fustyles_PM").style.height = '0px';
-              document.getElementById("fustyles_PM").style.display = 'none';
-              document.getElementById("fustyles_PM").innerHTML = PM_data;
-        }
-        else
-        {
-            var div = document.createElement('div');
-            div.id = "fustyles_PM";    
-            div.style.left = '0px';
-            div.style.top = '0px';
-            div.style.width = '0px';
-            div.style.height = '0px';                        
-            div.style.zindex='9999';   
-            div.style.display="none";
-            div.innerHTML = PM_data;
-            document.body.appendChild(div);
-        }
       }
     };
     xmlHttp.open("GET", input_url_, true);
@@ -103,7 +83,7 @@
   {
     if (document.getElementById("fustyles_PM"))
     {
-      var x = (document.getElementById("fustyles_PM").innerHTML).split(";");
+      var x = PM_data.split(";");
       var s = input_site_.split("-");
 
       for (var i = 0; i <(x.length-1); i++) 
