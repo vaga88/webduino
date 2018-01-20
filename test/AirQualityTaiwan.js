@@ -6,10 +6,8 @@
   
   function PM_gov_link(input_url_) 
   {
-    if (document.getElementById("fustyles_PM"))
-      document.getElementById("fustyles_PM").innerHTML = "";
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function(PM_data) 
+    xmlHttp.onreadystatechange = function() 
     {
       if (this.readyState == 4 && this.status == 200) 
       {
@@ -82,6 +80,7 @@
   
   function PM_gov_get(input_site_) 
   {
+    console.log(PM_data);
     var x = PM_data.split(";");
     var s = input_site_.split("-");
 
