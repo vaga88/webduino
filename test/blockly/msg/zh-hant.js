@@ -1,1 +1,1 @@
-MSG.catMatrixLed = "模擬指示燈";
+MSG.catpmgov = "台灣空氣品質";

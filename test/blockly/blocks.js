@@ -1,293 +1,106 @@
-Blockly.Blocks['matrix_led_char'] = {
-  init: function() {
-    this.appendValueInput("value_char_")
-        .setCheck(null)   
-        .appendField(Blockly.Msg.MATRIXLED_CHAR_SHOW);    
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(300);    
-    this.setTooltip("");
-    this.setHelpUrl("");    
-  }
-}; 
-
-Blockly.Blocks['matrix_led_marquee'] = {
-  init: function() {
-    this.appendValueInput("value_marquee_")
-        .setCheck("String")   
-        .appendField(Blockly.Msg.MATRIXLED_MARQUEE_SHOW); 
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(300);    
-    this.setTooltip("");
-    this.setHelpUrl("");    
-  }
-};  
-
-Blockly.Blocks['matrix_led_marquee_stop'] = {
+Blockly.Blocks['pmgov_link'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.MATRIXLED_MARQUEE_STOP_SHOW);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(300);    
-    this.setTooltip("");
-    this.setHelpUrl("");    
-  }
-}; 
-
-Blockly.Blocks['matrix_led_marquee_resume'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.MATRIXLED_MARQUEE_RESUME_SHOW);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(300);    
-    this.setTooltip("");
-    this.setHelpUrl("");    
-  }
-}; 
-
-Blockly.Blocks['matrix_led_marquee_reverse'] = {
-  init: function() {
-    this.appendDummyInput() 
-        .appendField(Blockly.Msg.MATRIXLED_MARQUEE_REVERSE_SHOW);    
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(300);    
-    this.setTooltip("");
-    this.setHelpUrl("");    
-  }
-};
-
-Blockly.Blocks['matrix_led_marquee_time'] = {
-  init: function() {
-    this.appendValueInput("value_marquee_time_")
-        .setCheck("Number")  
-        .appendField(Blockly.Msg.MATRIXLED_MARQUEE_TIME_SHOW);  
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(300);    
-    this.setTooltip("");
-    this.setHelpUrl("");    
-  }
-};  
-
-Blockly.Blocks['matrix_led_sample'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.MATRIXLED_SAMPLE_SHOW)
-        .appendField(new Blockly.FieldDropdown([["♥","♥"], ["♡","♡"], ["↑","↑"], ["↓","↓"], ["←","←"], ["→","→"], ["↖","↖"], ["↙","↙"], ["↗","↗"], ["↘","↘"], ["▲","▲"], ["▼","▼"], ["◄","◄"], ["►","►"], ["O","O"], ["X","X"], ["V","V"]]), "value_sample_");     
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setTooltip('');
-    this.setColour(300);
-    this.setHelpUrl("");
-  }
-};
-
-Blockly.Blocks['matrix_led_code'] = {
-  init: function() {
-    this.appendValueInput("value_code_")
-        .setCheck("String")   
-        .appendField(Blockly.Msg.MATRIXLED_CODE_SHOW)
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(300);    
-    this.setTooltip("");
-    this.setHelpUrl("");    
-  }
-}; 
-
-Blockly.Blocks['matrix_led_color'] = {
-  init: function() {
-    this.appendValueInput("value_color_")
-        .setCheck(null)  
-        .appendField(Blockly.Msg.MATRIXLED_COLOR_SHOW);    
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(300);    
-    this.setTooltip("");
-    this.setHelpUrl("");    
-  }
-};  
-
-Blockly.Blocks['matrix_led_width'] = {
-  init: function() {
-    this.appendValueInput("value_width_")
-        .setCheck("Number")  
-        .appendField(Blockly.Msg.MATRIXLED_WIDTH_SHOW);    
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(300);    
-    this.setTooltip("");
-    this.setHelpUrl("");    
-  }
-};  
-
-Blockly.Blocks['matrix_led_height'] = {
-  init: function() {
-    this.appendValueInput("value_height_")
-        .setCheck("Number")  
-        .appendField(Blockly.Msg.MATRIXLED_HEIGHT_SHOW);    
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(300);    
-    this.setTooltip("");
-    this.setHelpUrl("");    
-  }
-};   
-
-Blockly.Blocks['matrix_led_matrix'] = {
-  init: function() {
-    this.appendDummyInput()
-        .setAlign(Blockly.ALIGN_CENTRE)
-        .appendField(Blockly.Msg.MATRIXLED_MATRIX_SHOW);
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L01")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L06")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L11")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L16")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L21");
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L02")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L07")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L12")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L17")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L22");
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L03")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L08")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L13")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L18")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L23");
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L04")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L09")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L14")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L19")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L24");
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L05")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L10")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L15")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L20")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L25");
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(300);    
-    this.setTooltip("");
-    this.setHelpUrl("");
-  }
-};
-
-Blockly.Blocks['matrix_led_matrixcode'] = {
-  init: function() {
-    this.appendDummyInput()
-        .setAlign(Blockly.ALIGN_CENTRE)
-        .appendField(Blockly.Msg.MATRIXLED_MATRIXCODE_SHOW);
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L01")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L06")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L11")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L16")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L21");
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L02")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L07")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L12")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L17")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L22");
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L03")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L08")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L13")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L18")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L23");
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L04")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L09")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L14")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L19")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L24");
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L05")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L10")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L15")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L20")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "L25");
-    this.setOutput(true, null);
-    this.setColour(300);    
-    this.setTooltip("");
-    this.setHelpUrl("");
-  }
-};
-
-Blockly.Blocks['matrix_led_clear'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.MATRIXLED_CLEAR_SHOW);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(300);    
-    this.setTooltip("");
-    this.setHelpUrl("");    
-  }
-};    
-
-Blockly.Blocks['matrix_led_on'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.MATRIXLED_ON_SHOW);
-    this.appendValueInput("value_x_on_")
-        .setCheck("Number")
-        .appendField("x");
-    this.appendValueInput("value_y_on_")
-        .setCheck("Number")
-        .appendField("y");
+        .appendField(Blockly.Msg.PM_LINK_SHOW);
+    this.appendValueInput("value_url_")
+        .setCheck("String");
     this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
     this.setColour(300);
     this.setTooltip("");
     this.setHelpUrl("");
-  }
+  }  
 };
 
-Blockly.Blocks['matrix_led_off'] = {
+Blockly.Blocks['pmgov_get'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.MATRIXLED_OFF_SHOW);
-    this.appendValueInput("value_x_off_")
-        .setCheck("Number")
-        .appendField("x");
-    this.appendValueInput("value_y_off_")
-        .setCheck("Number")
-        .appendField("y");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(300);
-    this.setTooltip("");
-    this.setHelpUrl("");
-  }
-};  
-  
-Blockly.Blocks['matrix_led_state'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.MATRIXLED_STATE_SHOW);
-    this.appendValueInput("value_x_state_")
-        .setCheck("Number")
-        .appendField("x");
-    this.appendValueInput("value_y_state_")
-        .setCheck("Number")
-        .appendField("y");
-    this.setInputsInline(true);
+        .appendField(Blockly.Msg.PM_GET_SHOW)
+        .appendField(new Blockly.FieldDropdown([
+          ["基隆市-基隆","基隆市-基隆"],
+          ["新北市-汐止","新北市-汐止"],
+          ["新北市-萬里","新北市-萬里"],
+          ["新北市-新店","新北市-新店"],
+          ["新北市-土城","新北市-土城"],
+          ["新北市-板橋","新北市-板橋"],
+          ["新北市-新莊","新北市-新莊"],
+          ["新北市-菜寮","新北市-菜寮"],
+          ["新北市-林口","新北市-林口"],
+          ["新北市-淡水","新北市-淡水"],
+          ["新北市-永和","新北市-永和"],  
+          ["新北市-三重","新北市-三重"],
+          ["新北市-富貴角","新北市-富貴角"],
+          ["臺北市-士林","臺北市-士林"],
+          ["臺北市-中山","臺北市-中山"],
+          ["臺北市-萬華","臺北市-萬華"],
+          ["臺北市-古亭","臺北市-古亭"],
+          ["臺北市-松山","臺北市-松山"],
+          ["臺北市-大同","臺北市-大同"],
+          ["臺北市-陽明","臺北市-陽明"],  
+          ["桃園市-桃園","桃園市-桃園"],
+          ["桃園市-大園","桃園市-大園"],
+          ["桃園市-觀音","桃園市-觀音"],
+          ["桃園市-平鎮","桃園市-平鎮"],
+          ["桃園市-龍潭","桃園市-龍潭"],
+          ["桃園市-中壢","桃園市-中壢"],
+          ["新竹縣-湖口","新竹縣-湖口"],
+          ["新竹縣-竹東","新竹縣-竹東"],
+          ["新竹市-新竹","新竹市-新竹"],
+          ["苗栗縣-頭份","苗栗縣-頭份"],
+          ["苗栗縣-苗栗","苗栗縣-苗栗"],
+          ["苗栗縣-三義","苗栗縣-三義"],
+          ["臺中市-豐原","臺中市-豐原"],
+          ["臺中市-沙鹿","臺中市-沙鹿"],
+          ["臺中市-大里","臺中市-大里"],
+          ["臺中市-忠明","臺中市-忠明"],
+          ["臺中市-西屯","臺中市-西屯"],
+          ["彰化縣-彰化","彰化縣-彰化"],
+          ["彰化縣-線西","彰化縣-線西"],
+          ["彰化縣-二林","彰化縣-二林"],
+          ["南投縣-南投","南投縣-南投"],
+          ["南投縣-竹山","南投縣-竹山"], 
+          ["南投縣-埔里","南投縣-埔里"],  
+          ["雲林縣-斗六","雲林縣-斗六"],
+          ["雲林縣-崙背","雲林縣-崙背"],
+          ["嘉義縣-新港","嘉義縣-新港"],
+          ["嘉義縣-朴子","嘉義縣-朴子"],
+          ["雲林縣-臺西","雲林縣-臺西"],
+          ["嘉義市-嘉義","嘉義市-嘉義"],
+          ["臺南市-新營","臺南市-新營"],
+          ["臺南市-善化","臺南市-善化"],
+          ["臺南市-安南","臺南市-安南"],
+          ["臺南市-臺南","臺南市-臺南"],
+          ["高雄市-美濃","高雄市-美濃"],
+          ["高雄市-橋頭","高雄市-橋頭"],
+          ["高雄市-仁武","高雄市-仁武"],
+          ["高雄市-鳳山","高雄市-鳳山"],
+          ["高雄市-大寮","高雄市-大寮"],
+          ["高雄市-林園","高雄市-林園"],
+          ["高雄市-楠梓","高雄市-楠梓"],
+          ["高雄市-左營","高雄市-左營"],
+          ["高雄市-前金","高雄市-前金"],
+          ["高雄市-前鎮","高雄市-前鎮"],
+          ["高雄市-小港","高雄市-小港"],
+          ["高雄市-復興","高雄市-復興"],  
+          ["屏東縣-屏東","屏東縣-屏東"],
+          ["屏東縣-潮州","屏東縣-潮州"],
+          ["屏東縣-恆春","屏東縣-恆春"],
+          ["臺東縣-臺東","臺東縣-臺東"],
+          ["臺東縣-關山","臺東縣-關山"],  
+          ["花蓮縣-花蓮","花蓮縣-花蓮"],
+          ["宜蘭縣-宜蘭","宜蘭縣-宜蘭"],
+          ["宜蘭縣-冬山","宜蘭縣-冬山"],
+          ["連江縣-馬祖","連江縣-馬祖"],
+          ["金門縣-金門","金門縣-金門"],
+          ["澎湖縣-馬公","澎湖縣-馬公"]
+        ]), "value_site_");
     this.setOutput(true, null);  
     this.setColour(300);
     this.setTooltip("");
     this.setHelpUrl("");
   }  
 };
+
+
 
