@@ -35,7 +35,7 @@ var Data;
 var i;
 
 
-PM_gov_link('http://opendata2.epa.gov.tw/AQI.xml');await delay(1);Site = (PM_gov_get("高雄市-鳳山")).split(',');
+PM_gov_link('https://opendata2.epa.gov.tw/AQI.xml');await delay(1);Site = (PM_gov_get("高雄市-鳳山")).split(',');
 Data = '';
 for (i = 1; i <= 36; i += 2) {
   Data = String(Data) + String(Site[i - 1]);
