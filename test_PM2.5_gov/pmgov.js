@@ -13,7 +13,7 @@
             for (var i = 0; i <x.length; i++) 
             { 
               if ((x[i].getElementsByTagName("County")[0].childNodes[0].nodeValue+"-"+x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue)==input_site_)
-                  return "SiteName," +
+                  var Data = "SiteName," +
                           x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue +
                           ",County," +
                           x[i].getElementsByTagName("County")[0].childNodes[0].nodeValue +
@@ -48,7 +48,9 @@
                           ",WindDirec," +
                           x[i].getElementsByTagName("WindDirec")[0].childNodes[0].nodeValue +
                           ",WindSpeed," +
-                          x[i].getElementsByTagName("WindSpeed")[0].childNodes[0].nodeValue;  
+                          x[i].getElementsByTagName("WindSpeed")[0].childNodes[0].nodeValue; 
+                alert(Data);
+                return data;
                 if (i==(x.length-1)) return "No Exist!"
             }
       }
