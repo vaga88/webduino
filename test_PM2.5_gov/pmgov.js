@@ -1,8 +1,6 @@
 +(function (window, document) {
 
   'use strict';
- 
-  var PM_data = "";
   
   function PM_gov_get(input_url_,input_site_) 
   {
@@ -16,7 +14,7 @@
         { 
           if ((x[i].getElementsByTagName("County")[0].childNodes[0].nodeValue+"-"+x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue)==input_site_)
           {
-              PM_data = "SiteName," +
+              var PM_data = "SiteName," +
                       x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue +
                       ",County," +
                       x[i].getElementsByTagName("County")[0].childNodes[0].nodeValue +
@@ -52,6 +50,26 @@
                       x[i].getElementsByTagName("WindDirec")[0].childNodes[0].nodeValue +
                       ",WindSpeed," +
                       x[i].getElementsByTagName("WindSpeed")[0].childNodes[0].nodeValue; 
+            
+        
+                      if (document.getElementById("fustyles_PM"))
+                      {
+                            document.getElementById("fustyles_iframe"+input_id_).style.left = input_LEFT_ + 'px';
+                            document.getElementById("fustyles_iframe"+input_id_).style.top = input_TOP_ + 'px';
+                            document.getElementById("fustyles_iframe"+input_id_).style.display = 'block';
+                            document.getElementById("fustyles_iframe"+input_id_).innerHTML = PM_data;
+                      }
+                      else
+                      {
+                          var div = document.createElement('div');
+                          div.id = "fustyles_PM";    
+                          div.style.left = input_LEFT_ + 'px';
+                          div.style.top = input_TOP_ + 'px';
+                          div.style.zindex='9999';      
+                          div.innerHTML = PM_data;
+                          document.body.appendChild(div);
+                      }
+            
           }
         }
       }
