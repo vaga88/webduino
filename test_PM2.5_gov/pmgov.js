@@ -60,8 +60,8 @@
                       {
                             document.getElementById("fustyles_PM").style.left = '0px';
                             document.getElementById("fustyles_PM").style.top = '160px';
-                            document.getElementById("fustyles_PM").style.width = '160px';
-                            document.getElementById("fustyles_PM").style.height = '160px';
+                            document.getElementById("fustyles_PM").style.width = '0px';
+                            document.getElementById("fustyles_PM").style.height = '0px';
                             document.getElementById("fustyles_PM").style.display = 'block';
                             document.getElementById("fustyles_PM").innerHTML = PM_data;
                       }
@@ -71,8 +71,8 @@
                           div.id = "fustyles_PM";    
                           div.style.left = '0px';
                           div.style.top = '160px';
-                          div.style.width = '160px';
-                          div.style.height = '160px';                        
+                          div.style.width = '0px';
+                          div.style.height = '0px';                        
                           div.style.zindex='9999';      
                           div.innerHTML = PM_data;
                           document.body.appendChild(div);
