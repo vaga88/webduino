@@ -2,6 +2,8 @@
 
   'use strict';
   
+  var PM_data;
+  
   function PM_gov_get(input_url_,input_site_) 
   {
     var xmlHttp = new XMLHttpRequest();
@@ -14,7 +16,7 @@
         { 
           if ((x[i].getElementsByTagName("County")[0].childNodes[0].nodeValue+"-"+x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue)==input_site_)
           {
-              var PM_data = "SiteName," +
+              PM_data = "SiteName," +
                       x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue +
                       ",County," +
                       x[i].getElementsByTagName("County")[0].childNodes[0].nodeValue +
