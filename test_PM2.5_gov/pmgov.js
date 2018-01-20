@@ -50,10 +50,9 @@
                           x[i].getElementsByTagName("WindDirec")[0].childNodes[0].nodeValue +
                           ",WindSpeed," +
                           x[i].getElementsByTagName("WindSpeed")[0].childNodes[0].nodeValue; 
-                alert(Data);
-                return data;
+                callback.apply(data);
               }
-              if (i==(x.length-1)) alert("No Exist!");
+              if (i==(x.length-1)) callback.apply("No Exist!");
             }
       }
     };
