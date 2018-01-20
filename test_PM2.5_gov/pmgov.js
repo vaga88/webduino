@@ -109,7 +109,7 @@
       var x = (document.getElementById("fustyles_PM").innerHTML).split(";");
       var s = input_site_.split("-");
 
-      for (var i = 0; i <x.length; i++) 
+      for (var i = 0; i <(x.length-1); i++) 
       { 
         if ((x[i].indexOf(s[0])!=-1)&&(x[i].indexOf(s[1])!=-1))
         {
