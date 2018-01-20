@@ -3,7 +3,7 @@
 Created using JS Bin
 http://bin.webduino.io
 
-Copyright (c) 2018 by anonymous (http://bin.webduino.io/cahato/1/edit)
+Copyright (c) 2018 by anonymous (http://bin.webduino.io/paxij/1/edit)
 
 Released under the MIT license: http://jsbin.mit-license.org
 -->
@@ -19,7 +19,7 @@ Released under the MIT license: http://jsbin.mit-license.org
   <script src="https://blockly.webduino.io/webduino-blockly.js"></script>
   <script src="https://blockly.webduino.io/lib/firebase.js"></script>
   <script src="https://blockly.webduino.io/lib/runtime.min.js"></script>
-  <script src="https://rawgit.com/fustyles/webduino/temp/AirQuality_Taiwan_20180120/pmgov.js"></script>
+  <script src="https://rawgit.com/fustyles/webduino/temp/AirQuality_Taiwan_20180120/AirQualityTaiwan.js"></script>
 <style id="jsbin-css">
 #demo-area-01-show { font-size: 60px; pointer-events: auto!important; }
 </style>
@@ -30,13 +30,11 @@ Released under the MIT license: http://jsbin.mit-license.org
 <script id="jsbin-javascript">
 (async function () {
 
-var _E8_AE_8A_E6_95_B8;
 var Site;
 var Data;
 var i;
 
 
-_E8_AE_8A_E6_95_B8 = '若雲端積木網站為https，請手動更改為http重新載入才能執行！';
 PM_gov_link('http://opendata2.epa.gov.tw/AQI.xml');await delay(1);Site = (PM_gov_get("高雄市-鳳山")).split(',');
 Data = '';
 for (i = 1; i <= 36; i += 2) {
