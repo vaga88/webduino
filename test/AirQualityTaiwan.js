@@ -9,7 +9,7 @@
     if (document.getElementById("fustyles_PM"))
       document.getElementById("fustyles_PM").innerHTML = "";
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function() 
+    xmlHttp.onreadystatechange = function(PM_data) 
     {
       if (this.readyState == 4 && this.status == 200) 
       {
