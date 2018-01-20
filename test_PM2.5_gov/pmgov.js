@@ -72,6 +72,7 @@
             PM_data = PM_data + x[i].getElementsByTagName("WindSpeed")[0].childNodes[0].nodeValue; 
           PM_data = PM_data + ";"; 
         }
+        console.log(PM_data);
         if (document.getElementById("fustyles_PM"))
         {
               document.getElementById("fustyles_PM").style.left = '0px';
