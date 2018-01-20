@@ -5,7 +5,7 @@
   function PM_gov_get(input_url_,input_site_) 
   {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = return function() 
+    xmlHttp.onreadystatechange = function() 
     {
       if (this.readyState == 4 && this.status == 200) 
       {
@@ -14,7 +14,7 @@
             { 
               if ((x[i].getElementsByTagName("County")[0].childNodes[0].nodeValue+"-"+x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue)==input_site_)
               {
-                  return  "SiteName," +
+                  var Data =  "SiteName," +
                           x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue +
                           ",County," +
                           x[i].getElementsByTagName("County")[0].childNodes[0].nodeValue +
@@ -50,8 +50,9 @@
                           x[i].getElementsByTagName("WindDirec")[0].childNodes[0].nodeValue +
                           ",WindSpeed," +
                           x[i].getElementsByTagName("WindSpeed")[0].childNodes[0].nodeValue; 
+                callback.apply(Data);
               }
-              if (i==(x.length-1)) return "No Exist!";
+              if (i==(x.length-1)) callback.apply("No Exist!");
             }
       }
     };
