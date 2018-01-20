@@ -59,10 +59,7 @@
       }
     };
     xmlHttp.open("GET", input_url_, true);
-    xmlHttp.send();
-    while (state==0){}
-    state = 0;
-    return PM_data;    
+    xmlHttp.send(); 
   }
     
   window.PM_gov_get = PM_gov_get;
