@@ -6,8 +6,6 @@ Blockly.JavaScript['pm_gov'] = function(block) {
   {
     document.write(window[name]);
   }
-  return("");
-}
 
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
