@@ -5,9 +5,8 @@
   function PM_gov_link(input_url_,input_site_) 
   {
     if (document.getElementById("fustyles_PM"))
-    {
       document.getElementById("fustyles_PM").innerHTML = "";
-    }
+
     
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() 
@@ -90,11 +89,9 @@
   function PM_gov_get() 
   {
     if (document.getElementById("fustyles_PM"))
-    {
       return document.getElementById("fustyles_PM").innerHTML;
-    }
     else
-       return "Please execute \"link data blockly\" in advance!";
+      return "Please execute \'link data blockly\' in advance!";
   }
     
   window.PM_gov_link = PM_gov_link;
