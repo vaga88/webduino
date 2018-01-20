@@ -79,8 +79,8 @@ Blockly.Blocks['pm_gov'] = {
           ["連江縣-馬祖","連江縣-馬祖"],
           ["金門縣-金門","金門縣-金門"],
           ["澎湖縣-馬公","澎湖縣-馬公"]
-        ]), "value_site_")
-        .appendValueInput("value_url_")
+        ]), "value_site_");
+    this.appendValueInput("value_url_")
         .setCheck("String");
     this.setInputsInline(true);
     this.setOutput(true, null);  
