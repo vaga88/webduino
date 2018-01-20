@@ -39,7 +39,7 @@
             PM_data = PM_data + x[i].getElementsByTagName("PM2.5_AVG")[0].childNodes[0].nodeValue;
           PM_data = PM_data + ",Status,";
           if (x[i].getElementsByTagName("Status")[0].childNodes.length==1)                      
-            PM_data = PM_data + x[i].getElementsByTagName("Status")[0].childNodes[0].nodeValue;
+            PM_data = PM_data + x[i].getElementsByTagName("Status")[0].childNodes[0].nodeValue;          
           PM_data = PM_data + ",CO,";
           if (x[i].getElementsByTagName("CO")[0].childNodes.length==1)                      
             PM_data = PM_data + x[i].getElementsByTagName("CO")[0].childNodes[0].nodeValue;
