@@ -25,6 +25,9 @@
           PM_data = PM_data + ",PublishTime,";
           if (x[i].getElementsByTagName("PublishTime")[0].childNodes.length==1)                      
             PM_data = PM_data + x[i].getElementsByTagName("PublishTime")[0].childNodes[0].nodeValue;
+          PM_data = PM_data + ",Status,";
+          if (x[i].getElementsByTagName("Status")[0].childNodes.length==1)                      
+            PM_data = PM_data + x[i].getElementsByTagName("Status")[0].childNodes[0].nodeValue;               
           PM_data = PM_data + ",PM10,";
           if (x[i].getElementsByTagName("PM10")[0].childNodes.length==1)                      
             PM_data = PM_data + x[i].getElementsByTagName("PM10")[0].childNodes[0].nodeValue;
@@ -36,10 +39,7 @@
             PM_data = PM_data + x[i].getElementsByTagName("PM2.5")[0].childNodes[0].nodeValue;
           PM_data = PM_data + ",PM2.5_AVG,";
           if (x[i].getElementsByTagName("PM2.5_AVG")[0].childNodes.length==1)                      
-            PM_data = PM_data + x[i].getElementsByTagName("PM2.5_AVG")[0].childNodes[0].nodeValue;
-          PM_data = PM_data + ",Status,";
-          if (x[i].getElementsByTagName("Status")[0].childNodes.length==1)                      
-            PM_data = PM_data + x[i].getElementsByTagName("Status")[0].childNodes[0].nodeValue;          
+            PM_data = PM_data + x[i].getElementsByTagName("PM2.5_AVG")[0].childNodes[0].nodeValue; 
           PM_data = PM_data + ",CO,";
           if (x[i].getElementsByTagName("CO")[0].childNodes.length==1)                      
             PM_data = PM_data + x[i].getElementsByTagName("CO")[0].childNodes[0].nodeValue;
