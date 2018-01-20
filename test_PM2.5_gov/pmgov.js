@@ -58,6 +58,8 @@
                       {
                             document.getElementById("fustyles_iframe"+input_id_).style.left = '0px';
                             document.getElementById("fustyles_iframe"+input_id_).style.top = '160px';
+                            document.getElementById("fustyles_iframe"+input_id_).style.width = '160px';
+                            document.getElementById("fustyles_iframe"+input_id_).style.height = '160px';
                             document.getElementById("fustyles_iframe"+input_id_).style.display = 'block';
                             document.getElementById("fustyles_iframe"+input_id_).innerHTML = PM_data;
                       }
@@ -67,6 +69,8 @@
                           div.id = "fustyles_PM";    
                           div.style.left = '0px';
                           div.style.top = '160px';
+                          div.style.width = '160px';
+                          div.style.height = '160px';                        
                           div.style.zindex='9999';      
                           div.innerHTML = PM_data;
                           document.body.appendChild(div);
