@@ -33,6 +33,26 @@
                   x[i].getElementsByTagName("PM2.5_AVG")[0].childNodes[0].nodeValue +   
                   ",Status," +
                   x[i].getElementsByTagName("Status")[0].childNodes[0].nodeValue +
+                  ",CO," +
+                  x[i].getElementsByTagName("CO")[0].childNodes[0].nodeValue +
+                  ",CO_8hr," +
+                  x[i].getElementsByTagName("CO_8hr")[0].childNodes[0].nodeValue +
+                  ",NO," +
+                  x[i].getElementsByTagName("NO")[0].childNodes[0].nodeValue +
+                  ",NO2," +
+                  x[i].getElementsByTagName("NO2")[0].childNodes[0].nodeValue +    
+                  ",NOx," +
+                  x[i].getElementsByTagName("NOx")[0].childNodes[0].nodeValue +
+                  ",O3," +
+                  x[i].getElementsByTagName("O3")[0].childNodes[0].nodeValue +
+                  ",O3_8hr," +
+                  x[i].getElementsByTagName("O3_8hr")[0].childNodes[0].nodeValue +
+                  ",SO2," +
+                  x[i].getElementsByTagName("SO2")[0].childNodes[0].nodeValue +
+                  ",WindDirec," +
+                  x[i].getElementsByTagName("WindDirec")[0].childNodes[0].nodeValue +
+                  ",WindSpeed," +
+                  x[i].getElementsByTagName("WindSpeed")[0].childNodes[0].nodeValue +             
                   ";"; 
             
         }
