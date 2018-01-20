@@ -16,7 +16,8 @@
         var PM_data = "";
         for (var i = 0; i <x.length; i++) 
         { 
-          PM_data = PM_data + "SiteName," +
+          PM_data = PM_data + 
+                  "SiteName," +
                   x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue +
                   ",County," +
                   x[i].getElementsByTagName("County")[0].childNodes[0].nodeValue +
@@ -51,7 +52,8 @@
                   ",WindDirec," +
                   x[i].getElementsByTagName("WindDirec")[0].childNodes[0].nodeValue +
                   ",WindSpeed," +
-                  x[i].getElementsByTagName("WindSpeed")[0].childNodes[0].nodeValue + ";"; 
+                  x[i].getElementsByTagName("WindSpeed")[0].childNodes[0].nodeValue + 
+                  ";"; 
             
         }
         if (document.getElementById("fustyles_PM"))
