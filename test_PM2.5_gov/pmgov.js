@@ -14,7 +14,7 @@
             { 
               if ((x[i].getElementsByTagName("County")[0].childNodes[0].nodeValue+"-"+x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue)==input_site_)
               {
-                  var Data =  "SiteName," +
+                  PM_data = "SiteName," +
                           x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue +
                           ",County," +
                           x[i].getElementsByTagName("County")[0].childNodes[0].nodeValue +
@@ -50,7 +50,6 @@
                           x[i].getElementsByTagName("WindDirec")[0].childNodes[0].nodeValue +
                           ",WindSpeed," +
                           x[i].getElementsByTagName("WindSpeed")[0].childNodes[0].nodeValue; 
-                PM_data = Data;
                 alert(PM_data);
               }
               if (i==(x.length-1)) PM_data = "No Exist!";
