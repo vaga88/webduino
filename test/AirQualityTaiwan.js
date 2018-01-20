@@ -81,18 +81,12 @@
   
   function PM_gov_get(input_site_) 
   {
-    if (document.getElementById("fustyles_PM"))
-    {
-      var x = PM_data.split(";");
-      var s = input_site_.split("-");
+    var x = PM_data.split(";");
+    var s = input_site_.split("-");
 
-      for (var i = 0; i <(x.length-1); i++) 
-      { 
-        if ((x[i].indexOf(s[0])!=-1)&&(x[i].indexOf(s[1])!=-1))
-        {
-          return x[i];
-         }
-      }
+    for (var i = 0; i <(x.length-1); i++) 
+    { 
+      if ((x[i].indexOf(s[0])!=-1)&&(x[i].indexOf(s[1])!=-1)) return x[i];
     }
   } 
   
