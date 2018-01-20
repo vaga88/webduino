@@ -51,10 +51,10 @@
                   x[i].getElementsByTagName("SO2")[0].childNodes[0].nodeValue;
           
                   PM_data = PM_data + ",WindDirec,";
-                  if (x[i].getElementsByTagName("WindDirec")[0].childNodes[0])
+                  if (x[i].getElementsByTagName("WindDirec")[0])
                         PM_data = PM_data + x[i].getElementsByTagName("WindDirec")[0].childNodes[0].nodeValue;
                   PM_data = PM_data + ",WindSpeed," +
-                  if (x[i].getElementsByTagName("WindSpeed")[0].childNodes[0])
+                  if (x[i].getElementsByTagName("WindSpeed")[0])
                         PM_data = PM_data + x[i].getElementsByTagName("WindSpeed")[0].childNodes[0].nodeValue;             
                   PM_data = PM_data + ";"; 
             
