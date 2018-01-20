@@ -21,7 +21,7 @@ function myFunction(xml) {
   var xmlDoc = xml.responseXML;
   var table="<tr><th>SiteName</th><th>County</th><th>PublishTime</th><th>PM10</th><th>PM2.5</th><th>Status</th></tr>";
   var x = xmlDoc.getElementsByTagName("Data");
-	alert(x.length);
+
   for (i = 0; i <x.length; i++) { 
     table += "<tr><td>" +
     x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue +
