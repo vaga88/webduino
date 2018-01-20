@@ -1,5 +1,5 @@
 {
-  "types": ["pm_gov"],
+  "types": ["pm_gov_link","pm_gov_get"],
   "category": "catPlus",
   "scripts": [
     "blockly/blocks.js",
