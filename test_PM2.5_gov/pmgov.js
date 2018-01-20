@@ -52,8 +52,8 @@
             }
       }
     };
-    xhttp.open("GET", input_url_, true);
-    xhttp.send();
+    xmlHttp.open("GET", input_url_, true);
+    xmlHttp.send();
   }
     
   window.PM_gov_get = PM_gov_get;
