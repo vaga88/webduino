@@ -12,7 +12,7 @@
             var x = this.responseXML.getElementsByTagName("Data");
             for (var i = 0; i <x.length; i++) 
             { 
-              if ((x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue+"-"+x[i].getElementsByTagName("County")[0].childNodes[0].nodeValue)==input_site_)
+              if ((x[i].getElementsByTagName("County")[0].childNodes[0].nodeValue+"-"+x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue)==input_site_)
                   return "SiteName," +
                           x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue +
                           ",County," +
