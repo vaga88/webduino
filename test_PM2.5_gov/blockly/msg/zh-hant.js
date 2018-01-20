@@ -1,1 +1,1 @@
-MSG.catMatrixLed = "政府PM資料";
+MSG.catpmgov = "政府PM資料";
