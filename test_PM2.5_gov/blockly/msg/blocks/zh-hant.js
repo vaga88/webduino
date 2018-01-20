@@ -1,1 +1,1 @@
-Blockly.Msg.PM_SHOW = "取得PM資料";
+Blockly.Msg.PM_SHOW = "連結PM資料";
