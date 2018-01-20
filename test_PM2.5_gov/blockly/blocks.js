@@ -1,7 +1,7 @@
 Blockly.Blocks['pmgov_link'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.PM_LINK_SHOW)
+        .appendField(Blockly.Msg.PM_LINK_SHOW);
     this.appendValueInput("value_url_")
         .setCheck("String");
     this.setInputsInline(true);
@@ -16,7 +16,7 @@ Blockly.Blocks['pmgov_link'] = {
 Blockly.Blocks['pmgov_get'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.PM_GET_SHOW);
+        .appendField(Blockly.Msg.PM_GET_SHOW)
         .appendField(new Blockly.FieldDropdown([
           ["基隆市-基隆","基隆市-基隆"],
           ["新北市-汐止","新北市-汐止"],
