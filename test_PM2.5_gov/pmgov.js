@@ -1,7 +1,9 @@
 +(function (window, document) {
 
   'use strict';
-
+  
+  var PM_data;
+  
   function PM_gov_get(input_url_,input_site_) 
   {
     var xmlHttp = new XMLHttpRequest();
