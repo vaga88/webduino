@@ -2,9 +2,7 @@
 
   'use strict';
   
-  var PM_data;
-  
-  function PM_gov_get(input_url_,input_site_) 
+  function PM_gov_link(input_url_,input_site_) 
   {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() 
@@ -16,7 +14,7 @@
         { 
           if ((x[i].getElementsByTagName("County")[0].childNodes[0].nodeValue+"-"+x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue)==input_site_)
           {
-              PM_data = "SiteName," +
+              var PM_data = "SiteName," +
                       x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue +
                       ",County," +
                       x[i].getElementsByTagName("County")[0].childNodes[0].nodeValue +
@@ -56,12 +54,12 @@
         
                       if (document.getElementById("fustyles_PM"))
                       {
-                            document.getElementById("fustyles_iframe"+input_id_).style.left = '0px';
-                            document.getElementById("fustyles_iframe"+input_id_).style.top = '160px';
-                            document.getElementById("fustyles_iframe"+input_id_).style.width = '160px';
-                            document.getElementById("fustyles_iframe"+input_id_).style.height = '160px';
-                            document.getElementById("fustyles_iframe"+input_id_).style.display = 'block';
-                            document.getElementById("fustyles_iframe"+input_id_).innerHTML = PM_data;
+                            document.getElementById("fustyles_PM").style.left = '0px';
+                            document.getElementById("fustyles_PM").style.top = '160px';
+                            document.getElementById("fustyles_PM").style.width = '160px';
+                            document.getElementById("fustyles_PM").style.height = '160px';
+                            document.getElementById("fustyles_PM").style.display = 'block';
+                            document.getElementById("fustyles_PM").innerHTML = PM_data;
                       }
                       else
                       {
@@ -83,7 +81,18 @@
     xmlHttp.open("GET", input_url_, true);
     xmlHttp.send(); 
   }
+  
+  function PM_gov_get() 
+  {
+    if (document.getElementById("fustyles_PM"))
+    {
+      return document.getElementById("fustyles_PM").innerHTML;
+    }
+    else
+       return "Please execute \"link data blockly\" in advance!";
+  }
     
+  window.PM_gov_link = PM_gov_link;
   window.PM_gov_get = PM_gov_get;
   
 }(window, window.document));
