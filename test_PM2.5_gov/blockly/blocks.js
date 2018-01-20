@@ -1,11 +1,11 @@
-Blockly.Blocks['pm2.5_gov'] = {
+Blockly.Blocks['pm_gov'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.PM25_SHOW);
-    this.appendValueInput("value_x_state_")
+        .appendField(Blockly.Msg.PM_SHOW);
+    this.appendValueInput("value_county_")
         .setCheck("Number")
         .appendField("x");
-    this.appendValueInput("value_y_state_")
+    this.appendValueInput("value_url_")
         .setCheck("Number")
         .appendField("y");
     this.setInputsInline(true);
