@@ -53,7 +53,8 @@
             div.style.top = '0px';
             div.style.width = '0px';
             div.style.height = '0px';                        
-            div.style.zindex='9999';      
+            div.style.zindex='9999';   
+            div.style.display="none";
             div.innerHTML = PM_data;
             document.body.appendChild(div);
         }
