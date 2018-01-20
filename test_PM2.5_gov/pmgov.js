@@ -2,7 +2,7 @@
 
   'use strict';
 
-  function PM_gov_get(input_url_,input_county_) 
+  function PM_gov_get(input_url_,input_site_) 
   {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() 
@@ -12,7 +12,7 @@
             var x = this.responseXML.getElementsByTagName("Data");
             for (var i = 0; i <x.length; i++) 
             { 
-              if ((x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue+"-"+x[i].getElementsByTagName("County")[0].childNodes[0].nodeValue)==input_county_)
+              if ((x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue+"-"+x[i].getElementsByTagName("County")[0].childNodes[0].nodeValue)==input_site_)
                   return "SiteName," +
                           x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue +
                           ",County," +
