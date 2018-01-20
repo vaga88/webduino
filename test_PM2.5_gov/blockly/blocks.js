@@ -83,7 +83,8 @@ Blockly.Blocks['pm_gov'] = {
     this.appendValueInput("value_url_")
         .setCheck("String");
     this.setInputsInline(true);
-    this.setOutput(true, null);  
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
     this.setColour(300);
     this.setTooltip("");
     this.setHelpUrl("");
