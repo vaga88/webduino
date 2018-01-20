@@ -2,7 +2,7 @@
 
   'use strict';
 
-  function PM_gov_get(input_url_,input_site_) 
+  function PM_gov_get(input_url_,input_site_,callback) 
   {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() 
