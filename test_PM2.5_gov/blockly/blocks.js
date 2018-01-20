@@ -1,7 +1,7 @@
 Blockly.Blocks['pm_gov'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.PM_SHOW);
+        .appendField(Blockly.Msg.PM_SHOW)
         .appendField(new Blockly.FieldDropdown([
           ["基隆市-基隆","基隆市-基隆"],
           ["新北市-汐止","新北市-汐止"],
