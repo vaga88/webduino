@@ -7,7 +7,6 @@
     if (document.getElementById("fustyles_PM"))
       document.getElementById("fustyles_PM").innerHTML = "";
 
-    
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() 
     {
