@@ -104,7 +104,7 @@
   {
     if (document.getElementById("fustyles_PM"))
     {
-      concole.log(document.getElementById("fustyles_PM").innerHTML);
+      console.log(document.getElementById("fustyles_PM").innerHTML);
       var x = (document.getElementById("fustyles_PM").innerHTML).split(";");
       var s = input_site_.split("-");
 
