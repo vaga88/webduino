@@ -3,7 +3,6 @@
   'use strict';
  
   var PM_data = "";
-  var state = 0 ;
   
   function PM_gov_get(input_url_,input_site_) 
   {
@@ -55,7 +54,6 @@
                       x[i].getElementsByTagName("WindSpeed")[0].childNodes[0].nodeValue; 
           }
         }
-        state = 1;
       }
     };
     xmlHttp.open("GET", input_url_, true);
