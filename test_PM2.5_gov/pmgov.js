@@ -16,10 +16,10 @@
         var PM_data = "";
         for (var i = 0; i <x.length; i++) 
         { 
-          PM_data = PM_data + ",County,";
+          PM_data = PM_data + "County,";
           if (x[i].getElementsByTagName("County")[0].childNodes.length==1)                      
             PM_data = PM_data + x[i].getElementsByTagName("County")[0].childNodes[0].nodeValue;
-          PM_data = PM_data + "SiteName,";
+          PM_data = PM_data + ",SiteName,";
           if (x[i].getElementsByTagName("SiteName")[0].childNodes.length==1)
             PM_data = PM_data + x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue;
           PM_data = PM_data + ",PublishTime,";
