@@ -1,8 +1,9 @@
 +(function (window, document) {
 
   'use strict';
-  
-  var PM_data;
+ 
+  var PM_data = "";
+  var state = 0 ;
   
   function PM_gov_get(input_url_,input_site_) 
   {
@@ -52,15 +53,16 @@
                           x[i].getElementsByTagName("WindDirec")[0].childNodes[0].nodeValue +
                           ",WindSpeed," +
                           x[i].getElementsByTagName("WindSpeed")[0].childNodes[0].nodeValue; 
-                alert(PM_data);
               }
-              if (i==(x.length-1)) PM_data = "No Exist!";
+              state = 1;
             }
       }
     };
     xmlHttp.open("GET", input_url_, true);
     xmlHttp.send();
-    return PM_data;
+    while (state==0){}
+    state = 0;
+    return PM_data;    
   }
     
   window.PM_gov_get = PM_gov_get;
