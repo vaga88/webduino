@@ -1,5 +1,5 @@
 {
-  "types": ["pm2.5_gov"],
+  "types": ["pm25_gov"],
   "category": "catPlus",
   "scripts": [
     "blockly/blocks.js",
