@@ -1,1 +1,1 @@
-MSG.catMatrixLed = "模擬指示燈";
+MSG.catMatrixLed = "政府PM資料";
