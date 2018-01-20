@@ -54,8 +54,8 @@
         
                       if (document.getElementById("fustyles_PM"))
                       {
-                            document.getElementById("fustyles_iframe"+input_id_).style.left = input_LEFT_ + 'px';
-                            document.getElementById("fustyles_iframe"+input_id_).style.top = input_TOP_ + 'px';
+                            document.getElementById("fustyles_iframe"+input_id_).style.left = '0px';
+                            document.getElementById("fustyles_iframe"+input_id_).style.top = '160px';
                             document.getElementById("fustyles_iframe"+input_id_).style.display = 'block';
                             document.getElementById("fustyles_iframe"+input_id_).innerHTML = PM_data;
                       }
@@ -63,8 +63,8 @@
                       {
                           var div = document.createElement('div');
                           div.id = "fustyles_PM";    
-                          div.style.left = input_LEFT_ + 'px';
-                          div.style.top = input_TOP_ + 'px';
+                          div.style.left = '0px';
+                          div.style.top = '160px';
                           div.style.zindex='9999';      
                           div.innerHTML = PM_data;
                           document.body.appendChild(div);
