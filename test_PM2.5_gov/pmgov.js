@@ -17,7 +17,6 @@
         for (var i = 0; i <x.length; i++) 
         { 
           PM_data = PM_data + "SiteName,";
-          console.log(x[i].getElementsByTagName("WindSpeed")[0].childNodes.length);
           
           if (x[i].getElementsByTagName("SiteName")[0].childNodes.length==1)
             PM_data = PM_data + x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue;
@@ -106,7 +105,6 @@
   {
     if (document.getElementById("fustyles_PM"))
     {
-      console.log(document.getElementById("fustyles_PM").innerHTML);
       var x = (document.getElementById("fustyles_PM").innerHTML).split(";");
       var s = input_site_.split("-");
 
