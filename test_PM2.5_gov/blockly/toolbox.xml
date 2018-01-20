@@ -1,13 +1,9 @@
 <category id="catpmgov">
   <block type="pm_gov">
-    <value name="value_x_state_">
-      <block type="math_number">
-        <field name="NUM">0</field>
-      </block>
-    </value>
-    <value name="value_y_state_">
-      <block type="math_number">
-        <field name="NUM">0</field>
+    <field name="value_site_"></field>
+    <value name="value_url_">
+      <block type="text">
+        <field name="TEXT">https://opendata2.epa.gov.tw/AQI.xml</field>
       </block>
     </value>
   </block>  
