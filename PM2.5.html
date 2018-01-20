@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>PM2.5</title>
+
+<script>
+
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    myFunction(this);
+    }
+  };
+  xhttp.open("GET", "http://opendata2.epa.gov.tw/AQI.xml", true);
+  xhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<tr><th>SiteName</th><th>County</th><th>PublishTime</th><th>PM10</th><th>PM2.5</th><th>Status</th></tr>";
+  var x = xmlDoc.getElementsByTagName("Data");
+	alert(x.length);
+  for (i = 0; i <x.length; i++) { 
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("SiteName")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+	x[i].getElementsByTagName("County")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+	x[i].getElementsByTagName("PublishTime")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+	x[i].getElementsByTagName("PM10")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+	x[i].getElementsByTagName("PM2.5")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("Status")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  document.getElementById("PM25").innerHTML = "<table >" +　table + "</table>";
+}
+
+</script>
+
+</head>
+<body onload="loadDoc();">
+<div id="PM25"></div>
+</body>
+</html>
