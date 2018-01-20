@@ -4,6 +4,11 @@
   
   function PM_gov_link(input_url_,input_site_) 
   {
+    if (document.getElementById("fustyles_PM"))
+    {
+      document.getElementById("fustyles_PM").innerHTML = "";
+    }
+    
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() 
     {
