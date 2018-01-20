@@ -2,7 +2,7 @@
 
   'use strict';
 
-  function PM2.5_gov_get(input_url_,input_county_) 
+  function PM_gov_get(input_url_,input_county_) 
   {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() 
@@ -32,6 +32,6 @@
     xhttp.send();
   }
     
-  window.PM2.5_gov_get = PM2.5_gov_get;
+  window.PM_gov_get = PM_gov_get;
   
 }(window, window.document));
