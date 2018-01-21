@@ -6,6 +6,8 @@
   
   function PM_gov_link(input_url_) 
   {
+    ajaxCall(input_url_);
+    
     if(window.XMLHttpRequest)
     {
         var xmlHttp = new XMLHttpRequest();
