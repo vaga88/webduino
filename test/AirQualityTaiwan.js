@@ -110,10 +110,10 @@
           //});
           
           json = JSON.stringify(json);
-          var get1 = json.split("\"records\":")[1];
-          var get2 = get1.split("]")[0]+"]";
-          console.log(get2);
-          var d = $.parseJSON(get2);
+          var s1 = json.split("\"records\":")[1];
+          var s2 = s1.split("]")[0]+"]";
+          console.log(s2);
+          json = $.parseJSON(s2);
           console.log(d.length);
           
           //"County,"",SiteName,"",PublishTime,"",Status,"",PM10,"",PM10_AVG,"",PM2.5,"",PM2.5_AVG,"",CO,"",CO_8hr,"",NO,"",NO2,"",NOx,"",O3,"",O3_8hr,"",SO2,"",WindDirec,"",WindSpeed,""             
