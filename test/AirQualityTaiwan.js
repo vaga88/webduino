@@ -164,6 +164,7 @@
               PM_data = PM_data + json[i]["WindSpeed"]; 
             PM_data = PM_data + ";";             
           }
+          console.log(json.length);
           console.log(PM_data);
         },
         error: function(exception)
