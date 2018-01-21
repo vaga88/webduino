@@ -17,7 +17,7 @@
     if (window.XMLHttpRequest)
       var xmlHttp = new XMLHttpRequest();
     else
-        var xmlHttp = new ActiveXObject('Microsoft.XMLHTTP');
+      var xmlHttp = new ActiveXObject('Microsoft.XMLHTTP');
     
     xmlHttp.onreadystatechange = function() 
     {
@@ -161,9 +161,7 @@
     var s = input_site_.split("-");
 
     for (var i = 0; i <(x.length-1); i++) 
-    { 
       if ((x[i].indexOf(s[0])!=-1)&&(x[i].indexOf(s[1])!=-1)) return x[i];
-    }
   } 
     
   window.PM_gov_link = PM_gov_link;
