@@ -2,7 +2,7 @@
 
   'use strict';
   
-  var PM_data = "";
+  var PM_data;
   
   function PM_gov_link(input_url_,input_format_) 
   {
