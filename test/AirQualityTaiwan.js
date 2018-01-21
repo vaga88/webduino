@@ -145,8 +145,6 @@
             PM_data += element.WindSpeed;
             PM_data += ";";
           });
-          
-          console.log(PM_data);
         },
         error: function(exception)
         {
