@@ -105,9 +105,9 @@
         url: target,
         success: function(jsondata)
         {
+          console.log(jsondata);
           var json = $.parseJSON(jsondata);
           console.log(json.length);
-          console.log(data);
           
           for (var i = 0; i < json.length; i++) 
           { 
