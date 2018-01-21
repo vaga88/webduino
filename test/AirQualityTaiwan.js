@@ -105,16 +105,17 @@
         url: target,
         success: function(json)
         {
-          //$.each(json, function(index, element) {
-          //  PM_data = PM_data + element.County + ",";
-          //});
+          
           
           json = JSON.stringify(json);
           var s1 = json.split("\"records\":")[1];
           var s2 = s1.split("]")[0]+"]";
           console.log(s2);
           json = $.parseJSON(s2);
-          console.log(d.length);
+          
+          $.each(json, function(index, element) {
+            PM_data = PM_data + element.SiteName + ",";
+          });
           
           //"County,"",SiteName,"",PublishTime,"",Status,"",PM10,"",PM10_AVG,"",PM2.5,"",PM2.5_AVG,"",CO,"",CO_8hr,"",NO,"",NO2,"",NOx,"",O3,"",O3_8hr,"",SO2,"",WindDirec,"",WindSpeed,""             
         },
