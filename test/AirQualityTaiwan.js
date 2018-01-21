@@ -108,9 +108,11 @@
           
           console.log(json);
           
-          var t= JSON.parse(json);
-          console.log(t.length);
-          console.log(json.records);
+          $.each(json, function(index, element) {
+            PM_data = PM_data + element.County + ",";
+          });
+          
+          console.log(PM_data);
           
           for (var i = 0; i < t.length; i++) 
           { 
@@ -170,8 +172,6 @@
               PM_data = PM_data + json[i]["WindSpeed"]; 
             PM_data = PM_data + ";";             
           }
-          
-          console.log(PM_data);
         },
         error: function(exception)
         {
