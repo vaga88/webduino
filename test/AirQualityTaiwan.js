@@ -105,11 +105,11 @@
         url: target,
         success: function(json)
         {
-          $("#demo-area-01-show").html(json);
+          console.log(json);
         },
         error: function(exception)
         {
-          $("#demo-area-01-show").html(exception.statusText);
+          console.log(exception.statusText);
         }
      });
   }
