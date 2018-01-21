@@ -103,12 +103,12 @@
         type: "POST",
         dataType : "jsonp",
         url: target,
-        success: function(jsondata)
+        success: function(json)
         {
-          console.log(jsondata);
-          console.log(jsondata.records.length);
+          console.log(json);
+          console.log(json.length);
           
-          for (var i = 0; i < json.records.length; i++) 
+          for (var i = 0; i < json.length; i++) 
           { 
             PM_data = PM_data + "County,";
             //if (x[i].getElementsByTagName("County")[0].childNodes.length==1)                      
