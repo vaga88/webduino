@@ -1,7 +1,11 @@
 Blockly.Blocks['pmgov_link'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.PM_LINK_SHOW);
+        .appendField(Blockly.Msg.PM_LINK_SHOW)
+        .appendField(new Blockly.FieldDropdown([
+          ["JSON","JSON"],    
+          ["XML","XML"]
+        ]), "value_format_");          
     this.appendValueInput("value_url_")
         .setCheck("String");
     this.setInputsInline(true);
