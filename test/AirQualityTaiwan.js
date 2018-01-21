@@ -109,7 +109,7 @@
         },
         error: function(exception)
         {
-          console.log(exception.statusText);
+          console.log('fail');
         }
      });
   }
