@@ -105,7 +105,9 @@
         url: target,
         success: function(json)
         {
+          
           console.log(json);
+          json = $.parseJSON(json);
           console.log(json.length);
           
           for (var i = 0; i < json.length; i++) 
