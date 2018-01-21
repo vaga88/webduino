@@ -104,13 +104,15 @@
         type: "POST",
         dataType : "jsonp",
         url: target,
-    });
-    data.success(function( msg ) {
-        $("#demo-area-01-show").html(msg);
-    });
-    data.error(function( msg ) {
-        $("#demo-area-01-show").html("fail getting data");
-    });
+        success: function(json)
+        {
+          $("#demo-area-01-show").html(json);
+        },
+        error: function(exception)
+        {
+          $("#demo-area-01-show").html(exception.statusText);
+        }
+     });
   }
   
   window.PM_gov_link = PM_gov_link;
