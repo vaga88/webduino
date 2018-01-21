@@ -107,6 +107,7 @@
         {
           
           console.log(json);
+          console.log(json.records);
           var t= JSON.parse(json);
           console.log(t.length);
           
