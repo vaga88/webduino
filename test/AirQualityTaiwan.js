@@ -114,18 +114,9 @@
         }
      });
   }
-  
-  function CreateScript(target)
-  {
-    var script = document.createElement('script');
-    script.src = target;
-    script.type = 'text/javascript';
-    document.getElementsByTagName('head')[0].appendChild(script);
-  }
-  
+ 
   window.PM_gov_link = PM_gov_link;
   window.PM_gov_get = PM_gov_get;
   window.AjaxCall = AjaxCall;
-  window.CreateScript = CreateScript;
   
 }(window, window.document));
