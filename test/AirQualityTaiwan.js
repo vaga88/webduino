@@ -106,7 +106,7 @@
         success: function(json)
         {
           console.log(json);
-          console.log(json.length);
+          console.log(json.results.length);
           for (var i = 0; i < json.length; i++) 
           { 
             PM_data = PM_data + "County,";
