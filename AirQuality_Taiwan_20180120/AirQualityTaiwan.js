@@ -6,7 +6,11 @@
   
   function PM_gov_link(input_url_) 
   {
-    var xmlHttp = new XMLHttpRequest();
+    if (window.XMLHttpRequest)
+      var xmlHttp = new XMLHttpRequest();
+    else
+      var xmlHttp = new ActiveXObject('Microsoft.XMLHTTP');
+    
     xmlHttp.onreadystatechange = function() 
     {
       if (this.readyState == 4 && this.status == 200) 
