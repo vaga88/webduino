@@ -4,11 +4,16 @@
   
   var PM_data = "";
   
-  function PM_gov_link(input_url_) 
+  function PM_gov_link(input_url_,input_format_) 
   {
-    AjaxCall(input_url_);
-    return false;
+    if (input_format_=="JSON")
+      getJSON(input_url_);
+    else if (input_format_=="XML")
+      getXML(input_url_);   
+  }
     
+  function getXML(target)  
+  {
     if (window.XMLHttpRequest)
       var xmlHttp = new XMLHttpRequest();
     else
@@ -85,19 +90,7 @@
     xmlHttp.send(); 
   }
   
-  function PM_gov_get(input_site_) 
-  {
-    console.log(PM_data);
-    var x = PM_data.split(";");
-    var s = input_site_.split("-");
-
-    for (var i = 0; i <(x.length-1); i++) 
-    { 
-      if ((x[i].indexOf(s[0])!=-1)&&(x[i].indexOf(s[1])!=-1)) return x[i];
-    }
-  } 
-  
-  function AjaxCall(target)
+  function getJSON(target)
   {
     var data = $.ajax({
         type: "POST",
@@ -161,9 +154,21 @@
         }
      });
   }
- 
+
+  function PM_gov_get(input_site_) 
+  {
+    var x = PM_data.split(";");
+    var s = input_site_.split("-");
+
+    for (var i = 0; i <(x.length-1); i++) 
+    { 
+      if ((x[i].indexOf(s[0])!=-1)&&(x[i].indexOf(s[1])!=-1)) return x[i];
+    }
+  } 
+    
   window.PM_gov_link = PM_gov_link;
   window.PM_gov_get = PM_gov_get;
-  window.AjaxCall = AjaxCall;
+  window.getXML = getXML;
+  window.getJSON = getJSON;
   
 }(window, window.document));
