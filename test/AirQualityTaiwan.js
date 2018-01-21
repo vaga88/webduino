@@ -110,7 +110,8 @@
           //});
           
           json = JSON.stringify(json);
-          console.log(json);
+          var d = json.split("\"records\":");
+          console.log(d[1]);
           
           //"County,"",SiteName,"",PublishTime,"",Status,"",PM10,"",PM10_AVG,"",PM2.5,"",PM2.5_AVG,"",CO,"",CO_8hr,"",NO,"",NO2,"",NOx,"",O3,"",O3_8hr,"",SO2,"",WindDirec,"",WindSpeed,""             
         },
