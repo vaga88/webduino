@@ -107,7 +107,6 @@
         success: function(json)
         {
           //console.log(json);
-          var items = [];
           $.each( json, function( key, val ) {
             PM_data = PM_data + key + "," + val + ",";
           });
