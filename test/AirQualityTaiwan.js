@@ -2,7 +2,7 @@
 
   'use strict';
   
-  var PM_data;
+  var PM_data = "";
   
   function PM_gov_link(input_url_) 
   {
@@ -114,12 +114,44 @@
           json = $.parseJSON(s2);
           
           $.each(json, function(index, element) {
-            PM_data += element.SiteName + ",";
+            PM_data += "County,";
+            PM_data += element.County;
+            PM_data += ",SiteName,";
+            PM_data += element.SiteName;
+            PM_data += ",PublishTime,";
+            PM_data += element.PublishTime;
+            PM_data += ",PM10,";
+            PM_data += element.PM10;
+            PM_data += ",PM10_AVG,";
+            PM_data += element.PM10_AVG;
+            PM_data += ",PM2.5,";
+            PM_data += element.PM2.5;
+            PM_data += ",PM2.5_AVG,";
+            PM_data += element.PM2.5_AVG;
+            PM_data += ",CO,";
+            PM_data += element.CO;
+            PM_data += ",CO_8hr,";
+            PM_data += element.CO_8hr;
+            PM_data += ",NO,";
+            PM_data += element.NO;
+            PM_data += ",NO2,";
+            PM_data += element.NO2;
+            PM_data += ",NOx,";
+            PM_data += element.NOx;
+            PM_data += ",O3,";
+            PM_data += element.O3;
+            PM_data += ",O3_8hr,";
+            PM_data += element.O3_8hr;
+            PM_data += ",SO2,";
+            PM_data += element.SO2;
+            PM_data += ",WindDirec,";
+            PM_data += element.WindDirec;
+            PM_data += ",WindSpeed,";
+            PM_data += element.WindSpeed;
+            PM_data += ";";
           });
           
           console.log(PM_data);
-          
-          //"County,"",SiteName,"",PublishTime,"",Status,"",PM10,"",PM10_AVG,"",PM2.5,"",PM2.5_AVG,"",CO,"",CO_8hr,"",NO,"",NO2,"",NOx,"",O3,"",O3_8hr,"",SO2,"",WindDirec,"",WindSpeed,""             
         },
         error: function(exception)
         {
