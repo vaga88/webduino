@@ -8,6 +8,7 @@
   {
     CreateScript(input_url_);
     //AjaxCall(input_url_);
+    return false;
     
     if (window.XMLHttpRequest)
       var xmlHttp = new XMLHttpRequest();
