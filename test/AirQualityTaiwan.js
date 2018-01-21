@@ -106,6 +106,7 @@
         success: function(jsondata)
         {
           console.log(jsondata);
+          console.log(jsondata.records.length);
           var json = $.parseJSON(jsondata);
           console.log(json.length);
           
