@@ -105,7 +105,8 @@
         url: target,
         success: function(json)
         {
-          //console.log(json);
+          console.log(json);
+          console.log(json.length);
           for (var i = 0; i < json.length; i++) 
           { 
             PM_data = PM_data + "County,";
@@ -164,7 +165,7 @@
               PM_data = PM_data + json[i]["WindSpeed"]; 
             PM_data = PM_data + ";";             
           }
-          console.log(json.length);
+          
           console.log(PM_data);
         },
         error: function(exception)
