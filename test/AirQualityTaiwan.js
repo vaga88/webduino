@@ -114,7 +114,7 @@
           json = $.parseJSON(s2);
           
           $.each(json, function(index, element) {
-            PM_data = PM_data + element.SiteName + ",";
+            PM_data += element.SiteName + ",";
           });
           
           console.log(PM_data);
