@@ -99,7 +99,28 @@
     }
   } 
   
+  function ajaxCall(target){
+ 
+    //發出 ajax call
+    var data = $.ajax({
+        type: "POST",
+        url: target,
+    });
+ 
+    //成功得到資料
+    data.success(function( msg ) {
+        $("#demo-area-01-show").html(msg);
+    });
+ 
+    //取得資料失敗
+    data.error(function( msg ) {
+        $("#demo-area-01-show").html("fail getting data");
+    });
+ 
+  }
+  
   window.PM_gov_link = PM_gov_link;
   window.PM_gov_get = PM_gov_get;
+  window.ajaxCall = ajaxCall;
   
 }(window, window.document));
