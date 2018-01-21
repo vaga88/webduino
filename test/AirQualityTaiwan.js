@@ -8,12 +8,10 @@
   {
     ajaxCall(input_url_);
     
-    if(window.XMLHttpRequest)
-    {
-        var xmlHttp = new XMLHttpRequest();
-    }else{
+    if (window.XMLHttpRequest)
+      var xmlHttp = new XMLHttpRequest();
+    else
         var xmlHttp = new ActiveXObject('Microsoft.XMLHTTP');
-    }
     
     xmlHttp.onreadystatechange = function() 
     {
