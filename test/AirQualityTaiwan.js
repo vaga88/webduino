@@ -107,9 +107,64 @@
         success: function(json)
         {
           //console.log(json);
-          $.each( json, function( key, val ) {
-            PM_data = PM_data + key + "," + val + ",";
-          });
+          for (var i = 0; i < json.length; i++) {
+                    PM_data = PM_data + json[i][0]);  
+            PM_data = PM_data + "County,";
+            //if (x[i].getElementsByTagName("County")[0].childNodes.length==1)                      
+              PM_data = PM_data + json[i]["County"];
+            PM_data = PM_data + ",SiteName,";
+            //if (x[i].getElementsByTagName("SiteName")[0].childNodes.length==1)
+              PM_data = PM_data + json[i]["SiteName"];
+            PM_data = PM_data + ",PublishTime,";
+            //if (x[i].getElementsByTagName("PublishTime")[0].childNodes.length==1)                      
+              PM_data = PM_data + json[i]["PublishTime"];
+            PM_data = PM_data + ",Status,";
+            //if (x[i].getElementsByTagName("Status")[0].childNodes.length==1)                      
+              PM_data = PM_data + json[i]["Status"];               
+            PM_data = PM_data + ",PM10,";
+            //if (x[i].getElementsByTagName("PM10")[0].childNodes.length==1)                      
+              PM_data = PM_data + json[i]["PM10"];
+            PM_data = PM_data + ",PM10_AVG,";
+            //if (x[i].getElementsByTagName("PM10_AVG")[0].childNodes.length==1)                      
+              PM_data = PM_data + json[i]["PM10_AVG"];                    
+            PM_data = PM_data + ",PM2.5,";
+            //if (x[i].getElementsByTagName("PM2.5")[0].childNodes.length==1)                      
+              PM_data = PM_data + json[i]["PM2.5"];
+            PM_data = PM_data + ",PM2.5_AVG,";
+            //if (x[i].getElementsByTagName("PM2.5_AVG")[0].childNodes.length==1)                      
+              PM_data = PM_data + json[i]["PM2.5_AVG"]; 
+            PM_data = PM_data + ",CO,";
+            //if (x[i].getElementsByTagName("CO")[0].childNodes.length==1)                      
+              PM_data = PM_data + json[i]["CO"];
+            PM_data = PM_data + ",CO_8hr,";
+            //if (x[i].getElementsByTagName("CO_8hr")[0].childNodes.length==1)                      
+              PM_data = PM_data + json[i]["CO_8hr"];
+            PM_data = PM_data + ",NO,";
+            //if (x[i].getElementsByTagName("NO")[0].childNodes.length==1)                      
+              PM_data = PM_data + json[i]["NO"];
+            PM_data = PM_data + ",NO2,";
+            //if (x[i].getElementsByTagName("NO2")[0].childNodes.length==1)                      
+              PM_data = PM_data + json[i]["NO2"];  
+            PM_data = PM_data + ",NOx,";
+            //if (x[i].getElementsByTagName("NOx")[0].childNodes.length==1)                      
+              PM_data = PM_data + json[i]["NOx"];
+            PM_data = PM_data + ",O3,";
+            //if (x[i].getElementsByTagName("O3")[0].childNodes.length==1)                      
+              PM_data = PM_data + json[i]["O3"];
+            PM_data = PM_data + ",O3_8hr,";
+            //if (x[i].getElementsByTagName("O3_8hr")[0].childNodes.length==1)                      
+              PM_data = PM_data + json[i]["O3_8hr"];
+            PM_data = PM_data + ",SO2,";
+            //if (x[i].getElementsByTagName("SO2")[0].childNodes.length==1)                      
+              PM_data = PM_data + json[i]["SO2"];
+            PM_data = PM_data + ",WindDirec,";
+            //if (x[i].getElementsByTagName("WindDirec")[0].childNodes.length==1)
+              PM_data = PM_data + json[i]["WindDirec"];
+            PM_data = PM_data + ",WindSpeed,";
+            //if (x[i].getElementsByTagName("WindSpeed")[0].childNodes.length==1)
+              PM_data = PM_data + json[i]["WindSpeed"]; 
+            PM_data = PM_data + ";";             
+          }
           console.log(PM_data);
         },
         error: function(exception)
