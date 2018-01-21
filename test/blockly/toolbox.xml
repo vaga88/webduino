@@ -3,7 +3,7 @@
     <field name="value_format_">JSON</field>
     <value name="value_url_">
       <block type="text">
-        <field name="TEXT">http://opendata2.epa.gov.tw/AQI.xml</field>
+        <field name="TEXT">https://opendata.epa.gov.tw/webapi/api/rest/datastore/355000000I-000259?sort=County</field>
       </block>
     </value>
   </block>  
