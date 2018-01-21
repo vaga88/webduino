@@ -125,9 +125,9 @@
             PM_data += ",PM10_AVG,";
             PM_data += element.PM10_AVG;
             PM_data += ",PM2.5,";
-            PM_data += element.PM2.5;
+            PM_data += element["PM2.5"];
             PM_data += ",PM2.5_AVG,";
-            PM_data += element.PM2.5_AVG;
+            PM_data += element["PM2.5_AVG"];
             PM_data += ",CO,";
             PM_data += element.CO;
             PM_data += ",CO_8hr,";
