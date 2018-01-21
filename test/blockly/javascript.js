@@ -1,6 +1,6 @@
 Blockly.JavaScript['pmgov_link'] = function(block) {
   var value_url_ = Blockly.JavaScript.valueToCode(block, 'value_url_', Blockly.JavaScript.ORDER_ATOMIC);  
-  var code = 'PM_gov_link('+value_url_+');\nawait delay(1);';
+  var code = 'PM_gov_link('+value_url_+');await delay(1);';
   return code;
 };
 
