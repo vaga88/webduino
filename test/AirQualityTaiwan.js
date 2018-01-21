@@ -6,6 +6,7 @@
   
   function PM_gov_link(input_url_,input_format_) 
   {
+    PM_data = "";
     if (input_format_=="JSON")
       getJSON(input_url_);
     else if (input_format_=="XML")
@@ -24,7 +25,6 @@
       if (this.readyState == 4 && this.status == 200) 
       {    
         var x = this.responseXML.getElementsByTagName("Data");
-        PM_data = "";
         
         for (var i = 0; i <x.length; i++) 
         { 
