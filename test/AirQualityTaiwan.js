@@ -107,9 +107,10 @@
         {
           
           console.log(json);
-          console.log(json["records"].length);
+          var t= JSON.parse(json);
+          console.log(t.length);
           
-          for (var i = 0; i < json["records"].length; i++) 
+          for (var i = 0; i < t.length; i++) 
           { 
             PM_data = PM_data + "County,";
             //if (x[i].getElementsByTagName("County")[0].childNodes.length==1)                      
