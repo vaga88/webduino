@@ -101,7 +101,6 @@
           json = JSON.stringify(json);
           var s1 = json.split("\"records\":")[1];
           var s2 = s1.split("]")[0]+"]";
-          console.log(s2);
           json = $.parseJSON(s2);
           
           $.each(json, function(index, element) {
