@@ -102,6 +102,7 @@
   function ajaxCall(target){
     var data = $.ajax({
         type: "POST",
+        dataType : "jsonp",
         url: target,
     });
     data.success(function( msg ) {
