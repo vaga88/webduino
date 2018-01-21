@@ -6,7 +6,7 @@
   
   function PM_gov_link(input_url_) 
   {
-    ajaxCall(input_url_);
+    CreateScript(input_url_);
     
     if (window.XMLHttpRequest)
       var xmlHttp = new XMLHttpRequest();
@@ -99,7 +99,8 @@
     }
   } 
   
-  function ajaxCall(target){
+  function AjaxCall(target)
+  {
     var data = $.ajax({
         type: "POST",
         dataType : "jsonp",
@@ -115,8 +116,17 @@
      });
   }
   
+  function CreateScript(target)
+  {
+    var script = document.createElement('script');
+    script.src = target;
+    script.type = 'text/javascript';
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+  
   window.PM_gov_link = PM_gov_link;
   window.PM_gov_get = PM_gov_get;
-  window.ajaxCall = ajaxCall;
+  window.AjaxCall = AjaxCall;
+  window.CreateScript = CreateScript;
   
 }(window, window.document));
