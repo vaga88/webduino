@@ -103,10 +103,12 @@
         type: "POST",
         dataType : "jsonp",
         url: target,
-        success: function(json)
+        success: function(jsondata)
         {
-          console.log(json);
+          var json = $.parseJSON(jsondata);
           console.log(json.length);
+          console.log(data);
+          
           for (var i = 0; i < json.length; i++) 
           { 
             PM_data = PM_data + "County,";
