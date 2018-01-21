@@ -86,7 +86,7 @@
         }
       }
     };
-    xmlHttp.open("GET", input_url_, true);
+    xmlHttp.open("GET", target, true);
     xmlHttp.send(); 
   }
   
