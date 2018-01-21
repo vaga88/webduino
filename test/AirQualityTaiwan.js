@@ -98,8 +98,6 @@
         url: target,
         success: function(json)
         {
-          
-          
           json = JSON.stringify(json);
           var s1 = json.split("\"records\":")[1];
           var s2 = s1.split("]")[0]+"]";
