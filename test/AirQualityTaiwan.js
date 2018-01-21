@@ -6,7 +6,6 @@
   
   function PM_gov_link(input_url_) 
   {
-    //CreateScript(input_url_);
     AjaxCall(input_url_);
     return false;
     
