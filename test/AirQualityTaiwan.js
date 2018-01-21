@@ -106,8 +106,8 @@
         success: function(json)
         {
           //console.log(json);
-          for (var i = 0; i < json.length; i++) {
-                    PM_data = PM_data + json[i][0]);  
+          for (var i = 0; i < json.length; i++) 
+          { 
             PM_data = PM_data + "County,";
             //if (x[i].getElementsByTagName("County")[0].childNodes.length==1)                      
               PM_data = PM_data + json[i]["County"];
