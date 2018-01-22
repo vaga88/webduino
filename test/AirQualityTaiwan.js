@@ -96,7 +96,7 @@
   {
     var data = $.ajax({
         type: "POST",
-        dataType : input_format_,
+        dataType: input_format_,
         url: target,
         success: function(json)
         {
