@@ -98,11 +98,10 @@
         url: target,
         success: function(json)
         {
-          
-	  var t = JSON.parse(json);
-	  console.log(t.records);
 		
           var s0 = JSON.stringify(json);
+	console.log(s0.records);
+		
           if (s0.indexOf("\"records\":")!=-1)
           {
             var s1 = s0.split("\"records\":")[1];
