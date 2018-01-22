@@ -109,7 +109,7 @@
           
           $.each(json, function(index, element) {
             PM_data += "County,";
-            PM_data += element.find("County").text;
+            PM_data += element.County;
             PM_data += ",SiteName,";
             PM_data += element.SiteName;
             PM_data += ",PublishTime,";
