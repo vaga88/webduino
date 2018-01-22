@@ -89,7 +89,7 @@
     xmlHttp.open("GET", target, true);
     xmlHttp.send(); 
   }
-  
+		  					
   function getJSON(target,datatype)
   {
     var data = $.ajax({
@@ -98,7 +98,10 @@
         url: target,
         success: function(json)
         {
-          console.log(json);
+          
+	  json = json.records;
+	  console.log(json);
+		
           var s0 = JSON.stringify(json);
           if (s0.indexOf("\"records\":")!=-1)
           {
