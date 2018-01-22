@@ -100,10 +100,13 @@
         url: target,
         success: function(json)
         {
-          json = JSON.stringify(json);
-          var s1 = json.split("\"records\":")[1];
-          var s2 = s1.split("]")[0]+"]";
-          json = $.parseJSON(s2);
+          var s0 = JSON.stringify(json);
+          if (s0.indexOf(""\"records\":"")!=-1)
+          {
+            var s1 = s0.split("\"records\":")[1];
+            var s2 = s1.split("]")[0]+"]";
+            json = $.parseJSON(s2);
+          }
           
           $.each(json, function(index, element) {
             PM_data += "County,";
