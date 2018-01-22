@@ -6,7 +6,6 @@
   
   function PM_gov_link(input_url_,input_format_) 
   {
-    PM_data = "";
     if (input_format_=="JSON")
       getJSON(input_url_);
     else if (input_format_=="XML")
@@ -25,7 +24,7 @@
       if (this.readyState == 4 && this.status == 200) 
       {    
         var x = this.responseXML.getElementsByTagName("Data");
-        
+        PM_data = "";
         for (var i = 0; i <x.length; i++) 
         { 
           PM_data += "County,";
@@ -105,7 +104,7 @@
             var s2 = s1.split("]")[0]+"]";
             json = $.parseJSON(s2);
           }
-          
+          PM_data = "";
           $.each(json, function(index, element) {
             PM_data += "County,";
             PM_data += element.County;
