@@ -7,10 +7,8 @@
   function PM_gov_link(input_url_,input_format_) 
   {
     PM_data = "";
-    if (input_format_=="JSONP")
-      getJSON(input_url_,"jsonp");
-    else if (input_format_=="JSON")
-      getJSON(input_url_,"json");
+    if (input_format_=="JSON")
+      getJSON(input_url_);
     else if (input_format_=="XML")
       getXML(input_url_);   
   }
@@ -96,7 +94,7 @@
   {
     var data = $.ajax({
         type: "get",
-        dataType: input_format_,
+        dataType: "jsonp",
         url: target,
         success: function(json)
         {
