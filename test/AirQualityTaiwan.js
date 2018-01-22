@@ -101,7 +101,7 @@
         success: function(json)
         {
           var s0 = JSON.stringify(json);
-          if (s0.indexOf(""\"records\":"")!=-1)
+          if (s0.indexOf("\"records\":")!=-1)
           {
             var s1 = s0.split("\"records\":")[1];
             var s2 = s1.split("]")[0]+"]";
