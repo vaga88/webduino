@@ -90,7 +90,7 @@
     xmlHttp.send(); 
   }
   
-  function getJSON(target,input_format_)
+  function getJSON(target)
   {
     var data = $.ajax({
         type: "get",
