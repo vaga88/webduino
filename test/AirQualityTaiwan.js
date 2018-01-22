@@ -146,12 +146,10 @@
             PM_data += element.WindSpeed;
             PM_data += ";";
           });
-        },
-        error: function(jqXHR, textStatus, errorThrown) 
-        {
-				  console.log('Error: ' + errorThrown);
-			  }
-     });
+        },	
+        error: function(jqXHR, textStatus, errorThrown)
+	{console.log('Error: ' + errorThrown);}
+     });	
   }
 
   function PM_gov_get(input_site_) 
