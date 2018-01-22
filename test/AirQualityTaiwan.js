@@ -95,7 +95,7 @@
   function getJSON(target,input_format_)
   {
     var data = $.ajax({
-        type: "POST",
+        type: "get",
         dataType: input_format_,
         url: target,
         success: function(json)
