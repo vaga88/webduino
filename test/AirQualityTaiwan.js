@@ -147,10 +147,10 @@
             PM_data += ";";
           });
         },
-        error: function(exception)
+        error: function(jqXHR, textStatus, errorThrown) 
         {
-          console.log('fail');
-        }
+				  console.log('Error: ' + errorThrown);
+			  }
      });
   }
 
