@@ -8,9 +8,9 @@
   {
     PM_data = "";
     if (input_format_=="JSON")
-      getJSON(input_url_);
+      getJSON(input_url_,"jsonp");
     else if (input_format_=="XML")
-      getXML(input_url_);   
+      getJSON(input_url_,"xml");  
   }
     
   function getXML(target)  
@@ -90,14 +90,15 @@
     xmlHttp.send(); 
   }
   
-  function getJSON(target)
+  function getJSON(target,datatype)
   {
     var data = $.ajax({
         type: "get",
-        dataType: "jsonp",
+        dataType: datatype,
         url: target,
         success: function(json)
         {
+          console.log(json);
           var s0 = JSON.stringify(json);
           if (s0.indexOf("\"records\":")!=-1)
           {
