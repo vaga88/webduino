@@ -99,8 +99,8 @@
         success: function(json)
         {
           
-	  json = json.records;
-	  console.log(json);
+	  var t = JSON.parse(json);
+	  console.log(t.records);
 		
           var s0 = JSON.stringify(json);
           if (s0.indexOf("\"records\":")!=-1)
