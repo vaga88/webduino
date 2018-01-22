@@ -2,15 +2,15 @@
 
   'use strict';
   
-  var PM_data;
+  var PM_data="";
   
   function PM_gov_link(input_url_,input_format_) 
   {
     PM_data = "";
     if (input_format_=="JSON")
-      getJSON(input_url_,"jsonp");
+      getJSON(input_url_);
     else if (input_format_=="XML")
-      getJSON(input_url_,"xml");  
+      getXML(input_url_);   
   }
     
   function getXML(target)  
@@ -89,19 +89,16 @@
     xmlHttp.open("GET", target, true);
     xmlHttp.send(); 
   }
-		  					
-  function getJSON(target,datatype)
+  
+  function getJSON(target)
   {
     var data = $.ajax({
         type: "get",
-        dataType: datatype,
+        dataType: "jsonp",
         url: target,
         success: function(json)
         {
-		
           var s0 = JSON.stringify(json);
-	console.log(s0.records);
-		
           if (s0.indexOf("\"records\":")!=-1)
           {
             var s1 = s0.split("\"records\":")[1];
@@ -148,19 +145,26 @@
             PM_data += element.WindSpeed;
             PM_data += ";";
           });
-        },	
-        error: function(jqXHR, textStatus, errorThrown)
-	{console.log('Error: ' + errorThrown);}
-     });	
+        },
+        error: function(exception)
+        {
+          console.log('fail');
+        }
+     });
   }
 
   function PM_gov_get(input_site_) 
   {
-    var x = PM_data.split(";");
-    var s = input_site_.split("-");
+    if (PM_data!="")
+    {
+      var x = PM_data.split(";");
+      var s = input_site_.split("-");
 
-    for (var i = 0; i <(x.length-1); i++) 
-      if ((x[i].indexOf(s[0])!=-1)&&(x[i].indexOf(s[1])!=-1)) return x[i];
+      for (var i = 0; i <(x.length-1); i++) 
+        if ((x[i].indexOf(s[0])!=-1)&&(x[i].indexOf(s[1])!=-1)) return x[i];
+    }
+    else
+       return "";
   } 
     
   window.PM_gov_link = PM_gov_link;
