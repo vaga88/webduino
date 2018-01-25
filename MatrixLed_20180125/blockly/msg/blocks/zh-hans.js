@@ -15,3 +15,4 @@ Blockly.Msg.MATRIXLED_MARQUEE_RESUME_SHOW = "恢复 跑马灯";
 Blockly.Msg.MATRIXLED_MARQUEE_TIME_SHOW = "跑马灯 间隔时间(ms)";
 Blockly.Msg.MATRIXLED_MARQUEE_REVERSE_SHOW = "跑马灯 反向";
 Blockly.Msg.MATRIXLED_CHAR_SHOW = "显示 字元(英数)";
+Blockly.Msg.MATRIXLED_TEXTTOCODE_SHOW = "转换文字为编码";
