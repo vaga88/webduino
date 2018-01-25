@@ -35,10 +35,10 @@
   const chare = "0000000110010110010100000";
   const charf = "0000000100111111010000000";
   const charg = "0000000101010110011000000";
-  const charh = "";
-  const chari = "";
-  const charj = "";
-  const chark = "";
+  const charh = "0000011111001000001100000";
+  const chari = "0000000000101110000000000";
+  const charj = "0000000001101110000000000";
+  const chark = "0000011111000100010100000";
   const charl = "";
   const charm = "";
   const charn = "";
