@@ -84,6 +84,13 @@
       </block>
     </value>
   </block>  
+  <block type="matrix_led_texttocode">
+    <value name="value_text_">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block> 
   <block type="matrix_led_on">
     <value name="value_x_on_">
       <block type="math_number">
