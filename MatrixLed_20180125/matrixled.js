@@ -32,7 +32,7 @@
   const charb = "0000011111001010011100000";
   const charc = "0000000110010010100100000";
   const chard = "0000000111001011111100000";
-  const chare = "";
+  const chare = "0000000110010110010100000";
   const charf = "";
   const charg = "";
   const charh = "";
