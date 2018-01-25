@@ -11,6 +11,21 @@ Blockly.Blocks['matrix_led_char'] = {
   }
 }; 
 
+  
+Blockly.Blocks['matrix_led_texttocode'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.MATRIXLED_TEXTTOCODE_SHOW);
+    this.appendValueInput("value_text_")
+        .setCheck("String")
+    this.setInputsInline(true);
+    this.setOutput(true, null);  
+    this.setColour(300);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }  
+};
+
 Blockly.Blocks['matrix_led_marquee'] = {
   init: function() {
     this.appendValueInput("value_marquee_")
