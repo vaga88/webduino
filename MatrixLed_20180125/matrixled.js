@@ -28,6 +28,32 @@
   const charX = "1000101010001000101010001";
   const charY = "1000001000001110100010000";   
   const charZ = "1000110011101011100110001";
+  const chara = "0111110010100101001001111";
+  const charb = "1111110101101011010101010";
+  const charc = "0111010001100011000110001";
+  const chard = "1111110001100011000101110";
+  const chare = "1111110101101011010110101";
+  const charf = "1111110100101001010010100";
+  const charg = "0111010001101011010110111";
+  const charh = "1111100100001000010011111";
+  const chari = "1000110001111111000110001";
+  const charj = "1001110001111111000010000";
+  const chark = "1111100010001000101010001";
+  const charl = "1111100001000010000100001";
+  const charm = "1111101000001000100011111";
+  const charn = "1111101000001000001011111";
+  const charo = "0111010001100011000101110";
+  const charp = "1111110010100101001001100";
+  const charq = "0111010001101011001001101";
+  const charr = "1111110100101001010001011";
+  const chars = "0100110101101011010110010";
+  const chart = "1000010000111111000010000";
+  const charu = "1111000001000010000111110";
+  const charv = "1110000010000010001011100";
+  const charw = "1111000001111100000111110";
+  const charx = "1000101010001000101010001";
+  const chary = "1000001000001110100010000";   
+  const charz = "1000110011101011100110001";
   const char0 = "0000011111100011111100000";
   const char1 = "0000001001111110000100000";
   const char2 = "0000010111101011110100000";
@@ -303,6 +329,58 @@
       return charY; 
     else if (input_char_=="Z")
       return charZ; 
+    else if (input_char_=="a")
+      return chara;
+    else if (input_char_=="b")
+      return charb;  
+    else if (input_char_=="c")
+      return charc; 
+    else if (input_char_=="d")
+      return chard;  
+    else if (input_char_=="e")
+      return chare;   
+    else if (input_char_=="fF")
+      return charf;  
+    else if (input_char_=="g")
+      return charg;   
+    else if (input_char_=="h")
+      return charh;  
+    else if (input_char_=="i")
+      return chari;   
+    else if (input_char_=="j")
+      return charj;  
+    else if (input_char_=="k")
+      return chark;   
+    else if (input_char_=="l")
+      return charl;  
+    else if (input_char_=="m")
+      return charm;  
+    else if (input_char_=="n")
+      return charn;  
+    else if (input_char_=="o")
+      return charo;  
+    else if (input_char_=="p")
+      return charp;  
+    else if (input_char_=="q")
+      return charq; 
+    else if (input_char_=="r")
+      return charr;  
+    else if (input_char_=="s")
+      return chars;
+    else if (input_char_=="t")
+      return chart;  
+    else if (input_char_=="u")
+      return charu;  
+    else if (input_char_=="v")
+      return charv;  
+    else if (input_char_=="w")
+      return charw;  
+    else if (input_char_=="x")
+      return charx;  
+    else if (input_char_=="y")
+      return chary; 
+    else if (input_char_=="z")
+      return charz;     
     else if (input_char_=="0")
       return char0; 
     else if (input_char_=="1")
