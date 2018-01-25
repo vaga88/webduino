@@ -339,7 +339,7 @@
       return chard;  
     else if (input_char_=="e")
       return chare;   
-    else if (input_char_=="fF")
+    else if (input_char_=="f")
       return charf;  
     else if (input_char_=="g")
       return charg;   
