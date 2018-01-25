@@ -153,6 +153,16 @@
     }
   }  
   
+  function MatrixLed_texttocode(input_text_) {
+    if (input_text_.length==1)
+    {
+      var textcode="";
+      for (var i=0;i<input_text_.length;i++)
+        textcode += MatrixLed_conversion(input_text_.substr(i,1));
+      return textcode;
+    }
+  }  
+  
   function MatrixLed_code(input_code_) {
     if (input_code_.length==25)
       MatrixLed_matrix(input_code_);
