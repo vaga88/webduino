@@ -184,7 +184,7 @@
     {
       var textcode="";
       for (var i=0;i<input_text_.length;i++)
-        textcode += MatrixLed_conversion(input_text_.substr(i,1));
+        textcode = textcode + MatrixLed_conversion(input_text_.substr(i,1)) + "00000";
       return textcode;
     }
     else
