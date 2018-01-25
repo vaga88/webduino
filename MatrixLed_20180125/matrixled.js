@@ -180,7 +180,7 @@
   }  
   
   function MatrixLed_texttocode(input_text_) {
-    if (input_text_.length==1)
+    if (input_text_.length>0)
     {
       var textcode="";
       for (var i=0;i<input_text_.length;i++)
