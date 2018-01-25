@@ -29,9 +29,9 @@
   const charY = "1000001000001110100010000";   
   const charZ = "1000110011101011100110001";
   const chara = "0000000110010010011000001";
-  const charb = "0000011111001010001000000";
-  const charc = "";
-  const chard = "";
+  const charb = "0000011111001010011100000";
+  const charc = "0000000110010010100100000";
+  const chard = "0000000111001011111100000";
   const chare = "";
   const charf = "";
   const charg = "";
