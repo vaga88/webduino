@@ -37,6 +37,12 @@ Blockly.JavaScript['matrix_led_color'] = function(block) {
   return code;
 };
 
+Blockly.JavaScript['matrix_led_texttocode'] = function(block) {
+  var value_text_ = Blockly.JavaScript.valueToCode(block, 'value_text_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'MatrixLed_texttocode('+value_text_+')';
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
 Blockly.JavaScript['matrix_led_width'] = function(block) {
   var value_width_ = Blockly.JavaScript.valueToCode(block, 'value_width_', Blockly.JavaScript.ORDER_ATOMIC);
   var code = 'MatrixLed_width('+ value_width_ +');';
