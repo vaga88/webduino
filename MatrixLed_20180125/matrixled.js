@@ -480,5 +480,6 @@
   window.MatrixLed_marquee_time = MatrixLed_marquee_time;
   window.MatrixLed_char = MatrixLed_char;
   window.MatrixLed_conversion =MatrixLed_conversion;
+  window.MatrixLed_texttocode =MatrixLed_texttocode;
   
 }(window, window.document));
