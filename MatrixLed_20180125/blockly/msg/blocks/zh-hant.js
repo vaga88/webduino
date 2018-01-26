@@ -16,3 +16,5 @@ Blockly.Msg.MATRIXLED_MARQUEE_TIME_SHOW = "跑馬燈 間隔時間(ms)";
 Blockly.Msg.MATRIXLED_MARQUEE_REVERSE_SHOW = "跑馬燈 反向";
 Blockly.Msg.MATRIXLED_CHAR_SHOW = "顯示 字元(英數)";
 Blockly.Msg.MATRIXLED_TEXTTOCODE_SHOW = "轉換文字為編碼";
+Blockly.Msg.MATRIXLED_SHOWSTATE_SHOW = "指示燈顯示";
+Blockly.Msg.MATRIXLED_INDENTCODE_SHOW = "縮排編碼";
