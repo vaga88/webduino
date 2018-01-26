@@ -113,6 +113,13 @@
       </block>
     </value>
   </block>   
+  <block type="matrix_led_marquee_time">
+    <value name="value_marquee_time_">
+      <block type="math_number">
+        <field name="NUM">500</field>
+      </block>
+    </value>
+  </block>   
   <block type="matrix_led_marquee">
     <value name="value_marquee_">
       <block type="text">
@@ -127,14 +134,7 @@
   <block type="matrix_led_marquee_reverse">
   </block>  
   <block type="matrix_led_clear">
-  </block>  
-  <block type="matrix_led_marquee_time">
-    <value name="value_marquee_time_">
-      <block type="math_number">
-        <field name="NUM">500</field>
-      </block>
-    </value>
-  </block>     
+  </block>      
   <block type="matrix_led_sample">
     <field name="value_sample_">♥</field>
   </block>  
