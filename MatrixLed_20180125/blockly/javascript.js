@@ -161,6 +161,6 @@ Blockly.JavaScript['matrix_led_showstate'] = function(block) {
 
 Blockly.JavaScript['matrix_led_indentcode'] = function(block) {
   var value_indentcode_ = Blockly.JavaScript.valueToCode(block, 'value_indentcode_', Blockly.JavaScript.ORDER_ATOMIC);
-  var code = 'MatrixLed_state('+value_indentcode_+')';
+  var code = 'MatrixLed_indentcode('+value_indentcode_+')';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
