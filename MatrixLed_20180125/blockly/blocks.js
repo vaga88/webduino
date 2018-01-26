@@ -14,10 +14,9 @@ Blockly.Blocks['matrix_led_char'] = {
   
 Blockly.Blocks['matrix_led_texttocode'] = {
   init: function() {
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.MATRIXLED_TEXTTOCODE_SHOW)
-        .appendValueInput("value_text_")
-        .setCheck("String");
+    this.appendValueInput("value_text_")
+        .setCheck("String")
+        .appendField(Blockly.Msg.MATRIXLED_TEXTTOCODE_SHOW);
     this.setOutput(true, null);  
     this.setColour(300);
     this.setTooltip("");
@@ -27,10 +26,9 @@ Blockly.Blocks['matrix_led_texttocode'] = {
 
 Blockly.Blocks['matrix_led_indentcode'] = {
   init: function() {
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.MATRIXLED_INDENTCODE_SHOW)
-        .appendValueInput("value_indentcode_")
-        .setCheck("String");
+    this.appendValueInput("value_indentcode_")
+        .setCheck("String")
+        .appendField(Blockly.Msg.MATRIXLED_INDENTCODE_SHOW);
     this.setOutput(true, null);  
     this.setColour(300);
     this.setTooltip("");
