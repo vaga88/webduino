@@ -1,4 +1,28 @@
 <category id="catMatrixLed">
+  <block type="matrix_led_color">
+    <value name="value_color_">
+      <block type="colour_picker">
+        <field name="COLOUR">#ff0000</field>
+      </block>
+    </value>
+  </block>  
+  <block type="matrix_led_width">
+    <value name="value_width_">
+      <block type="math_number">
+        <field name="NUM">250</field>
+      </block>
+    </value>
+  </block>
+  <block type="matrix_led_height">
+    <value name="value_height_">
+      <block type="math_number">
+        <field name="NUM">250</field>
+      </block>
+    </value>
+  </block>  
+  <block type="matrix_led_showstate">
+    <field name="value_showstate_">1</field>
+  </block> 
   <block type="matrix_led_matrix">
     <field name="L01">FALSE</field>
     <field name="L06">FALSE</field>
@@ -52,31 +76,7 @@
     <field name="L15">FALSE</field>
     <field name="L20">FALSE</field>
     <field name="L25">FALSE</field>
-  </block>  
-  <block type="matrix_led_color">
-    <value name="value_color_">
-      <block type="colour_picker">
-        <field name="COLOUR">#ff0000</field>
-      </block>
-    </value>
-  </block>  
-  <block type="matrix_led_width">
-    <value name="value_width_">
-      <block type="math_number">
-        <field name="NUM">250</field>
-      </block>
-    </value>
-  </block>
-  <block type="matrix_led_height">
-    <value name="value_height_">
-      <block type="math_number">
-        <field name="NUM">250</field>
-      </block>
-    </value>
-  </block>  
-  <block type="matrix_led_showstate">
-    <field name="value_showstate_">1</field>
-  </block> 
+  </block>    
   <block type="matrix_led_on">
     <value name="value_x_on_">
       <block type="math_number">
@@ -101,6 +101,18 @@
       </block>
     </value>
   </block>
+  <block type="matrix_led_state">
+    <value name="value_x_state_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="value_y_state_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>   
   <block type="matrix_led_marquee">
     <value name="value_marquee_">
       <block type="text">
@@ -122,19 +134,7 @@
         <field name="NUM">500</field>
       </block>
     </value>
-  </block>  
-  <block type="matrix_led_state">
-    <value name="value_x_state_">
-      <block type="math_number">
-        <field name="NUM">0</field>
-      </block>
-    </value>
-    <value name="value_y_state_">
-      <block type="math_number">
-        <field name="NUM">0</field>
-      </block>
-    </value>
-  </block>    
+  </block>     
   <block type="matrix_led_sample">
     <field name="value_sample_">♥</field>
   </block>  
