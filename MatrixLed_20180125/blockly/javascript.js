@@ -152,3 +152,15 @@ Blockly.JavaScript['matrix_led_state'] = function(block) {
   var code = 'MatrixLed_state('+value_x_state_+','+value_y_state_+')';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
+
+Blockly.JavaScript['matrix_led_showstate'] = function(block) {
+  var value_showstate_ = block.getFieldValue('value_showstate_');
+  var code = 'MatrixLed_showstate('+value_showstate_+');';
+  return code;
+};
+
+Blockly.JavaScript['matrix_led_indentcode'] = function(block) {
+  var value_indentcode_ = Blockly.JavaScript.valueToCode(block, 'value_indentcode_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'MatrixLed_state('+value_indentcode_+')';
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
