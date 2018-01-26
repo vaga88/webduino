@@ -18,7 +18,6 @@ Blockly.Blocks['matrix_led_texttocode'] = {
         .appendField(Blockly.Msg.MATRIXLED_TEXTTOCODE_SHOW);
     this.appendValueInput("value_text_")
         .setCheck("String")
-    this.setInputsInline(true);
     this.setOutput(true, null);  
     this.setColour(300);
     this.setTooltip("");
