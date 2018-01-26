@@ -117,13 +117,15 @@
     MatrixLedheight = input_height_;
   } 
   
-  function MatrixLed_showstate(input_state_) {
-    MatrixLedshowstate = input_state_;
+  function MatrixLed_showstate(input_showstate_) {
+    MatrixLedshowstate = input_showstate_;
   }   
   
-  function MatrixLed_indentcode() {
-    while (MatrixLedmarqueecode.search(/0000000000/)!=-1)
-      MatrixLedmarqueecode = MatrixLedmarqueecode.replace("/0000000000/g","00000");        
+  function MatrixLed_indentcode(input_indentcode_) {
+    var indentcode = input_indentcode_;
+    while (indentcode.search(/0000000000/)!=-1)
+      indentcode = indentcode.replace("/0000000000/g","00000"); 
+    return indentcode;
   } 
   
   function MatrixLed_marquee(input_marquee_) {
