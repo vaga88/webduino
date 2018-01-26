@@ -20,6 +20,9 @@
       </block>
     </value>
   </block>  
+  <block type="matrix_led_showstate">
+    <field name="value_showstate_">1</field>
+  </block> 
   <block type="matrix_led_matrix">
     <field name="L01">FALSE</field>
     <field name="L06">FALSE</field>
@@ -91,6 +94,10 @@
       </block>
     </value>
   </block> 
+  <block type="matrix_led_indentcode">
+    <value name="value_indentcode_">
+    </value>
+  </block>   
   <block type="matrix_led_on">
     <value name="value_x_on_">
       <block type="math_number">
