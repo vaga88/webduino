@@ -1,28 +1,4 @@
 <category id="catMatrixLed">
-  <block type="matrix_led_color">
-    <value name="value_color_">
-      <block type="colour_picker">
-        <field name="COLOUR">#ff0000</field>
-      </block>
-    </value>
-  </block>  
-  <block type="matrix_led_width">
-    <value name="value_width_">
-      <block type="math_number">
-        <field name="NUM">250</field>
-      </block>
-    </value>
-  </block>
-  <block type="matrix_led_height">
-    <value name="value_height_">
-      <block type="math_number">
-        <field name="NUM">250</field>
-      </block>
-    </value>
-  </block>  
-  <block type="matrix_led_showstate">
-    <field name="value_showstate_">1</field>
-  </block> 
   <block type="matrix_led_matrix">
     <field name="L01">FALSE</field>
     <field name="L06">FALSE</field>
@@ -77,27 +53,30 @@
     <field name="L20">FALSE</field>
     <field name="L25">FALSE</field>
   </block>  
-  <block type="matrix_led_sample">
-    <field name="value_sample_">♥</field>
-  </block>  
-  <block type="matrix_led_code">
-    <value name="value_code_">
-      <block type="text">
-        <field name="TEXT">0110011110011111111001100</field>
+  <block type="matrix_led_color">
+    <value name="value_color_">
+      <block type="colour_picker">
+        <field name="COLOUR">#ff0000</field>
       </block>
     </value>
   </block>  
-  <block type="matrix_led_texttocode">
-    <value name="value_text_">
-      <block type="text">
-        <field name="TEXT"></field>
+  <block type="matrix_led_width">
+    <value name="value_width_">
+      <block type="math_number">
+        <field name="NUM">250</field>
       </block>
     </value>
+  </block>
+  <block type="matrix_led_height">
+    <value name="value_height_">
+      <block type="math_number">
+        <field name="NUM">250</field>
+      </block>
+    </value>
+  </block>  
+  <block type="matrix_led_showstate">
+    <field name="value_showstate_">1</field>
   </block> 
-  <block type="matrix_led_indentcode">
-    <value name="value_indentcode_">
-    </value>
-  </block>   
   <block type="matrix_led_on">
     <value name="value_x_on_">
       <block type="math_number">
@@ -122,34 +101,6 @@
       </block>
     </value>
   </block>
-  <block type="matrix_led_state">
-    <value name="value_x_state_">
-      <block type="math_number">
-        <field name="NUM">0</field>
-      </block>
-    </value>
-    <value name="value_y_state_">
-      <block type="math_number">
-        <field name="NUM">0</field>
-      </block>
-    </value>
-  </block>  
-  <block type="matrix_led_clear">
-  </block>  
-  <block type="matrix_led_char">
-    <value name="value_char_">
-      <block type="text">
-        <field name="TEXT">♥</field>
-      </block>
-    </value>
-  </block>  
-  <block type="matrix_led_marquee_time">
-    <value name="value_marquee_time_">
-      <block type="math_number">
-        <field name="NUM">500</field>
-      </block>
-    </value>
-  </block>
   <block type="matrix_led_marquee">
     <value name="value_marquee_">
       <block type="text">
@@ -162,5 +113,54 @@
   <block type="matrix_led_marquee_resume">
   </block>
   <block type="matrix_led_marquee_reverse">
+  </block>  
+  <block type="matrix_led_clear">
+  </block>  
+  <block type="matrix_led_marquee_time">
+    <value name="value_marquee_time_">
+      <block type="math_number">
+        <field name="NUM">500</field>
+      </block>
+    </value>
+  </block>  
+  <block type="matrix_led_state">
+    <value name="value_x_state_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="value_y_state_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>    
+  <block type="matrix_led_sample">
+    <field name="value_sample_">♥</field>
+  </block>  
+  <block type="matrix_led_char">
+    <value name="value_char_">
+      <block type="text">
+        <field name="TEXT">♥</field>
+      </block>
+    </value>
+  </block>    
+  <block type="matrix_led_code">
+    <value name="value_code_">
+      <block type="text">
+        <field name="TEXT">0110011110011111111001100</field>
+      </block>
+    </value>
+  </block>  
+  <block type="matrix_led_texttocode">
+    <value name="value_text_">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
   </block>
+  <block type="matrix_led_indentcode">
+    <value name="value_indentcode_">
+    </value>
+  </block>    
  </category>
