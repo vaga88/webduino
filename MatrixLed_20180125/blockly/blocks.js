@@ -26,6 +26,33 @@ Blockly.Blocks['matrix_led_texttocode'] = {
   }  
 };
 
+Blockly.Blocks['matrix_led_indentcode'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.MATRIXLED_INDENTCODE_SHOW);
+    this.appendValueInput("value_indentcode_")
+        .setCheck("String")
+    this.setInputsInline(true);
+    this.setOutput(true, null);  
+    this.setColour(300);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }  
+};
+
+Blockly.Blocks['matrix_led_showstate'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.MATRIXLED_SHOWSTATE_SHOW)
+        .appendField(new Blockly.FieldDropdown([["on","1"], ["off","0"]]), "value_showstate_");     
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(300);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }  
+};
+
 Blockly.Blocks['matrix_led_marquee'] = {
   init: function() {
     this.appendValueInput("value_marquee_")
