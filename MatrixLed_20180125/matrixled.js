@@ -493,7 +493,9 @@
   window.MatrixLed_marquee_reverse = MatrixLed_marquee_reverse;
   window.MatrixLed_marquee_time = MatrixLed_marquee_time;
   window.MatrixLed_char = MatrixLed_char;
-  window.MatrixLed_conversion =MatrixLed_conversion;
-  window.MatrixLed_texttocode =MatrixLed_texttocode;
+  window.MatrixLed_conversion = MatrixLed_conversion;
+  window.MatrixLed_texttocode = MatrixLed_texttocode;
+  window.MatrixLed_showstate = MatrixLed_showstate;
+  window.MatrixLed_indentcode = MatrixLed_indentcode;
   
 }(window, window.document));
