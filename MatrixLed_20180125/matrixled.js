@@ -125,7 +125,7 @@
     var indentcode = input_indentcode_;
     //while (indentcode.search(/0000000000/)!=-1)
       //indentcode = indentcode.replace("/0000000000/g","00000"); 
-    return indentcode.search(/0000000000/)+"-"+indentcode.replace("/0000000000/g","00000");
+    return indentcode.search(/0000000000/)+"-"+indentcode.replace("0000000000","00000");
   } 
   
   function MatrixLed_marquee(input_marquee_) {
