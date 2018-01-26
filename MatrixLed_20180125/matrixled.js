@@ -99,7 +99,7 @@
   var MatrixLedcolor = "#FF0000";
   var MatrixLedwidth = 250;
   var MatrixLedheight = 250;
-  var MatrixLedmarquee = "";
+  var MatrixLedmarqueecode = "";
   var MatrixLedmarqueetime = 500;
   var MatrixLedmarqueereverse = 1;
   var MatrixLedshowstate = 1;
@@ -128,31 +128,31 @@
       return;
     }
     else if ((input_marquee_.length%5==0)&&(input_marquee_.length>25)&&(input_marquee_.search(/[^0-1]/)==-1))
-      MatrixLedmarquee = input_marquee_;  
+      MatrixLedmarqueecode = input_marquee_;  
     else if (input_marquee_.length==1)
       MatrixLed_matrix(MatrixLed_conversion(input_marquee_));
     else if (input_marquee_.length>1)
     {
-      MatrixLedmarquee="";
+      MatrixLedmarqueecode="";
       for (var i=0;i<input_marquee_.length;i++)
-        MatrixLedmarquee = MatrixLedmarquee + MatrixLed_conversion(input_marquee_.substr(i,1)) + "00000";
+        MatrixLedmarqueecode = MatrixLedmarqueecode + MatrixLed_conversion(input_marquee_.substr(i,1)) + "00000";
     }
     window.clearInterval(marqueetimeid);
     marqueetimeid = window.setInterval("MatrixLed_marquee_play()",MatrixLedmarqueetime);
   }  
   
   function MatrixLed_marquee_play() {
-    if (MatrixLedmarquee.length>25)
+    if (MatrixLedmarqueecode.length>25)
     {
       if (MatrixLedmarqueereverse==1)
       {
-        MatrixLed_matrix(MatrixLedmarquee.substr(0,25));
-        MatrixLedmarquee = MatrixLedmarquee.substr(5,MatrixLedmarquee.length-5)+MatrixLedmarquee.substr(0,5);
+        MatrixLed_matrix(MatrixLedmarqueecode.substr(0,25));
+        MatrixLedmarqueecode = MatrixLedmarqueecode.substr(5,MatrixLedmarqueecode.length-5)+MatrixLedmarqueecode.substr(0,5);
       }
       else if (MatrixLedmarqueereverse==2)
       {
-        MatrixLed_matrix(MatrixLedmarquee.substr(MatrixLedmarquee.length-25,25));
-        MatrixLedmarquee = MatrixLedmarquee.substr(MatrixLedmarquee.length-5,5)+MatrixLedmarquee.substr(0,MatrixLedmarquee.length-5);
+        MatrixLed_matrix(MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-25,25));
+        MatrixLedmarqueecode = MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-5,5)+MatrixLedmarqueecode.substr(0,MatrixLedmarqueecode.length-5);
       }
     }
   } 
