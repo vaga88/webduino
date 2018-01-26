@@ -117,6 +117,10 @@
     MatrixLedheight = input_height_;
   } 
   
+  function MatrixLed_showstate(input_state_) {
+    MatrixLedshowstate = input_state_;
+  }   
+  
   function MatrixLed_marquee(input_marquee_) {
     if ((input_marquee_.length==25)&&(input_marquee_.search(/[^0-1]/)==-1))
     {
