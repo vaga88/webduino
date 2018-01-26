@@ -32,7 +32,6 @@ Blockly.Blocks['matrix_led_indentcode'] = {
         .appendField(Blockly.Msg.MATRIXLED_INDENTCODE_SHOW);
     this.appendValueInput("value_indentcode_")
         .setCheck("String")
-    this.setInputsInline(true);
     this.setOutput(true, null);  
     this.setColour(300);
     this.setTooltip("");
