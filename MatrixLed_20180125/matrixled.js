@@ -121,6 +121,11 @@
     MatrixLedshowstate = input_state_;
   }   
   
+  function MatrixLed_indentcode() {
+    while (MatrixLedmarqueecode.search(/0000000000/)!=-1)
+      MatrixLedmarqueecode = MatrixLedmarqueecode.replace("/0000000000/g","00000");        
+  } 
+  
   function MatrixLed_marquee(input_marquee_) {
     if ((input_marquee_.length==25)&&(input_marquee_.search(/[^0-1]/)==-1))
     {
