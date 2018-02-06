@@ -3,6 +3,7 @@ Blockly.Blocks['xmlHTTP_ResponseData'] = {
     this.appendDummyInput()
         .appendField(Blockly.Msg.XMLHTTP_RESPONSEDATA)
         .appendField(new Blockly.FieldDropdown([
+          ["JSON","JSON"],
           ["HTML","HTML"],    
           ["XML","XML"]
         ]), "value_format_");          
