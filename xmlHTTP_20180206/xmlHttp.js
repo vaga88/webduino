@@ -12,7 +12,6 @@
     DataUrl = input_url_;
     DataFormat = input_format_;
     xmlHTTP_get();
-    var thistime = new Date().getTime(); 
   } 
   
   function xmlHTTP_get()   
