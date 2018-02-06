@@ -3,16 +3,25 @@
   'use strict';
   
   var ResponseData="";
+  var DataUrl="";
   var DataFormat="";
   
   function xmlHTTP(input_url_,input_format_) 
   {
     ResponseData="";
+    DataUrl = input_url_;
     DataFormat = input_format_;
-    return ResponseData;
+    xmlHTTP_get();
+    
+    long int StartTime=millis();
+    while( (StartTime+5000) > millis())
+    {
+        if (ResponseData!="") return ResponseData;
+    } 
+    return ResponseData;    
   } 
   
-  function xmlHTTP()   
+  function xmlHTTP_get()   
   {
     if (window.XMLHttpRequest)
       var xmlHttp = new XMLHttpRequest();
@@ -29,13 +38,11 @@
           ResponseData = this.responseXML;
       }
     };
-    xmlHttp.open("GET", target, true);
+    xmlHttp.open("GET", DataUrl, true);
     xmlHttp.send(); 
   }
   
-  window.PM_gov_link = PM_gov_link;
-  window.PM_gov_get = PM_gov_get;
-  window.getXML = getXML;
-  window.getJSON = getJSON;
+  window.xmlHTTP = xmlHTTP;
+  window.xmlHTTP_get = xmlHTTP_get;
   
 }(window, window.document));
