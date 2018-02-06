@@ -30,7 +30,7 @@
           },
           error: function(exception)
           {
-            ResponseData= ResponseData + " fail";
+            ResponseData= DataFormat + " fail";
           }
        });
     }
