@@ -12,8 +12,8 @@
     DataUrl = input_url_;
     DataFormat = input_format_;
     xmlHTTP_get();
-    var thistime = new Date().getSeconds;
-    while((new Date().getSeconds-thistime)<5)
+    var thistime = new Date().getTime();
+    while((new Date().getTime()-thistime)<5000)
     {
       if (ResponseData!="") return ResponseData;
     }
