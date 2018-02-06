@@ -57,7 +57,7 @@
           }
         }
       };
-      xmlHttp.open("GET", DataUrl, true);
+      xmlHttp.open("PUT", DataUrl, true);
       xmlHttp.send(); 
     }
   }
