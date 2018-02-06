@@ -51,9 +51,9 @@
         if (this.readyState == 4 && this.status == 200) 
         {    
           if (DataFormat=="HTML")
-            console.log(this.responseText);
+            DataFormat = this.responseText;
           else if (DataFormat=="XML")
-            console.log(this.responseXML);
+            DataFormat = this.responseXML;
         }
       };
       xmlHttp.open("GET", DataUrl, true);
