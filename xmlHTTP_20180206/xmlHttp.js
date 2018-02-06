@@ -23,23 +23,42 @@
   
   function xmlHTTP_get()   
   {
-    if (window.XMLHttpRequest)
-      var xmlHttp = new XMLHttpRequest();
-    else
-      var xmlHttp = new ActiveXObject('Microsoft.XMLHTTP');
-    
-    xmlHttp.onreadystatechange = function() 
+    if (DataFormat=="JSON")
     {
-      if (this.readyState == 4 && this.status == 200) 
-      {    
-        if (DataFormat=="HTML")
-          ResponseData = this.responseText;
-        else if (DataFormat=="XML")
-          ResponseData = this.responseXML;
-      }
-    };
-    xmlHttp.open("GET", DataUrl, true);
-    xmlHttp.send(); 
+      var data = $.ajax({
+          type: "get",
+          dataType: "jsonp",
+          url: DataUrl,
+          success: function(json)
+          {
+            DataFormat=json;
+          },
+          error: function(exception)
+          {
+            DataFormat="FAIL";
+          }
+       });
+    }
+    else
+    {
+      if (window.XMLHttpRequest)
+        var xmlHttp = new XMLHttpRequest();
+      else
+        var xmlHttp = new ActiveXObject('Microsoft.XMLHTTP');
+
+      xmlHttp.onreadystatechange = function() 
+      {
+        if (this.readyState == 4 && this.status == 200) 
+        {    
+          if (DataFormat=="HTML")
+            ResponseData = this.responseText;
+          else if (DataFormat=="XML")
+            ResponseData = this.responseXML;
+        }
+      };
+      xmlHttp.open("GET", DataUrl, true);
+      xmlHttp.send(); 
+    }
   }
   
   window.xmlHTTP = xmlHTTP;
