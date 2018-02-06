@@ -13,12 +13,12 @@
     DataFormat = input_format_;
     xmlHTTP_get();
     
-    //var starttime=new Date().getTime();
-    //while ((new Date().getTime()-starttime)<5000)
-    //{
-    //  if(ResponseData!="") return ResponseData;
-    //}
-    //return DataFormat;   
+    var starttime=new Date().getTime();
+    while ((new Date().getTime()-starttime)<10000)
+    {
+      if(ResponseData!="") return ResponseData;
+    }
+    return DataFormat;   
   } 
   
   function xmlHTTP_get()   
