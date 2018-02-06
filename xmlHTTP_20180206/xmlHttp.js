@@ -51,9 +51,11 @@
         if (this.readyState == 4 && this.status == 200) 
         {    
           if (DataFormat=="HTML")
-            ResponseData = this.responseText;
+            ResponseData = "HTML success";
+            //ResponseData = this.responseText;
           else if (DataFormat=="XML")
-            ResponseData = this.responseXML;
+            ResponseData = "XML success";
+            //ResponseData = this.responseXML;
         }
       };
       xmlHttp.open("GET", DataUrl, true);
