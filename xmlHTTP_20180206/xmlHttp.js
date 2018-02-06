@@ -13,8 +13,9 @@
     DataFormat = input_format_;
     xmlHTTP_get();
     
-    long int StartTime=millis();
-    while( (StartTime+5000) > millis())
+    var d = new Date();
+    var StartTime = d.getSeconds();
+    while( (StartTime+5) > d.getSeconds())
     {
         if (ResponseData!="") return ResponseData;
     } 
