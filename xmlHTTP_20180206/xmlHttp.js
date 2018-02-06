@@ -13,12 +13,12 @@
     DataFormat = input_format_;
     xmlHTTP_get();
     
-    var starttime=new Date().getTime();
-    while ((new Date().getTime()-starttime)<5000)
-    {
-      if(ResponseData!="") return ResponseData;
-    }
-    return DataFormat + " fail";   
+    //var starttime=new Date().getTime();
+    //while ((new Date().getTime()-starttime)<5000)
+    //{
+    //  if(ResponseData!="") return ResponseData;
+    //}
+    //return DataFormat + " fail";   
   } 
   
   function xmlHTTP_get()   
@@ -51,11 +51,9 @@
         if (this.readyState == 4 && this.status == 200) 
         {    
           if (DataFormat=="HTML")
-            ResponseData = "HTML success";
-            //ResponseData = this.responseText;
+            console.log(this.responseText);
           else if (DataFormat=="XML")
-            ResponseData = "XML success";
-            //ResponseData = this.responseXML;
+            console.log(this.responseXML);
         }
       };
       xmlHttp.open("GET", DataUrl, true);
