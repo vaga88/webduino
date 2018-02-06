@@ -56,7 +56,7 @@
             ResponseData = this.responseXML;
         }
       };
-      xmlHttp.open("PUT", DataUrl, true);
+      xmlHttp.open("GET", DataUrl, true);
       xmlHttp.send(); 
     }
   }
