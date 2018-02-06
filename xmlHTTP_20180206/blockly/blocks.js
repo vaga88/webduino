@@ -9,8 +9,7 @@ Blockly.Blocks['xmlHTTP_ResponseData'] = {
     this.appendValueInput("value_url_")
         .setCheck("String");
     this.setInputsInline(true);
-    this.setPreviousStatement(true);
-    this.setNextStatement(true);
+    this.setOutput(true, null);
     this.setColour(300);
     this.setTooltip("");
     this.setHelpUrl("");
