@@ -18,7 +18,7 @@
     //{
     //  if(ResponseData!="") return ResponseData;
     //}
-    //return DataFormat + " fail";   
+    return DataFormat;   
   } 
   
   function xmlHTTP_get()   
