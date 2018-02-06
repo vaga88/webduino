@@ -33,7 +33,7 @@
       if (this.readyState == 4 && this.status == 200) 
       {    
         if (DataFormat=="HTML")
-          ResponseData = this.responseTEXT;
+          ResponseData = this.responseText;
         else if (DataFormat=="XML")
           ResponseData = this.responseXML;
       }
