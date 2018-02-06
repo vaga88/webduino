@@ -18,7 +18,7 @@
     {
       if(ResponseData!="") return ResponseData;
     }
-    return ResponseData;    
+    return "FAIL";    
   } 
   
   function xmlHTTP_get()   
