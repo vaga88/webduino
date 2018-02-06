@@ -18,7 +18,7 @@
     {
       if(ResponseData!="") return ResponseData;
     }
-    return "FAIL";    
+    return DataFormat + " fail";   
   } 
   
   function xmlHTTP_get()   
@@ -35,7 +35,7 @@
           },
           error: function(exception)
           {
-            DataFormat="FAIL";
+            DataFormat= DataFormat + " fail";
           }
        });
     }
@@ -56,7 +56,7 @@
             ResponseData = this.responseXML;
         }
       };
-      xmlHttp.open("PUT", DataUrl, true);
+      xmlHttp.open("GET", DataUrl, true);
       xmlHttp.send(); 
     }
   }
