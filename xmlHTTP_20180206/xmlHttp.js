@@ -30,7 +30,8 @@
           },
           error: function(exception)
           {
-            ResponseData= DataFormat + " fail";
+            console.log(DataFormat+" fail");
+            ResponseData= DataFormat+" fail";
           }
        });
     }
