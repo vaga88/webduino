@@ -12,7 +12,7 @@
     DataUrl = input_url_;
     DataFormat = input_format_;
     xmlHTTP_get();
-    return DataFormat;   
+    return ResponseData;   
   } 
   
   function xmlHTTP_get()   
@@ -45,9 +45,9 @@
         if (this.readyState == 4 && this.status == 200) 
         {    
           if (DataFormat=="HTML")
-            DataFormat = this.responseText;
+            ResponseData = this.responseText;
           else if (DataFormat=="XML")
-            DataFormat = this.responseXML;
+            ResponseData = this.responseXML;
         }
       };
       xmlHttp.open("GET", DataUrl, true);
