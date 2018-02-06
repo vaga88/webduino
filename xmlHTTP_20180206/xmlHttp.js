@@ -12,12 +12,7 @@
     DataUrl = input_url_;
     DataFormat = input_format_;
     xmlHTTP_get();
-    var thistime = new Date().getTime();
-    while((new Date().getTime()-thistime)<10000)
-    {
-      if (ResponseData!="") return ResponseData;
-    }
-    return "finish";   
+    var thistime = new Date().getTime(); 
   } 
   
   function xmlHTTP_get()   
