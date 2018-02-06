@@ -13,11 +13,11 @@
     DataFormat = input_format_;
     xmlHTTP_get();
     var thistime = new Date().getTime();
-    while((new Date().getTime()-thistime)<5000)
+    while((new Date().getTime()-thistime)<10000)
     {
       if (ResponseData!="") return ResponseData;
     }
-    return ResponseData;   
+    return "finish";   
   } 
   
   function xmlHTTP_get()   
