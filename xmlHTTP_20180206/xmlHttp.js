@@ -26,7 +26,7 @@
     if (DataFormat=="JSON")
     {
       var data = $.ajax({
-          type: "get",
+          type: "post",
           dataType: "jsonp",
           url: DataUrl,
           success: function(json)
