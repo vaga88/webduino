@@ -25,6 +25,7 @@
           url: DataUrl,
           success: function(json)
           {
+            console.log(json);
             ResponseData=json;
           },
           error: function(exception)
@@ -45,8 +46,10 @@
         if (this.readyState == 4 && this.status == 200) 
         {    
           if (DataFormat=="HTML")
+            console.log(this.responseText);
             ResponseData = this.responseText;
           else if (DataFormat=="XML")
+            console.log(this.responseXML);
             ResponseData = this.responseXML;
         }
       };
