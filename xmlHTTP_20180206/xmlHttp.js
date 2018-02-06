@@ -25,11 +25,11 @@
           url: DataUrl,
           success: function(json)
           {
-            DataFormat=json;
+            ResponseData=json;
           },
           error: function(exception)
           {
-            DataFormat= DataFormat + " fail";
+            ResponseData= ResponseData + " fail";
           }
        });
     }
