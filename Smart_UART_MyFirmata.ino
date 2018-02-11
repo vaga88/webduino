@@ -6,7 +6,7 @@
 // ?cmd  
 // Number：  ?cmd=num1  ?cmd=num1,num2
 // String ： ?&cmd=str1  ?&cmd=str1,str2 
-// String+Number ： ?+cmd=num1,str2   
+// Number+String ： ?+cmd=num1,str2   
 
 // ?inputpullup=3
 // ?pinmode=3,1
@@ -14,8 +14,8 @@
 // ?analogwrite=3,200
 // ?digitalread=3
 // ?analogread=3
-// ?&message=Hello,World
-// ?+message=100,Hello
+// ?&cmd=Hello,World
+// ?+cmd=100,Hello
 
 
 #include <SoftwareSerial.h>
@@ -136,15 +136,7 @@ void loop()
     else if (cmd=="analogread")
       {
         SendData(String(analogRead(num1)));
-      }    
-    else if (cmd=="&message")
-      {
-        SendData(str1+","+str2);
-      }     
-    else if (cmd=="+message")
-      {
-        SendData(String(num1)+","+str2);
-      }                
+      }                 
     else 
       {
         SendData("Command is not defined");
