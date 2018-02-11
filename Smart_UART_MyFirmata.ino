@@ -14,8 +14,8 @@
 // ?analogwrite=3,200
 // ?digitalread=3
 // ?analogread=3
-// ?&cmd=Hello,World
-// ?+cmd=100,Hello
+// ?&yourcmd=Hello,World
+// ?+yourcmd=100,Hello
 
 
 #include <SoftwareSerial.h>
