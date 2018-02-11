@@ -1,7 +1,8 @@
 /*
+
 Webduino Smart UART
 
-Author : ChungYi Fu (Kaohsiung, Taiwan)  2018-2-11 15:30 
+Author : ChungYi Fu (Kaohsiung, Taiwan)  2018-2-11 16:00 
 
 Command format :  
 ?cmd  
@@ -17,6 +18,7 @@ Number+String ： ?+cmd=num1,str2
 ?analogread=3
 ?&yourcmd=Hello,World
 ?+yourcmd=100,Hello
+
 */
 
 
@@ -25,7 +27,6 @@ SoftwareSerial mySerial(10, 11); // Arduino RX:10, TX:11
 
 String ReceiveData="", command="",cmd="",str1="",str2="";
 long int num1=-1,num2=-1;
-byte ReceiveState=0,cmdState=1,num1State=0,num2State=0,commastate=0;
 
 void setup()
 {
