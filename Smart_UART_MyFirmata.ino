@@ -16,6 +16,8 @@ Number+String ： ?+cmd=num1,str2
 ?analogwrite=3,200
 ?digitalread=3
 ?analogread=3
+
+?yourcmd=3,180
 ?&yourcmd=Hello,World
 ?+yourcmd=100,Hello
 
