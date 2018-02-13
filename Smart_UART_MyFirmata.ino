@@ -54,11 +54,21 @@ void loop()
       mySerial.read();
     }
     
-    if (cmd=="your command")
+    if (cmd=="yourcmd")
       {
-        // you can do anything
-        //SendData("Hello World");
+        //you can do anything
+        //SendData(command);
       }
+    else if (cmd=="&yourcmd")
+      {
+        //you can do anything
+        //SendData(command);
+      }
+    else if (cmd=="+yourcmd")
+      {
+        //you can do anything
+        //SendData(command);
+      }   
     else if (cmd=="inputpullup")
       {
         pinMode(num1, INPUT_PULLUP);
