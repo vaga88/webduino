@@ -2,7 +2,7 @@
 
 Webduino Smart UART
 
-Author : ChungYi Fu (Kaohsiung, Taiwan)  2018-2-11 16:00 
+Author : ChungYi Fu (Kaohsiung, Taiwan)  2018-2-14 13:00 
 
 Command format :  
 ?cmd  
@@ -16,8 +16,6 @@ Number+String ： ?+cmd=num1,str2
 ?analogwrite=3,200
 ?digitalread=3
 ?analogread=3
-
-?yourcmd=3,180
 ?&yourcmd=Hello,World
 ?+yourcmd=100,Hello
 
@@ -54,21 +52,11 @@ void loop()
       mySerial.read();
     }
     
-    if (cmd=="yourcmd")
+    if (cmd=="your command")
       {
-        //you can do anything
-        //SendData(command);
+        // you can do anything
+        //SendData("Hello World");
       }
-    else if (cmd=="&yourcmd")
-      {
-        //you can do anything
-        //SendData(command);
-      }
-    else if (cmd=="+yourcmd")
-      {
-        //you can do anything
-        //SendData(command);
-      }   
     else if (cmd=="inputpullup")
       {
         pinMode(num1, INPUT_PULLUP);
@@ -120,19 +108,18 @@ void getVariable()
     while (mySerial.available())
     {
       char c=mySerial.read();
-      delay(10);
       ReceiveData=ReceiveData+String(c);
       
       if (String(c).indexOf("?")!=-1) ReceiveState=1;
       if (String(c).indexOf(" ")!=-1) ReceiveState=0;
-      if ((ReceiveState==1)&&(String(c).indexOf("?")==-1)) 
+      if (ReceiveState==1)
       {
         command=command+String(c);
 
         if ((String(c).indexOf("=")!=-1)&&(ReceiveState==1)) cmdState=0;
-        if (cmdState==1) cmd=cmd+String(c);
+        if ((cmdState==1)&&(String(c).indexOf("?")==-1)) cmd=cmd+String(c);
 
-        if ((String(c).indexOf("=")!=-1)&&(ReceiveState==1)) num1State=1;
+        if ((String(c).indexOf("=")!=-1)&&(ReceiveState==1)&&(num2State==0)) num1State=1;
         if (((String(c).indexOf(",")!=-1)||(String(c).indexOf(" ")!=-1))&&(ReceiveState==1)) num1State=0;
         if ((num1State==1)&&(String(c).indexOf("=")==-1))
         {
