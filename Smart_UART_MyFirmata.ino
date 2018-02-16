@@ -1,7 +1,5 @@
 /*
-
 Webduino Smart UART
-
 Author : ChungYi Fu (Kaohsiung, Taiwan)  2018-2-16 13:30 
 
 Command format :  
@@ -18,7 +16,6 @@ Number+String ： ?+cmd=num1,str2
 ?analogread=3
 ?&yourcmd=Hello,World
 ?+yourcmd=100,Hello
-
 */
 
 
@@ -52,11 +49,21 @@ void loop()
       mySerial.read();
     }
     
-    if (cmd=="your command")
+    if (cmd=="yourcmd")
       {
-        // you can do anything
-        //SendData("Hello World");
+        //you can do anything
+        //SendData(cmd+"="+num1+","+num2);
       }
+    else if (cmd=="&yourcmd")
+      {
+        //you can do anything
+        //SendData(cmd+"="+str1+","+str2);
+      }
+    else if (cmd=="+yourcmd")
+      {
+        //you can do anything
+        //SendData(cmd+"="+String(num1)+","+str2);
+      }   
     else if (cmd=="inputpullup")
       {
         pinMode(num1, INPUT_PULLUP);
