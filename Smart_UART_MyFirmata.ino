@@ -1,5 +1,7 @@
 /*
+
 Webduino Smart UART
+
 Author : ChungYi Fu (Kaohsiung, Taiwan)  2018-2-16 13:30 
 
 Command format :  
@@ -16,6 +18,7 @@ Number+String ： ?+cmd=num1,str2
 ?analogread=3
 ?&yourcmd=Hello,World
 ?+yourcmd=100,Hello
+
 */
 
 
@@ -107,18 +110,18 @@ void getVariable()
       char c=mySerial.read();
       ReceiveData=ReceiveData+String(c);
       
-      if (String(c).indexOf("?")!=-1) ReceiveState=1;
-      if (String(c).indexOf(" ")!=-1) ReceiveState=0;
+      if (c=='?') ReceiveState=1;
+      if (c==' ') ReceiveState=0;
       if (ReceiveState==1)
       {
         command=command+String(c);
 
-        if ((String(c).indexOf("=")!=-1)&&(ReceiveState==1)) cmdState=0;
-        if ((cmdState==1)&&(String(c).indexOf("?")==-1)) cmd=cmd+String(c);
+        if ((c=='=')&&(ReceiveState==1)) cmdState=0;
+        if ((cmdState==1)&&(c!='?')) cmd=cmd+String(c);
 
-        if ((String(c).indexOf("=")!=-1)&&(ReceiveState==1)&&(num2State==0)) num1State=1;
-        if (((String(c).indexOf(",")!=-1)||(String(c).indexOf(" ")!=-1))&&(ReceiveState==1)) num1State=0;
-        if ((num1State==1)&&(String(c).indexOf("=")==-1))
+        if ((c=='=')&&(ReceiveState==1)&&(num2State==0)) num1State=1;
+        if (((c==',')||(c==' '))&&(ReceiveState==1)) num1State=0;
+        if ((num1State==1)&&(c!='='))
         {
           if (ReceiveData.indexOf("?&")!=-1)
             str1=str1+String(c);
@@ -131,9 +134,9 @@ void getVariable()
           }
         }
         
-        if ((String(c).indexOf(",")!=-1)&&(ReceiveState==1)) num2State=1;
-        if ((String(c).indexOf(" ")!=-1)&&(ReceiveState==1)) num2State=0;
-        if ((num2State==1)&&(String(c).indexOf(",")==-1))
+        if ((c==',')&&(ReceiveState==1)) num2State=1;
+        if ((c==' ')&&(ReceiveState==1)) num2State=0;
+        if ((num2State==1)&&(c!=','))
         {
           if ((ReceiveData.indexOf("?&")!=-1)||(ReceiveData.indexOf("?+")!=-1))
             str2=str2+String(c);
