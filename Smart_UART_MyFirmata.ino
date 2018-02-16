@@ -1,7 +1,5 @@
 /*
-
 Webduino Smart UART
-
 Author : ChungYi Fu (Kaohsiung, Taiwan)  2018-2-16 13:30 
 
 Command format :  
@@ -18,7 +16,6 @@ Number+String ： ?+cmd=num1,str2
 ?analogread=3
 ?&yourcmd=Hello,World
 ?+yourcmd=100,Hello
-
 */
 
 
