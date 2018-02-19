@@ -14,7 +14,7 @@ Command format : ?cmd=str1;str2;str3
 #include <SoftwareSerial.h>
 SoftwareSerial mySerial(10, 11); // Arduino RX:10, TX:11 
 
-String ReceiveData="", command="",cmd="",str1="",str2="";
+String ReceiveData="", command="",cmd="",str1="",str2="",str3="";
 
 void setup()
 {
