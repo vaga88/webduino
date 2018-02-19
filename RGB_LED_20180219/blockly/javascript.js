@@ -5,6 +5,9 @@ Blockly.JavaScript['rgb_led'] = function(block) {
   var value_green = Blockly.JavaScript.valueToCode(block, 'VALUE_GREEN', Blockly.JavaScript.ORDER_ATOMIC);
   var pin_blue = block.getFieldValue('PIN_BLUE');
   var value_blue = Blockly.JavaScript.valueToCode(block, 'VALUE_BLUE', Blockly.JavaScript.ORDER_ATOMIC);
+  
+  Blockly.JavaScript.definitions_['var_pinred'] = 'var test;';
+  
   // TODO: Assemble JavaScript into code variable.
   var code = 'var pinred = getPin(board, '+pin_red+');\n'+
              'pinred.setMode(3);\n'+
