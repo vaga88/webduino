@@ -1,4 +1,4 @@
-Blockly.Msg.TITLE_SHOW = "RGB LED   ";
+Blockly.Msg.TITLE_SHOW = "SMART RGB LED   ";
 Blockly.Msg.RED_SHOW = "RED";
 Blockly.Msg.VALE_RED_SHOW = "VALUE";
 Blockly.Msg.GREEN_SHOW = "GREEN";
