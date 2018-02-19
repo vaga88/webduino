@@ -16,6 +16,5 @@ Blockly.JavaScript['rgb_led'] = function(block) {
              'pinblue.setMode(3);\n'+
              'pinblue.write('+value_blue+');\n'+
              'funRGB_LED("Success");\n';
-             '
   return code;
 };
