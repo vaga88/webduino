@@ -3,9 +3,9 @@
   'use strict';
   
   
-  function funRGB_LED(pin_red,value_red,pin_green,value_green,pin_blue,value_blue)
+  function funRGB_LED(message)
   {
-
+    alert(message);
   }
     
   window.funRGB_LED = funRGB_LED;
