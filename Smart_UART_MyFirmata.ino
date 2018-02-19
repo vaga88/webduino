@@ -69,7 +69,7 @@ void loop()
       }      
     else 
       {
-        SendData("Command is not defined");
+        SendData("command is not defined");
       }  
   }
 }
@@ -82,7 +82,7 @@ void SendData(String data)
 void getVariable()
 {
   ReceiveData="";command="";cmd="";str1="";str2="";
-  byte ReceiveState=0,cmdState=1,str1State=0,str2State=0,commastate=0,equalstate=0;
+  byte ReceiveState=0,cmdState=1,str1State=0,str2State=0,semicolonstate=0,equalstate=0;
   
   if (mySerial.available())
   {
@@ -111,11 +111,11 @@ void getVariable()
             str2=str2+String(c);
         else if ((str1State==1)&&(c=='=')&&(equalstate==1))
           str1=str1+String(c); 
-        else if ((str2State==1)&&(c==';')&&(commastate==1))
+        else if ((str2State==1)&&(c==';')&&(semicolonstate==1))
           str2=str2+String(c); 
           
         if (str1State==1) equalstate=1;
-        if (str2State==1) commastate=1;
+        if (str2State==1) semicolonstate=1;
       }
     }  
     Serial.println(ReceiveData);
