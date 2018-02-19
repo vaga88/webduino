@@ -1,13 +1,22 @@
-<category id="catpmgov">
-  <block type="pmgov_link">
-    <field name="value_format_">JSON</field>
-    <value name="value_url_">
-      <block type="text">
-        <field name="TEXT">https://opendata.epa.gov.tw/webapi/api/rest/datastore/355000000I-000259?sort=County</field>
+<category id="catrgbled">
+  <block type="rgb_led">
+    <field name="PIN_RED">15</field>
+    <field name="PIN_GREEN">12</field>
+    <field name="PIN_BLUE">13</field>
+    <value name="VALUE_RED">
+      <block type="math_number">
+        <field name="NUM">0</field>
       </block>
     </value>
-  </block>  
-  <block type="pmgov_get">
-    <field name="value_site_"></field>
-  </block> 
+    <value name="VALUE_GREEN">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="VALUE_BLUE">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
  </category>
