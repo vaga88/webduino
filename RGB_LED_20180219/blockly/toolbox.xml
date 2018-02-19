@@ -1,4 +1,4 @@
-<category id="catrbgled">
+<category id="catrgbled">
   <block type="rgb_led">
     <field name="PIN_RED">15</field>
     <field name="PIN_GREEN">12</field>
