@@ -1,12 +1,12 @@
 {
-  "types": ["pmgov_link","pmgov_get"],
+  "types": ["rgb_led"],
   "category": "catPlus",
   "scripts": [
     "blockly/blocks.js",
     "blockly/javascript.js"
   ],
   "dependencies": [
-    "AirQualityTaiwan.js"    
+    "rgb_led.js"    
   ],
   "msg": "blockly/msg",
   "blocksMsg": "blockly/msg/blocks",
