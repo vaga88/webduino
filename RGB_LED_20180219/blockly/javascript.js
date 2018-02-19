@@ -1,12 +1,11 @@
-Blockly.JavaScript['pmgov_link'] = function(block) {
-  var value_format_ = block.getFieldValue('value_format_'); 
-  var value_url_ = Blockly.JavaScript.valueToCode(block, 'value_url_', Blockly.JavaScript.ORDER_ATOMIC);  
-  var code = 'PM_gov_link('+value_url_+',"'+value_format_+'");\nawait delay(1);';
+Blockly.JavaScript['rgb_led'] = function(block) {
+  var pin_red = block.getFieldValue('PIN_RED');
+  var value_red = Blockly.JavaScript.valueToCode(block, 'VALUE_RED', Blockly.JavaScript.ORDER_ATOMIC);
+  var pin_green = block.getFieldValue('PIN_GREEN');
+  var value_green = Blockly.JavaScript.valueToCode(block, 'VALUE_GREEN', Blockly.JavaScript.ORDER_ATOMIC);
+  var pin_blue = block.getFieldValue('PIN_BLUE');
+  var value_blue = Blockly.JavaScript.valueToCode(block, 'VALUE_BLUE', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = 'funRGB_LED('+pin_red+','+value_red+','+pin_green+','+value_green+','+pin_blue+','+value_blue+');\n';
   return code;
-};
-
-Blockly.JavaScript['pmgov_get'] = function(block) {
-  var value_site_ = block.getFieldValue('value_site_');  
-  var code = 'PM_gov_get("'+value_site_+'")';
-  return [code, Blockly.JavaScript.ORDER_NONE];
 };
