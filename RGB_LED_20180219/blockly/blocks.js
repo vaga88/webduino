@@ -3,22 +3,22 @@ Blockly.Blocks['rgb_led'] = {
     this.appendValueInput("VALUE_RED")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("RGB LED   ")
-        .appendField("RED")
+        .appendField(Blockly.Msg.TITLE_SHOW)
+        .appendField(Blockly.Msg.RED_SHOW)
         .appendField(new Blockly.FieldDropdown([["15","15"], ["12","12"], ["13","13"]]), "PIN_RED")
-        .appendField("VALUE");
+        .appendField(Blockly.Msg.VALE_RED_SHOW);
     this.appendValueInput("VALUE_GREEN")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("GREEN")
+        .appendField(Blockly.Msg.GREEN_SHOW)
         .appendField(new Blockly.FieldDropdown([["15","15"], ["12","12"], ["13","13"]]), "PIN_GREEN")
-        .appendField("VALUE");
+        .appendField(Blockly.Msg.VALUE_GREEN_SHOW);
     this.appendValueInput("VALUE_BLUE")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("BLUE")
+        .appendField(Blockly.Msg.BLUE_SHOW)
         .appendField(new Blockly.FieldDropdown([["15","15"], ["12","12"], ["13","13"]]), "PIN_BLUE")
-        .appendField("VALUE");
+        .appendField(Blockly.Msg.VALUE_BLUE_SHOW);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(330);
