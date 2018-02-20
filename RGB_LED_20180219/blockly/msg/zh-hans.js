@@ -1,1 +1,1 @@
-MSG.catrgbled = "SMART LED";
+MSG.catrgbled = "RGB LED";
