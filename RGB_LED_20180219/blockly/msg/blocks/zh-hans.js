@@ -1,4 +1,4 @@
-Blockly.Msg.TITLE_SHOW = "SMART RGB LED   ";
+Blockly.Msg.TITLE_SHOW = "RGB LED   ";
 Blockly.Msg.RED_SHOW = "红";
 Blockly.Msg.VALE_RED_SHOW = "数值";
 Blockly.Msg.GREEN_SHOW = "绿";
