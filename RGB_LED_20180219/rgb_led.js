@@ -5,7 +5,7 @@
   
   function funRGB_LED(message)
   {
-    alert(message);
+    //alert(message);
   }
     
   window.funRGB_LED = funRGB_LED;
