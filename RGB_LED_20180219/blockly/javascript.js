@@ -6,18 +6,18 @@ Blockly.JavaScript['rgb_led'] = function(block) {
   var pin_blue = block.getFieldValue('PIN_BLUE');
   var value_blue = Blockly.JavaScript.valueToCode(block, 'VALUE_BLUE', Blockly.JavaScript.ORDER_ATOMIC);
   
-  Blockly.JavaScript.definitions_['var_rgbled_pin'] = 'var pin_red,pin_green,pin_blue;';
+  Blockly.JavaScript.definitions_['var_rgbled_pin'] = 'var pinred,pingreen,pinblue;';
   
   // TODO: Assemble JavaScript into code variable.
-  var code = 'pin_red = getPin(board, '+pin_red+');\n'+
-             'pin_red.setMode(3);\n'+
-             'pin_red.write('+value_red+');\n'+
-             'pin_green = getPin(board, '+pin_green+');\n'+
-             'pin_green.setMode(3);\n'+
-             'pin_green.write('+value_green+');\n'+
-             'pin_blue = getPin(board, '+pin_blue+');\n'+
-             'pin_blue.setMode(3);\n'+
-             'pin_blue.write('+value_blue+');\n'+
+  var code = 'pinred = getPin(board, '+pin_red+');\n'+
+             'pinred.setMode(3);\n'+
+             'pinred.write('+value_red+');\n'+
+             'pingreen = getPin(board, '+pin_green+');\n'+
+             'pingreen.setMode(3);\n'+
+             'pingreen.write('+value_green+');\n'+
+             'pinblue = getPin(board, '+pin_blue+');\n'+
+             'pinblue.setMode(3);\n'+
+             'pinblue.write('+value_blue+');\n'+
              'funRGB_LED('+pin_red+','+value_red+','+pin_green+','+value_green+','+pin_blue+','+value_blue+');\n';
   return code;
 };
