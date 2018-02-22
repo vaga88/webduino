@@ -3,7 +3,7 @@
   'use strict';
   
   
-  function funRGB_LED(pin_red,value_red,pin_green,value_green,pin_blue,value_blue+')
+  function funRGB_LED(pin_red,value_red,pin_green,value_green,pin_blue,value_blue)
   {
     console.log(pin_red+','+value_red+','+pin_green+','+value_green+','+pin_blue+','+value_blue);
   }
