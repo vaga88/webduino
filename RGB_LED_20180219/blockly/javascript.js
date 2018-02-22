@@ -18,6 +18,6 @@ Blockly.JavaScript['rgb_led'] = function(block) {
              'pin_blue = getPin(board, '+pin_blue+');\n'+
              'pin_blue.setMode(3);\n'+
              'pin_blue.write('+value_blue+');\n'+
-             'funRGB_LED("Success");\n';
+             'funRGB_LED('+pin_red+','+value_red+','+pin_green+','+value_green+','+pin_blue+','+value_blue+');\n';
   return code;
 };
