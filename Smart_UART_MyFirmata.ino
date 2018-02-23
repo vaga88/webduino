@@ -91,17 +91,17 @@ void loop()
         }
         else if  (str1=="L")
         {
-          analogWrite(5,str2.toInt());
-          analogWrite(6,0);
-          analogWrite(9,0);
-          analogWrite(10,str3.toInt());          
-        }
-        else if  (str1=="R")
-        {
           analogWrite(5,0);
           analogWrite(6,str2.toInt());
           analogWrite(9,str3.toInt());
-          analogWrite(10,0); 
+          analogWrite(10,0);   
+        }
+        else if  (str1=="R")
+        {
+          analogWrite(5,str2.toInt());
+          analogWrite(6,0);
+          analogWrite(9,0);
+          analogWrite(10,str3.toInt());   
         }
       }    
     else 
