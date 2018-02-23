@@ -1,6 +1,6 @@
 /*
 Webduino Smart UART
-Author : ChungYi Fu (Kaohsiung, Taiwan)  2018-2-23 22:00 
+Author : ChungYi Fu (Kaohsiung, Taiwan)  2018-2-23 22:30 
 Command format : ?cmd=str1;str2;str3;str4;str5;str6;str7;str8;str9
 ?inputpullup=3
 ?pinmode=3;1
@@ -16,6 +16,89 @@ SoftwareSerial mySerial(10, 11); // Arduino RX:10, TX:11
 
 String ReceiveData="", command="",cmd="",str1="",str2="",str3="",str4="",str5="",str6="",str7="",str8="",str9="";
 
+void executecommand()
+{
+  Serial.println("");
+  //Serial.println("command: "+command);
+  Serial.println("cmd= "+cmd+" ,str1= "+str1+" ,str2= "+str2+" ,str3= "+str3+" ,str4= "+str4+" ,str5= "+str5+" ,str6= "+str6+" ,str7= "+str7+" ,str8= "+str8+" ,str9= "+str9);
+  
+  if (cmd=="yourcmd")
+    {
+      //you can do anything
+      //SendData(cmd+"="+str1+";"+str2);
+    } 
+  else if (cmd=="inputpullup")
+    {
+      pinMode(str1.toInt(), INPUT_PULLUP);
+      SendData(command);
+    }  
+  else if (cmd=="pinmode")
+    {
+      pinMode(str1.toInt(), str2.toInt());
+      SendData(command);
+    }        
+  else if (cmd=="digitalwrite")
+    {
+      digitalWrite(str1.toInt(),str2.toInt());
+      SendData(command);
+    }   
+  else if (cmd=="digitalread")
+    {
+      SendData(String(digitalRead(str1.toInt())));
+    }    
+  else if (cmd=="analogwrite")
+    {
+      analogWrite(str1.toInt(),str2.toInt());
+      SendData(command);
+    }       
+  else if (cmd=="analogread")
+    {
+      SendData(String(analogRead(str1.toInt())));
+    }  
+  else if (cmd=="car")    //   ?car=pin_L1;pin_L2;pin_R1;pin_R2;status;left_speed;right_speed
+    {
+      if (str5=="S")
+      {
+        analogWrite(str1.toInt(),0);
+        analogWrite(str2.toInt(),0);
+        analogWrite(str3.toInt(),0);
+        analogWrite(str4.toInt(),0);
+      }
+      else if  (str5=="F")
+      {
+        analogWrite(str1.toInt(),0);
+        analogWrite(str2.toInt(),str6.toInt());
+        analogWrite(str3.toInt(),str7.toInt());
+        analogWrite(str4.toInt(),0);          
+      }
+      else if  (str5=="B")
+      {
+        analogWrite(str1.toInt(),str6.toInt());
+        analogWrite(str2.toInt(),0);
+        analogWrite(str3.toInt(),0);
+        analogWrite(str4.toInt(),str7.toInt());          
+      }
+      else if  (str5=="L")
+      {
+        analogWrite(str1.toInt(),0);
+        analogWrite(str2.toInt(),str6.toInt());
+        analogWrite(str3.toInt(),0);
+        analogWrite(str4.toInt(),str7.toInt());  
+      }
+      else if  (str5=="R")
+      {
+        analogWrite(str1.toInt(),str6.toInt());
+        analogWrite(str2.toInt(),0);
+        analogWrite(str3.toInt(),str7.toInt());
+        analogWrite(str4.toInt(),0);    
+      }
+    }    
+  else 
+    {
+      SendData("command is not defined");
+    }   
+}
+
 void setup()
 {
   Serial.begin(9600);
@@ -29,85 +112,7 @@ void loop()
 
   if (ReceiveData.indexOf("?")==0)
   {
-    Serial.println("");
-    //Serial.println("command: "+command);
-    Serial.println("cmd= "+cmd+" ,str1= "+str1+" ,str2= "+str2+" ,str3= "+str3+" ,str4= "+str4+" ,str5= "+str5+" ,str6= "+str6+" ,str7= "+str7+" ,str8= "+str8+" ,str9= "+str9);
-    
-    if (cmd=="yourcmd")
-      {
-        //you can do anything
-        //SendData(cmd+"="+str1+";"+str2);
-      } 
-    else if (cmd=="inputpullup")
-      {
-        pinMode(str1.toInt(), INPUT_PULLUP);
-        SendData(command);
-      }  
-    else if (cmd=="pinmode")
-      {
-        pinMode(str1.toInt(), str2.toInt());
-        SendData(command);
-      }        
-    else if (cmd=="digitalwrite")
-      {
-        digitalWrite(str1.toInt(),str2.toInt());
-        SendData(command);
-      }   
-    else if (cmd=="digitalread")
-      {
-        SendData(String(digitalRead(str1.toInt())));
-      }    
-    else if (cmd=="analogwrite")
-      {
-        analogWrite(str1.toInt(),str2.toInt());
-        SendData(command);
-      }       
-    else if (cmd=="analogread")
-      {
-        SendData(String(analogRead(str1.toInt())));
-      }  
-    else if (cmd=="car")    //   ?car=pin_L1;pin_L2;pin_R1;pin_R2;status;left_speed;right_speed
-      {
-        if (str5=="S")
-        {
-          analogWrite(str1.toInt(),0);
-          analogWrite(str2.toInt(),0);
-          analogWrite(str3.toInt(),0);
-          analogWrite(str4.toInt(),0);
-        }
-        else if  (str5=="F")
-        {
-          analogWrite(str1.toInt(),0);
-          analogWrite(str2.toInt(),str6.toInt());
-          analogWrite(str3.toInt(),str7.toInt());
-          analogWrite(str4.toInt(),0);          
-        }
-        else if  (str5=="B")
-        {
-          analogWrite(str1.toInt(),str6.toInt());
-          analogWrite(str2.toInt(),0);
-          analogWrite(str3.toInt(),0);
-          analogWrite(str4.toInt(),str7.toInt());          
-        }
-        else if  (str5=="L")
-        {
-          analogWrite(str1.toInt(),0);
-          analogWrite(str2.toInt(),str6.toInt());
-          analogWrite(str3.toInt(),0);
-          analogWrite(str4.toInt(),str7.toInt());  
-        }
-        else if  (str5=="R")
-        {
-          analogWrite(str1.toInt(),str6.toInt());
-          analogWrite(str2.toInt(),0);
-          analogWrite(str3.toInt(),str7.toInt());
-          analogWrite(str4.toInt(),0);    
-        }
-      }    
-    else 
-      {
-        SendData("command is not defined");
-      }  
+    executecommand();
   }
 }
 
