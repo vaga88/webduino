@@ -1,6 +1,6 @@
 /*
 Webduino Smart UART
-Author : ChungYi Fu (Kaohsiung, Taiwan)  2018-2-21 17:30 
+Author : ChungYi Fu (Kaohsiung, Taiwan)  2018-2-23 20:00 
 Command format : ?cmd=str1;str2;str3;str4;str5;str6;str7;str8;str9
 ?inputpullup=3
 ?pinmode=3;1
@@ -66,42 +66,42 @@ void loop()
       {
         SendData(String(analogRead(str1.toInt())));
       }  
-    else if (cmd=="car")    //?car=motion;left_speed;right_speed
+    else if (cmd=="car")    //?car=A-1A;A-1B;;B-1A;B-1B;motion;left_speed;right_speed
       {
-        if (str1=="S")
+        if (str5=="S")
         {
-          analogWrite(5,0);
-          analogWrite(6,0);
-          analogWrite(9,0);
-          analogWrite(10,0);
+          analogWrite(str1.toInt(),0);
+          analogWrite(str2.toInt(),0);
+          analogWrite(str3.toInt(),0);
+          analogWrite(str4.toInt(),0);
         }
-        else if  (str1=="F")
+        else if  (str5=="F")
         {
-          analogWrite(5,str2.toInt());
-          analogWrite(6,0);
-          analogWrite(9,str3.toInt());
-          analogWrite(10,0);          
+          analogWrite(str1.toInt(),0);
+          analogWrite(str2.toInt(),str6.toInt());
+          analogWrite(str3.toInt(),str7.toInt());
+          analogWrite(str4.toInt(),0);          
         }
-        else if  (str1=="B")
+        else if  (str5=="B")
         {
-          analogWrite(5,0);
-          analogWrite(6,str2.toInt());
-          analogWrite(9,0);
-          analogWrite(10,str3.toInt());          
+          analogWrite(str1.toInt(),str6.toInt());
+          analogWrite(str2.toInt(),0);
+          analogWrite(str3.toInt(),0);
+          analogWrite(str4.toInt(),str7.toInt());          
         }
-        else if  (str1=="L")
+        else if  (str5=="L")
         {
-          analogWrite(5,0);
-          analogWrite(6,str2.toInt());
-          analogWrite(9,str3.toInt());
-          analogWrite(10,0);   
+          analogWrite(str1.toInt(),0);
+          analogWrite(str2.toInt(),str6.toInt());
+          analogWrite(str3.toInt(),0);
+          analogWrite(str4.toInt(),str7.toInt());  
         }
-        else if  (str1=="R")
+        else if  (str5=="R")
         {
-          analogWrite(5,str2.toInt());
-          analogWrite(6,0);
-          analogWrite(9,0);
-          analogWrite(10,str3.toInt());   
+          analogWrite(str1.toInt(),str6.toInt());
+          analogWrite(str2.toInt(),0);
+          analogWrite(str3.toInt(),str7.toInt());
+          analogWrite(str4.toInt(),0);    
         }
       }    
     else 
