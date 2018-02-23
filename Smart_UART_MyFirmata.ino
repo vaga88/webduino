@@ -66,7 +66,7 @@ void loop()
       {
         SendData(String(analogRead(str1.toInt())));
       }  
-    else if (cmd=="car")    //   ?car=A-1A;A-1B;B-1A;B-1B;status;left_speed;right_speed
+    else if (cmd=="car")    //   ?car=pinL1;pinL2;pinR1;pinR2;status;left_speed;right_speed
       {
         if (str5=="S")
         {
