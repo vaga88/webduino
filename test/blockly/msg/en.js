@@ -1,1 +1,1 @@
-MSG.catpmgov = "TAIWAN AIR QUALITY";
+MSG.catUART = "UART";

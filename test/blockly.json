@@ -1,14 +1,16 @@
 {
-  "types": ["pmgov_link","pmgov_get"],
-  "category": "catPlus",
-  "scripts": [
-    "blockly/blocks.js",
-    "blockly/javascript.js"
-  ],
-  "dependencies": [
-    "AirQualityTaiwan.js"    
-  ],
-  "msg": "blockly/msg",
-  "blocksMsg": "blockly/msg/blocks",
-  "toolbox": "blockly/toolbox.xml"
+    "types": ["uart_new", "uart_rx","uart_data","uart_car","uart_system","uart_custom"],
+    "category": "catMenu2",
+    "scripts": [
+        "blockly/blocks.js",
+        "blockly/javascript.js"
+    ],
+    "dependencies": [
+        "UART.js",
+        "UART-blockly.js",
+        "uart_myfirmata.js"
+    ],
+    "msg": "blockly/msg",
+    "blocksMsg": "blockly/msg/blocks",
+    "toolbox": "blockly/toolbox.xml"
 }

@@ -1,2 +1,4 @@
-Blockly.Msg.PM_LINK_SHOW = "連結空氣資料";
-Blockly.Msg.PM_GET_SHOW = "取得空氣資料";
+// UART
+Blockly.Msg.WEBDUINO_UART_SETTING = "設定 UART baud rate:";
+Blockly.Msg.WEBDUINO_UART_RX = "接收資料";
+Blockly.Msg.WEBDUINO_UART_TX = "傳送資料";

@@ -1,13 +1,15 @@
-<category id="catpmgov">
-  <block type="pmgov_link">
-    <field name="value_format_">JSON</field>
-    <value name="value_url_">
-      <block type="text">
-        <field name="TEXT">https://opendata.epa.gov.tw/webapi/api/rest/datastore/355000000I-000259?sort=County</field>
-      </block>
-    </value>
-  </block>  
-  <block type="pmgov_get">
-    <field name="value_site_"></field>
-  </block> 
- </category>
+<category id="catUART" tags="mark1,fly,smart">
+    <block type="variables_set">
+        <field name="VAR">uart</field>
+        <value name="VALUE">
+            <block type="uart_new">
+            </block>
+        </value>
+    </block>
+    <block type="uart_tx">
+    </block>
+    <block type="uart_rx">
+    </block>
+    <block type="uart_data">
+    </block>
+</category>
