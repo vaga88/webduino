@@ -1,5 +1,5 @@
 {
-    "types": ["uart_new", "uart_rx","uart_data"],
+    "types": ["uart_new", "uart_rx","uart_data","uart_car","uart_system","uart_custom"],
     "category": "catMenu2",
     "scripts": [
         "blockly/blocks.js",
@@ -7,7 +7,8 @@
     ],
     "dependencies": [
         "UART.js",
-        "UART-blockly.js"
+        "UART-blockly.js",
+        "uart_myfirmata.js"
     ],
     "msg": "blockly/msg",
     "blocksMsg": "blockly/msg/blocks",
