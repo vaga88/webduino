@@ -8,7 +8,7 @@ Blockly.JavaScript['uart_car'] = function(block) {
   var value_str6 = Blockly.JavaScript.valueToCode(block, 'str6', Blockly.JavaScript.ORDER_ATOMIC);
   var value_str7 = Blockly.JavaScript.valueToCode(block, 'str7', Blockly.JavaScript.ORDER_ATOMIC);
   var cmd = '?'+value_cmd+'='+value_str1+';'+value_str2+';'+value_str3+';'+value_str4+';'+dropdown_str5+';'+value_str6+';'+value_str7;
-  var code = cmd.replace("'", "");
+  var code = "'"+cmd.replace("'", "")+"'";
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
