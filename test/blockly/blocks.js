@@ -115,12 +115,12 @@ Blockly.Blocks['uart_system'] = {
         .setCheck("Number")
         .appendField("value");
     this.appendValueInput("str3")
-        .setCheck("Number")
+        .setCheck(null)
         .appendField("other");
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(345);
-    this.setTooltip("");
-    this.setHelpUrl("");
+ this.setTooltip("");
+ this.setHelpUrl("");
   }
 };
