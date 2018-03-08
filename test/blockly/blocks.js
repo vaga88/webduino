@@ -51,7 +51,7 @@ Blockly.Blocks['uart_system'] = {
         .appendField("value");
     this.appendValueInput("str3")
         .setCheck(null)
-        .appendField("str3~");
+        .appendField("str3~str9");
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(345);
