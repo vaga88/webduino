@@ -124,3 +124,43 @@ Blockly.Blocks['uart_system'] = {
  this.setHelpUrl("");
   }
 };
+
+Blockly.Blocks['uart_custom'] = {
+  init: function() {
+    this.appendValueInput("cmd")
+        .setCheck(null)
+        .appendField("Uart Custom  cmd");
+    this.appendValueInput("str1")
+        .setCheck(null)
+        .appendField("str1");
+    this.appendValueInput("str2")
+        .setCheck(null)
+        .appendField("str2");
+    this.appendValueInput("str3")
+        .setCheck(null)
+        .appendField("str3");
+    this.appendValueInput("str4")
+        .setCheck(null)
+        .appendField("str4");
+    this.appendValueInput("str5")
+        .setCheck(null)
+        .appendField("str5");
+    this.appendValueInput("str6")
+        .setCheck(null)
+        .appendField("str6");
+    this.appendValueInput("str7")
+        .setCheck(null)
+        .appendField("str7");
+    this.appendValueInput("str8")
+        .setCheck(null)
+        .appendField("str8");
+    this.appendValueInput("str9")
+        .setCheck(null)
+        .appendField("str9");
+    this.setInputsInline(true);
+    this.setOutput(true, null);
+    this.setColour(345);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
