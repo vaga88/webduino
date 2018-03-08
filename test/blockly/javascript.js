@@ -40,7 +40,7 @@ Blockly.JavaScript['uart_car'] = function(block) {
   var value_str6 = Blockly.JavaScript.valueToCode(block, 'str6', Blockly.JavaScript.ORDER_ATOMIC);
   var value_str7 = Blockly.JavaScript.valueToCode(block, 'str7', Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
-  var code = '...';
+  var code = '?'+value_cmd+'='+value_str1+';'+value_str2+';'+value_str3+';'+value_str4+';'+value_str5+';'+value_str6+';'+value_str7';
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
