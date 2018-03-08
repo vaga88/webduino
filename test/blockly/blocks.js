@@ -98,8 +98,8 @@ Blockly.Blocks['uart_car'] = {
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(345);
- this.setTooltip("");
- this.setHelpUrl("");
+    this.setTooltip("");
+    this.setHelpUrl("");
   }
 };
 
@@ -119,8 +119,8 @@ Blockly.Blocks['uart_system'] = {
         .appendField("other");
     this.setInputsInline(true);
     this.setOutput(true, null);
-    this.setColour(230);
- this.setTooltip("");
- this.setHelpUrl("");
+    this.setColour(345);
+    this.setTooltip("");
+    this.setHelpUrl("");
   }
 };
