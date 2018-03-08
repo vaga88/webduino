@@ -2,17 +2,17 @@
 
   'use strict';
   
-  function uartcar("+value_cmd+","+value_str1+","+value_str2+","+value_str3+","+value_str4+","+dropdown_str5+","+value_str6+","+value_str7+")";
+  function uartcar(cmd,str1,str2,str3,str4,str5,str6,str7)
+  {
+    // "+value_cmd+","+value_str1+","+value_str2+","+value_str3+","+value_str4+","+dropdown_str5+","+value_str6+","+value_str7
+  }
+  
+  function uartsystem(cmd,str1,str2,str3)
   {
     
   }
   
-  function uartsystem("+dropdown_cmd+","+value_str1+","+value_str2+","+value_str3+")";
-  {
-    
-  }
-  
-  function uartcustom("+value_cmd+","+value_str1+","+value_str2+","+value_str3+","+value_str4+","+value_str5+","+value_str6+","+value_str7+","+value_str8+","+value_str9+")";
+  function uartcustom(cmd,str1,str2,str3,str4,str5,str6,str7,str8,str9)
   {
     
   }
