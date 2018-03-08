@@ -7,8 +7,7 @@
     ],
     "dependencies": [
         "UART.js",
-        "UART-blockly.js",
-        "uart_myfirmata.js"
+        "UART-blockly.js"
     ],
     "msg": "blockly/msg",
     "blocksMsg": "blockly/msg/blocks",
