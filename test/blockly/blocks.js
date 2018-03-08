@@ -32,7 +32,7 @@ Blockly.Blocks['uart_car'] = {
         .appendField("B speed");
     this.setInputsInline(true);
     this.setOutput(true, null);
-    this.setColour(345);
+    this.setColour(300);
     this.setTooltip("");
     this.setHelpUrl("");
   }
@@ -54,7 +54,7 @@ Blockly.Blocks['uart_system'] = {
         .appendField("str3~str9");
     this.setInputsInline(true);
     this.setOutput(true, null);
-    this.setColour(345);
+    this.setColour(300);
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -94,7 +94,7 @@ Blockly.Blocks['uart_custom'] = {
         .appendField("str9");
     this.setInputsInline(true);
     this.setOutput(true, null);
-    this.setColour(345);
+    this.setColour(300);
  this.setTooltip("");
  this.setHelpUrl("");
   }
