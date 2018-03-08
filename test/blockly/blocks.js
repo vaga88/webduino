@@ -102,3 +102,25 @@ Blockly.Blocks['uart_car'] = {
  this.setHelpUrl("");
   }
 };
+
+Blockly.Blocks['uart_system'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Uart System  cmd")
+        .appendField(new Blockly.FieldDropdown([["inputPullup","inputpullup"], ["pinMode","pinmode"], ["digitalWrite","digitalwrite"], ["digitalRead","digitalread"], ["analogWrite","analogwrite"], ["analogRead","analogread"]]), "cmd");
+    this.appendValueInput("str1")
+        .setCheck("Number")
+        .appendField("pin");
+    this.appendValueInput("str2")
+        .setCheck("Number")
+        .appendField("value");
+    this.appendValueInput("str3")
+        .setCheck("Number")
+        .appendField("other");
+    this.setInputsInline(true);
+    this.setOutput(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
