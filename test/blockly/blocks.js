@@ -62,8 +62,8 @@ Blockly.Blocks['uart_system'] = {
         .appendField("str3~str9");
     this.setOutput(true, null);
     this.setColour(300);
- this.setTooltip("");
- this.setHelpUrl("");
+    this.setTooltip("");
+    this.setHelpUrl("");
   }
 };
 
@@ -111,7 +111,7 @@ Blockly.Blocks['uart_custom'] = {
         .appendField("str9");
     this.setOutput(true, null);
     this.setColour(300);
- this.setTooltip("");
- this.setHelpUrl("");
+    this.setTooltip("");
+    this.setHelpUrl("");
   }
 };
