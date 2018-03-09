@@ -16,7 +16,7 @@ Blockly.JavaScript['uart_system'] = function(block) {
   var value_str1 = Blockly.JavaScript.valueToCode(block, 'str1', Blockly.JavaScript.ORDER_ATOMIC);
   var value_str2 = Blockly.JavaScript.valueToCode(block, 'str2', Blockly.JavaScript.ORDER_ATOMIC);
   var value_str3 = Blockly.JavaScript.valueToCode(block, 'str3', Blockly.JavaScript.ORDER_ATOMIC);
-  var code = "uartsystem("+dropdown_cmd+","+value_str1+","+value_str2+","+value_str3+")";
+  var code = "uartsystem('"+dropdown_cmd+"',"+value_str1+","+value_str2+","+value_str3+")";
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
