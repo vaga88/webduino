@@ -26,17 +26,17 @@
             <field name="NUM">9</field>
           </block>
         </value>
+        <value name="str5">
+          <block type="math_number">
+            <field name="NUM">200</field>
+          </block>
+        </value>
         <value name="str6">
           <block type="math_number">
             <field name="NUM">200</field>
           </block>
         </value>
         <value name="str7">
-          <block type="math_number">
-            <field name="NUM">200</field>
-          </block>
-        </value>
-        <value name="str8">
           <block type="math_number">
             <field name="NUM">200</field>
           </block>
