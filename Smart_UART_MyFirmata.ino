@@ -57,7 +57,7 @@ void executecommand()
     {
       SendData(String(analogRead(str1.toInt())));
     }  
-  else if (cmd=="car")    //   ?car=pin_L1;pin_L2;pin_R1;pin_R2;status;left_speed;right_speed
+  else if (cmd=="car")    //   ?car=pin_L1;pin_L2;pin_R1;pin_R2;state;left_speed;right_speed
     {
       pinMode(str1.toInt(), OUTPUT);
       pinMode(str2.toInt(), OUTPUT);
