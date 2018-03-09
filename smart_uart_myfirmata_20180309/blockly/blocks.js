@@ -22,7 +22,7 @@ Blockly.Blocks['uart_car'] = {
     this.appendDummyInput()
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("State")
-        .appendField(new Blockly.FieldDropdown([["forward","F"], ["backward","B"], ["left","L"], ["right","R"], ["stop","S"]]), "str5");
+        .appendField(new Blockly.FieldDropdown([["Forward","F"], ["Backward","B"], ["Left","L"], ["Right","R"], ["Stop","S"]]), "str5");
     this.appendValueInput("str6")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
