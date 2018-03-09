@@ -6,19 +6,19 @@ Blockly.Blocks['uart_car'] = {
     this.appendValueInput("str1")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("pinR1");
+        .appendField("pinL1");
     this.appendValueInput("str2")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("pinR2");
+        .appendField("pinL2");
     this.appendValueInput("str3")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("pinL1");
+        .appendField("pinR1");
     this.appendValueInput("str4")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("pinL2");
+        .appendField("pinR2");
     this.appendDummyInput()
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("State")
@@ -26,11 +26,11 @@ Blockly.Blocks['uart_car'] = {
     this.appendValueInput("str6")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("A speed");
+        .appendField("L speed");
     this.appendValueInput("str7")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("B speed");
+        .appendField("R speed");
     this.appendValueInput("str8")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
