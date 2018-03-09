@@ -34,7 +34,7 @@ Blockly.Blocks['uart_car'] = {
     this.appendValueInput("str8")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("Turn Delay");    
+        .appendField("Delay");    
     this.setOutput(true, null);
     this.setColour(300);
     this.setTooltip("");
