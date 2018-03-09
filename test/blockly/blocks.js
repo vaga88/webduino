@@ -20,6 +20,7 @@ Blockly.Blocks['uart_car'] = {
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("pinL2");
     this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("STATE")
         .appendField(new Blockly.FieldDropdown([["forward","F"], ["backward","B"], ["left","L"], ["right","R"], ["stop","S"]]), "str5");
     this.appendValueInput("str6")
@@ -30,6 +31,10 @@ Blockly.Blocks['uart_car'] = {
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("B speed");
+    this.appendValueInput("str8")
+        .setCheck("Number")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField("Turn Delay");    
     this.setOutput(true, null);
     this.setColour(300);
     this.setTooltip("");
@@ -40,16 +45,20 @@ Blockly.Blocks['uart_car'] = {
 Blockly.Blocks['uart_system'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Uart System  cmd")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField("Uart System     cmd")
         .appendField(new Blockly.FieldDropdown([["inputPullup","inputpullup"], ["pinMode","pinmode"], ["digitalWrite","digitalwrite"], ["digitalRead","digitalread"], ["analogWrite","analogwrite"], ["analogRead","analogread"]]), "cmd");
     this.appendValueInput("str1")
         .setCheck("Number")
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("pin");
     this.appendValueInput("str2")
         .setCheck("Number")
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("value");
     this.appendValueInput("str3")
         .setCheck(null)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("str3~str9");
     this.setOutput(true, null);
     this.setColour(300);
@@ -62,33 +71,43 @@ Blockly.Blocks['uart_custom'] = {
   init: function() {
     this.appendValueInput("cmd")
         .setCheck(null)
-        .appendField("Uart Custom  cmd");
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField("Uart Custom     cmd");
     this.appendValueInput("str1")
         .setCheck(null)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("str1");
     this.appendValueInput("str2")
         .setCheck(null)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("str2");
     this.appendValueInput("str3")
         .setCheck(null)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("str3");
     this.appendValueInput("str4")
         .setCheck(null)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("str4");
     this.appendValueInput("str5")
         .setCheck(null)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("str5");
     this.appendValueInput("str6")
         .setCheck(null)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("str6");
     this.appendValueInput("str7")
         .setCheck(null)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("str7");
     this.appendValueInput("str8")
         .setCheck(null)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("str8");
     this.appendValueInput("str9")
         .setCheck(null)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("str9");
     this.setOutput(true, null);
     this.setColour(300);
