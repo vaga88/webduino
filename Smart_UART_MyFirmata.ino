@@ -8,6 +8,7 @@ Command format : ?cmd=str1;str2;str3;str4;str5;str6;str7;str8;str9
 ?analogwrite=3;200
 ?digitalread=3
 ?analogread=3
+?car=pinL1;pinL2;pinR1;pinR2;state;L_speed;R_speed;Delay
 */
 
 
@@ -57,7 +58,7 @@ void executecommand()
     {
       SendData(String(analogRead(str1.toInt())));
     }  
-  else if (cmd=="car")    //   ?car=pinR1;pinR2;pinL1;pinL2;state;R_speed;L_speed;Delay
+  else if (cmd=="car")    // ?car=pinL1;pinL2;pinR1;pinR2;state;L_speed;R_speed;Delay
     {
       pinMode(str1.toInt(), OUTPUT);
       pinMode(str2.toInt(), OUTPUT);
