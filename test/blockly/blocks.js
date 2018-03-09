@@ -2,7 +2,7 @@ Blockly.Blocks['uart_car'] = {
   init: function() {
     this.appendValueInput("cmd")
         .setCheck("String")
-        .appendField("Uart Car     cmd");
+        .appendField("Uart Car    cmd");
     this.appendValueInput("str1")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -46,7 +46,7 @@ Blockly.Blocks['uart_system'] = {
   init: function() {
     this.appendDummyInput()
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("Uart System     cmd")
+        .appendField("Uart System    cmd")
         .appendField(new Blockly.FieldDropdown([["inputPullup","inputpullup"], ["pinMode","pinmode"], ["digitalWrite","digitalwrite"], ["digitalRead","digitalread"], ["analogWrite","analogwrite"], ["analogRead","analogread"]]), "cmd");
     this.appendValueInput("str1")
         .setCheck("Number")
@@ -72,7 +72,7 @@ Blockly.Blocks['uart_custom'] = {
     this.appendValueInput("cmd")
         .setCheck(null)
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("Uart Custom     cmd");
+        .appendField("Uart Custom    cmd");
     this.appendValueInput("str1")
         .setCheck(null)
         .setAlign(Blockly.ALIGN_RIGHT)
