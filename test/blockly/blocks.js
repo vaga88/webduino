@@ -6,19 +6,19 @@ Blockly.Blocks['uart_car'] = {
     this.appendValueInput("str1")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("pin(A-1A)");
+        .appendField("pinR1");
     this.appendValueInput("str2")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("pin(A-1B)");
+        .appendField("pinR2");
     this.appendValueInput("str3")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("pin(B-1A)");
+        .appendField("pinL1");
     this.appendValueInput("str4")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("pin((B-1B)");
+        .appendField("pinL2");
     this.appendDummyInput()
         .appendField("STATE")
         .appendField(new Blockly.FieldDropdown([["forward","F"], ["backward","B"], ["left","L"], ["right","R"], ["stop","S"]]), "str5");
@@ -30,7 +30,6 @@ Blockly.Blocks['uart_car'] = {
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("B speed");
-    this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(300);
     this.setTooltip("");
@@ -52,7 +51,6 @@ Blockly.Blocks['uart_system'] = {
     this.appendValueInput("str3")
         .setCheck(null)
         .appendField("str3~str9");
-    this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(300);
  this.setTooltip("");
@@ -92,7 +90,6 @@ Blockly.Blocks['uart_custom'] = {
     this.appendValueInput("str9")
         .setCheck(null)
         .appendField("str9");
-    this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(300);
  this.setTooltip("");
