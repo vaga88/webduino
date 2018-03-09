@@ -34,7 +34,8 @@ Blockly.Blocks['uart_car'] = {
     this.appendValueInput("str8")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("Delay(ms)");    
+        .appendField("Delay(ms)");
+    this.setInputsInline(false);    
     this.setOutput(true, null);
     this.setColour(300);
     this.setTooltip("");
@@ -60,6 +61,7 @@ Blockly.Blocks['uart_system'] = {
         .setCheck(null)
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("str3~str9");
+    this.setInputsInline(false);     
     this.setOutput(true, null);
     this.setColour(300);
     this.setTooltip("");
@@ -109,6 +111,7 @@ Blockly.Blocks['uart_custom'] = {
         .setCheck(null)
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("str9");
+    this.setInputsInline(false);     
     this.setOutput(true, null);
     this.setColour(300);
     this.setTooltip("");
