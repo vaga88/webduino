@@ -7,7 +7,8 @@ Blockly.JavaScript['uart_car'] = function(block) {
   var dropdown_str5 = block.getFieldValue('str5');
   var value_str6 = Blockly.JavaScript.valueToCode(block, 'str6', Blockly.JavaScript.ORDER_ATOMIC);
   var value_str7 = Blockly.JavaScript.valueToCode(block, 'str7', Blockly.JavaScript.ORDER_ATOMIC);
-  var code = "uartcar("+value_cmd+","+value_str1+","+value_str2+","+value_str3+","+value_str4+",'"+dropdown_str5+"',"+value_str6+","+value_str7+")";
+  var value_str8 = Blockly.JavaScript.valueToCode(block, 'str8', Blockly.JavaScript.ORDER_ATOMIC);  
+  var code = "uartcar("+value_cmd+","+value_str1+","+value_str2+","+value_str3+","+value_str4+",'"+dropdown_str5+"',"+value_str6+","+value_str7+","+value_str8+")";
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
