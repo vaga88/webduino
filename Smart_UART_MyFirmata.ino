@@ -1,6 +1,6 @@
 /*
 Webduino Smart UART
-Author : ChungYi Fu (Kaohsiung, Taiwan)  2018-3-9 22:00 
+Author : ChungYi Fu (Kaohsiung, Taiwan)  2018-3-9 18:00 
 Command format : ?cmd=str1;str2;str3;str4;str5;str6;str7;str8;str9
 ?inputpullup=3
 ?pinmode=3;1
@@ -90,14 +90,30 @@ void executecommand()
         analogWrite(str1.toInt(),0);
         analogWrite(str2.toInt(),str6.toInt());
         analogWrite(str3.toInt(),0);
-        analogWrite(str4.toInt(),str7.toInt());  
+        analogWrite(str4.toInt(),str7.toInt());
+        if (str8!="")
+        {
+          delay(str8.toInt());
+          analogWrite(str1.toInt(),0);
+          analogWrite(str2.toInt(),0);
+          analogWrite(str3.toInt(),0);
+          analogWrite(str4.toInt(),0);          
+        }
       }
       else if  (str5=="R")
       {
         analogWrite(str1.toInt(),str6.toInt());
         analogWrite(str2.toInt(),0);
         analogWrite(str3.toInt(),str7.toInt());
-        analogWrite(str4.toInt(),0);    
+        analogWrite(str4.toInt(),0);  
+        if (str8!="")
+        {
+          delay(str8.toInt());
+          analogWrite(str1.toInt(),0);
+          analogWrite(str2.toInt(),0);
+          analogWrite(str3.toInt(),0);
+          analogWrite(str4.toInt(),0);          
+        }        
       }
     }    
   else 
