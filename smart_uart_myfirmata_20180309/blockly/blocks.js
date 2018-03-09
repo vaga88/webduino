@@ -19,22 +19,22 @@ Blockly.Blocks['uart_car'] = {
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("pinR2");
-    this.appendDummyInput()
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("State")
-        .appendField(new Blockly.FieldDropdown([["FORWARD","F"], ["BACKWARD","B"], ["LEFT","L"], ["RIGHT","R"], ["STOP","S"]]), "str5");
-    this.appendValueInput("str6")
+    this.appendValueInput("str5")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("L speed");
-    this.appendValueInput("str7")
+    this.appendValueInput("str6")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("R speed");
-    this.appendValueInput("str8")
+    this.appendValueInput("str7")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("Delay(ms)");
+    this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField("State")
+        .appendField(new Blockly.FieldDropdown([["FORWARD","F"], ["BACKWARD","B"], ["LEFT","L"], ["RIGHT","R"], ["STOP","S"]]), "str8");    
     this.setInputsInline(false);    
     this.setOutput(true, null);
     this.setColour(300);
