@@ -1,7 +1,7 @@
 /*
 Webduino Smart UART
 
-Author : ChungYi Fu (Kaohsiung, Taiwan)  2018-3-9 19:00 
+Author : ChungYi Fu (Kaohsiung, Taiwan)  2018-3-9 22:30 
 
 Command format : ?cmd=str1;str2;str3;str4;str5;str6;str7;str8;str9
 
@@ -61,7 +61,7 @@ void executecommand()
     {
       SendData(String(analogRead(str1.toInt())));
     }  
-  else if (cmd=="car")    // ?car=pinL1;pinL2;pinR1;pinR2;state;L_speed;R_speed;Delay
+  else if (cmd=="car")    // ?car=pinL1;pinL2;pinR1;pinR2;L_speed;R_speed;Delay;state
     {
       pinMode(str1.toInt(), OUTPUT);
       pinMode(str2.toInt(), OUTPUT);
