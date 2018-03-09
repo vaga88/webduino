@@ -1,8 +1,12 @@
 Blockly.Blocks['uart_car'] = {
   init: function() {
+    this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField("Uart Car"); 
     this.appendValueInput("cmd")
         .setCheck("String")
-        .appendField("Uart Car    cmd");
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField("cmd");    
     this.appendValueInput("str1")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
