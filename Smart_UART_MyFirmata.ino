@@ -91,7 +91,7 @@ void executecommand()
         analogWrite(str2.toInt(),str6.toInt());
         analogWrite(str3.toInt(),0);
         analogWrite(str4.toInt(),str7.toInt());
-        if (str8!="")
+        if ((str8!="")&&(str8!="0"))
         {
           delay(str8.toInt());
           analogWrite(str1.toInt(),0);
@@ -106,7 +106,7 @@ void executecommand()
         analogWrite(str2.toInt(),0);
         analogWrite(str3.toInt(),str7.toInt());
         analogWrite(str4.toInt(),0);  
-        if (str8!="")
+        if ((str8!="")&&(str8!="0"))
         {
           delay(str8.toInt());
           analogWrite(str1.toInt(),0);
