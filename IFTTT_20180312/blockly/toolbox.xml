@@ -7,7 +7,7 @@
     </value>   
     <value name="ifttt_key">
       <block type="text">
-        <field name="TEXT">a</field>
+        <field name="TEXT"></field>
       </block>
     </value>
     <value name="ifttt_value1">
