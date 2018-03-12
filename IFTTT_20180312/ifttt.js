@@ -5,12 +5,12 @@
   function createIframe(ifttt_eventname,ifttt_key,ifttt_value1,ifttt_value2,ifttt_value3) {
     
     var input_url="https://maker.ifttt.com/trigger/"+ifttt_eventname+"/with/key/"+ifttt_key+"?value1="+ifttt_value1+"&value2="+ifttt_value2+"&value3="+ifttt_value3;
-    var src = '<iframe src="' + input_url + '" style="width:300px;height:100px"></iframe>';
+    var src = '<iframe src="' + input_url + '" style="width:400px;height:100px"></iframe>';
     
     if (document.getElementById("fustyles_iframe"))
     {
           document.getElementById("fustyles_iframe").style.left = '0px';
-          document.getElementById("fustyles_iframe").style.top = '0px';
+          document.getElementById("fustyles_iframe").style.top = '200px';
           document.getElementById("fustyles_iframe").style.display = 'block';
           document.getElementById("fustyles_iframe").innerHTML = src;
     }
