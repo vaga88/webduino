@@ -1,4 +1,4 @@
-Blockly.Blocks['iframe_open'] = {
+Blockly.Blocks['ifttt_open'] = {
   init: function() {
   this.appendValueInput("ifttt_eventname")
       .setCheck("String")
