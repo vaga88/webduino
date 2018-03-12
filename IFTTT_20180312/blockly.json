@@ -1,12 +1,12 @@
 {
-  "types": ["iframe_open","iframe_close"],
+  "types": ["IFTTT_line"],
   "category": "catPlus",
   "scripts": [
     "blockly/blocks.js",
     "blockly/javascript.js"
   ],
   "dependencies": [
-    "iframe.js"    
+    "IFTTT.js"    
   ],
   "msg": "blockly/msg",
   "blocksMsg": "blockly/msg/blocks",
