@@ -10,7 +10,7 @@
     if (document.getElementById("fustyles_iframe"))
     {
           document.getElementById("fustyles_iframe").style.left = '0px';
-          document.getElementById("fustyles_iframe").style.top = '200px';
+          document.getElementById("fustyles_iframe").style.top = '100px';
           document.getElementById("fustyles_iframe").style.display = 'block';
           document.getElementById("fustyles_iframe").innerHTML = src;
     }
@@ -20,7 +20,7 @@
         div.id = "fustyles_iframe";
         div.style.position = 'absolute';      
         div.style.left = '0px';
-        div.style.top = '200px';
+        div.style.top = '100px';
         div.style.zindex='9999';      
         div.innerHTML = src;
         document.body.appendChild(div);
