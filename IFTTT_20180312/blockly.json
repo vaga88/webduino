@@ -1,5 +1,5 @@
 {
-  "types": ["IFTTT_open"],
+  "types": ["ifttt_open"],
   "category": "catPlus",
   "scripts": [
     "blockly/blocks.js",
