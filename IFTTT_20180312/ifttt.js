@@ -20,7 +20,7 @@
         div.id = "fustyles_iframe";
         div.style.position = 'absolute';      
         div.style.left = '0px';
-        div.style.top = '0px';
+        div.style.top = '200px';
         div.style.zindex='9999';      
         div.innerHTML = src;
         document.body.appendChild(div);
