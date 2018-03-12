@@ -1,4 +1,4 @@
-Blockly.JavaScript['iframe_open'] = function (block) {
+Blockly.JavaScript['IFTTT_open'] = function (block) {
   var ifttt_eventname = Blockly.JavaScript.valueToCode(block, 'ifttt_eventname', Blockly.JavaScript.ORDER_ATOMIC);  
   var ifttt_key = Blockly.JavaScript.valueToCode(block, 'ifttt_key', Blockly.JavaScript.ORDER_ATOMIC);
   var ifttt_value1 = Blockly.JavaScript.valueToCode(block, 'ifttt_value1', Blockly.JavaScript.ORDER_ATOMIC);
