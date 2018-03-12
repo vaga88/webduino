@@ -1,41 +1,28 @@
-<category id="catIframe">
-  <block type="iframe_open">
-    <value name="openid_">
-      <block type="math_number">
-        <field name="NUM">0</field>
-      </block>
-    </value>    
-    <value name="url_">
+<category id="catifttt">
+  <block type="ifttt_open">
+    <value name="ifttt_eventname">
       <block type="text">
-        <field name="TEXT">about:blank</field>
+        <field name="TEXT"></field>
+      </block>
+    </value>   
+    <value name="ifttt_key">
+      <block type="text">
+        <field name="TEXT">a</field>
       </block>
     </value>
-    <value name="width_">
-      <block type="math_number">
-        <field name="NUM">500</field>
+    <value name="ifttt_value1">
+      <block type="text">
+        <field name="TEXT"></field>
       </block>
     </value>
-    <value name="height_">
-      <block type="math_number">
-        <field name="NUM">400</field>
+    <value name="ifttt_value2">
+      <block type="text">
+        <field name="TEXT"></field>
       </block>
     </value>
-    <value name="left_">
-      <block type="math_number">
-        <field name="NUM">0</field>
+    <value name="ifttt_value3">
+      <block type="text">
+        <field name="TEXT"></field>
       </block>
     </value>
-    <value name="top_">
-      <block type="math_number">
-        <field name="NUM">100</field>
-      </block>
-    </value>    
-  </block>
-  <block type="iframe_close">
-    <value name="closeid_">
-      <block type="math_number">
-        <field name="NUM">0</field>
-      </block>
-    </value> 
-  </block>
  </category>
