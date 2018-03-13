@@ -7,17 +7,17 @@
     var input_url="https://maker.ifttt.com/trigger/"+ifttt_eventname+"/with/key/"+ifttt_key+"?value1="+ifttt_value1+"&value2="+ifttt_value2+"&value3="+ifttt_value3;
     var src = '<iframe src="' + input_url + '" style="width:0px;height:0px"></iframe>';
     
-    if (document.getElementById("fustyles_iframe"))
+    if (document.getElementById("ifttt_iframe"))
     {
-          document.getElementById("fustyles_iframe").style.left = '0px';
-          document.getElementById("fustyles_iframe").style.top = '0px';
-          document.getElementById("fustyles_iframe").style.display = 'block';
-          document.getElementById("fustyles_iframe").innerHTML = src;
+          document.getElementById("ifttt_iframe").style.left = '0px';
+          document.getElementById("ifttt_iframe").style.top = '0px';
+          document.getElementById("ifttt_iframe").style.display = 'block';
+          document.getElementById("ifttt_iframe").innerHTML = src;
     }
     else
     {
         var div = document.createElement('div');
-        div.id = "fustyles_iframe";
+        div.id = "ifttt_iframe";
         div.style.position = 'absolute';      
         div.style.left = '0px';
         div.style.top = '0px';
