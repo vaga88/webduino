@@ -4,7 +4,7 @@ Blockly.Blocks['ifttt_open'] = {
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField("IFTTT   ")
-      .appendField("Event")    
+      .appendField("EventName")    
   this.appendValueInput("ifttt_key")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
