@@ -1,1 +1,1 @@
-MSG.catifttt = "IFTTT LINE";
+MSG.catifttt = "IFTTT";
