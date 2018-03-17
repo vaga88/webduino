@@ -24,8 +24,8 @@
           url: DataUrl,
           success: function(json)
           {
-            //console.log(JSON.parse(JSON.stringify(json)));
-            return JSON.parse(JSON.stringify(json));
+            //console.log(JSON.parse(json));
+            return JSON.parse(json);
           },
           error: function(exception)
           {
