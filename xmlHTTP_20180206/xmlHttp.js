@@ -11,7 +11,7 @@
     ResponseData="";
     DataUrl = input_url_;
     DataFormat = input_format_;
-    xmlHTTP_get();
+    return xmlHTTP_get();
   } 
   
   function xmlHTTP_get()   
@@ -25,12 +25,12 @@
           success: function(json)
           {
             console.log(json);
-            ResponseData=json;
+            return json;
           },
           error: function(exception)
           {
             console.log(DataFormat+" fail");
-            ResponseData= DataFormat+" fail";
+            return DataFormat+" fail";
           }
        });
     }
@@ -48,12 +48,12 @@
           if (DataFormat=="HTML")
           {
             console.log(this.responseText);
-            ResponseData = this.responseText;
+            return this.responseText;
           }
           else if (DataFormat=="XML")
           {
             console.log(this.responseXML);
-            ResponseData = this.responseXML;
+            return this.responseXML;
           }
         }
       };
