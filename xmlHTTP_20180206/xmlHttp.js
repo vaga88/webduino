@@ -24,12 +24,12 @@
           url: DataUrl,
           success: function(json)
           {
-            console.log(JSON.stringify(json));
+            //console.log(JSON.stringify(json));
             return JSON.stringify(json);
           },
           error: function(exception)
           {
-            console.log(DataFormat+" fail");
+            //console.log(DataFormat+" fail");
             return DataFormat+" fail";
           }
        });
