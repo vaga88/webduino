@@ -24,7 +24,7 @@
           url: DataUrl,
           success: function(json)
           {
-            console.log(json);
+            console.log(json.replace(/\'/g,"’").replace(/\"/g,"”"));
             return json.replace(/\'/g,"’").replace(/\"/g,"”");
           },
           error: function(exception)
@@ -47,12 +47,12 @@
         {    
           if (DataFormat=="HTML")
           {
-            console.log(this.responseText);
+            console.log(this.responseText.replace(/\'/g,"’").replace(/\"/g,"”"));
             return this.responseText.replace(/\'/g,"’").replace(/\"/g,"”");
           }
           else if (DataFormat=="XML")
           {
-            console.log(this.responseXML);
+            console.log(this.responseXML.replace(/\'/g,"’").replace(/\"/g,"”"));
             return this.responseXML.replace(/\'/g,"’").replace(/\"/g,"”");
           }
         }
