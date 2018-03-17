@@ -25,7 +25,7 @@
           success: function(json)
           {
             console.log(json);
-            return json;
+            return json.replace(/\'/g,"’").replace(/\"/g,"”");
           },
           error: function(exception)
           {
@@ -48,12 +48,12 @@
           if (DataFormat=="HTML")
           {
             console.log(this.responseText);
-            return this.responseText;
+            return this.responseText.replace(/\'/g,"’").replace(/\"/g,"”");
           }
           else if (DataFormat=="XML")
           {
             console.log(this.responseXML);
-            return this.responseXML;
+            return this.responseXML.replace(/\'/g,"’").replace(/\"/g,"”");
           }
         }
       };
