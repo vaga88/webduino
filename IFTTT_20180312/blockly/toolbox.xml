@@ -1,6 +1,6 @@
 <category id="catifttt">
   <block type="ifttt_open">
-    <value name="ifttt_eventname">
+    <value name="ifttt_event">
       <block type="text">
         <field name="TEXT"></field>
       </block>
