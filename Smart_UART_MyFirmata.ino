@@ -1,7 +1,7 @@
 /*
 Webduino Smart UART
 
-Author : ChungYi Fu (Kaohsiung, Taiwan)  2018-3-9 22:30 
+Author : ChungYi Fu (Kaohsiung, Taiwan)  2018-3-19 09:30 
 
 Command Format : ?cmd=str1;str2;str3;str4;str5;str6;str7;str8;str9
 
@@ -67,6 +67,11 @@ void executecommand()
       pinMode(str2.toInt(), OUTPUT);
       pinMode(str3.toInt(), OUTPUT);
       pinMode(str4.toInt(), OUTPUT);
+      digitalWrite(str1.toInt(), 0);
+      digitalWrite(str2.toInt(), 0);
+      digitalWrite(str3.toInt(), 0);
+      digitalWrite(str4.toInt(), 0);
+      delay(100);
     
       if (str8=="S")
       {
