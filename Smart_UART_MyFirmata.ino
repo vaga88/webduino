@@ -1,7 +1,7 @@
 /*
-Webduino Smart UART
+Webduino Smart(UART) + Arduino Uno 
 
-Author : ChungYi Fu (Kaohsiung, Taiwan)  2018-3-19 09:30 
+Author : ChungYi Fu (Kaohsiung, Taiwan)  2018-3-19 22:30 
 
 Command Format : ?cmd=str1;str2;str3;str4;str5;str6;str7;str8;str9
 
