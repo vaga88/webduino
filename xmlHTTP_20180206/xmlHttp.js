@@ -23,12 +23,12 @@
           url: DataUrl,
           success: function(json)
           {
-            //console.log(JSON.parse(json));
-            return JSON.parse(json);
+            console.log(json);
+            return json;
           },
           error: function(exception)
           {
-            //console.log(DataFormat+" fail");
+            console.log(DataFormat+" fail");
             return DataFormat+" fail";
           }
        });
@@ -47,12 +47,12 @@
           if (DataFormat=="HTML")
           {
             console.log(this.responseText);
-            return this.responseText;
+            return String(this.responseText);
           }
           else if (DataFormat=="XML")
           {
             console.log(this.responseXML);
-            return this.responseXML;
+            return String(this.responseXML);
           }
         }
       };
