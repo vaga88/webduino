@@ -4,15 +4,16 @@
   
   function xmlHTTP(input_url_,input_format_) 
   {
-    xmlHTTP_get(input_url_,input_format_,function(err, response) 
+    var responseData=xmlHTTP_get(input_url_,input_format_,function(err, response) 
                 {
                     if (err)
                         return "";
                     else 
-                        alert(response);
                         return response;
                 }
     );
+    alert(responseData);
+    return responseData;
   } 
   
   function xmlHTTP_get(DataUrl,DataFormat,callback)   
