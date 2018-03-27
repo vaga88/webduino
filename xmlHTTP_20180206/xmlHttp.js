@@ -9,7 +9,7 @@
   {
     DataUrl = input_url_;
     DataFormat = input_format_;
-    xmlHTTP_get(function(err, response) 
+    return xmlHTTP_get(function(err, response) 
                 {
                     if (err)
                         return "";
