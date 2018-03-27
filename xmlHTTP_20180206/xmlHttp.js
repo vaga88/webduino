@@ -2,14 +2,9 @@
 
   'use strict';
   
-  var DataUrl="";
-  var DataFormat="";
-  
   function xmlHTTP(input_url_,input_format_) 
   {
-    DataUrl = input_url_;
-    DataFormat = input_format_;
-    return xmlHTTP_get(function(err, response) 
+    return xmlHTTP_get(input_url_,input_format_,function(err, response) 
                 {
                     if (err)
                         return "";
@@ -19,7 +14,7 @@
     );
   } 
   
-  function xmlHTTP_get(callback)   
+  function xmlHTTP_get(DataUrl,DataFormat,callback)   
   {
     if (DataFormat=="JSON")
     {
