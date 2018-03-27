@@ -9,11 +9,17 @@
   {
     DataUrl = input_url_;
     DataFormat = input_format_;
-    var responseData=xmlHTTP_get();
-    return responseData;
+    xmlHTTP_get(function(err, response) 
+                {
+                    if (err)
+                        return "";
+                    else 
+                        return response;
+                }
+    );
   } 
   
-  function xmlHTTP_get()   
+  function xmlHTTP_get(callback)   
   {
     if (DataFormat=="JSON")
     {
@@ -24,12 +30,12 @@
           success: function(json)
           {
             console.log(json);
-            return json;
+            callback(null, json);
           },
           error: function(exception)
           {
             console.log(DataFormat+" fail");
-            return DataFormat+" fail";
+            callback(null, DataFormat+" fail");
           }
        });
     }
@@ -47,12 +53,12 @@
           if (DataFormat=="HTML")
           {
             console.log(this.responseText);
-            return String(this.responseText);
+            callback(null, this.responseText);
           }
           else if (DataFormat=="XML")
           {
             console.log(this.responseXML);
-            return String(this.responseXML);
+            callback(null, this.responseXML);
           }
         }
       };
