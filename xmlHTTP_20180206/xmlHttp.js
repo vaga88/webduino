@@ -10,7 +10,6 @@
     DataUrl = input_url_;
     DataFormat = input_format_;
     var responseData=xmlHTTP_get();
-    alert(responseData);
     return responseData;
   } 
   
