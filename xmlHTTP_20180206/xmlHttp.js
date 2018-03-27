@@ -2,13 +2,11 @@
 
   'use strict';
   
-  var ResponseData="";
   var DataUrl="";
   var DataFormat="";
   
   function xmlHTTP(input_url_,input_format_) 
   {
-    ResponseData="";
     DataUrl = input_url_;
     DataFormat = input_format_;
     var responseData=xmlHTTP_get();
