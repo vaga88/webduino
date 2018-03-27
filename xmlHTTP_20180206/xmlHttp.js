@@ -11,7 +11,8 @@
     ResponseData="";
     DataUrl = input_url_;
     DataFormat = input_format_;
-    return xmlHTTP_get();
+    responseData=xmlHTTP_get();
+    return responseData;
   } 
   
   function xmlHTTP_get()   
