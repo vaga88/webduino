@@ -4,7 +4,7 @@
   
   function xmlHTTP(input_url_,input_format_) 
   {
-    var responseData=xmlHTTP_get(input_url_,input_format_,function(err, response) 
+    xmlHTTP_get(input_url_,input_format_,function(err, response) 
                 {
                     if (err)
                         return "";
@@ -12,8 +12,8 @@
                         return response;
                 }
     );
-    alert(responseData);
-    return responseData;
+    alert(response);
+    return response;
   } 
   
   function xmlHTTP_get(DataUrl,DataFormat,callback)   
