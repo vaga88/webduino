@@ -30,7 +30,7 @@
           success: function(json)
           {
             console.log(json);
-            callback(null, json);
+            callback(null, String(json));
           },
           error: function(exception)
           {
@@ -53,12 +53,12 @@
           if (DataFormat=="HTML")
           {
             console.log(this.responseText);
-            callback(null, this.responseText);
+            callback(null, String(this.responseText));
           }
           else if (DataFormat=="XML")
           {
             console.log(this.responseXML);
-            callback(null, this.responseXML);
+            callback(null, String(this.responseXML));
           }
         }
       };
