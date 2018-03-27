@@ -11,7 +11,7 @@
     ResponseData="";
     DataUrl = input_url_;
     DataFormat = input_format_;
-    responseData=xmlHTTP_get();
+    var responseData=xmlHTTP_get();
     return responseData;
   } 
   
