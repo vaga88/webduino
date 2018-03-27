@@ -9,6 +9,7 @@
                     if (err)
                         return "";
                     else 
+                        alert(response);
                         return response;
                 }
     );
