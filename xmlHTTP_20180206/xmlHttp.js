@@ -4,7 +4,7 @@
   
   function xmlHTTP(input_url_,input_format_) 
   {
-    return xmlHTTP_get(input_url_,input_format_,function(err, response) 
+    xmlHTTP_get(input_url_,input_format_,function(err, response) 
                 {
                     if (err)
                         return "";
