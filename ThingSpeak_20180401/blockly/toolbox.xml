@@ -1,26 +1,46 @@
-<category id="catifttt">
-  <block type="ifttt_open">
-    <value name="ifttt_event">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value>   
-    <value name="ifttt_key">
+<category id="catthingspeak">
+  <block type="thingspeak_update">  
+    <value name="key">
       <block type="text">
         <field name="TEXT"></field>
       </block>
     </value>
-    <value name="ifttt_value1">
+    <value name="field1">
       <block type="text">
         <field name="TEXT"></field>
       </block>
     </value>
-    <value name="ifttt_value2">
+    <value name="field2">
       <block type="text">
         <field name="TEXT"></field>
       </block>
     </value>
-    <value name="ifttt_value3">
+    <value name="field3">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="field4">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="field5">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="field6">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="field7">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="field8">
       <block type="text">
         <field name="TEXT"></field>
       </block>
