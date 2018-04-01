@@ -1,12 +1,12 @@
 {
-  "types": ["ifttt_open"],
+  "types": ["thingspeak_update"],
   "category": "catPlus",
   "scripts": [
     "blockly/blocks.js",
     "blockly/javascript.js"
   ],
   "dependencies": [
-    "ifttt.js"    
+    "thingspeak.js"    
   ],
   "msg": "blockly/msg",
   "blocksMsg": "blockly/msg/blocks",
