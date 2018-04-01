@@ -2,9 +2,9 @@
 
   'use strict';
   
-  function xmlHTTP(input_url_,input_format_) 
+  function getResponse(input_url_,input_format_) 
   {
-    xmlHTTP_get(input_url_,input_format_,function(err, response) 
+    getData(input_url_,input_format_,function(err, response) 
                 {
                     if (err)
                         return "";
@@ -16,7 +16,7 @@
     return response;
   } 
   
-  function xmlHTTP_get(DataUrl,DataFormat,callback)   
+  function getData(DataUrl,DataFormat,callback)   
   {
     if (DataFormat=="JSON")
     {
@@ -64,7 +64,7 @@
     }
   }
   
-  window.xmlHTTP = xmlHTTP;
-  window.xmlHTTP_get = xmlHTTP_get;
+  window.getResponse = getResponse;
+  window.getData = getData;
   
 }(window, window.document));
