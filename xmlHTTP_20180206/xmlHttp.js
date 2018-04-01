@@ -22,7 +22,20 @@
     xmlHttp.onreadystatechange = function() 
     {
       if (this.readyState == 4 && this.status == 200) 
-      {    
+      {  
+        /*
+        if (DataFormat=="HTML")
+        {
+          console.log(this.responseText);
+          return String(this.responseText);
+        }                         
+        else if (DataFormat=="XML")
+        {
+          console.log(this.responseXML);
+          return String(this.responseXML);
+        }
+        */
+        
         var x = this.responseXML.getElementsByTagName("Data");
         PM_data = "";
         for (var i = 0; i <x.length; i++) 
