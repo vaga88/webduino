@@ -1,4 +1,4 @@
-Blockly.JavaScript['ifttt_open'] = function (block) {
+Blockly.JavaScript['thingspeak_update'] = function (block) {
   var key = Blockly.JavaScript.valueToCode(block, 'key', Blockly.JavaScript.ORDER_ATOMIC);
   var field1 = Blockly.JavaScript.valueToCode(block, 'field1', Blockly.JavaScript.ORDER_ATOMIC);
   var field2 = Blockly.JavaScript.valueToCode(block, 'field2', Blockly.JavaScript.ORDER_ATOMIC);
