@@ -5,35 +5,35 @@ Blockly.Blocks['thingspeak_update'] = {
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField("Key");
   this.appendValueInput("field1")
-      .setCheck("String")
+      .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField("Field1");
   this.appendValueInput("field2")
-      .setCheck("String")
+      .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField("Field2");
   this.appendValueInput("field3")
-      .setCheck("String")
+      .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField("Field3");  
   this.appendValueInput("field4")
-      .setCheck("String")
+      .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField("Field4");
   this.appendValueInput("field5")
-      .setCheck("String")
+      .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField("Field5");
   this.appendValueInput("field6")
-      .setCheck("String")
+      .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField("Field6");  
   this.appendValueInput("field7")
-      .setCheck("String")
+      .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField("Field7");
   this.appendValueInput("field8")
-      .setCheck("String")
+      .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField("Field8");  
   this.setPreviousStatement(true);
