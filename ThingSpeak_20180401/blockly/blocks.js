@@ -3,7 +3,8 @@ Blockly.Blocks['thingspeak_update'] = {
   this.appendValueInput("key")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField("Key");
+      .appendField("ThingSpeak   ")
+      .appendField("Write API Key");
   this.appendValueInput("field1")
       .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
