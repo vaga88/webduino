@@ -7,35 +7,35 @@ Blockly.Blocks['thingspeak_update'] = {
   this.appendValueInput("field1")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField("field1");
+      .appendField("Field1");
   this.appendValueInput("field2")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField("field2");
+      .appendField("Field2");
   this.appendValueInput("field3")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField("field3");  
+      .appendField("Field3");  
   this.appendValueInput("field4")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField("field4");
+      .appendField("Field4");
   this.appendValueInput("field5")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField("field5");
+      .appendField("Field5");
   this.appendValueInput("field6")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField("field6");  
+      .appendField("Field6");  
   this.appendValueInput("field7")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField("field7");
+      .appendField("Field7");
   this.appendValueInput("field8")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField("field8");  
+      .appendField("Field8");  
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setTooltip('');
