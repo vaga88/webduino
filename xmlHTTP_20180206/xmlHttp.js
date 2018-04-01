@@ -9,6 +9,7 @@
                     if (err)
                         document.getElementById('demo-area-01-show').innerHTML = "failed";
                     else 
+                        console.log(String(response));
                         document.getElementById('demo-area-01-show').innerHTML = String(response);
                 }
     );
