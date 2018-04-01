@@ -7,13 +7,11 @@
     getData(input_url_,input_format_,function(err, response) 
                 {
                     if (err)
-                        return "";
+                        document.getElementById('demo-area-01-show').innerHTML = "failed";
                     else 
-                        return response;
+                        document.getElementById('demo-area-01-show').innerHTML = String(response);
                 }
     );
-    alert(response);
-    return response;
   } 
   
   function getData(DataUrl,DataFormat,callback)   
