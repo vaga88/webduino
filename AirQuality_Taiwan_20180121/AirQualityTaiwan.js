@@ -39,46 +39,46 @@
           PM_data += ",Status,";
           if (x[i].getElementsByTagName("Status")[0].childNodes.length==1)                      
             PM_data += x[i].getElementsByTagName("Status")[0].childNodes[0].nodeValue;               
-          PM_data += ",PM10,";
+          PM_data += ",PM10 (μg/m3),";
           if (x[i].getElementsByTagName("PM10")[0].childNodes.length==1)                      
             PM_data += x[i].getElementsByTagName("PM10")[0].childNodes[0].nodeValue;
-          PM_data += ",PM10_AVG,";
+          PM_data += ",PM10_AVG (μg/m3),";
           if (x[i].getElementsByTagName("PM10_AVG")[0].childNodes.length==1)                      
             PM_data += x[i].getElementsByTagName("PM10_AVG")[0].childNodes[0].nodeValue;                    
-          PM_data += ",PM2.5,";
+          PM_data += ",PM2.5 (μg/m3),";
           if (x[i].getElementsByTagName("PM2.5")[0].childNodes.length==1)                      
             PM_data += x[i].getElementsByTagName("PM2.5")[0].childNodes[0].nodeValue;
-          PM_data += ",PM2.5_AVG,";
+          PM_data += ",PM2.5_AVG (μg/m3),";
           if (x[i].getElementsByTagName("PM2.5_AVG")[0].childNodes.length==1)                      
             PM_data += x[i].getElementsByTagName("PM2.5_AVG")[0].childNodes[0].nodeValue; 
-          PM_data += ",CO,";
+          PM_data += ",CO (ppm),";
           if (x[i].getElementsByTagName("CO")[0].childNodes.length==1)                      
             PM_data += x[i].getElementsByTagName("CO")[0].childNodes[0].nodeValue;
-          PM_data += ",CO_8hr,";
+          PM_data += ",CO_8hr (ppm),";
           if (x[i].getElementsByTagName("CO_8hr")[0].childNodes.length==1)                      
             PM_data += x[i].getElementsByTagName("CO_8hr")[0].childNodes[0].nodeValue;
-          PM_data += ",NO,";
+          PM_data += ",NO (ppb),";
           if (x[i].getElementsByTagName("NO")[0].childNodes.length==1)                      
             PM_data += x[i].getElementsByTagName("NO")[0].childNodes[0].nodeValue;
-          PM_data += ",NO2,";
+          PM_data += ",NO2 (ppb),";
           if (x[i].getElementsByTagName("NO2")[0].childNodes.length==1)                      
             PM_data += x[i].getElementsByTagName("NO2")[0].childNodes[0].nodeValue;  
-          PM_data += ",NOx,";
+          PM_data += ",NOx (ppb),";
           if (x[i].getElementsByTagName("NOx")[0].childNodes.length==1)                      
             PM_data += x[i].getElementsByTagName("NOx")[0].childNodes[0].nodeValue;
-          PM_data += ",O3,";
+          PM_data += ",O3 (ppb),";
           if (x[i].getElementsByTagName("O3")[0].childNodes.length==1)                      
             PM_data += x[i].getElementsByTagName("O3")[0].childNodes[0].nodeValue;
-          PM_data += ",O3_8hr,";
+          PM_data += ",O3_8hr (ppb),";
           if (x[i].getElementsByTagName("O3_8hr")[0].childNodes.length==1)                      
             PM_data += x[i].getElementsByTagName("O3_8hr")[0].childNodes[0].nodeValue;
-          PM_data += ",SO2,";
+          PM_data += ",SO2 (ppb),";
           if (x[i].getElementsByTagName("SO2")[0].childNodes.length==1)                      
             PM_data += x[i].getElementsByTagName("SO2")[0].childNodes[0].nodeValue;
-          PM_data += ",WindDirec,";
+          PM_data += ",WindDirec (degrees),";
           if (x[i].getElementsByTagName("WindDirec")[0].childNodes.length==1)
             PM_data += x[i].getElementsByTagName("WindDirec")[0].childNodes[0].nodeValue;
-          PM_data += ",WindSpeed,";
+          PM_data += ",WindSpeed (m/sec),";
           if (x[i].getElementsByTagName("WindSpeed")[0].childNodes.length==1)
             PM_data += x[i].getElementsByTagName("WindSpeed")[0].childNodes[0].nodeValue; 
           PM_data += ";"; 
@@ -114,33 +114,33 @@
             PM_data += element.PublishTime;
             PM_data += ",Status,";
             PM_data += element.Status;
-            PM_data += ",PM10,";
+            PM_data += ",PM10 (μg/m3),";
             PM_data += element.PM10;
-            PM_data += ",PM10_AVG,";
+            PM_data += ",PM10_AVG (μg/m3),";
             PM_data += element.PM10_AVG;
-            PM_data += ",PM2.5,";
+            PM_data += ",PM2.5 (μg/m3),";
             PM_data += element["PM2.5"];
-            PM_data += ",PM2.5_AVG,";
+            PM_data += ",PM2.5_AVG (μg/m3),";
             PM_data += element["PM2.5_AVG"];
-            PM_data += ",CO,";
+            PM_data += ",CO (ppm),";
             PM_data += element.CO;
-            PM_data += ",CO_8hr,";
+            PM_data += ",CO_8hr (ppm),";
             PM_data += element.CO_8hr;
-            PM_data += ",NO,";
+            PM_data += ",NO (ppb),";
             PM_data += element.NO;
-            PM_data += ",NO2,";
+            PM_data += ",NO2 (ppb),";
             PM_data += element.NO2;
-            PM_data += ",NOx,";
+            PM_data += ",NOx (ppb),";
             PM_data += element.NOx;
-            PM_data += ",O3,";
+            PM_data += ",O3 (ppb),";
             PM_data += element.O3;
-            PM_data += ",O3_8hr,";
+            PM_data += ",O3_8hr (ppb),";
             PM_data += element.O3_8hr;
-            PM_data += ",SO2,";
+            PM_data += ",SO2 (ppb),";
             PM_data += element.SO2;
-            PM_data += ",WindDirec,";
+            PM_data += ",WindDirec (degrees),";
             PM_data += element.WindDirec;
-            PM_data += ",WindSpeed,";
+            PM_data += ",WindSpeed (m/sec),";
             PM_data += element.WindSpeed;
             PM_data += ";";
           });

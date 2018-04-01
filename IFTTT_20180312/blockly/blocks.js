@@ -4,23 +4,23 @@ Blockly.Blocks['ifttt_open'] = {
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField("IFTTT   ")
-      .appendField("Event")    
+      .appendField("Event");    
   this.appendValueInput("ifttt_key")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField("Key")
+      .appendField("Key");
   this.appendValueInput("ifttt_value1")
-      .setCheck("String")
+      .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField("Value1")
+      .appendField("Value1");
   this.appendValueInput("ifttt_value2")
-      .setCheck("String")
+      .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField("Value2")
+      .appendField("Value2");
   this.appendValueInput("ifttt_value3")
-      .setCheck("String")
+      .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField("Value3")  
+      .appendField("Value3");  
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setTooltip('');
