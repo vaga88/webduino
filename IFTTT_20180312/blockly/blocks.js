@@ -10,15 +10,15 @@ Blockly.Blocks['ifttt_open'] = {
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField("Key");
   this.appendValueInput("ifttt_value1")
-      .setCheck("String")
+      .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField("Value1");
   this.appendValueInput("ifttt_value2")
-      .setCheck("String")
+      .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField("Value2");
   this.appendValueInput("ifttt_value3")
-      .setCheck("String")
+      .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField("Value3");  
   this.setPreviousStatement(true);
