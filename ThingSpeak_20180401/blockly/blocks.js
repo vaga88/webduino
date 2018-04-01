@@ -1,26 +1,41 @@
-Blockly.Blocks['ifttt_open'] = {
-  init: function() {
-  this.appendValueInput("ifttt_event")
+Blockly.Blocks['thingspeak_update'] = {
+  init: function() {   
+  this.appendValueInput("key")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField("IFTTT   ")
-      .appendField("Event")    
-  this.appendValueInput("ifttt_key")
+      .appendField("Key");
+  this.appendValueInput("field1")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField("Key")
-  this.appendValueInput("ifttt_value1")
+      .appendField("field1");
+  this.appendValueInput("field2")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField("Value1")
-  this.appendValueInput("ifttt_value2")
+      .appendField("field2");
+  this.appendValueInput("field3")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField("Value2")
-  this.appendValueInput("ifttt_value3")
+      .appendField("field3");  
+  this.appendValueInput("field4")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField("Value3")  
+      .appendField("field4");
+  this.appendValueInput("field5")
+      .setCheck("String")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField("field5");
+  this.appendValueInput("field6")
+      .setCheck("String")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField("field6");  
+  this.appendValueInput("field7")
+      .setCheck("String")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField("field7");
+  this.appendValueInput("field8")
+      .setCheck("String")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField("field8");  
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setTooltip('');
