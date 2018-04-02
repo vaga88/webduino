@@ -250,9 +250,9 @@
   
   function MatrixLed_reverse(input_x_,input_y_) {
     if ((L[input_x_*5+input_y_]=='')||(L[input_x_*5+input_y_]==" bgcolor='white'"))
-      return 0;
+      L[input_x_*5+input_y_]=" bgcolor='"+MatrixLedcolor+"'";
     else
-      return 1;
+      L[input_x_*5+input_y_]=" bgcolor='white'";
   }
 
   function MatrixLed_state(input_x_,input_y_) {
