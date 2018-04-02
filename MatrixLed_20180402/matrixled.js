@@ -253,6 +253,7 @@
       L[input_x_*5+input_y_]=" bgcolor='"+MatrixLedcolor+"'";
     else
       L[input_x_*5+input_y_]=" bgcolor='white'";
+    MatrixLed_show();
   }
 
   function MatrixLed_state(input_x_,input_y_) {
