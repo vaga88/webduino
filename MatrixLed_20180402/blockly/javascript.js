@@ -146,6 +146,13 @@ Blockly.JavaScript['matrix_led_off'] = function(block) {
   return code;
 };
 
+Blockly.JavaScript['matrix_led_reverse'] = function(block) {
+  var value_x_reverse_ = Blockly.JavaScript.valueToCode(block, 'value_x_reverse_', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_y_reverse_ = Blockly.JavaScript.valueToCode(block, 'value_y_reverse_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'MatrixLed_reverse('+value_x_reverse_+','+value_y_reverse_+');';
+  return code;
+};
+
 Blockly.JavaScript['matrix_led_state'] = function(block) {
   var value_x_state_ = Blockly.JavaScript.valueToCode(block, 'value_x_state_', Blockly.JavaScript.ORDER_ATOMIC);
   var value_y_state_ = Blockly.JavaScript.valueToCode(block, 'value_y_state_', Blockly.JavaScript.ORDER_ATOMIC);
