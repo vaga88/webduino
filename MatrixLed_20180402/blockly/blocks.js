@@ -310,6 +310,25 @@ Blockly.Blocks['matrix_led_off'] = {
     this.setHelpUrl("");
   }
 };  
+
+Blockly.Blocks['matrix_led_reverse'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.MATRIXLED_REVERSE_SHOW);
+    this.appendValueInput("value_x_reverse_")
+        .setCheck("Number")
+        .appendField("x");
+    this.appendValueInput("value_y_reverse_")
+        .setCheck("Number")
+        .appendField("y");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(300);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};  
   
 Blockly.Blocks['matrix_led_state'] = {
   init: function() {
