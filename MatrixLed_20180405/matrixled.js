@@ -501,8 +501,8 @@
           L[k]=" bgcolor='"+MatrixLedcolor+"'";
         else
           L[k]=" bgcolor='white'";
+        k++;
       }
-      k++;
     }
     MatrixLed_show();
   }
