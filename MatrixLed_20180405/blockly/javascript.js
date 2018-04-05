@@ -171,3 +171,13 @@ Blockly.JavaScript['matrix_led_indentcode'] = function(block) {
   var code = 'MatrixLed_indentcode('+value_indentcode_+')';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
+
+Blockly.JavaScript['matrix_led_barchart'] = function(block) {
+  var value_col1 = Blockly.JavaScript.valueToCode(block, 'value_col1', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_col2 = Blockly.JavaScript.valueToCode(block, 'value_col2', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_col3 = Blockly.JavaScript.valueToCode(block, 'value_col3', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_col4 = Blockly.JavaScript.valueToCode(block, 'value_col4', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_col5 = Blockly.JavaScript.valueToCode(block, 'value_col5', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'MatrixLed_barchart('+value_col1+','+value_col2+','+value_col3+','+value_col4+','+value_col5+');';
+  return code;
+};
