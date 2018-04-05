@@ -348,3 +348,28 @@ Blockly.Blocks['matrix_led_state'] = {
   }  
 };
 
+Blockly.Blocks['matrix_led_barchart'] = {
+  init: function() {
+    this.appendValueInput("value_col1")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.MATRIXLED_BARCHART_SHOW)    
+        .appendField(Blockly.Msg.MATRIXLED_COL1_SHOW);
+    this.appendValueInput("value_col2")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.MATRIXLED_COL2_SHOW);
+    this.appendValueInput("value_col3")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.MATRIXLED_COL3_SHOW);
+    this.appendValueInput("value_col4")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.MATRIXLED_COL4_SHOW);
+    this.appendValueInput("value_col5")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.MATRIXLED_COL5_SHOW);    
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(300);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }  
+};
