@@ -525,5 +525,6 @@
   window.MatrixLed_texttocode = MatrixLed_texttocode;
   window.MatrixLed_showstate = MatrixLed_showstate;
   window.MatrixLed_indentcode = MatrixLed_indentcode;
+  window.MatrixLed_barchart = MatrixLed_barchart;
   
 }(window, window.document));
