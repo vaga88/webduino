@@ -490,7 +490,7 @@
       return noexist;
   }
   
-  function MatrixLed_barchart(col1,col2,col3,col4,col5){
+  function MatrixLed_barchart(value1,value2,value3,value4,value5){
     var barcode="1111111111111111111111111";
     for (var i=0;i<25;i++)
     {
