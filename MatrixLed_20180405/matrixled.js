@@ -489,6 +489,18 @@
     else
       return noexist;
   }
+  
+  function MatrixLed_barchart(col1,col2,col3,col4,col5){
+    var barcode="1111111111111111111111111";
+    for (var i=0;i<25;i++)
+    {
+      if (barcode.substr(i,1)=="1")
+        L[i]=" bgcolor='"+MatrixLedcolor+"'";
+      else
+        L[i]=" bgcolor='white'";
+    }
+    MatrixLed_show();
+  }
 
   window.MatrixLed_clear = MatrixLed_clear;
   window.MatrixLed_matrix = MatrixLed_matrix;
