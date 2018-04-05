@@ -491,13 +491,18 @@
   }
   
   function MatrixLed_barchart(value1,value2,value3,value4,value5){
-    var barcode="1111111111111111111111111";
-    for (var i=0;i<25;i++)
-    {
-      if (barcode.substr(i,1)=="1")
-        L[i]=" bgcolor='"+MatrixLedcolor+"'";
-      else
-        L[i]=" bgcolor='white'";
+    var input_value=[value1,value2,value3,value4,value5];
+    var k=0;
+    for (var i=0;i<5;i++)
+    {    
+      for (var J=0;J<5;J++)
+      {
+        if (J>=(5-input_value[i]))
+          L[k]=" bgcolor='"+MatrixLedcolor+"'";
+        else
+          L[k]=" bgcolor='white'";
+      }
+      k++;
     }
     MatrixLed_show();
   }
