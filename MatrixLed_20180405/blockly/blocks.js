@@ -350,22 +350,22 @@ Blockly.Blocks['matrix_led_state'] = {
 
 Blockly.Blocks['matrix_led_barchart'] = {
   init: function() {
-    this.appendValueInput("value_col1")
+    this.appendValueInput("value_value1")
         .setCheck("Number")
         .appendField(Blockly.Msg.MATRIXLED_BARCHART_SHOW)    
-        .appendField(Blockly.Msg.MATRIXLED_COL1_SHOW);
-    this.appendValueInput("value_col2")
+        .appendField(Blockly.Msg.MATRIXLED_VALUE1_SHOW);
+    this.appendValueInput("value_value2")
         .setCheck("Number")
-        .appendField(Blockly.Msg.MATRIXLED_COL2_SHOW);
-    this.appendValueInput("value_col3")
+        .appendField(Blockly.Msg.MATRIXLED_VALUE2_SHOW);
+    this.appendValueInput("value_value3")
         .setCheck("Number")
-        .appendField(Blockly.Msg.MATRIXLED_COL3_SHOW);
-    this.appendValueInput("value_col4")
+        .appendField(Blockly.Msg.MATRIXLED_VALUE3_SHOW);
+    this.appendValueInput("value_value4")
         .setCheck("Number")
-        .appendField(Blockly.Msg.MATRIXLED_COL4_SHOW);
-    this.appendValueInput("value_col5")
+        .appendField(Blockly.Msg.MATRIXLED_VALUE4_SHOW);
+    this.appendValueInput("value_value5")
         .setCheck("Number")
-        .appendField(Blockly.Msg.MATRIXLED_COL5_SHOW);    
+        .appendField(Blockly.Msg.MATRIXLED_VALUE5_SHOW);    
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(300);
