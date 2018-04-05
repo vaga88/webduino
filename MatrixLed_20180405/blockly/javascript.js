@@ -173,11 +173,11 @@ Blockly.JavaScript['matrix_led_indentcode'] = function(block) {
 };
 
 Blockly.JavaScript['matrix_led_barchart'] = function(block) {
-  var value_col1 = Blockly.JavaScript.valueToCode(block, 'value_col1', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_col2 = Blockly.JavaScript.valueToCode(block, 'value_col2', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_col3 = Blockly.JavaScript.valueToCode(block, 'value_col3', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_col4 = Blockly.JavaScript.valueToCode(block, 'value_col4', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_col5 = Blockly.JavaScript.valueToCode(block, 'value_col5', Blockly.JavaScript.ORDER_ATOMIC);
-  var code = 'MatrixLed_barchart('+value_col1+','+value_col2+','+value_col3+','+value_col4+','+value_col5+');';
+  var value_value1 = Blockly.JavaScript.valueToCode(block, 'value_value1', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_value2 = Blockly.JavaScript.valueToCode(block, 'value_value2', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_value3 = Blockly.JavaScript.valueToCode(block, 'value_value3', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_value4 = Blockly.JavaScript.valueToCode(block, 'value_value4', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_value5 = Blockly.JavaScript.valueToCode(block, 'value_value5', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'MatrixLed_barchart('+value_value1+','+value_value2+','+value_value3+','+value_value4+','+value_value5+');';
   return code;
 };
