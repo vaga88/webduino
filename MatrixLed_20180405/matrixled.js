@@ -215,7 +215,7 @@
   function MatrixLed_clear() {
     for (var i=0;i<25;i++)
     {
-      L[i]=" bgcolor='black'";
+      L[i]=" bgcolor='white'";
     }
     MatrixLed_show();
   }
@@ -228,7 +228,7 @@
       else
       {
         if (L[i]=="")
-          L[i]=" bgcolor='black'";
+          L[i]=" bgcolor='white'";
       }
     }
     MatrixLed_show();
@@ -238,26 +238,26 @@
     for (var i=0;i<25;i++)
     {
       if (i==(input_x_*5+input_y_))
-        L[i]=" bgcolor='black'";
+        L[i]=" bgcolor='white'";
       else
       {
         if (L[i]=="")
-          L[i]=" bgcolor='black'";
+          L[i]=" bgcolor='white'";
       }
     }
     MatrixLed_show();
   }
   
   function MatrixLed_reverse(input_x_,input_y_) {
-    if ((L[input_x_*5+input_y_]=='')||(L[input_x_*5+input_y_]==" bgcolor='black'"))
+    if ((L[input_x_*5+input_y_]=='')||(L[input_x_*5+input_y_]==" bgcolor='white'"))
       L[input_x_*5+input_y_]=" bgcolor='"+MatrixLedcolor+"'";
     else
-      L[input_x_*5+input_y_]=" bgcolor='black'";
+      L[input_x_*5+input_y_]=" bgcolor='white'";
     MatrixLed_show();
   }
 
   function MatrixLed_state(input_x_,input_y_) {
-    if ((L[input_x_*5+input_y_]=='')||(L[input_x_*5+input_y_]==" bgcolor='black'"))
+    if ((L[input_x_*5+input_y_]=='')||(L[input_x_*5+input_y_]==" bgcolor='white'"))
       return 0;
     else
       return 1;
@@ -269,14 +269,14 @@
       if (input_value_.substr(i,1)=="1")
         L[i]=" bgcolor='"+MatrixLedcolor+"'";
       else
-        L[i]=" bgcolor='black'";
+        L[i]=" bgcolor='white'";
     }
     MatrixLed_show();
   }
   
   function MatrixLed_show() {
     if (MatrixLedshowstate==1)
-      var ledtable ="<table style='width:"+MatrixLedwidth+"px;height:"+MatrixLedheight+"px;border:black;'>"
+      var ledtable ="<table style='width:"+MatrixLedwidth+"px;height:"+MatrixLedheight+"px;border:white;'>"
                   + "<tr><td"+L[0]+"></td><td"+L[5]+"></td><td"+L[10]+"></td><td"+L[15]+"></td><td"+L[20]+"></td></tr>"
                   + "<tr><td"+L[1]+"></td><td"+L[6]+"></td><td"+L[11]+"></td><td"+L[16]+"></td><td"+L[21]+"></td></tr>"
                   + "<tr><td"+L[2]+"></td><td"+L[7]+"></td><td"+L[12]+"></td><td"+L[17]+"></td><td"+L[22]+"></td></tr>"
@@ -284,7 +284,7 @@
                   + "<tr><td"+L[4]+"></td><td"+L[9]+"></td><td"+L[14]+"></td><td"+L[19]+"></td><td"+L[24]+"></td></tr>"
                   + "</table>";
     else
-      var ledtable ="<table style='width:"+MatrixLedwidth+"px;height:"+MatrixLedheight+"px;border:black;'>"
+      var ledtable ="<table style='width:"+MatrixLedwidth+"px;height:"+MatrixLedheight+"px;border:white;'>"
                   + "<tr><td></td><td></td><td></td><td></td><td></td></tr>"
                   + "<tr><td></td><td></td><td></td><td></td><td></td></tr>"
                   + "<tr><td></td><td></td><td></td><td></td><td></td></tr>"
@@ -500,7 +500,7 @@
         if (J>=(5-input_value[i]))
           L[k]=" bgcolor='"+MatrixLedcolor+"'";
         else
-          L[k]=" bgcolor='black'";
+          L[k]=" bgcolor='white'";
         k++;
       }
     }
