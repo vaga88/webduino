@@ -458,9 +458,9 @@
       return Quotationmarkssingle;     
     else if (input_char_=="\"")
       return Quotationmarksdouble;   
-    else if (input_char_=="?")
+    else if (input_char_=="♡")
       return heart;
-    else if (input_char_=="?")
+    else if (input_char_=="♥")
       return heartfill;    
     else if (input_char_=="↑")
       return arrowup;
@@ -482,9 +482,9 @@
       return arrowupfill;
     else if (input_char_=="▼")
       return arrowdownfill;
-    else if (input_char_=="?")
+    else if (input_char_=="◄")
       return arrowleftfill;
-    else if (input_char_=="?")
+    else if (input_char_=="►")
       return arrowrightfill;    
     else
       return noexist;
