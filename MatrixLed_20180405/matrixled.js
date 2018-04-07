@@ -215,7 +215,7 @@
   function MatrixLed_clear() {
     for (var i=0;i<25;i++)
     {
-      L[i]=" bgcolor='white'";
+      L[i]=" bgcolor='black'";
     }
     MatrixLed_show();
   }
@@ -228,7 +228,7 @@
       else
       {
         if (L[i]=="")
-          L[i]=" bgcolor='white'";
+          L[i]=" bgcolor='black'";
       }
     }
     MatrixLed_show();
@@ -238,26 +238,26 @@
     for (var i=0;i<25;i++)
     {
       if (i==(input_x_*5+input_y_))
-        L[i]=" bgcolor='white'";
+        L[i]=" bgcolor='black'";
       else
       {
         if (L[i]=="")
-          L[i]=" bgcolor='white'";
+          L[i]=" bgcolor='black'";
       }
     }
     MatrixLed_show();
   }
   
   function MatrixLed_reverse(input_x_,input_y_) {
-    if ((L[input_x_*5+input_y_]=='')||(L[input_x_*5+input_y_]==" bgcolor='white'"))
+    if ((L[input_x_*5+input_y_]=='')||(L[input_x_*5+input_y_]==" bgcolor='black'"))
       L[input_x_*5+input_y_]=" bgcolor='"+MatrixLedcolor+"'";
     else
-      L[input_x_*5+input_y_]=" bgcolor='white'";
+      L[input_x_*5+input_y_]=" bgcolor='black'";
     MatrixLed_show();
   }
 
   function MatrixLed_state(input_x_,input_y_) {
-    if ((L[input_x_*5+input_y_]=='')||(L[input_x_*5+input_y_]==" bgcolor='white'"))
+    if ((L[input_x_*5+input_y_]=='')||(L[input_x_*5+input_y_]==" bgcolor='black'"))
       return 0;
     else
       return 1;
@@ -269,14 +269,14 @@
       if (input_value_.substr(i,1)=="1")
         L[i]=" bgcolor='"+MatrixLedcolor+"'";
       else
-        L[i]=" bgcolor='white'";
+        L[i]=" bgcolor='black'";
     }
     MatrixLed_show();
   }
   
   function MatrixLed_show() {
     if (MatrixLedshowstate==1)
-      var ledtable ="<table style='width:"+MatrixLedwidth+"px;height:"+MatrixLedheight+"px;border:white;'>"
+      var ledtable ="<table style='width:"+MatrixLedwidth+"px;height:"+MatrixLedheight+"px;border:black;'>"
                   + "<tr><td"+L[0]+"></td><td"+L[5]+"></td><td"+L[10]+"></td><td"+L[15]+"></td><td"+L[20]+"></td></tr>"
                   + "<tr><td"+L[1]+"></td><td"+L[6]+"></td><td"+L[11]+"></td><td"+L[16]+"></td><td"+L[21]+"></td></tr>"
                   + "<tr><td"+L[2]+"></td><td"+L[7]+"></td><td"+L[12]+"></td><td"+L[17]+"></td><td"+L[22]+"></td></tr>"
@@ -284,7 +284,7 @@
                   + "<tr><td"+L[4]+"></td><td"+L[9]+"></td><td"+L[14]+"></td><td"+L[19]+"></td><td"+L[24]+"></td></tr>"
                   + "</table>";
     else
-      var ledtable ="<table style='width:"+MatrixLedwidth+"px;height:"+MatrixLedheight+"px;border:white;'>"
+      var ledtable ="<table style='width:"+MatrixLedwidth+"px;height:"+MatrixLedheight+"px;border:black;'>"
                   + "<tr><td></td><td></td><td></td><td></td><td></td></tr>"
                   + "<tr><td></td><td></td><td></td><td></td><td></td></tr>"
                   + "<tr><td></td><td></td><td></td><td></td><td></td></tr>"
@@ -458,9 +458,9 @@
       return Quotationmarkssingle;     
     else if (input_char_=="\"")
       return Quotationmarksdouble;   
-    else if (input_char_=="♡")
+    else if (input_char_=="?")
       return heart;
-    else if (input_char_=="♥")
+    else if (input_char_=="?")
       return heartfill;    
     else if (input_char_=="↑")
       return arrowup;
@@ -482,9 +482,9 @@
       return arrowupfill;
     else if (input_char_=="▼")
       return arrowdownfill;
-    else if (input_char_=="◄")
+    else if (input_char_=="?")
       return arrowleftfill;
-    else if (input_char_=="►")
+    else if (input_char_=="?")
       return arrowrightfill;    
     else
       return noexist;
@@ -500,7 +500,7 @@
         if (J>=(5-input_value[i]))
           L[k]=" bgcolor='"+MatrixLedcolor+"'";
         else
-          L[k]=" bgcolor='white'";
+          L[k]=" bgcolor='black'";
         k++;
       }
     }
