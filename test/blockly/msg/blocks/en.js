@@ -25,3 +25,5 @@ Blockly.Msg.MATRIXLED_VALUE2_SHOW = "VALUE2";
 Blockly.Msg.MATRIXLED_VALUE3_SHOW = "VALUE3";
 Blockly.Msg.MATRIXLED_VALUE4_SHOW = "VALUE4";
 Blockly.Msg.MATRIXLED_VALUE5_SHOW = "VALUE5";
+Blockly.Msg.MATRIXLED_CLOCKWISE_SHOW = "Rotate 90 degrees clockwise";
+Blockly.Msg.MATRIXLED_COUNTERCLOCKWISE_SHOW = "Rotate 90 degrees counter clockwise";
