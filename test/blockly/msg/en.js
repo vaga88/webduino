@@ -1,1 +1,1 @@
-MSG.catUARTMYFIRMATA = "UART MYFIRMATA";
+MSG.catMatrixLed = "Simulation Indicator Light";
