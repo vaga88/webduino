@@ -181,3 +181,13 @@ Blockly.JavaScript['matrix_led_barchart'] = function(block) {
   var code = 'MatrixLed_barchart('+value_value1+','+value_value2+','+value_value3+','+value_value4+','+value_value5+');';
   return code;
 };
+
+Blockly.JavaScript['matrix_led_clockwise'] = function(block) {
+  var code = 'Matrixled_clockwise();';
+  return code;
+};
+
+Blockly.JavaScript['matrix_led_counterclockwise'] = function(block) {
+  var code = 'Matrixled_counterclockwise();';
+  return code;
+};
