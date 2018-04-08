@@ -508,8 +508,13 @@
   }
   
   function Matrixled_clockwise(){
-    var Tmp = L.clone();
-    var n=0;
+    var Tmp = = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
+    var n;
+    for (n=0;n<25;n++)
+    {
+      Tmp[n]=L[n];
+    }
+    n=0;
     for (var i=4;i>=0;i--)
     {    
       for (var j=0;j<5;j++)
@@ -522,8 +527,13 @@
   }
   
   function Matrixled_counterclockwise(){
-    var Tmp = L.clone();
-    var n=0;
+    var Tmp = = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
+    var n;
+    for (n=0;n<25;n++)
+    {
+      Tmp[n]=L[n];
+    }
+    n=0;
     for (var i=0;i<5;i++)
     {    
       for (var j=4;j>=0;j--)
