@@ -506,7 +506,43 @@
     }
     MatrixLed_show();
   }
-
+  
+  function Matrixled_clockwise(){
+    var Tmp = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
+    for (var i=0;i<25;i++)
+    {
+        Tmp[i]=L[i];
+    }
+    var n=0;
+    for (var j=4;j>=0;j--)
+    {    
+      for (var k=0;k<5;k++)
+      {
+        L[n]=Tmp[j+5*k];
+        n++;
+      }
+    }
+    MatrixLed_show();
+  }
+  
+  function Matrixled_counterclockwise(){
+    var Tmp = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
+    for (var i=0;i<25;i++)
+    {
+        Tmp[i]=L[i];
+    }
+    var n=0;
+    for (var j=0;j<5;j++)
+    {    
+      for (var k=4;k>=0;k--)
+      {
+        L[n]=Tmp[j+5*k];
+        n++;
+      }
+    }
+    MatrixLed_show();
+  }
+  
   window.MatrixLed_clear = MatrixLed_clear;
   window.MatrixLed_matrix = MatrixLed_matrix;
   window.MatrixLed_show = MatrixLed_show;
@@ -531,5 +567,7 @@
   window.MatrixLed_showstate = MatrixLed_showstate;
   window.MatrixLed_indentcode = MatrixLed_indentcode;
   window.MatrixLed_barchart = MatrixLed_barchart;
+  window.matrixled_clockwise = Matrixled_clockwise;
+  window.matrixled_counterclockwise = Matrixled_counterclockwise;
   
 }(window, window.document));
