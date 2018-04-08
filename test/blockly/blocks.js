@@ -378,3 +378,27 @@ Blockly.Blocks['matrix_led_barchart'] = {
     this.setHelpUrl("");
   }  
 };
+
+Blockly.Blocks['matrix_led_clockwise'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.MATRIXLED_CLOCKWISE_SHOW);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(300);    
+    this.setTooltip("");
+    this.setHelpUrl("");    
+  }
+}; 
+
+Blockly.Blocks['matrix_led_counterclockwise'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.MATRIXLED_COUNTERCLOCKWISE_SHOW);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(300);    
+    this.setTooltip("");
+    this.setHelpUrl("");    
+  }
+}; 
