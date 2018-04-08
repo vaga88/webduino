@@ -508,17 +508,13 @@
   }
   
   function Matrixled_clockwise(){
-    var Tmp = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
-    for (var i=0;i<25;i++)
-    {
-        Tmp[i]=L[i];
-    }
+    var Tmp = L.clone();
     var n=0;
-    for (var j=4;j>=0;j--)
+    for (var i=4;i>=0;i--)
     {    
-      for (var k=0;k<5;k++)
+      for (var j=0;j<5;j++)
       {
-        L[n]=Tmp[j+5*k];
+        L[n]=Tmp[i+5*j];
         n++;
       }
     }
@@ -526,17 +522,13 @@
   }
   
   function Matrixled_counterclockwise(){
-    var Tmp = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
-    for (var i=0;i<25;i++)
-    {
-        Tmp[i]=L[i];
-    }
+    var Tmp = L.clone();
     var n=0;
-    for (var j=0;j<5;j++)
+    for (var i=0;i<5;i++)
     {    
-      for (var k=4;k>=0;k--)
+      for (var j=4;j>=0;j--)
       {
-        L[n]=Tmp[j+5*k];
+        L[n]=Tmp[i+5*j];
         n++;
       }
     }
