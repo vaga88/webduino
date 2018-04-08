@@ -559,7 +559,7 @@
   window.MatrixLed_showstate = MatrixLed_showstate;
   window.MatrixLed_indentcode = MatrixLed_indentcode;
   window.MatrixLed_barchart = MatrixLed_barchart;
-  window.matrixled_clockwise = Matrixled_clockwise;
-  window.matrixled_counterclockwise = Matrixled_counterclockwise;
+  window.Matrixled_clockwise = Matrixled_clockwise;
+  window.Matrixled_counterclockwise = Matrixled_counterclockwise;
   
 }(window, window.document));
