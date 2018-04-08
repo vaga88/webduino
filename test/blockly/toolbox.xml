@@ -198,5 +198,9 @@
         <field name="NUM">0</field>
       </block>
     </value>    
-  </block>    
+  </block> 
+  <block type="matrix_led_clockwise">
+  </block>
+  <block type="matrix_led_counterclockwise">
+  </block>  
  </category>
