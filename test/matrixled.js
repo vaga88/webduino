@@ -494,9 +494,9 @@
   function MatrixLed_barchart(value1,value2,value3,value4,value5){
     var input_value=[value1,value2,value3,value4,value5];
     var k=0;
-    for (var i=0;i<5;i++)
+    for (var i=0;i<=4;i++)
     {    
-      for (var J=0;J<5;J++)
+      for (var J=0;J<=4;J++)
       {
         if (J>=(5-input_value[i]))
           L[k]=MatrixLedcolor;
@@ -518,7 +518,7 @@
     n=0;
     for (var i=4;i>=0;i--)
     {    
-      for (var j=0;j<5;j++)
+      for (var j=0;j<=4;j++)
       {
         L[n]=Tmp[i+5*j];
         n++;
@@ -535,7 +535,7 @@
       Tmp[n]=L[n];
     }
     n=0;
-    for (var i=0;i<5;i++)
+    for (var i=0;i<=4;i++)
     {    
       for (var j=4;j>=0;j--)
       {
@@ -556,7 +556,7 @@
     n=0;
     for (var i=4;i>=0;i--)
     {    
-      for (var j=0;j<5;j++)
+      for (var j=0;j<=4;j++)
       {
         L[n]=Tmp[i+5*j];
         n++;
@@ -575,7 +575,7 @@
     n=0;
     for (var i=4;i>=0;i--)
     {    
-      for (var j=0;<5;j++)
+      for (var j=0;j<=4;j++)
       {
         L[n]=Tmp[j+i*5];
         n++;
