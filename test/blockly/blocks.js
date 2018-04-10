@@ -402,3 +402,57 @@ Blockly.Blocks['matrix_led_counterclockwise'] = {
     this.setHelpUrl("");    
   }
 }; 
+
+Blockly.Blocks['matrix_led_verticalflip'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.MATRIXLED_VERTICALFLIP_SHOW);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(300);    
+    this.setTooltip("");
+    this.setHelpUrl("");    
+  }
+}; 
+
+Blockly.Blocks['matrix_led_horizontalflip'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.MATRIXLED_HORIZONTALFLIP_SHOW);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(300);    
+    this.setTooltip("");
+    this.setHelpUrl("");    
+  }
+}; 
+
+Blockly.Blocks['matrix_led_invert'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.MATRIXLED_INVERT_SHOW);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(300);    
+    this.setTooltip("");
+    this.setHelpUrl("");    
+  }
+}; 
+
+Blockly.Blocks['matrix_led_getcolor'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.MATRIXLED_GETCOLOR_SHOW);
+    this.appendValueInput("value_x_state_")
+        .setCheck("Number")
+        .appendField("x");
+    this.appendValueInput("value_y_state_")
+        .setCheck("Number")
+        .appendField("y");
+    this.setInputsInline(true);
+    this.setOutput(true, null);  
+    this.setColour(300);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }  
+};
