@@ -257,7 +257,7 @@
   }
 
   function MatrixLed_state(input_x_,input_y_) {
-    if ((L[input_x_*5+input_y_]=='')||(L[input_x_*5+input_y_]==" bgcolor='white'"))
+    if ((L[input_x_*5+input_y_]=="")||(L[input_x_*5+input_y_]==" bgcolor='white'"))
       return 0;
     else
       return 1;
@@ -586,7 +586,7 @@
   function Matrixled_invert(){
     for (var i=0;i<25;i++)
     {
-    if ((L[i]=='')||(L[i]==" bgcolor='white'"))
+    if ((L[i]=="")||(L[i]==" bgcolor='white'"))
       L[i]=" bgcolor='"+MatrixLedcolor+"'";
     else
       L[i]=" bgcolor='white'";
