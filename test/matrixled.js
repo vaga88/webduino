@@ -584,21 +584,12 @@
   }
   
   function Matrixled_invert(){
-    var Tmp = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
-    var n;
-    for (n=0;n<25;n++)
+    for (var i=0;i<25;i++)
     {
-      Tmp[n]=L[n];
-    }
-    n=0;
-    for (var i=0;i<5;i++)
-    {    
-      for (var j=4;j>=0;j--)
-      {
-        L[n]=Tmp[i+5*j];
-        n++;
-      }
-    }
+    if ((L[i]=='')||(L[i]==" bgcolor='white'"))
+      L[i]=" bgcolor='"+MatrixLedcolor+"'";
+    else
+      L[i]=" bgcolor='white'";
     MatrixLed_show();
   }
   
