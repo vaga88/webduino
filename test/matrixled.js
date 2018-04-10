@@ -553,9 +553,9 @@
       Tmp[n]=L[n];
     }
     n=0;
-    for (var i=0;i<5;i++)
+    for (var i=4;i>=0;i--)
     {    
-      for (var j=4;j>=0;j--)
+      for (var j=0;j<5;j++)
       {
         L[n]=Tmp[i+5*j];
         n++;
