@@ -191,3 +191,25 @@ Blockly.JavaScript['matrix_led_counterclockwise'] = function(block) {
   var code = 'Matrixled_counterclockwise();';
   return code;
 };
+
+Blockly.JavaScript['matrix_led_verticalflip'] = function(block) {
+  var code = 'Matrixled_verticalflip();';
+  return code;
+};
+
+Blockly.JavaScript['matrix_led_horizontalflip'] = function(block) {
+  var code = 'Matrixled_horizontalflip();';
+  return code;
+};
+
+Blockly.JavaScript['matrix_led_invert'] = function(block) {
+  var code = 'Matrixled_invert();';
+  return code;
+};
+
+Blockly.JavaScript['matrix_led_getcolor'] = function(block) {
+  var value_x_state_ = Blockly.JavaScript.valueToCode(block, 'value_x_state_', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_y_state_ = Blockly.JavaScript.valueToCode(block, 'value_y_state_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'MatrixLed_getcolor('+value_x_state_+','+value_y_state_+')';
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
