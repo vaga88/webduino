@@ -545,6 +545,70 @@
     MatrixLed_show();
   }
   
+  function Matrixled_verticalflip(){
+    var Tmp = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
+    var n;
+    for (n=0;n<25;n++)
+    {
+      Tmp[n]=L[n];
+    }
+    n=0;
+    for (var i=0;i<5;i++)
+    {    
+      for (var j=4;j>=0;j--)
+      {
+        L[n]=Tmp[i+5*j];
+        n++;
+      }
+    }
+    MatrixLed_show();
+  }
+  
+  function Matrixled_horizontalflip(){
+    var Tmp = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
+    var n;
+    for (n=0;n<25;n++)
+    {
+      Tmp[n]=L[n];
+    }
+    n=0;
+    for (var i=0;i<5;i++)
+    {    
+      for (var j=4;j>=0;j--)
+      {
+        L[n]=Tmp[i+5*j];
+        n++;
+      }
+    }
+    MatrixLed_show();
+  }
+  
+  function Matrixled_invert(){
+    var Tmp = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
+    var n;
+    for (n=0;n<25;n++)
+    {
+      Tmp[n]=L[n];
+    }
+    n=0;
+    for (var i=0;i<5;i++)
+    {    
+      for (var j=4;j>=0;j--)
+      {
+        L[n]=Tmp[i+5*j];
+        n++;
+      }
+    }
+    MatrixLed_show();
+  }
+  
+  function MatrixLed_getcolor(input_x_,input_y_) {
+    if ((L[input_x_*5+input_y_]=='')||(L[input_x_*5+input_y_]==" bgcolor='white'"))
+      return 0;
+    else
+      return 1;
+  } 
+  
   window.MatrixLed_clear = MatrixLed_clear;
   window.MatrixLed_matrix = MatrixLed_matrix;
   window.MatrixLed_show = MatrixLed_show;
@@ -571,5 +635,9 @@
   window.MatrixLed_barchart = MatrixLed_barchart;
   window.Matrixled_clockwise = Matrixled_clockwise;
   window.Matrixled_counterclockwise = Matrixled_counterclockwise;
+  window.Matrixled_verticalflip = Matrixled_verticalflip;
+  window.Matrixled_horizontalflip = Matrixled_horizontalflip;
+  window.Matrixled_invert = Matrixled_invert;
+  window.MatrixLed_getcolor = MatrixLed_getcolor;
   
 }(window, window.document));
