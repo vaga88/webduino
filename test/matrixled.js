@@ -96,8 +96,8 @@
   const noexist = "0000000000000000000000000";
   
   var L = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
-  var MatrixLedcolor = "#FF0000";
-  var MatrixLedbackcolor = "#FFFFFF";
+  var MatrixLedcolor = "#ff0000";
+  var MatrixLedbackcolor = "#ffffff";
   var MatrixLedwidth = 250;
   var MatrixLedheight = 250;
   var MatrixLedmarqueecode = "";
