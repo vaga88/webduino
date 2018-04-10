@@ -587,10 +587,11 @@
   function Matrixled_invert(){
     for (var i=0;i<25;i++)
     {
-    if ((L[i]=="")||(L[i]==MatrixLedbackcolor))
-      L[i]=MatrixLedcolor;
-    else
-      L[i]=MatrixLedbackcolor;
+      if ((L[i]=="")||(L[i]==MatrixLedbackcolor))
+        L[i]=MatrixLedcolor;
+      else
+        L[i]=MatrixLedbackcolor;
+    }
     MatrixLed_show();
   }
   
