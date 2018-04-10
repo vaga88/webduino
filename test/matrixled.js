@@ -97,6 +97,7 @@
   
   var L = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
   var MatrixLedcolor = "#FF0000";
+  var MatrixLedbackcolor = "#FFFFFF";
   var MatrixLedwidth = 250;
   var MatrixLedheight = 250;
   var MatrixLedmarqueecode = "";
@@ -215,7 +216,7 @@
   function MatrixLed_clear() {
     for (var i=0;i<25;i++)
     {
-      L[i]=" bgcolor='white'";
+      L[i]=" bgcolor='"+MatrixLedbackcolor+"'";
     }
     MatrixLed_show();
   }
@@ -228,7 +229,7 @@
       else
       {
         if (L[i]=="")
-          L[i]=" bgcolor='white'";
+          L[i]=" bgcolor='"+MatrixLedbackcolor+"'";
       }
     }
     MatrixLed_show();
@@ -238,26 +239,26 @@
     for (var i=0;i<25;i++)
     {
       if (i==(input_x_*5+input_y_))
-        L[i]=" bgcolor='white'";
+        L[i]=" bgcolor='"+MatrixLedbackcolor+"'";
       else
       {
         if (L[i]=="")
-          L[i]=" bgcolor='white'";
+          L[i]=" bgcolor='"+MatrixLedbackcolor+"'";
       }
     }
     MatrixLed_show();
   }
   
   function MatrixLed_reverse(input_x_,input_y_) {
-    if ((L[input_x_*5+input_y_]=='')||(L[input_x_*5+input_y_]==" bgcolor='white'"))
+    if ((L[input_x_*5+input_y_]=='')||(L[input_x_*5+input_y_]==" bgcolor='"+MatrixLedbackcolor+"'"))
       L[input_x_*5+input_y_]=" bgcolor='"+MatrixLedcolor+"'";
     else
-      L[input_x_*5+input_y_]=" bgcolor='white'";
+      L[input_x_*5+input_y_]=" bgcolor='"+MatrixLedbackcolor+"'";
     MatrixLed_show();
   }
 
   function MatrixLed_state(input_x_,input_y_) {
-    if ((L[input_x_*5+input_y_]=="")||(L[input_x_*5+input_y_]==" bgcolor='white'"))
+    if ((L[input_x_*5+input_y_]=="")||(L[input_x_*5+input_y_]==" bgcolor='"+MatrixLedbackcolor+"'"))
       return 0;
     else
       return 1;
@@ -269,7 +270,7 @@
       if (input_value_.substr(i,1)=="1")
         L[i]=" bgcolor='"+MatrixLedcolor+"'";
       else
-        L[i]=" bgcolor='white'";
+        L[i]=" bgcolor='"+MatrixLedbackcolor+"'";
     }
     MatrixLed_show();
   }
@@ -500,7 +501,7 @@
         if (J>=(5-input_value[i]))
           L[k]=" bgcolor='"+MatrixLedcolor+"'";
         else
-          L[k]=" bgcolor='white'";
+          L[k]=" bgcolor='"+MatrixLedbackcolor+"'";
         k++;
       }
     }
@@ -586,10 +587,10 @@
   function Matrixled_invert(){
     for (var i=0;i<25;i++)
     {
-    if ((L[i]=="")||(L[i]==" bgcolor='white'"))
+    if ((L[i]=="")||(L[i]==" bgcolor='"+MatrixLedbackcolor+"'"))
       L[i]=" bgcolor='"+MatrixLedcolor+"'";
     else
-      L[i]=" bgcolor='white'";
+      L[i]=" bgcolor='"+MatrixLedbackcolor+"'";
     MatrixLed_show();
   }
   
