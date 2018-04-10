@@ -203,4 +203,22 @@
   </block>
   <block type="matrix_led_counterclockwise">
   </block>  
+  <block type="matrix_led_verticalflip">
+  </block>  
+  <block type="matrix_led_horizontalflip">
+  </block>  
+  <block type="matrix_led_invert">
+  </block>  
+ <block type="matrix_led_getcolor">
+    <value name="value_x_state_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="value_y_state_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>    
  </category>
