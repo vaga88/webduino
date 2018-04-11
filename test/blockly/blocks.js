@@ -456,3 +456,16 @@ Blockly.Blocks['matrix_led_getcolor'] = {
     this.setHelpUrl("");
   }  
 };
+
+Blockly.Blocks['matrix_led_backcolor'] = {
+  init: function() {
+    this.appendValueInput("value_color_")
+        .setCheck("String")   
+        .appendField(Blockly.Msg.MATRIXLED_BACKCOLOR_SHOW); 
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(300);    
+    this.setTooltip("");
+    this.setHelpUrl("");    
+  }
+};  
