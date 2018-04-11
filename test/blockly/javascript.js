@@ -213,3 +213,9 @@ Blockly.JavaScript['matrix_led_getcolor'] = function(block) {
   var code = 'MatrixLed_getcolor('+value_x_state_+','+value_y_state_+')';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
+
+Blockly.JavaScript['matrix_led_backcolor'] = function(block) {
+  var value_color_ = Blockly.JavaScript.valueToCode(block, 'value_color_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'MatrixLed_backcolor('+ value_color_ +');';
+  return code;
+};
