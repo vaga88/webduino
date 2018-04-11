@@ -599,6 +599,10 @@
     return L[input_x_*5+input_y_];
   } 
   
+  function MatrixLed_backcolor(input_color_) {
+    MatrixLedbackcolor=input_color_;
+  }     
+  
   window.MatrixLed_clear = MatrixLed_clear;
   window.MatrixLed_matrix = MatrixLed_matrix;
   window.MatrixLed_show = MatrixLed_show;
@@ -629,5 +633,6 @@
   window.Matrixled_horizontalflip = Matrixled_horizontalflip;
   window.Matrixled_invert = Matrixled_invert;
   window.MatrixLed_getcolor = MatrixLed_getcolor;
+  window.MatrixLed_backcolor = MatrixLed_backcolor;
   
 }(window, window.document));
