@@ -221,11 +221,5 @@
   </block>  
   <block type="matrix_led_invert">
   </block>
-  <block type="matrix_led_backcolor">
-    <value name="value_color_">
-      <block type="colour_picker">
-        <field name="COLOUR">#ffffff</field>
-      </block>
-    </value>
-  </block>      
+   
  </category>
