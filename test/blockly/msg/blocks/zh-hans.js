@@ -31,3 +31,4 @@ Blockly.Msg.MATRIXLED_VERTICALFLIP_SHOW = "垂直翻转";
 Blockly.Msg.MATRIXLED_HORIZONTALFLIP_SHOW = "水平翻转";
 Blockly.Msg.MATRIXLED_INVERT_SHOW = "反转";
 Blockly.Msg.MATRIXLED_GETCOLOR_SHOW = "灯光色码值";
+Blockly.Msg.MATRIXLED_BACKCOLOR_SHOW = "背景颜色";
