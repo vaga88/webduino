@@ -460,7 +460,7 @@ Blockly.Blocks['matrix_led_getcolor'] = {
 Blockly.Blocks['matrix_led_backcolor'] = {
   init: function() {
     this.appendValueInput("value_color_")
-        .setCheck("String")   
+        .setCheck(null)   
         .appendField(Blockly.Msg.MATRIXLED_BACKCOLOR_SHOW); 
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
