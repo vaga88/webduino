@@ -5,8 +5,7 @@
         <field name="COLOUR">#ff0000</field>
       </block>
     </value>
-  </block>  
-
+  </block>
   <block type="matrix_led_width">
     <value name="value_width_">
       <block type="math_number">
