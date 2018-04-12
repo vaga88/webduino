@@ -2,10 +2,10 @@
   <block type="matrix_led_backcolor">
     <value name="value_color_">
       <block type="colour_picker">
-        <field name="COLOUR">#ffffff</field>
+        <field name="COLOUR">#ff0000</field>
       </block>
     </value>
-  </block>   
+  </block>  
   <block type="matrix_led_color">
     <value name="value_color_">
       <block type="colour_picker">
