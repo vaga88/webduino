@@ -2,10 +2,17 @@
   <block type="matrix_led_backcolor">
     <value name="value_color_">
       <block type="colour_picker">
-        <field name="COLOUR">#ff0000</field>
+        <field name="COLOUR">#ffffff</field>
       </block>
     </value>
   </block>
+  <block type="matrix_led_color">
+    <value name="value_color_">
+      <block type="colour_picker">
+        <field name="COLOUR">#ff0000</field>
+      </block>
+    </value>
+  </block>    
   <block type="matrix_led_width">
     <value name="value_width_">
       <block type="math_number">
