@@ -120,6 +120,7 @@
   
   function MatrixLed_showstate(input_showstate_) {
     MatrixLedshowstate = input_showstate_;
+    MatrixLed_show();
   }   
   
   function MatrixLed_indentcode(input_indentcode_) {
