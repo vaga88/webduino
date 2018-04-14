@@ -286,11 +286,11 @@
                   + "</table>";
     else
       var ledtable ="<table style='width:"+MatrixLedwidth+"px;height:"+MatrixLedheight+"px;border:white;'>"
-                  + "<tr><td></td><td></td><td></td><td></td><td></td></tr>"
-                  + "<tr><td></td><td></td><td></td><td></td><td></td></tr>"
-                  + "<tr><td></td><td></td><td></td><td></td><td></td></tr>"
-                  + "<tr><td></td><td></td><td></td><td></td><td></td></tr>"
-                  + "<tr><td></td><td></td><td></td><td></td><td></td></tr>"
+                  + "<tr><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td></tr>"
+                  + "<tr><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td></tr>"
+                  + "<tr><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td></tr>"
+                  + "<tr><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td></tr>"
+                  + "<tr><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td></tr>"
                   + "</table>";
     
     if (document.getElementById("fustyles_matrixled"))
